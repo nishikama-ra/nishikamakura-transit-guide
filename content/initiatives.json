@@ -1,0 +1,11 @@
+{
+  "municipal": [
+    {"organization":"鎌倉市","title":"地域公共交通計画","description":"鎌倉市の公共交通に関する計画や検討状況を確認できます。","href":"https://www.city.kamakura.kanagawa.jp/","linkLabel":"鎌倉市のサイトで確認"}
+  ],
+  "community": [
+    {"organization":"西鎌倉地区町内・自治会連合会 新たな移動手段検討委員会","title":"移動先・移動ニーズのアンケート","description":"地域の皆さまが、どこへ、どのように移動したいかを集めています。","href":"https://nishikama-ra.github.io/Mobility_Dest_Enq/","linkLabel":"アンケートを見る"}
+  ],
+  "otherBusiness": [
+    {"organization":"湘南鎌倉総合病院","title":"病院への送迎・アクセス","description":"送迎バスを含む病院への行き方を確認できます。","href":"https://www.skgh.jp/access/","linkLabel":"アクセス案内を見る"}
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>その他の移動手段｜西鎌倉周辺くらしの交通案内</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><small>西鎌倉周辺</small><strong>くらしの交通案内</strong></span></a>
+    <nav class="global-nav" aria-label="主なページ"><a href="index.html#public-transit">電車・バス・モノレール</a><a aria-current="page" href="services.html">その他の移動手段</a><a href="initiatives.html">移動を便利にする取り組み</a></nav>
+  </header>
+  <main>
+    <section class="page-intro shell"><p class="eyebrow">電車・バス以外の選択肢</p><h1>その他の移動手段</h1></section>
+    <section class="section shell"><div class="section-heading compact"><div><p class="section-kicker">必要な場所へ来てもらう</p><h2>タクシー</h2></div></div><div id="passengerList" class="passenger-list"></div></section>
+    <section class="section shuttle-section"><div class="shell"><div class="section-heading compact"><div><p class="section-kicker">病院と乗り場・自宅を結ぶ</p><h2>施設の送迎</h2></div></div><div id="shuttleList" class="action-grid"></div></div></section>
+    <section class="section shell"><div class="section-heading compact"><div><p class="section-kicker">利用対象と登録条件がある移動サービス</p><h2>福祉有償運送</h2></div></div><p class="section-lead">身体障害のある方、要介護・要支援認定を受けた方などで、単独でタクシー等を利用することが難しい方と、その付き添いの方が対象です。利用前に実施団体への会員登録が必要です。</p><div id="welfareList" class="action-grid"></div></section>
+    <section class="section boat-section"><div class="shell"><div class="section-heading compact"><div><p class="section-kicker">海を移動する</p><h2>船</h2></div></div><div id="boatList" class="action-grid"></div></div></section>
+    <section class="section shell"><div class="section-heading compact"><div><p class="section-kicker">観光で利用する</p><h2>観光の移動</h2></div></div><div id="tourismList" class="action-grid"></div></section>
+    <section class="section map-section" id="self-drive">
+      <div class="shell">
+        <div class="section-heading"><div><p class="section-kicker">借りて使う</p><h2>貸出場所</h2></div><p id="mapScope"></p></div>
+        <div id="typeFilters" class="type-filters" aria-label="乗りものの種類"></div>
+        <div class="map-layout"><div id="placesMap" class="places-map" aria-label="貸出・返却場所の地図"></div><div class="place-panel"><p id="placeCount" class="place-count"></p><div id="placeList" class="place-list"></div></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>西鎌倉地区町内・自治会連合会 新たな移動手段検討委員会</p></div></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/services.js"></script>
+</body>
+</html>

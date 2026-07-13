@@ -1,0 +1,93 @@
+{
+  "updatedAt": "2026-07-13",
+  "scope": "西鎌倉・鎌倉山・腰越・津・津西・手広の行政区域から800m以内、および藤沢・大船・鎌倉・江の島の各駅エリアから800m以内",
+  "selfDrive": {
+    "types": [
+      {"id":"shareCycle","label":"シェアサイクル","color":"#2f86a0","description":"アプリで自転車を借り、対応するステーションへ返します。"},
+      {"id":"rentalCycle","label":"店舗で借りる自転車","color":"#5f936a","description":"店舗で受付して借ります。営業時間や予約方法を確認してください。"},
+      {"id":"smallMobility","label":"電動モビリティ","color":"#d9775f","description":"電動キックボード、電動バイク、電動トゥクトゥクなど。借りられる車種と必要な免許を各欄に記載しています。"},
+      {"id":"rentalMotorbike","label":"レンタルバイク","color":"#b6683f","description":"原付・バイクを借りて運転するサービスです。利用には車種に応じた免許が必要です。"},
+      {"id":"wheelchair","label":"車いすの貸出","color":"#487a6b","description":"手動・電動の車いすを借りられる場所です。車種と受取方法を確認してください。"},
+      {"id":"carShare","label":"カーシェア","color":"#8b72b8","description":"会員登録・予約後、ステーションにある車を自分で運転します。"},
+      {"id":"rentalCar","label":"レンタカー","color":"#c39732","description":"営業所で手続きし、借りた車を自分で運転します。"}
+    ],
+    "places": [
+      {"name":"LINKAGE CYCLING","type":"rentalCycle","provider":"LINKAGE CYCLING","address":"神奈川県藤沢市片瀬4-14-4","lat":35.316307,"lng":139.485733,"href":"https://linkagecycling.com/club_house/","vehicle":"スポーツ自転車","note":"稼働日を事前に確認。"},
+      {"name":"湘南ローカルウェーブ","type":"rentalCycle","provider":"湘南ローカルウェーブ","address":"神奈川県藤沢市片瀬海岸1-12-3 ワンアンドオンリー湘南ビル105","lat":35.308235,"lng":139.485886,"href":"https://www.slw.co.jp/bicycle.html","phone":"0466-76-6066","vehicle":"普通自転車・電動アシスト自転車"},
+      {"name":"レンタサイクル鎌倉駅前店（くらりん）","type":"rentalCycle","provider":"ジェイアールバステック","address":"神奈川県鎌倉市小町1-1","lat":35.319115,"lng":139.55072,"href":"https://www.jrbustech.co.jp/wp/shop_service/cycle_kamakura","phone":"0467-24-2319","vehicle":"普通自転車・電動アシスト自転車"},
+      {"name":"COGICOGI 江ノ島ポート","type":"shareCycle","provider":"COGICOGI","address":"神奈川県藤沢市片瀬海岸2-15-13 建物前スペース","href":"https://cogicogi.jp/smart/port-kamakura.html","vehicle":"電動アシスト自転車","note":"24時間利用可能。貸出状況はアプリで確認。"},
+      {"name":"COGICOGI 面白法人カヤックポート","type":"shareCycle","provider":"COGICOGI","address":"神奈川県鎌倉市御成町5-12 研究開発棟 建物横スペース","href":"https://cogicogi.jp/smart/port-kamakura.html","vehicle":"電動アシスト自転車","note":"24時間利用可能。貸出状況はアプリで確認。"},
+      {"name":"ベストBike 鎌倉駅前","type":"rentalMotorbike","provider":"ベストBike","address":"鎌倉駅前","href":"https://bestbike.co.jp/reserve/locations-eu","vehicle":"原付・バイク","note":"車種、受取場所、必要な免許は予約画面で確認。"},
+
+      {"name":"SEA-Board 藤沢駅前ポート","type":"smallMobility","provider":"SEA-Board","address":"オリックスレンタカー藤沢駅前店隣","lat":35.3390207,"lng":139.4851532,"href":"https://sa-mobility.com/mobility-services/sea-board/miura/","vehicle":"特定小型原付の電動モビリティ"},
+      {"name":"SEA-Board ル・ミリュウ鎌倉山ポート","type":"smallMobility","provider":"SEA-Board","address":"ル・ミリュウ鎌倉山 駐車場","lat":35.3182203,"lng":139.5149244,"href":"https://sa-mobility.com/mobility-services/sea-board/miura/","vehicle":"特定小型原付の電動モビリティ"},
+      {"name":"SEA-Board 江ノ島駅前ポート","type":"smallMobility","provider":"SEA-Board","address":"小池商店前","lat":35.311211,"lng":139.4875543,"href":"https://sa-mobility.com/mobility-services/sea-board/miura/","vehicle":"特定小型原付の電動モビリティ"},
+      {"name":"SEA-Board ホテルニューカマクラポート","type":"smallMobility","provider":"SEA-Board","address":"ホテルニューカマクラ（鎌倉駅前）","lat":35.3196717,"lng":139.5501471,"href":"https://sa-mobility.com/mobility-services/sea-board/miura/","vehicle":"特定小型原付の電動モビリティ"},
+      {"name":"Emobi 鎌倉駅西口","type":"smallMobility","provider":"Emobi","address":"神奈川県鎌倉市御成町1-2","lat":35.317879,"lng":139.550003,"href":"https://www.emobi.co.jp/hub/kamakura","vehicle":"電動トゥクトゥク","note":"普通自動車免許が必要。"},
+      {"name":"Emobi 湘南モノレール江の島B駐車場","type":"smallMobility","provider":"Emobi","address":"神奈川県藤沢市片瀬3丁目15番1号","lat":35.312191,"lng":139.487686,"href":"https://www.emobi.co.jp/hub/shonan-enoshima","vehicle":"電動トゥクトゥク","note":"普通自動車免許が必要。"},
+      {"name":"Emobi 藤沢駅南口","type":"smallMobility","provider":"Emobi","address":"スーパーホテル湘南・藤沢駅南口（神奈川県藤沢市南藤沢23-7）","lat":35.337891,"lng":139.485962,"href":"https://www.emobi.co.jp/map","vehicle":"電動トゥクトゥク","note":"普通自動車免許が必要。"},
+      {"name":"湘南ローカルウェーブ","type":"smallMobility","provider":"湘南ローカルウェーブ","address":"神奈川県藤沢市片瀬海岸1-12-3 ワンアンドオンリー湘南ビル105","lat":35.308235,"lng":139.485886,"href":"https://www.slw.co.jp/bicycle.html","vehicle":"電動キックボード・電動バイク"},
+      {"name":"Rimo shonan","type":"smallMobility","provider":"Rimo shonan","address":"神奈川県鎌倉市腰越3丁目1-24 ベイ松葉屋","lat":35.308607,"lng":139.492512,"href":"https://activityjapan.com/publish/plan/51612","vehicle":"電動キックボード","note":"原付免許または普通自動車免許が必要。"},
+      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"smallMobility","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","href":"https://shop.square-mobility.com/collections/rental","vehicle":"特定小型原付の電動キックボード・電動バイク・e-Bike","note":"車種により免許の要否が異なる。"},
+      {"name":"TROUVER Mobility","type":"smallMobility","provider":"TROUVER Mobility","address":"神奈川県鎌倉市御成町11-2 ヤノヤビル2階 鎌倉旅する仕事場 西口ラウンジ","href":"https://www.trouvermobility.com/","vehicle":"電動キックボード・電動バイク・e-Bike","note":"車種により免許の要否が異なる。"},
+      {"name":"湘南ローカルウェーブ","type":"wheelchair","provider":"湘南ローカルウェーブ","address":"神奈川県藤沢市片瀬海岸1-12-3 ワンアンドオンリー湘南ビル105","lat":35.308235,"lng":139.485886,"href":"https://www.slw.co.jp/bicycle.html","vehicle":"手動車いす","phone":"0466-76-6066"},
+      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"wheelchair","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","href":"https://shop.square-mobility.com/collections/rental","vehicle":"電動車いす（WHILL）"},
+
+      {"name":"鎌倉腰越３丁目","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市腰越3-14","lat":35.306669,"lng":139.493478,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=IX52"},
+      {"name":"鎌倉腰越３丁目１４","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市腰越3-14","lat":35.307075,"lng":139.493011,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=IX51"},
+      {"name":"江ノ島駅前","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬海岸1-4","lat":35.311046,"lng":139.4874,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=RK92&newwindow=true"},
+      {"name":"タイムズ片瀬海岸第６","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬海岸1-5","lat":35.307278,"lng":139.493114,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=ED29"},
+      {"name":"タイムズ片瀬市民センター","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬3-5","lat":35.311539,"lng":139.491258,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=MV99"},
+      {"name":"タイムズ片瀬しおさいセンター","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬4-9","lat":35.311864,"lng":139.487133,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=MV92"},
+      {"name":"タイムズ片瀬江の島駅前第３","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬海岸2-11","lat":35.307533,"lng":139.485108,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=NB25"},
+      {"name":"片瀬２丁目１５","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬2-15","lat":35.315589,"lng":139.490228,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=RO84"},
+      {"name":"ＵＲレーベンスガルテン山崎","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市山崎1390","lat":35.339028,"lng":139.531747,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=CI65"},
+      {"name":"ヴェレーナ鎌倉大船","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市山崎2289","lat":35.336997,"lng":139.534228,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=CP66"},
+      {"name":"鎌倉駅東口","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市小町1-1","lat":35.315064,"lng":139.553756,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=IF06"},
+      {"name":"タイムズポート大船","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市大船2-20","lat":35.3503222,"lng":139.5392861,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=U990"},
+      {"name":"タイムズ大船第３０","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市大船1-19","lat":35.348117,"lng":139.5358,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=ED28"},
+      {"name":"タイムズ大船第２４","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市大船1-21","lat":35.348653,"lng":139.536086,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=Y413"},
+      {"name":"タイムズ大船第１０","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市大船2-16","lat":35.3498638,"lng":139.5374777,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=U357"},
+      {"name":"エクセラ大船","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市小袋谷1-2","lat":35.345639,"lng":139.534219,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=LQ24"},
+      {"name":"タイムズ藤沢石上第１１","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市鵠沼石上1-9","lat":35.332283,"lng":139.491569,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=R352"},
+      {"name":"リバーシティ藤沢","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市朝日町19","lat":35.339133,"lng":139.493933,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=NU02"},
+      {"name":"藤沢川名１","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市川名1-10","lat":35.330558,"lng":139.501414,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=LM28"},
+      {"name":"三井のカーシェアーズ リパーク鵠沼橘1丁目第4","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県藤沢市鵠沼橘1丁目14-5","lat":35.334385,"lng":139.484329,"href":"https://www.carshares.jp/station/kanagawa/fujisawa/"},
+      {"name":"三井のカーシェアーズ リパーク鵠沼橘1丁目第2","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県藤沢市鵠沼橘1丁目2-17","lat":35.335815,"lng":139.48587,"href":"https://www.carshares.jp/station/kanagawa/fujisawa/"},
+      {"name":"三井のカーシェアーズ リパーク藤沢北口第6","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県藤沢市藤沢218","lat":35.34267,"lng":139.487991,"href":"https://www.carshares.jp/station/kanagawa/fujisawa/"},
+      {"name":"三井のカーシェアーズ リパーク藤沢62","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県藤沢市藤沢545-62","lat":35.342274,"lng":139.485458,"href":"https://www.carshares.jp/station/kanagawa/fujisawa/"},
+      {"name":"三井のカーシェアーズ リパーク鎌倉扇ガ谷1丁目第3","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県鎌倉市扇ガ谷1丁目8-15","lat":35.321671,"lng":139.550079,"href":"https://www.carshares.jp/station/kanagawa/kamakura/"},
+      {"name":"三井のカーシェアーズ リパーク鎌倉小町2丁目第3","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県鎌倉市小町2丁目14","lat":35.320808,"lng":139.553741,"href":"https://www.carshares.jp/station/kanagawa/kamakura/"},
+      {"name":"三井のカーシェアーズ リパーク鎌倉小町2丁目","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県鎌倉市小町2丁目17-33","lat":35.319859,"lng":139.554565,"href":"https://www.carshares.jp/station/kanagawa/kamakura/"},
+      {"name":"三井のカーシェアーズ リパーク大船3丁目","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県鎌倉市大船3丁目2-15","lat":35.349907,"lng":139.532806,"href":"https://www.carshares.jp/station/kanagawa/kamakura/"},
+      {"name":"三井のカーシェアーズ リパーク大船2丁目第3","type":"carShare","provider":"三井のカーシェアーズ","address":"神奈川県鎌倉市大船2丁目16-46","lat":35.352654,"lng":139.534546,"href":"https://www.carshares.jp/station/kanagawa/kamakura/"},
+
+      {"name":"オリックスレンタカー 藤沢駅前店","type":"rentalCar","provider":"オリックスレンタカー","address":"神奈川県藤沢市藤沢438-6 1F","lat":35.338928,"lng":139.485947,"href":"https://car.orix.co.jp/shops/?shops_pk=346","phone":"0466-55-5435"},
+      {"name":"オリックスレンタカー 藤沢南カウンター","type":"rentalCar","provider":"オリックスレンタカー","address":"神奈川県藤沢市川名265-1","lat":35.3343703,"lng":139.4940514,"href":"https://car.orix.co.jp/shops/?shops_pk=347","phone":"0466-55-5435"},
+      {"name":"ニッポンレンタカー 藤沢駅前","type":"rentalCar","provider":"ニッポンレンタカー","address":"神奈川県藤沢市鵠沼石上1-3-4","lat":35.336979,"lng":139.488754,"href":"https://store.nipponrentacar.co.jp/b/nrs/info/513252/","phone":"050-1712-2717"},
+      {"name":"ニッポンレンタカー 大船駅前","type":"rentalCar","provider":"ニッポンレンタカー","address":"神奈川県鎌倉市大船1-3-3","lat":35.350609,"lng":139.53096,"href":"https://store.nipponrentacar.co.jp/b/nrs/info/513573/","phone":"050-1712-2718"},
+      {"name":"トヨタレンタカー 大船駅東口前店","type":"rentalCar","provider":"トヨタレンタカー","address":"神奈川県鎌倉市大船2-6-12","lat":35.352531,"lng":139.534851,"href":"https://rent.toyota.co.jp/shop/detail.aspx?eCode=041&rCode=63702","phone":"0467-42-9111"},
+      {"name":"オリックスレンタカー 鎌倉・大船駅前店","type":"rentalCar","provider":"オリックスレンタカー","address":"神奈川県鎌倉市大船3-1-15","lat":35.34972,"lng":139.531677,"href":"https://car.orix.co.jp/shops/?shops_pk=344","phone":"0467-81-3318"}
+    ]
+  },
+  "facilityShuttles": [
+    {"name":"湘南鎌倉総合病院 無料シャトルバス","description":"湘南鎌倉総合病院と大船駅西口を結ぶ定時運行の無料シャトルバスです。乗り場と時刻表を病院の案内で確認できます。","href":"https://www.skgh.jp/access/","linkLabel":"乗り場・時刻表"},
+    {"name":"湘鎌オンデマンドバス","description":"対象地域の自宅などと湘南鎌倉総合病院を結ぶ、無料・事前予約制の乗合サービスです。対象となる地域・受診等の利用条件があります。自力で乗降できる方が対象で、車いすには対応していません。","href":"https://www.skgh.jp/access/","linkLabel":"対象地域・利用条件・予約方法"}
+  ],
+  "welfareTransport": [
+    {"name":"福祉クラブ生活協同組合 らら・むーぶ・かまくら","description":"鎌倉市内を原則、月～金曜日の9～17時に運行。初乗り2km 500円、以後1kmごと150円、迎車300円。乗降介助・付き添いなどは別料金です。所在地：鎌倉市台5-2-3 コア北鎌倉内。","phone":"0467-48-6999","links":[{"label":"団体の案内","href":"https://www.fukushi-club.net/service/fukushi-kaigo/idou/"},{"label":"鎌倉市の登録事業者一覧・料金","href":"https://www.city.kamakura.kanagawa.jp/koureisya/yuushou_unnsou.html"}]},
+    {"name":"NPO法人 お助けらっこ","description":"鎌倉市を運送区域に含みます。走行1km 200円、迎車300円または500円など。待機、福祉車両、介助、付き添い等は別料金です。所在地：横浜市旭区若葉台4-23-605。","phone":"080-2425-2525","links":[{"label":"団体の案内","href":"https://www.otasuke-racco.com/"},{"label":"鎌倉市の登録事業者一覧・料金","href":"https://www.city.kamakura.kanagawa.jp/koureisya/yuushou_unnsou.html"}]}
+  ],
+  "boats": [
+    {"name":"江の島遊覧船 べんてん丸","description":"江の島弁天橋と稚児ヶ淵を約6分で結びます。海況などにより運休します。運航の有無は当日10時30分ごろに藤沢市観光公式サイトで確認できます。","links":[{"label":"当日の運航案内","href":"https://www.fujisawa-kanko.jp/access/bentenmaru.html"},{"label":"乗り場・利用案内","href":"https://kamakura-life.net/benten/"}]}
+  ],
+  "tourismServices": [
+    {"name":"人力車かざぐるま","description":"江の島周辺を人力車で案内する観光向けの移動サービスです。営業状況や乗車方法は公式Instagramで確認できます。","href":"https://www.instagram.com/enoshimarickshaw/","linkLabel":"公式Instagram"}
+  ],
+  "passengerServices": [
+    {"name":"KGグループ","description":"鎌倉タクシー、グリンハイヤー、鎌倉江之島ハイヤー、逗子葉山タクシーの共同配車窓口です。","links":[{"label":"電話で配車を依頼","phone":"0467-31-0101"},{"label":"公式情報","href":"https://gurin.co.jp/"}]},
+    {"name":"鎌倉スマイル株式会社","description":"鎌倉市内のタクシー事業者です。","links":[{"label":"電話で配車を依頼","phone":"0467-40-5396"},{"label":"事業者情報","href":"https://www.taxi-kanagawa.or.jp/taxi/%E9%8E%8C%E5%80%89%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/"}]},
+    {"name":"和光交通株式会社","description":"藤沢市内のタクシー事業者です。","links":[{"label":"電話で配車を依頼","phone":"0120-97-5050"},{"label":"事業者情報","href":"https://www.taxi-kanagawa.or.jp/taxi/%E5%92%8C%E5%85%89%E4%BA%A4%E9%80%9A%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/"}]},
+    {"name":"タクシーアプリ GO","description":"対応するタクシーをアプリから呼べます。配車可否は利用地点と時間帯により異なります。","links":[{"label":"公式情報","href":"https://go.goinc.jp/"}]}
+  ]
+}

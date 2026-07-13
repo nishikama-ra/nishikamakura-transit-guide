@@ -1,0 +1,810 @@
+{
+  "collectedAt": "2026-07-13",
+  "scope": "指定地域の行政区域から800m以内、または藤沢・大船・鎌倉・江の島の各駅エリアから800m以内",
+  "source": [
+    "https://www.hellocycling.jp/station/kanagawa/%E9%8E%8C%E5%80%89%E5%B8%82",
+    "https://www.hellocycling.jp/station/kanagawa/%E8%97%A4%E6%B2%A2%E5%B8%82"
+  ],
+  "places": [
+    {
+      "name": "AOKI鎌倉店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市手広6丁目6-1",
+      "capacity": 4,
+      "lat": 35.33158108018413,
+      "lng": 139.50440818760563,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ATTA HOTEL 大仏坂",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市長谷4-7-16",
+      "capacity": 6,
+      "lat": 35.317132,
+      "lng": 139.533873,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "EN HOTEL Fujisawa",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢12-9",
+      "capacity": 4,
+      "lat": 35.33628262152399,
+      "lng": 139.49305143251286,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "FUJISAWA INN＆SUITES",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢545-166",
+      "capacity": 3,
+      "lat": 35.341903,
+      "lng": 139.486131,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ODAKYU湘南GATEファミリー通り側",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢21-1",
+      "capacity": 8,
+      "lat": 35.33756,
+      "lng": 139.48805,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ODAKYU湘南ゲート（e-Bike 専用）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢２１-１",
+      "capacity": 4,
+      "lat": 35.33774,
+      "lng": 139.48744,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "あさひ本店たこせんべい江ノ電湘南店前",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸１-８-１６",
+      "capacity": 6,
+      "lat": 35.3106171,
+      "lng": 139.4888459,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "アルエットビル",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市大船１-１１-１６",
+      "capacity": 12,
+      "lat": 35.35144589837525,
+      "lng": 139.53173402094444,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ウィークエンドハウスアレイ",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市七里ガ浜1－1－1",
+      "capacity": 15,
+      "lat": 35.305532,
+      "lng": 139.509818,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "カーニープレイス藤沢駐車場口",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢520-6",
+      "capacity": 13,
+      "lat": 35.339777246445024,
+      "lng": 139.48442912598395,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "キップホテル湘南藤沢",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢22-17",
+      "capacity": 3,
+      "lat": 35.33830794877835,
+      "lng": 139.4865323395347,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "くらげ広場駐輪場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸2-19-1",
+      "capacity": 4,
+      "lat": 35.309045,
+      "lng": 139.480137,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "シェアハウスひだまり藤沢",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市川名2-5-10",
+      "capacity": 3,
+      "lat": 35.33260552367987,
+      "lng": 139.49389183391577,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "スバナ会館（e-Bike 専用）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸1-9-12",
+      "capacity": 5,
+      "lat": 35.31,
+      "lng": 139.48657,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "セブンイレブン　鎌倉七里ガ浜店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市七里ガ浜東2-2-5",
+      "capacity": 5,
+      "lat": 35.305365,
+      "lng": 139.510929,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "そうてつローゼン鎌倉深沢店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市笛田３-１６-１",
+      "capacity": 4,
+      "lat": 35.3299373399,
+      "lng": 139.5191206585,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "たまや鎌倉手広店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市笛田1-2-10",
+      "capacity": 3,
+      "lat": 35.330067859849294,
+      "lng": 139.5138680934906,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "デニーズ 江ノ島店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸2-18-14",
+      "capacity": 7,
+      "lat": 35.3096602,
+      "lng": 139.4806325,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "デニーズ 藤沢駅北口店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢1015-4",
+      "capacity": 3,
+      "lat": 35.341406,
+      "lng": 139.483774,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "トーセイホテル　ココネ鎌倉",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市御成町7-10-1",
+      "capacity": 3,
+      "lat": 35.31679478850817,
+      "lng": 139.5485375036419,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ドラゴンマンション藤沢弐番館",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市川名８３１−１",
+      "capacity": 6,
+      "lat": 35.3313441,
+      "lng": 139.5004638,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ファミリーマート　鎌倉御成町店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市御成町9-28",
+      "capacity": 4,
+      "lat": 35.318915,
+      "lng": 139.548515,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ファミリーマート　鎌倉二の鳥居店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市小町2-15-1",
+      "capacity": 6,
+      "lat": 35.319477,
+      "lng": 139.552687,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ファミリーマート　藤沢藤が岡店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤が岡1-11-4",
+      "capacity": 4,
+      "lat": 35.344737,
+      "lng": 139.492057,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ファミリーマート　片瀬江ノ島駅前店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸2-16-10",
+      "capacity": 4,
+      "lat": 35.308493,
+      "lng": 139.483596,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "フジサワ名店ビル 駐輪場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢2-1-1",
+      "capacity": 7,
+      "lat": 35.338557,
+      "lng": 139.488659,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "やまか　深沢店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤55",
+      "capacity": 2,
+      "lat": 35.33148,
+      "lng": 139.51759,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "やまか　片瀬山店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬山2-7-1",
+      "capacity": 6,
+      "lat": 35.32333,
+      "lng": 139.49425,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ラフォーレ片瀬海岸A",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸3丁目13-21",
+      "capacity": 2,
+      "lat": 35.31170362863351,
+      "lng": 139.48094784198554,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "リパーク鵠沼花沢町第４",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市鵠沼花沢町12-15",
+      "capacity": 13,
+      "lat": 35.3378273,
+      "lng": 139.4835098,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "リパーク藤沢北口第8",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢1011-17",
+      "capacity": 28,
+      "lat": 35.3413141,
+      "lng": 139.4834116,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ル･ミリュウ 鎌倉山",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市鎌倉山３丁目２−３２",
+      "capacity": 2,
+      "lat": 35.31822351924493,
+      "lng": 139.5150333364546,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ローソン　鎌倉梶原店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤３６４‐５",
+      "capacity": 4,
+      "lat": 35.3258278,
+      "lng": 139.5243834,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ローソン　鎌倉手広店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市笛田１‐４‐４０",
+      "capacity": 4,
+      "lat": 35.3314133,
+      "lng": 139.5095229,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "ローソン　藤沢一本松店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢１０３６‐６",
+      "capacity": 10,
+      "lat": 35.3392456,
+      "lng": 139.4814204,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "奥田公園",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市鵠沼東１２",
+      "capacity": 11,
+      "lat": 35.333805374794835,
+      "lng": 139.4898205933304,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "岡本一丁目3番地（大船駅西口）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市岡本1-3-12",
+      "capacity": 3,
+      "lat": 35.35744422924579,
+      "lng": 139.52914502409158,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "鎌倉とうきゅう駐車場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市小町１-１３",
+      "capacity": 5,
+      "lat": 35.317430233,
+      "lng": 139.55141516,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "鎌倉プリンスホテル（e-Bike 専用）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市七里ガ浜東1-2-18",
+      "capacity": 7,
+      "lat": 35.30597,
+      "lng": 139.51561,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "鎌倉下馬駐車場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市御成町4－13",
+      "capacity": 6,
+      "lat": 35.316184715094124,
+      "lng": 139.5500412750046,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "鎌倉御成商店街踏切横（e-Bike 専用）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市御成町4-40",
+      "capacity": 5,
+      "lat": 35.31682,
+      "lng": 139.55029,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "吉野家 134号線江ノ島店1",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市腰越3丁目4‐3",
+      "capacity": 3,
+      "lat": 35.3084208,
+      "lng": 139.4915957,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "吉野家 134号線江ノ島店2",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市腰越3丁目4‐3",
+      "capacity": 3,
+      "lat": 35.3082085,
+      "lng": 139.4917151,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "教養センター",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市笛田2‐17‐1",
+      "capacity": 3,
+      "lat": 35.32427903582522,
+      "lng": 139.51616342787403,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "業務スーパーやまか津西店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市津西1-5-8",
+      "capacity": 3,
+      "lat": 35.3146637,
+      "lng": 139.501544,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "極楽寺",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市極楽寺3-6-7",
+      "capacity": 5,
+      "lat": 35.3097040113,
+      "lng": 139.529192947,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "後河内公園",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市宮前372",
+      "capacity": 3,
+      "lat": 35.33494884708689,
+      "lng": 139.50923754928434,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "江ノ島スタイル",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市腰越3丁目11-4",
+      "capacity": 2,
+      "lat": 35.3088799,
+      "lng": 139.4894694,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "考古資料仮収蔵庫",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市弥勒寺1-7-7",
+      "capacity": 3,
+      "lat": 35.33782167301555,
+      "lng": 139.49757629120404,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "腰越3丁目 江ノ電電車通り付近",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市腰越3-14",
+      "capacity": 10,
+      "lat": 35.31024,
+      "lng": 139.48972,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "鎖大師青蓮寺",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市手広5丁目1-8",
+      "capacity": 4,
+      "lat": 35.32619417160971,
+      "lng": 139.50848453171704,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "七里ヶ浜海岸駐車場（ e-Bike 専用）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市七里ガ浜東2-1-12",
+      "capacity": 8,
+      "lat": 35.30484,
+      "lng": 139.51207,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "樹々ビル",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市御成町15番7号",
+      "capacity": 3,
+      "lat": 35.31959698488282,
+      "lng": 139.54790254230687,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "小塚会館",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市小塚597",
+      "capacity": 3,
+      "lat": 35.338634154866895,
+      "lng": 139.50295429109195,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "小田急パーキング片瀬江ノ島駅前第２",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸２-１０付近",
+      "capacity": 5,
+      "lat": 35.31008571544,
+      "lng": 139.482268178,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "湘南パーキング",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市大船3-1-5",
+      "capacity": 5,
+      "lat": 35.350348868330755,
+      "lng": 139.53158200910636,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "湘南モノレール 片瀬山駅",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市西鎌倉4-894-6",
+      "capacity": 5,
+      "lat": 35.317269,
+      "lng": 139.496144,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "湘南モノレール 目白山下駅",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬山3-2776",
+      "capacity": 8,
+      "lat": 35.3140325,
+      "lng": 139.4916001,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "湘南信用金庫 深沢支店",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤82",
+      "capacity": 3,
+      "lat": 35.330906971812844,
+      "lng": 139.5175461460915,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "常盤うなぎ公園",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤42‐5",
+      "capacity": 3,
+      "lat": 35.33100051041559,
+      "lng": 139.5172477744713,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "深沢行政センター",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤111-3",
+      "capacity": 3,
+      "lat": 35.33129021617963,
+      "lng": 139.51893682340602,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "川名森久公園",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市川名１８１",
+      "capacity": 6,
+      "lat": 35.33229309985873,
+      "lng": 139.494776703484,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "相鉄フレッサイン　鎌倉大船駅笠間口",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市大船1-26-5",
+      "capacity": 6,
+      "lat": 35.35447425664292,
+      "lng": 139.53299676800495,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "相鉄フレッサイン　鎌倉大船駅東口",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市大船1-22-3",
+      "capacity": 6,
+      "lat": 35.3522174,
+      "lng": 139.5325794,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "村岡市民センター（むらおかえのでんホール）",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市村岡１-１５-３",
+      "capacity": 5,
+      "lat": 35.33726466520056,
+      "lng": 139.50521876205588,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "大船駅西口交通広場駐輪場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市岡本2-55-19",
+      "capacity": 3,
+      "lat": 35.35239,
+      "lng": 139.52925,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "大船行政センター",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市大船2-1-26",
+      "capacity": 4,
+      "lat": 35.34979168930872,
+      "lng": 139.53353207185566,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "秩父宮記念体育館",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市鵠沼東8-2",
+      "capacity": 12,
+      "lat": 35.332291,
+      "lng": 139.489476,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "笛田子どもの広場",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市笛田3-25",
+      "capacity": 3,
+      "lat": 35.32606164486661,
+      "lng": 139.52131630090105,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "東京電力パワーグリッド(株) 藤沢支社",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市南藤沢18-10",
+      "capacity": 9,
+      "lat": 35.336523,
+      "lng": 139.49045,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢駅前",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢438-6",
+      "capacity": 10,
+      "lat": 35.33899975348142,
+      "lng": 139.4852301478386,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢駅北口",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢５５５付近",
+      "capacity": 13,
+      "lat": 35.3393772631,
+      "lng": 139.4872514609,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢市観光センター横緑地",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市片瀬海岸２丁目２０－１３",
+      "capacity": 12,
+      "lat": 35.3077686,
+      "lng": 139.48261,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢市庁舎",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市朝日町1-1",
+      "capacity": 7,
+      "lat": 35.338892,
+      "lng": 139.490538,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢市役所本庁舎駐輪場（北側）横",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市朝日町１番地１",
+      "capacity": 10,
+      "lat": 35.3392459,
+      "lng": 139.4908728,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢商工会館ミナパーク",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市藤沢607-1",
+      "capacity": 7,
+      "lat": 35.34113981305404,
+      "lng": 139.48803452946885,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "藤沢南口江ノ電高架下",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県藤沢市鵠沼石上１-１-１",
+      "capacity": 9,
+      "lat": 35.33666,
+      "lng": 139.48687,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "忍者ホテル1",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤375-3",
+      "capacity": 2,
+      "lat": 35.3250416,
+      "lng": 139.5242244,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "忍者ホテル2",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市常盤412-1",
+      "capacity": 2,
+      "lat": 35.322794,
+      "lng": 139.525873,
+      "href": "https://www.hellocycling.jp/station/"
+    },
+    {
+      "name": "檑亭",
+      "type": "shareCycle",
+      "provider": "HELLO CYCLING",
+      "address": "神奈川県鎌倉市鎌倉山３-１-１",
+      "capacity": 3,
+      "lat": 35.31622106907143,
+      "lng": 139.5151976009417,
+      "href": "https://www.hellocycling.jp/station/"
+    }
+  ]
+}
