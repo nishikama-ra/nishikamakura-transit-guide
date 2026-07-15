@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-07-13",
-  "status": "2026/7/13時点",
+  "checkedAt": "2026-07-15",
+  "status": "2026/7/15時点",
   "origins": [
     {"name":"藤沢駅","tone":"fujisawa","services":[
       {"stopsHeading":"手広・片瀬山へ","stops":"手広、片瀬山","route":"F2 片瀬山循環","mode":"路線バス","weekday":"19:24","holiday":"19:34","href":"https://www.enoden.co.jp/bus/files/timeschedule/00101_%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3_02.pdf"},
@@ -12,17 +12,17 @@
       {"stopsHeading":"江ノ島駅まで","stops":"石上、柳小路、鵠沼、湘南海岸公園、江ノ島","route":"江ノ電 江ノ島行き","mode":"電車","weekday":"23:42","holiday":"23:42","href":"https://www.enoden.co.jp/train/station/fujisawa/time-table/"}
     ]},
     {"name":"大船駅","tone":"ofuna","services":[
-      {"stopsHeading":"新鎌倉山へ","stops":"鎌倉武道館前、町屋入口、湘南町屋、深沢、手広、赤羽、龍口明神社前、新鎌倉山1番、新鎌倉山2番、新鎌倉山3番、新鎌倉山4番、新鎌倉山","route":"N35 新鎌倉山循環（ミニバス）","mode":"路線バス","weekday":"12:45","holiday":"12:25","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
+      {"stopsHeading":"新鎌倉山へ","stops":"鎌倉武道館前、町屋入口、湘南町屋、深沢、手広、赤羽、龍口明神社前、新鎌倉山1番","route":"N35 新鎌倉山循環（ミニバス）","mode":"路線バス","weekday":"12:50","holiday":"12:25","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
       {"stopsHeading":"鎌倉山へ","stops":"富士見町、鎌倉山","route":"N9 鎌倉山行き","mode":"路線バス","weekday":"21:00","holiday":"20:45","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_04.pdf"},
-      {"stopsHeading":"湘南町屋・手広・湘南車庫へ","stops":"富士見町、湘南町屋、手広、湘南車庫","route":"N15 湘南車庫行き","mode":"路線バス","weekday":"21:10","holiday":"21:24","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
+      {"stopsHeading":"湘南町屋・手広・湘南車庫へ","stops":"富士見町、湘南町屋、手広、湘南車庫","route":"N15 湘南車庫行き","mode":"路線バス","weekday":"21:12","holiday":"21:24","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
       {"stopsHeading":"湘南町屋・深沢・梶原へ","stops":"湘南町屋、湘南深沢、梶原","route":"N91 梶原行き","mode":"路線バス","weekday":"21:20","holiday":"21:05","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_03.pdf"},
-      {"stopsHeading":"湘南町屋・西鎌倉入口・津村・腰越へ","stops":"湘南町屋、西鎌倉入口、津村、腰越、江ノ島","route":"N3 江ノ島行き","mode":"路線バス","weekday":"21:40","holiday":"20:30","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
+      {"stopsHeading":"湘南町屋・西鎌倉入口・津村・腰越へ","stops":"湘南町屋、西鎌倉入口、津村、腰越、江ノ島","route":"N3 江ノ島行き","mode":"路線バス","weekday":"21:10","holiday":"20:05","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
       {"stopsHeading":"湘南町屋・梶原口・桔梗山へ","stops":"湘南町屋、梶原口、桔梗山","route":"N95 桔梗山行き","mode":"路線バス","weekday":"22:04","holiday":"21:14","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_07.pdf"},
       {"stopsHeading":"湘南町屋・手広・西ヶ谷・津村へ","stops":"湘南町屋、手広、西ヶ谷、津村","route":"N31 津村行き","mode":"路線バス","weekday":"22:15","holiday":"21:00","href":"https://www.enoden.co.jp/bus/files/timeschedule/00609_%E5%A4%A7%E8%88%B9%E9%A7%85%E6%9D%B1%E5%8F%A3%E4%BA%A4%E9%80%9A%E5%BA%83%E5%A0%B4_02.pdf"},
       {"stopsHeading":"湘南江の島駅まで","stops":"富士見町、湘南町屋、湘南深沢、西鎌倉、片瀬山、目白山下、湘南江の島","route":"湘南モノレール 湘南江の島行き","mode":"モノレール","weekday":"23:50","holiday":"23:50","href":"https://www.shonan-monorail.co.jp/station/detail/ofuna.html"}
     ]},
     {"name":"鎌倉駅","tone":"kamakura","services":[
-      {"stopsHeading":"桔梗山へ","stops":"打越、火の見下、梶原口、日当、西梶原、梶原、東梶原、桔梗山","boarding":"鎌倉駅東口 1番ポール","route":"K1 桔梗山行き","mode":"路線バス","weekday":"12:20","holiday":"16:40","href":"https://www.enoden.co.jp/bus/files/timeschedule/00123_%E9%8E%8C%E5%80%89%E9%A7%85%E6%9D%B1%E5%8F%A3_01.pdf"},
+      {"stopsHeading":"桔梗山へ","stops":"打越、火の見下、梶原口、日当、西梶原、梶原、東梶原、桔梗山","boarding":"鎌倉駅東口 1番ポール","route":"K1 桔梗山行き","mode":"路線バス","weekday":"12:20","holiday":"17:55","href":"https://www.enoden.co.jp/bus/files/timeschedule/00123_%E9%8E%8C%E5%80%89%E9%A7%85%E6%9D%B1%E5%8F%A3_01.pdf"},
       {"stopsHeading":"鎌倉中央公園へ","stops":"法務局前、八雲神社前、仲ノ坂、一向堂、梶原口、日当、山の上ロータリー、鎌倉中央公園入口、鎌倉中央公園","boarding":"鎌倉市役所前（鎌倉駅西口から徒歩約3分）","route":"K7 鎌倉中央公園行き","mode":"路線バス","weekday":"16:15","holiday":"16:15","href":"https://www.enoden.co.jp/bus/files/timeschedule/06102_%E9%8E%8C%E5%80%89%E5%B8%82%E5%BD%B9%E6%89%80%E5%89%8D_01.pdf"},
       {"stopsHeading":"桔梗山へ","stops":"法務局前、八雲神社前、仲ノ坂、一向堂、梶原口、日当、西梶原、梶原、東梶原、桔梗山","boarding":"鎌倉市役所前（鎌倉駅西口から徒歩約3分）","route":"K6 桔梗山行き","mode":"路線バス","weekday":"19:15","holiday":"19:05","href":"https://www.enoden.co.jp/bus/files/timeschedule/06102_%E9%8E%8C%E5%80%89%E5%B8%82%E5%BD%B9%E6%89%80%E5%89%8D_01.pdf"},
       {"stopsHeading":"深沢・梶原へ","stops":"深沢、梶原","boarding":"鎌倉駅東口","route":"K11 梶原行き","mode":"路線バス","weekday":"21:15","holiday":"20:15","href":"https://www.enoden.co.jp/bus/files/timeschedule/00123_%E9%8E%8C%E5%80%89%E9%A7%85%E6%9D%B1%E5%8F%A3_01.pdf"},
