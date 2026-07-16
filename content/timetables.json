@@ -7,6 +7,7 @@
                         "tone":  "fujisawa",
                         "services":  [
                                          {
+                                             "boarding":  "藤沢駅南口 2番乗り場",
                                              "route":  "F2 片瀬山循環",
                                              "mode":  "路線バス",
                                              "weekday":  "19:24",
@@ -41,6 +42,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 2番乗り場",
                                              "route":  "F4 小動行き",
                                              "mode":  "路線バス",
                                              "weekday":  "20:52",
@@ -73,6 +75,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 3番乗り場",
                                              "route":  "F3 江ノ島行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:05",
@@ -102,6 +105,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 4番乗り場",
                                              "route":  "N13 湘南車庫行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:36",
@@ -126,6 +130,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 3番乗り場",
                                              "route":  "F23 湘南車庫行き（片瀬山経由）",
                                              "mode":  "路線バス",
                                              "weekday":  "22:15",
@@ -162,6 +167,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 1番乗り場",
                                              "route":  "F12 桔梗山行き",
                                              "mode":  "路線バス",
                                              "weekday":  "22:25",
@@ -193,6 +199,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "江ノ電 藤沢駅",
                                              "route":  "江ノ電 江ノ島行き",
                                              "mode":  "電車",
                                              "weekday":  "23:42",
@@ -219,6 +226,7 @@
                         "tone":  "ofuna",
                         "services":  [
                                          {
+                                             "boarding":  "大船駅東口交通広場 2番乗り場",
                                              "route":  "N35 新鎌倉山循環（ミニバス）",
                                              "mode":  "路線バス",
                                              "weekday":  "12:50",
@@ -258,6 +266,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 4番乗り場",
                                              "route":  "N9 鎌倉山行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:00",
@@ -284,6 +293,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 2番乗り場",
                                              "route":  "N15 湘南車庫行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:12",
@@ -308,6 +318,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 3番乗り場",
                                              "route":  "N91 梶原行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:20",
@@ -339,6 +350,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 2番乗り場",
                                              "route":  "N3 江ノ島行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:10",
@@ -381,6 +393,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 7番乗り場",
                                              "route":  "N95 桔梗山行き",
                                              "mode":  "路線バス",
                                              "weekday":  "22:04",
@@ -411,6 +424,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "大船駅東口交通広場 2番乗り場",
                                              "route":  "N31 津村行き",
                                              "mode":  "路線バス",
                                              "weekday":  "22:15",
@@ -443,6 +457,7 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "湘南モノレール 大船駅",
                                              "route":  "湘南モノレール 湘南江の島行き",
                                              "mode":  "モノレール",
                                              "weekday":  "23:50",
@@ -565,7 +580,7 @@
                                                            }
                                          },
                                          {
-                                             "boarding":  "鎌倉駅東口",
+                                             "boarding":  "鎌倉駅東口 1番ポール",
                                              "route":  "K11 梶原行き",
                                              "mode":  "路線バス",
                                              "weekday":  "21:15",
@@ -593,7 +608,7 @@
                                                            }
                                          },
                                          {
-                                             "boarding":  "鎌倉駅東口",
+                                             "boarding":  "鎌倉駅東口 1番ポール",
                                              "route":  "K3 湘南車庫行き",
                                              "mode":  "路線バス",
                                              "weekday":  "22:25",
@@ -653,6 +668,22 @@
                      {
                          "label":  "江ノ電バス時刻表検索",
                          "href":  "https://www.enoden.co.jp/bus/regular/"
+                     },
+                     {
+                         "label":  "江ノ電バス 大船駅東口交通広場",
+                         "href":  "https://www.enoden.co.jp/bus/route/stops/609"
+                     },
+                     {
+                         "label":  "江ノ電バス 鎌倉駅東口",
+                         "href":  "https://www.enoden.co.jp/bus/route/stops/123"
+                     },
+                     {
+                         "label":  "江ノ電バス 藤沢駅南口",
+                         "href":  "https://www.enoden.co.jp/bus/route/stops/101"
+                     },
+                     {
+                         "label":  "江ノ電バス 鎌倉市役所前",
+                         "href":  "https://www.enoden.co.jp/bus/route/stops/6102"
                      },
                      {
                          "label":  "京急バス 鎌倉駅（東口）",

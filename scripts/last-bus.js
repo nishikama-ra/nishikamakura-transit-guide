@@ -7,17 +7,19 @@ function routeHeading(service) {
 }
 
 function reachableIcon(kind) {
-  if (kind === 'station') return '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"></rect><path d="M8 7h8M8 12h8M8 20l2-3M16 17l2 3"></path></svg>';
-  return '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="11" height="10" rx="2"></rect><path d="M9 6h5M8 10h7M17 7h2v13M16 20h4"></path></svg>';
+  const icon = kind === 'station'
+    ? '<path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"></path><path d="m9 15-1-1"></path><path d="m15 15 1-1"></path><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"></path><path d="m8 19-2 3"></path><path d="m16 19 2 3"></path>'
+    : '<path d="M4 6 2 7"></path><path d="M10 6h4"></path><path d="m22 7-2-1"></path><rect width="16" height="16" x="4" y="3" rx="2"></rect><path d="M4 11h16"></path><path d="M8 15h.01"></path><path d="M16 15h.01"></path><path d="M6 19v2"></path><path d="M18 21v-2"></path>';
+  return `<span class="reachable-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${icon}</svg></span>`;
 }
 
 function reachableGroup(kind, items) {
   if (!items?.length) return '';
-  const label = kind === 'station' ? '西鎌倉周辺の駅' : '西鎌倉周辺のバス停';
+  const label = kind === 'station' ? '停車駅' : '近くのバス停';
   return `<section class="reachable-group"><h4>${reachableIcon(kind)}<span class="reachable-label">${label}</span><span class="reachable-count">${items.length}</span></h4><ol>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ol></section>`;
 }
 
-fetch('content/timetables.json')
+fetch('content/timetables.json?v=20260716-3')
   .then(response => {
     if (!response.ok) throw new Error();
     return response.json();
@@ -28,10 +30,17 @@ fetch('content/timetables.json')
       return hours * 60 + minutes;
     };
     document.querySelector('#timetableStatus').textContent = data.status;
-    document.querySelector('#departureGrid').innerHTML = data.origins.map(origin => `
+    const originOrder = ['大船駅', '鎌倉駅', '藤沢駅'];
+    const originRank = name => {
+      const rank = originOrder.indexOf(name);
+      return rank === -1 ? originOrder.length : rank;
+    };
+    document.querySelector('#departureGrid').innerHTML = [...data.origins]
+      .sort((a, b) => originRank(a.name) - originRank(b.name))
+      .map(origin => `
       <section class="departure-panel" data-tone="${origin.tone}">
         <h2>${escapeHtml(origin.name)}から</h2>
-        ${[...origin.services].sort((a, b) => Math.min(toMinutes(a.weekday), toMinutes(a.holiday)) - Math.min(toMinutes(b.weekday), toMinutes(b.holiday))).map(service => `
+        ${[...origin.services].sort((a, b) => toMinutes(b.weekday) - toMinutes(a.weekday)).map(service => `
           <div class="departure-row"${service.routeId ? ` data-route-id="${escapeHtml(service.routeId)}"` : ''}>
             <div class="departure-detail"><span class="mode-label">${escapeHtml(service.mode)}</span><h3>${routeHeading(service)}</h3><p class="route-name">${escapeHtml(service.route)}</p>${service.boarding ? `<p>乗車場所：${escapeHtml(service.boarding)}</p>` : ''}</div>
             <div class="departure-schedule"><div><small>平日</small><strong>${escapeHtml(service.weekday)}</strong></div><div><small>土休日</small><strong>${escapeHtml(service.holiday)}</strong></div><a class="row-source" href="${escapeHtml(service.href)}" target="_blank" rel="noopener">公式時刻表 ↗</a></div>

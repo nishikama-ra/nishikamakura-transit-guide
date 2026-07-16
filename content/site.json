@@ -1,12 +1,12 @@
 {
   "hero": {
-    "eyebrow": "西鎌倉周辺のお出かけ案内",
-    "title": "買い物へ。通院へ。会いたい人のところへ。",
-    "titleLines": ["買い物へ。通院へ。", "会いたい人のところへ。"],
-    "lead": "西鎌倉周辺から買い物や通院、用事や楽しみに出かけるときの、乗りものと調べ方をまとめています。"
+    "eyebrow": "西鎌倉周辺の交通情報",
+    "title": "交通手段と時刻表を調べる",
+    "titleLines": ["交通手段と時刻表を調べる"],
+    "lead": "駅・バス停、最終便、タクシー、施設送迎など、西鎌倉周辺の移動に必要な情報を掲載しています。"
   },
   "homeCards": [
     {"number":"01","tone":"blue","title":"その他の移動手段","description":"タクシー、施設送迎、福祉有償運送、船、観光の移動、貸出サービスを利用方法ごとに案内します。","href":"services.html","linkLabel":"移動手段を見る"},
-    {"number":"02","tone":"green","title":"移動を便利にする取り組み","description":"地域の団体や行政などが進めている調査・検討・サービスを紹介します。","href":"initiatives.html","linkLabel":"取り組みを見る"}
+    {"number":"02","tone":"green","title":"交通に関する取り組み","description":"地域の団体や行政などが進めている調査・検討・サービスを紹介します。","href":"initiatives.html","linkLabel":"取り組みを見る"}
   ]
 }
