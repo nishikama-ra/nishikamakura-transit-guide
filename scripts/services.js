@@ -89,12 +89,12 @@ async function init() {
   const [services, hello] = await Promise.all([loadJson('content/services.json'), loadJson('content/hello-cycling.json')]);
   state.data = services.selfDrive;
   state.data.places = [...hello.places, ...state.data.places];
-  document.querySelector('#mapScope').textContent = `${services.scope}にある貸出・返却場所を掲載しています。種類を選ぶと地図と一覧が切り替わります。`;
+  document.querySelector('#mapScope').textContent = `${services.scope}の貸出・返却場所です。種類を選ぶと地図と一覧が切り替わります。`;
   renderFilters();
   renderActionCards('#shuttleList', services.facilityShuttles);
   renderActionCards('#welfareList', services.welfareTransport);
-  renderActionCards('#boatList', services.boats);
-  renderActionCards('#tourismList', services.tourismServices);
+  renderActionCards('#otherTourismList', [...services.boats, ...services.tourismServices]);
+  renderActionCards('#tsiteMobilityList', services.tsiteMobility);
   renderPassengerServices(services.passengerServices);
   if (!window.L) throw new Error('地図を読み込めませんでした');
   state.map = L.map('placesMap', { scrollWheelZoom: false }).setView([35.321, 139.505], 13);

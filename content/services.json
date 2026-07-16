@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-13",
-  "scope": "西鎌倉・鎌倉山・腰越・津・津西・手広の行政区域から800m以内、および藤沢・大船・鎌倉・江の島の各駅エリアから800m以内",
+  "updatedAt": "2026-07-16",
+  "scope": "西鎌倉周辺と藤沢・大船・鎌倉・江の島の各駅周辺",
   "selfDrive": {
     "types": [
       {"id":"shareCycle","label":"シェアサイクル","color":"#2f86a0","description":"アプリで自転車を借り、対応するステーションへ返します。"},
@@ -28,11 +28,12 @@
       {"name":"Emobi 藤沢駅南口","type":"smallMobility","provider":"Emobi","address":"スーパーホテル湘南・藤沢駅南口（神奈川県藤沢市南藤沢23-7）","lat":35.337891,"lng":139.485962,"href":"https://www.emobi.co.jp/map","vehicle":"電動トゥクトゥク","note":"普通自動車免許が必要。"},
       {"name":"湘南ローカルウェーブ","type":"smallMobility","provider":"湘南ローカルウェーブ","address":"神奈川県藤沢市片瀬海岸1-12-3 ワンアンドオンリー湘南ビル105","lat":35.308235,"lng":139.485886,"href":"https://www.slw.co.jp/bicycle.html","vehicle":"電動キックボード・電動バイク"},
       {"name":"Rimo shonan","type":"smallMobility","provider":"Rimo shonan","address":"神奈川県鎌倉市腰越3丁目1-24 ベイ松葉屋","lat":35.308607,"lng":139.492512,"href":"https://activityjapan.com/publish/plan/51612","vehicle":"電動キックボード","note":"原付免許または普通自動車免許が必要。"},
-      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"smallMobility","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","href":"https://shop.square-mobility.com/collections/rental","vehicle":"特定小型原付の電動キックボード・電動バイク・e-Bike","note":"車種により免許の要否が異なる。"},
+      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"smallMobility","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","lat":35.3352861,"lng":139.4636694,"href":"https://shop.square-mobility.com/collections/rental","vehicle":"免許不要の電動キックボード・電動バイク・e-Bike","note":"利用条件は予約する車種ごとに確認。"},
       {"name":"TROUVER Mobility","type":"smallMobility","provider":"TROUVER Mobility","address":"神奈川県鎌倉市御成町11-2 ヤノヤビル2階 鎌倉旅する仕事場 西口ラウンジ","href":"https://www.trouvermobility.com/","vehicle":"電動キックボード・電動バイク・e-Bike","note":"車種により免許の要否が異なる。"},
       {"name":"湘南ローカルウェーブ","type":"wheelchair","provider":"湘南ローカルウェーブ","address":"神奈川県藤沢市片瀬海岸1-12-3 ワンアンドオンリー湘南ビル105","lat":35.308235,"lng":139.485886,"href":"https://www.slw.co.jp/bicycle.html","vehicle":"手動車いす","phone":"0466-76-6066"},
-      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"wheelchair","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","href":"https://shop.square-mobility.com/collections/rental","vehicle":"電動車いす（WHILL）"},
+      {"name":"SQUARE Mobility 湘南T-SITE本店","type":"wheelchair","provider":"SQUARE Mobility","address":"神奈川県藤沢市辻堂元町6-20-1 湘南T-SITE 3号館1階","lat":35.3352861,"lng":139.4636694,"href":"https://shop.square-mobility.com/products/mobility-services-whill-f","vehicle":"電動車いす（WHILL）"},
 
+      {"name":"湘南T-SITE","type":"carShare","provider":"Hyundai MOCEAN","address":"神奈川県藤沢市辻堂元町6-20-1","lat":35.3352861,"lng":139.4636694,"href":"https://www.hyundai.com/jp/service/mocean","vehicle":"EVカーシェア","note":"利用可能な車両と予約状況はMOCEANアプリで確認。"},
       {"name":"鎌倉腰越３丁目","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市腰越3-14","lat":35.306669,"lng":139.493478,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=IX52"},
       {"name":"鎌倉腰越３丁目１４","type":"carShare","provider":"タイムズカー","address":"神奈川県鎌倉市腰越3-14","lat":35.307075,"lng":139.493011,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=IX51"},
       {"name":"江ノ島駅前","type":"carShare","provider":"タイムズカー","address":"神奈川県藤沢市片瀬海岸1-4","lat":35.311046,"lng":139.4874,"href":"https://share.timescar.jp/view/station/detail.jsp?scd=RK92&newwindow=true"},
@@ -72,7 +73,7 @@
   },
   "facilityShuttles": [
     {"name":"湘南鎌倉総合病院 無料シャトルバス","description":"湘南鎌倉総合病院と大船駅西口を結ぶ定時運行の無料シャトルバスです。乗り場と時刻表を病院の案内で確認できます。","href":"https://www.skgh.jp/access/","linkLabel":"乗り場・時刻表"},
-    {"name":"湘鎌オンデマンドバス","description":"対象地域の自宅などと湘南鎌倉総合病院を結ぶ、無料・事前予約制の乗合サービスです。対象となる地域・受診等の利用条件があります。自力で乗降できる方が対象で、車いすには対応していません。","href":"https://www.skgh.jp/access/","linkLabel":"対象地域・利用条件・予約方法"}
+    {"name":"湘鎌オンデマンドバス","description":"無料・事前予約制の乗合サービスです。2026年7月16日現在、往復で利用できるのは、産科（周産期医療センター）・放射線腫瘍科・オンコロジーセンターの受診と人間ドックです。診療科を問わず、退院日（デイホスピタルを含む）は病院から自宅への復路のみ利用できます。対象地域内に居住し、自力で乗降できる方が対象で、車いすには対応していません。","links":[{"label":"対象地域・利用条件・予約方法","href":"https://www.skgh.jp/access/"},{"label":"利用条件の詳細（PDF）","href":"https://www.skgh.jp/wp/wp-content/uploads/2025/05/2025.5.15_%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%83%90%E3%82%B9%E8%A9%B3%E7%B4%B0.pdf"}]}
   ],
   "welfareTransport": [
     {"name":"福祉クラブ生活協同組合 らら・むーぶ・かまくら","description":"鎌倉市内を原則、月～金曜日の9～17時に運行。初乗り2km 500円、以後1kmごと150円、迎車300円。乗降介助・付き添いなどは別料金です。所在地：鎌倉市台5-2-3 コア北鎌倉内。","phone":"0467-48-6999","links":[{"label":"団体の案内","href":"https://www.fukushi-club.net/service/fukushi-kaigo/idou/"},{"label":"鎌倉市の登録事業者一覧・料金","href":"https://www.city.kamakura.kanagawa.jp/koureisya/yuushou_unnsou.html"}]},
@@ -84,10 +85,18 @@
   "tourismServices": [
     {"name":"人力車かざぐるま","description":"江の島周辺を人力車で案内する観光向けの移動サービスです。営業状況や乗車方法は公式Instagramで確認できます。","href":"https://www.instagram.com/enoshimarickshaw/","linkLabel":"公式Instagram"}
   ],
+  "tsiteMobility": [
+    {"name":"SQUARE Mobility","description":"免許不要の特定小型原付の電動キックボード・電動バイクと、電動アシスト自転車のe-Bikeを借りられます。当日利用は2時間から、e-Bikeには1泊2日以上のプランもあります。","href":"https://shop.square-mobility.com/collections/rental","linkLabel":"車種・料金・予約"},
+    {"name":"WHILL 電動車いすレンタル","description":"コントローラーで操作する電動車いすWHILLを、1日から1か月まで借りられます。折りたためるModel Fと、店舗受取のModel Cがあり、外出時の長い歩行に不安がある方の移動を助けます。","href":"https://shop.square-mobility.com/collections/rental","linkLabel":"機種・料金・予約"},
+    {"name":"Hyundai MOCEAN","description":"HyundaiのEVを予約して運転できるカーシェアです。専用アプリで会員登録し、運転免許証とクレジットカードを登録して予約・解錠・返却を行います。KONA、IONIQ 5などのEVを利用できます。","href":"https://www.hyundai.com/jp/service/mocean","linkLabel":"利用方法・料金"},
+    {"name":"神奈中・江ノ電バス無料チケット","description":"湘南T-SITEでの買い物額に応じて、藤沢駅または辻堂駅との往復に使えるバス無料チケットがあります。","href":"https://store.tsite.jp/shonan/news/t-site/26847-1206380526.html","linkLabel":"案内を見る"},
+    {"name":"ENEOS Charge Plus","description":"駐車場にEV急速充電器があります。","href":"https://store.tsite.jp/shonan/news/t-site/38946-1057590223.html","linkLabel":"案内を見る"}
+  ],
   "passengerServices": [
     {"name":"KGグループ","description":"鎌倉タクシー、グリンハイヤー、鎌倉江之島ハイヤー、逗子葉山タクシーの共同配車窓口です。","links":[{"label":"電話で配車を依頼","phone":"0467-31-0101"},{"label":"公式情報","href":"https://gurin.co.jp/"}]},
     {"name":"鎌倉スマイル株式会社","description":"鎌倉市内のタクシー事業者です。","links":[{"label":"電話で配車を依頼","phone":"0467-40-5396"},{"label":"事業者情報","href":"https://www.taxi-kanagawa.or.jp/taxi/%E9%8E%8C%E5%80%89%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/"}]},
     {"name":"和光交通株式会社","description":"藤沢市内のタクシー事業者です。","links":[{"label":"電話で配車を依頼","phone":"0120-97-5050"},{"label":"事業者情報","href":"https://www.taxi-kanagawa.or.jp/taxi/%E5%92%8C%E5%85%89%E4%BA%A4%E9%80%9A%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE/"}]},
-    {"name":"タクシーアプリ GO","description":"対応するタクシーをアプリから呼べます。配車可否は利用地点と時間帯により異なります。","links":[{"label":"公式情報","href":"https://go.goinc.jp/"}]}
+    {"name":"タクシーアプリ GO","description":"対応するタクシーをアプリから呼べます。配車可否は利用地点と時間帯により異なります。","links":[{"label":"公式情報","href":"https://go.goinc.jp/"}]},
+    {"name":"タクシーアプリ S.RIDE","description":"アプリからタクシーを呼べます。西鎌倉周辺で利用でき、藤沢市は提供エリア外です。","links":[{"label":"提供エリア","href":"https://www.sride.jp/jp/area/"},{"label":"公式情報","href":"https://www.sride.jp/"}]}
   ]
 }
