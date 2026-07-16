@@ -86,9 +86,13 @@ function renderFilters() {
 }
 
 async function init() {
-  const [services, hello] = await Promise.all([loadJson('content/services.json'), loadJson('content/hello-cycling.json')]);
+  const [services, hello, carShare] = await Promise.all([
+    loadJson('content/services.json'),
+    loadJson('content/hello-cycling.json'),
+    loadJson('content/car-share.json')
+  ]);
   state.data = services.selfDrive;
-  state.data.places = [...hello.places, ...state.data.places];
+  state.data.places = [...hello.places, ...carShare.places, ...state.data.places];
   document.querySelector('#mapScope').textContent = `${services.scope}の貸出・返却場所です。種類を選ぶと地図と一覧が切り替わります。`;
   renderFilters();
   renderActionCards('#shuttleList', services.facilityShuttles);

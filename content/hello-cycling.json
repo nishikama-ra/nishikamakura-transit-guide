@@ -1,6 +1,7 @@
 {
   "collectedAt": "2026-07-13",
   "scope": "指定地域の行政区域から800m以内、または藤沢・大船・鎌倉・江の島の各駅エリアから800m以内",
+  "coordinateSource": "official-station-data",
   "source": [
     "https://www.hellocycling.jp/station/kanagawa/%E9%8E%8C%E5%80%89%E5%B8%82",
     "https://www.hellocycling.jp/station/kanagawa/%E8%97%A4%E6%B2%A2%E5%B8%82"

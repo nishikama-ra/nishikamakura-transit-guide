@@ -95,6 +95,7 @@ const included = stations.filter(station => {
 await writeFile(projectUrl, `${JSON.stringify({
   collectedAt: new Date().toISOString().slice(0, 10),
   scope: '指定地域の行政区域から800m以内、または藤沢・大船・鎌倉・江の島の各駅エリアから800m以内',
+  coordinateSource: 'official-station-data',
   source: cityUrls,
   places: included
 }, null, 2)}\n`, 'utf8');

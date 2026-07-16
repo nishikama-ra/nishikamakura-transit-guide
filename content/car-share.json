@@ -1,0 +1,806 @@
+{
+  "collectedAt": "2026-07-16",
+  "scope": "西鎌倉・腰越・津西・手広・鎌倉山の指定地域から800m以内、または藤沢・大船・鎌倉・江の島の各駅から800m以内。指定された鎌倉梶原月極、鎌倉上町屋第2大栄駐車場、NPC大船駅前は必ず掲載。",
+  "coordinateSources": {
+    "times": "official-map-tokyo-datum-converted",
+    "mitsui": "official-station-page",
+    "orix": "official-station-page"
+  },
+  "source": {
+    "times": "https://share.timescar.jp/view/station/teeda.ajax",
+    "mitsui": [
+      "https://www.carshares.jp/station/kanagawa/kamakura/",
+      "https://www.carshares.jp/station/kanagawa/fujisawa/"
+    ],
+    "orix": [
+      "https://station.orix-carshare.com/orix-carshare/spot/list?address=14204",
+      "https://station.orix-carshare.com/orix-carshare/spot/list?address=14205"
+    ],
+    "boundary": "https://geoshape.ex.nii.ac.jp/ka/topojson/2020/14/r2ka14204.topojson"
+  },
+  "counts": {
+    "times": 73,
+    "mitsui": 10,
+    "orix": 3,
+    "total": 86
+  },
+  "places": [
+    {
+      "name": "ｏｈａｎａ鎌倉",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-19",
+      "lat": 35.3540993,
+      "lng": 139.5355657,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JM59"
+    },
+    {
+      "name": "ＵＲコンフォール藤沢",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤が岡1-1",
+      "lat": 35.3452601,
+      "lng": 139.4899499,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JZ35"
+    },
+    {
+      "name": "アパルトマン御成町",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市御成町13",
+      "lat": 35.3205475,
+      "lng": 139.5496438,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=CA78"
+    },
+    {
+      "name": "エクセラ大船",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小袋谷1-2",
+      "lat": 35.3489078,
+      "lng": 139.5310323,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=LQ24"
+    },
+    {
+      "name": "エクレール",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県横浜市栄区長尾台町47",
+      "lat": 35.3584116,
+      "lng": 139.5275632,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=MP22"
+    },
+    {
+      "name": "グラシューズ鎌倉",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船1-27",
+      "lat": 35.3545372,
+      "lng": 139.5338688,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=QS12"
+    },
+    {
+      "name": "クリア・Ｎ",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢602",
+      "lat": 35.3407186,
+      "lng": 139.4879953,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=OE73"
+    },
+    {
+      "name": "コンフォートタウン大船",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船1-26",
+      "lat": 35.3543873,
+      "lng": 139.5341208,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=NW79"
+    },
+    {
+      "name": "タイムズセサミスポーツクラブ大船",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県横浜市栄区笠間2-14",
+      "lat": 35.356885,
+      "lng": 139.5334188,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JT23"
+    },
+    {
+      "name": "タイムズポート大船",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-20",
+      "lat": 35.3535906,
+      "lng": 139.5360988,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=U990"
+    },
+    {
+      "name": "タイムズ鎌倉御成町第４",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市御成町2",
+      "lat": 35.3176558,
+      "lng": 139.5496299,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EZ46"
+    },
+    {
+      "name": "タイムズ鎌倉小町第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町1-11",
+      "lat": 35.3187168,
+      "lng": 139.5538125,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=R236"
+    },
+    {
+      "name": "タイムズ鎌倉小町第３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町1-11",
+      "lat": 35.3178089,
+      "lng": 139.5534516,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=QO54"
+    },
+    {
+      "name": "タイムズ極楽寺駅前第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市極楽寺2-2",
+      "lat": 35.3101171,
+      "lng": 139.5293899,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EC22"
+    },
+    {
+      "name": "タイムズ鵠沼桜が岡第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼桜が岡1-6",
+      "lat": 35.3319585,
+      "lng": 139.4851958,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JV83"
+    },
+    {
+      "name": "タイムズ石上駅前",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上2-12",
+      "lat": 35.3321055,
+      "lng": 139.4865897,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=V230"
+    },
+    {
+      "name": "タイムズ村岡市民センター",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市村岡東1-5",
+      "lat": 35.3372474,
+      "lng": 139.504855,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=QC03"
+    },
+    {
+      "name": "タイムズ大船５丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船5-1",
+      "lat": 35.3491749,
+      "lng": 139.5360188,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=Y125"
+    },
+    {
+      "name": "タイムズ大船第１０",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-16",
+      "lat": 35.3531322,
+      "lng": 139.5342905,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=U357"
+    },
+    {
+      "name": "タイムズ大船第２１",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-19",
+      "lat": 35.3546463,
+      "lng": 139.5346457,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=Q451"
+    },
+    {
+      "name": "タイムズ大船第２２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船3-1",
+      "lat": 35.3502517,
+      "lng": 139.5312322,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=T686"
+    },
+    {
+      "name": "タイムズ大船第２４",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船1-21",
+      "lat": 35.3519215,
+      "lng": 139.532899,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=Y413"
+    },
+    {
+      "name": "タイムズ大船第２７",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-1",
+      "lat": 35.3501497,
+      "lng": 139.5330551,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=DP51"
+    },
+    {
+      "name": "タイムズ大船第２９",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-16",
+      "lat": 35.3524795,
+      "lng": 139.5359567,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=CC72"
+    },
+    {
+      "name": "タイムズ大船第３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船2-17",
+      "lat": 35.3531994,
+      "lng": 139.5344658,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=DE38"
+    },
+    {
+      "name": "タイムズ大船第３０",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船1-19",
+      "lat": 35.3513856,
+      "lng": 139.532613,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=ED28"
+    },
+    {
+      "name": "タイムズ大船第３３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市大船6-3",
+      "lat": 35.3507798,
+      "lng": 139.5392015,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=SH79"
+    },
+    {
+      "name": "タイムズ藤沢リラパーキング",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上1-1",
+      "lat": 35.3360911,
+      "lng": 139.4870455,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EP79"
+    },
+    {
+      "name": "タイムズ藤沢リラパーキング（ＥＶ）",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上1-1",
+      "lat": 35.3359361,
+      "lng": 139.4871255,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JS68"
+    },
+    {
+      "name": "タイムズ藤沢花沢町第７",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼花沢町10",
+      "lat": 35.3378938,
+      "lng": 139.4827618,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=ED30"
+    },
+    {
+      "name": "タイムズ藤沢花沢町第８",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼花沢町3",
+      "lat": 35.336616,
+      "lng": 139.4849117,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HD48"
+    },
+    {
+      "name": "タイムズ藤沢橘第３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼橘1-1",
+      "lat": 35.336352,
+      "lng": 139.4858146,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=R051"
+    },
+    {
+      "name": "タイムズ藤沢橘第４",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼橘1-2",
+      "lat": 35.3357411,
+      "lng": 139.4862346,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HW12"
+    },
+    {
+      "name": "タイムズ藤沢市朝日町駐車場",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市朝日町2",
+      "lat": 35.338419,
+      "lng": 139.492189,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HP84"
+    },
+    {
+      "name": "タイムズ藤沢市朝日町駐車場（ＥＶ）",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市朝日町2",
+      "lat": 35.3385519,
+      "lng": 139.4922,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JP35"
+    },
+    {
+      "name": "タイムズ藤沢石上第１１",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上1-9",
+      "lat": 35.3355522,
+      "lng": 139.4883864,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=R352"
+    },
+    {
+      "name": "タイムズ藤沢石上第１６",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上1-9",
+      "lat": 35.3354612,
+      "lng": 139.4886064,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=SA53"
+    },
+    {
+      "name": "タイムズ藤沢石上第９",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼石上1-12",
+      "lat": 35.3356911,
+      "lng": 139.4875645,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=R605"
+    },
+    {
+      "name": "タイムズ藤沢北口第１１",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢581",
+      "lat": 35.3419325,
+      "lng": 139.4884232,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=BO08"
+    },
+    {
+      "name": "タイムズ藤沢北口第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢1051",
+      "lat": 35.3404995,
+      "lng": 139.4825207,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=CU52"
+    },
+    {
+      "name": "タイムズ藤沢北口第６",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢976",
+      "lat": 35.3389216,
+      "lng": 139.4826208,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EU65"
+    },
+    {
+      "name": "タイムズ南藤沢第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市南藤沢16",
+      "lat": 35.3354163,
+      "lng": 139.492864,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=T287"
+    },
+    {
+      "name": "タイムズ南藤沢第５",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市南藤沢12",
+      "lat": 35.3362972,
+      "lng": 139.49292,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=DU16"
+    },
+    {
+      "name": "タイムズ南藤沢第６",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市南藤沢19",
+      "lat": 35.33718,
+      "lng": 139.4899892,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HD05"
+    },
+    {
+      "name": "タイムズ片瀬しおさいセンター",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬4-9",
+      "lat": 35.3151354,
+      "lng": 139.4839516,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=MV92"
+    },
+    {
+      "name": "タイムズ片瀬海岸第６",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬海岸1-5",
+      "lat": 35.31055,
+      "lng": 139.4899323,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=ED29"
+    },
+    {
+      "name": "タイムズ片瀬江の島駅前第３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬海岸2-11",
+      "lat": 35.3108048,
+      "lng": 139.4819269,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=NB25"
+    },
+    {
+      "name": "タイムズ片瀬市民センター",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬3-5",
+      "lat": 35.3148105,
+      "lng": 139.4880763,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=MV99"
+    },
+    {
+      "name": "テラス大鋸第１駐車場",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市大鋸1-2",
+      "lat": 35.3398249,
+      "lng": 139.4944557,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=KJ81"
+    },
+    {
+      "name": "プランドール藤沢",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市鵠沼花沢町2",
+      "lat": 35.3375939,
+      "lng": 139.4846457,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EJ86"
+    },
+    {
+      "name": "フリートパーキング（屋上）",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢  438",
+      "lat": 35.3389577,
+      "lng": 139.4853235,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=IT15"
+    },
+    {
+      "name": "リバーシティ藤沢",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市朝日町19",
+      "lat": 35.3424015,
+      "lng": 139.49075,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=NU02"
+    },
+    {
+      "name": "リブリ・小町駐車場",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町1-9",
+      "lat": 35.3181898,
+      "lng": 139.5533206,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=DX81"
+    },
+    {
+      "name": "笠間２丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県横浜市栄区笠間2-17",
+      "lat": 35.3579119,
+      "lng": 139.5346066,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=KW86"
+    },
+    {
+      "name": "笠間５丁目第３",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県横浜市栄区笠間5-1",
+      "lat": 35.3571151,
+      "lng": 139.5381374,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=LL83"
+    },
+    {
+      "name": "笠間住宅３号棟",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県横浜市栄区笠間1-7",
+      "lat": 35.3577739,
+      "lng": 139.5332017,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=LI77"
+    },
+    {
+      "name": "鎌倉駅東口",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町1-1",
+      "lat": 35.3183367,
+      "lng": 139.5505688,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=IF06"
+    },
+    {
+      "name": "鎌倉梶原月極",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市梶原17",
+      "lat": 35.3317373,
+      "lng": 139.5153983,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=KT47"
+    },
+    {
+      "name": "鎌倉御成町月極",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市御成町14",
+      "lat": 35.3199865,
+      "lng": 139.5489739,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=KG92"
+    },
+    {
+      "name": "鎌倉腰越３丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市腰越3-14",
+      "lat": 35.3099411,
+      "lng": 139.4902963,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=IX52"
+    },
+    {
+      "name": "鎌倉腰越３丁目１４",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市腰越3-14",
+      "lat": 35.310347,
+      "lng": 139.4898293,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=IX51"
+    },
+    {
+      "name": "鎌倉市小町２丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町2-16",
+      "lat": 35.3191087,
+      "lng": 139.5532816,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=JV79"
+    },
+    {
+      "name": "鎌倉扇ガ谷１丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市扇ガ谷1-1",
+      "lat": 35.3210364,
+      "lng": 139.5490068,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HE71"
+    },
+    {
+      "name": "極楽寺Ｂ駐車場",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市極楽寺3-7",
+      "lat": 35.3087062,
+      "lng": 139.5281731,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=QT71"
+    },
+    {
+      "name": "江ノ島駅前",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬海岸1-4",
+      "lat": 35.3110249,
+      "lng": 139.4880154,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=RK92"
+    },
+    {
+      "name": "小袋谷一丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小袋谷1-4",
+      "lat": 35.3481219,
+      "lng": 139.5319882,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=LD11"
+    },
+    {
+      "name": "小町大路",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市小町2-22",
+      "lat": 35.3195807,
+      "lng": 139.5545204,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=OO73"
+    },
+    {
+      "name": "大船プラザ",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県鎌倉市岡本1-2",
+      "lat": 35.3538852,
+      "lng": 139.5297822,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=EZ47"
+    },
+    {
+      "name": "藤沢市本町２丁目",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市本町2-2",
+      "lat": 35.3421403,
+      "lng": 139.4817097,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=KM85"
+    },
+    {
+      "name": "藤沢川名１",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市川名1-10",
+      "lat": 35.3338276,
+      "lng": 139.4982307,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=LM28"
+    },
+    {
+      "name": "藤沢川名第２",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市川名1-9",
+      "lat": 35.3334337,
+      "lng": 139.4980637,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=NE69"
+    },
+    {
+      "name": "藤沢遊行",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市藤沢40",
+      "lat": 35.3421515,
+      "lng": 139.4891361,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=HF34"
+    },
+    {
+      "name": "片瀬２丁目１５",
+      "type": "carShare",
+      "provider": "タイムズカー",
+      "address": "神奈川県藤沢市片瀬2-15",
+      "lat": 35.31886,
+      "lng": 139.4870462,
+      "href": "https://share.timescar.jp/view/station/detail.jsp?scd=RO84"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク鎌倉小町２丁目（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県鎌倉市小町２丁目１７ー３３",
+      "lat": 35.31975,
+      "lng": 139.554475,
+      "href": "https://www.carshares.jp/station/kanagawa/kamakura/ofuna/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E9%8E%8C%E5%80%89%E5%B0%8F%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク鎌倉小町２丁目第３（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県鎌倉市小町２丁目１４",
+      "lat": 35.32033889,
+      "lng": 139.5535472,
+      "href": "https://www.carshares.jp/station/kanagawa/kamakura/ofuna/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E9%8E%8C%E5%80%89%E5%B0%8F%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%E7%AC%AC%EF%BC%93%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク鎌倉扇ガ谷１丁目第３（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県鎌倉市扇ガ谷１丁目８ー１５",
+      "lat": 35.32165556,
+      "lng": 139.5501111,
+      "href": "https://www.carshares.jp/station/kanagawa/kamakura/ofuna/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E9%8E%8C%E5%80%89%E6%89%87%E3%82%AC%E8%B0%B7%EF%BC%91%E4%B8%81%E7%9B%AE%E7%AC%AC%EF%BC%93%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク鵠沼橘１丁目第２（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県藤沢市鵠沼橘１－２－１７",
+      "lat": 35.335913,
+      "lng": 139.486003,
+      "href": "https://www.carshares.jp/station/kanagawa/fujisawa/fujisawakita/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E9%B5%A0%E6%B2%BC%E6%A9%98%EF%BC%91%E4%B8%81%E7%9B%AE%E7%AC%AC%EF%BC%92%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク鵠沼橘１丁目第４（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県藤沢市鵠沼橘１丁目１４ー５",
+      "lat": 35.33446111,
+      "lng": 139.4843833,
+      "href": "https://www.carshares.jp/station/kanagawa/fujisawa/fujisawaminami/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E9%B5%A0%E6%B2%BC%E6%A9%98%EF%BC%91%E4%B8%81%E7%9B%AE%E7%AC%AC%EF%BC%94%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク大船２丁目第３（自転車禁止）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県鎌倉市大船２丁目１６ー４６",
+      "lat": 35.35270833,
+      "lng": 139.5345972,
+      "href": "https://www.carshares.jp/station/kanagawa/kamakura/ofuna/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E5%A4%A7%E8%88%B9%EF%BC%92%E4%B8%81%E7%9B%AE%E7%AC%AC%EF%BC%93%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E7%A6%81%E6%AD%A2%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク大船３丁目（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県鎌倉市大船３丁目２−１５",
+      "lat": 35.34971111,
+      "lng": 139.5326111,
+      "href": "https://www.carshares.jp/station/kanagawa/kamakura/ofuna/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E5%A4%A7%E8%88%B9%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク藤沢６２（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県藤沢市藤沢５４５－６２",
+      "lat": 35.34148,
+      "lng": 139.485881,
+      "href": "https://www.carshares.jp/station/kanagawa/fujisawa/fujisawakita/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E8%97%A4%E6%B2%A2%EF%BC%96%EF%BC%92%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク藤沢川名２丁目（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県藤沢市川名２丁目５ー１０",
+      "lat": 35.33274722,
+      "lng": 139.4936778,
+      "href": "https://www.carshares.jp/station/kanagawa/fujisawa/fujisawaminami/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E8%97%A4%E6%B2%A2%E5%B7%9D%E5%90%8D%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "三井のカーシェアーズ リパーク藤沢北口第６（自転車可）",
+      "type": "carShare",
+      "provider": "三井のカーシェアーズ",
+      "address": "神奈川県藤沢市藤沢２１８",
+      "lat": 35.34283,
+      "lng": 139.488032,
+      "href": "https://www.carshares.jp/station/kanagawa/fujisawa/fujisawakita/%E3%83%AA%E3%83%91%E3%83%BC%E3%82%AF%E8%97%A4%E6%B2%A2%E5%8C%97%E5%8F%A3%E7%AC%AC%EF%BC%96%EF%BC%88%E8%87%AA%E8%BB%A2%E8%BB%8A%E5%8F%AF%EF%BC%89/"
+    },
+    {
+      "name": "オリックスカーシェア ＮＰＣ大船駅前",
+      "type": "carShare",
+      "provider": "オリックスカーシェア",
+      "address": "神奈川県鎌倉市大船1-3-9",
+      "lat": 35.350149,
+      "lng": 139.530873,
+      "href": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st02137",
+      "note": "24時間。NPC24H大船駅前パーキング6階 No.CS1・2。"
+    },
+    {
+      "name": "オリックスカーシェア 鎌倉上町屋第２大栄駐車場",
+      "type": "carShare",
+      "provider": "オリックスカーシェア",
+      "address": "神奈川県鎌倉市上町屋8-1付近",
+      "lat": 35.338691,
+      "lng": 139.521486,
+      "href": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st07171",
+      "note": "24時間。鎌倉上町屋第2大栄駐車場 No.46。"
+    },
+    {
+      "name": "オリックスカーシェア 藤沢駅前",
+      "type": "carShare",
+      "provider": "オリックスカーシェア",
+      "address": "神奈川県藤沢市藤沢438-6",
+      "lat": 35.339016,
+      "lng": 139.485256,
+      "href": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st00168",
+      "note": "24時間。"
+    }
+  ]
+}
