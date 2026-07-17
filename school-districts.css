@@ -127,6 +127,18 @@
   font-weight: 500;
 }
 
+.school-official-link {
+  color: #315f7b;
+  font-size: 12px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.school-item > .school-official-link {
+  display: inline-block;
+  margin: -3px 14px 12px;
+}
+
 .point-panel {
   padding: 15px;
   background: #f7fafb;
@@ -175,6 +187,13 @@
 .point-district-row strong {
   font-size: 14px;
   font-weight: 500;
+}
+
+.point-district-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 9px;
+  align-items: baseline;
 }
 
 .school-route-actions {
@@ -302,6 +321,11 @@
 .school-popup span {
   color: var(--muted);
   font-size: 12px;
+}
+
+.school-popup .school-official-link {
+  display: inline-block;
+  margin-top: 7px;
 }
 
 .leaflet-container {
