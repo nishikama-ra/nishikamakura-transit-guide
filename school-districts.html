@@ -6,7 +6,7 @@
   <meta name="description" content="腰越地域・深沢地域・片瀬地区の公立小中学校の通学区域と、学校までの徒歩ルート・高低差を地図で確認できます。">
   <title>公立小中学校の学区｜西鎌倉周辺くらしの交通案内</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="school-districts.css?v=20260717-2">
+  <link rel="stylesheet" href="school-districts.css?v=20260717-3">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
@@ -70,8 +70,9 @@
         </div>
 
         <div class="school-map-notes">
-          <p>この地図は、国土交通省「国土数値情報 小学校区・中学校区データ（2023年度）」を加工して表示しています。境界は参考表示です。実際の指定校は、住所に基づき各市教育委員会の最新情報で確認してください。</p>
-          <p>住所は国土地理院の逆ジオコーディングによる町丁目レベルの参考表示です。徒歩ルートはMapbox、標高は国土地理院の標高タイルから取得します。表示ルートは指定通学路を示すものではありません。</p>
+          <p><strong>表示ルートは指定通学路を示すものではありません。</strong>通学にあたっては、学校から指定された通学路を通り、交通状況や周囲に注意して安全に通行してください。</p>
+          <p>この地図は、国土交通省「国土数値情報 小学校区・中学校区データ（2023年度）」を加工して表示しています。学区境界は参考表示です。実際の指定校は、住所に基づき各市教育委員会の最新情報で確認してください。</p>
+          <p>住所はMapboxの逆ジオコーディングにより、取得できる場合は番地まで表示します。地点によっては町丁目または近隣住所までの表示となります。徒歩ルートはMapbox、標高は国土地理院の標高タイルから取得します。</p>
           <div class="official-links school-source-links">
             <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou02.html" target="_blank" rel="noopener">鎌倉市 小学校通学区域 ↗</a>
             <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou03.html" target="_blank" rel="noopener">鎌倉市 中学校通学区域 ↗</a>
@@ -83,6 +84,7 @@
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="scripts/school-districts.js?v=20260717-2"></script>
+  <script src="scripts/school-districts.js?v=20260717-3"></script>
+  <script src="scripts/school-districts-patch.js?v=20260717-1"></script>
 </body>
 </html>
