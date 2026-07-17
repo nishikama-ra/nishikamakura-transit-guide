@@ -77,8 +77,10 @@ function addLabels(features){
   state.labelLayer=L.layerGroup().addTo(state.map);
   features.forEach(f=>{
     const p=f.properties;
+    const labelLat=Number.isFinite(p.schoolLat)?p.schoolLat:p.labelLat;
+    const labelLng=Number.isFinite(p.schoolLng)?p.schoolLng:p.labelLng;
     const icon=L.divIcon({className:'school-label-icon',html:`<span class="school-map-label" style="--school-color:${p.color}">${escapeHtml(p.name.replace('学校',''))}</span>`,iconSize:[0,0],iconAnchor:[0,0]});
-    L.marker([p.labelLat,p.labelLng],{icon,title:p.name,bubblingMouseEvents:false}).addTo(state.labelLayer).on('click',()=>focusSchool(p.id));
+    L.marker([labelLat,labelLng],{icon,title:p.name,bubblingMouseEvents:false}).addTo(state.labelLayer).on('click',()=>focusSchool(p.id));
   });
 }
 function renderDistricts(fit=true){
