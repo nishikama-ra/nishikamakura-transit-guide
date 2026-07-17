@@ -296,7 +296,7 @@ async function createRoute(level){
 async function init(){
   if(!window.L)throw new Error('地図を読み込めませんでした');
   state.data=await loadData();
-  state.map=L.map('schoolMap',{scrollWheelZoom:false,zoomControl:true}).setView([35.322952,139.510274],14);
+  state.map=L.map('schoolMap',{scrollWheelZoom:true,zoomControl:true}).setView([35.322952,139.510274],14);
   L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxZoom:18,attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'}).addTo(state.map);
   L.control.scale({imperial:false,position:'bottomleft'}).addTo(state.map);
   state.map.attributionControl.addAttribution('<a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">© Mapbox</a> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>');
