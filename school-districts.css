@@ -1,5 +1,5 @@
 .school-intro p:last-child {
-  max-width: 720px;
+  max-width: 780px;
 }
 
 .school-map-section {
@@ -17,8 +17,8 @@
 
 .school-map-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(300px, .55fr);
-  min-height: 620px;
+  grid-template-columns: minmax(0, 1.42fr) minmax(330px, .58fr);
+  min-height: 650px;
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
@@ -32,7 +32,7 @@
 }
 
 .school-map {
-  min-height: 620px;
+  min-height: 650px;
   height: 100%;
   background: #eaf1f3;
 }
@@ -56,10 +56,26 @@
 }
 
 .school-panel {
-  max-height: 620px;
+  max-height: 650px;
   padding: 18px;
   overflow: auto;
   border-left: 1px solid var(--line);
+}
+
+.panel-subheading {
+  margin-bottom: 12px;
+}
+
+.panel-subheading h3 {
+  margin: 3px 0 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.school-list-heading {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
 }
 
 .school-list {
@@ -71,6 +87,11 @@
   background: #fafcfd;
   border: 1px solid var(--line);
   border-left: 4px solid var(--school-color, var(--teal));
+}
+
+.school-item.is-selected {
+  background: #eef5f6;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--school-color) 35%, transparent);
 }
 
 .school-item button {
@@ -106,6 +127,123 @@
   font-weight: 500;
 }
 
+.point-panel {
+  padding: 15px;
+  background: #f7fafb;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.point-address {
+  display: grid;
+  gap: 3px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.point-address small,
+.point-address span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.point-address strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.point-districts {
+  display: grid;
+  gap: 7px;
+  margin-top: 11px;
+}
+
+.point-district-row {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 9px;
+  align-items: center;
+  padding-left: 9px;
+  border-left: 3px solid var(--school-color, #b9c7cd);
+}
+
+.point-district-row span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.point-district-row strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.school-route-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.school-route-actions button {
+  min-height: 46px;
+  padding: 8px 9px;
+  color: #315f7b;
+  background: #fff;
+  border: 1px solid #cbdce3;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.school-route-actions button:hover:not(:disabled) {
+  background: #edf5f8;
+}
+
+.school-route-actions button:disabled {
+  color: #9aa9b1;
+  background: #f3f5f6;
+  cursor: not-allowed;
+}
+
+.school-route-actions .route-clear {
+  grid-column: 1 / -1;
+  min-height: 36px;
+  color: var(--muted);
+}
+
+.route-status {
+  min-height: 2.8em;
+  margin: 12px 0 8px;
+  color: #415f70;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.profile-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  cursor: crosshair;
+}
+
+.profile-stats {
+  margin-top: 7px;
+  color: #415f70;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.profile-help {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .school-map-notes {
   margin-top: 18px;
   padding: 16px 18px;
@@ -116,7 +254,7 @@
 }
 
 .school-map-notes p {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .school-source-links a {
@@ -171,7 +309,7 @@
   }
 
   .school-map {
-    min-height: 470px;
+    min-height: 500px;
   }
 
   .school-panel {
@@ -192,5 +330,13 @@
   .map-reset {
     top: 10px;
     right: 10px;
+  }
+
+  .school-route-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .school-route-actions .route-clear {
+    grid-column: auto;
   }
 }
