@@ -184,6 +184,16 @@
   margin-top: 13px;
 }
 
+.route-disclaimer {
+  margin: 12px 0 0;
+  padding: 8px 10px;
+  color: #6f4f36;
+  background: #fff8ec;
+  border-left: 3px solid #c99b5b;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .school-route-actions button {
   min-height: 46px;
   padding: 8px 9px;
