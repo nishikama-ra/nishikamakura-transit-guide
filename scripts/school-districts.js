@@ -261,7 +261,7 @@ async function makeProfile(route,feature,id){
   const statsHtml=`徒歩距離 <b>${(route.distance/1000).toFixed(2)} km</b><br>最低 <b>${min.toFixed(1)}m</b> → 最高 <b>${max.toFixed(1)}m</b><br>累積上り <b>+${up.toFixed(0)}m</b> ／ 累積下り <b>−${down.toFixed(0)}m</b>`;
   document.querySelector('#profileStats').innerHTML=statsHtml;document.querySelector('#profileStatsExpanded').innerHTML=statsHtml;
   if(document.querySelector('#profileDialog').open)renderProfileExpanded();
-  document.querySelector('#routeStatus').textContent=`${feature.properties.name}の入口までの徒歩ルートと高低差を表示しています。`;
+  document.querySelector('#routeStatus').textContent=`${feature.properties.name}までの徒歩ルートと高低差を表示しています。`;
 }
 function endpoint(ctx,x,y,color,label,k=1){ctx.save();ctx.beginPath();ctx.arc(x,y,8*k,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3*k;ctx.stroke();ctx.fillStyle=color;ctx.font=`bold ${Math.round(19*k)}px sans-serif`;ctx.textAlign='center';ctx.fillText(label,x,y-16*k);ctx.restore();}
 function drawProfile(canvas=document.querySelector('#profileCanvas')){
@@ -325,7 +325,11 @@ async function init(){
   state.map.attributionControl.addAttribution('<a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">© Mapbox</a> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>');
   renderFilters();renderDistricts(false);
   state.map.on('click',event=>selectPoint(event.latlng));
-  document.querySelector('#resetMap').onclick=()=>{if(state.bounds?.isValid())state.map.fitBounds(state.bounds,{padding:[24,24],maxZoom:14});};
+  document.querySelector('#resetMap').onclick=()=>{
+    if(!state.bounds?.isValid())return;
+    state.map.fitBounds(state.bounds,{padding:[24,24],maxZoom:14,animate:false});
+    if(state.map.getZoom()<14)state.map.zoomIn(1);
+  };
   document.querySelector('#routeElementary').onclick=()=>createRoute('elementary');
   document.querySelector('#routeJuniorHigh').onclick=()=>createRoute('juniorHigh');
   document.querySelector('#clearSchoolRoute').onclick=()=>clearRoute();
