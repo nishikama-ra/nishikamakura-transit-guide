@@ -17,7 +17,7 @@
 
 .school-map-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.42fr) minmax(330px, .58fr);
+  grid-template-columns: minmax(0, 1.38fr) minmax(360px, .62fr);
   min-height: 650px;
   overflow: hidden;
   background: #fff;
@@ -132,6 +132,7 @@
   font-size: 12px;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  white-space: nowrap;
 }
 
 .school-item > .school-official-link {
@@ -140,7 +141,7 @@
 }
 
 .point-panel {
-  padding: 15px;
+  padding: 13px;
   background: #f7fafb;
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -172,10 +173,10 @@
 
 .point-district-row {
   display: grid;
-  grid-template-columns: 74px minmax(0, 1fr);
-  gap: 9px;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 7px;
   align-items: center;
-  padding-left: 9px;
+  padding-left: 7px;
   border-left: 3px solid var(--school-color, #b9c7cd);
 }
 
@@ -191,9 +192,13 @@
 
 .point-district-name {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3px 9px;
+  flex-wrap: nowrap;
+  gap: 8px;
   align-items: baseline;
+}
+
+.point-district-name strong {
+  white-space: nowrap;
 }
 
 .school-route-actions {

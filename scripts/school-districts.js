@@ -198,7 +198,7 @@ async function walkingRoute(start,end){
   if(!response.ok||data?.code!=='Ok'||!data.routes?.[0])throw new Error(data?.message||`Mapbox API HTTP ${response.status}`);
   const route=data.routes[0],coordsOut=route.geometry?.coordinates;
   if(!Array.isArray(coordsOut)||coordsOut.length<2)throw new Error('徒歩ルートの形状を取得できませんでした');
-  return{points:coordsOut.map(c=>L.latLng(c[1],c[0])),distance:route.distance,duration:route.duration};
+  return{points:coordsOut.map(c=>L.latLng(c[1],c[0])),distance:route.distance};
 }
 
 function schoolEndpoints(feature){
@@ -248,8 +248,8 @@ async function makeProfile(route,feature,id){
   if(profile.length<2)throw new Error('標高データを取得できませんでした');
   let up=0,down=0;for(let i=1;i<profile.length;i++){const d=profile[i].h-profile[i-1].h;if(d>0)up+=d;else down-=d;}
   state.profile={points:profile,total};drawProfile();
-  const hs=profile.map(p=>p.h),min=Math.min(...hs),max=Math.max(...hs),minutes=Math.max(1,Math.round(route.duration/60));
-  document.querySelector('#profileStats').innerHTML=`徒歩距離 <b>${(route.distance/1000).toFixed(2)} km</b> ／ 目安 <b>${minutes}分</b><br>最低 <b>${min.toFixed(1)}m</b> → 最高 <b>${max.toFixed(1)}m</b><br>累積上り <b>+${up.toFixed(0)}m</b> ／ 累積下り <b>−${down.toFixed(0)}m</b>`;
+  const hs=profile.map(p=>p.h),min=Math.min(...hs),max=Math.max(...hs);
+  document.querySelector('#profileStats').innerHTML=`徒歩距離 <b>${(route.distance/1000).toFixed(2)} km</b><br>最低 <b>${min.toFixed(1)}m</b> → 最高 <b>${max.toFixed(1)}m</b><br>累積上り <b>+${up.toFixed(0)}m</b> ／ 累積下り <b>−${down.toFixed(0)}m</b>`;
   document.querySelector('#routeStatus').textContent=`${feature.properties.name}の入口までの徒歩ルートと高低差を表示しています（指定通学路を示すものではありません）。`;
 }
 function endpoint(ctx,x,y,color,label){ctx.save();ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();ctx.fillStyle=color;ctx.font='bold 19px sans-serif';ctx.textAlign='center';ctx.fillText(label,x,y-16);ctx.restore();}
