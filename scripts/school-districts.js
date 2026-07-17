@@ -143,10 +143,11 @@ function districtRow(label,feature){
     :`<div class="point-district-row"><span>${label}</span><strong>対象範囲外または判定できません</strong></div>`;
 }
 function updateButtons(){
-  const e=document.querySelector('#routeElementary'),j=document.querySelector('#routeJuniorHigh'),c=document.querySelector('#clearSchoolRoute');
+  const e=document.querySelector('#routeElementary'),j=document.querySelector('#routeJuniorHigh'),c=document.querySelector('#clearSchoolRoute'),x=document.querySelector('#expandProfile');
   e.disabled=!state.point||!state.elementary||state.busy;
   j.disabled=!state.point||!state.juniorHigh||state.busy;
   c.disabled=!state.routeLine&&!state.profile||state.busy;
+  x.disabled=!state.profile||state.busy;
   e.textContent=state.elementary?`${state.elementary.properties.name}まで徒歩`:'小学校区を判定できません';
   j.textContent=state.juniorHigh?`${state.juniorHigh.properties.name}まで徒歩`:'中学校区を判定できません';
 }
@@ -160,9 +161,11 @@ function clearRoute(keepStatus=false){
   state.routeId++;state.busy=false;
   state.routeLine?.remove();state.targetMarker?.remove();state.profileMarker?.remove();
   state.routeLine=state.targetMarker=state.profileMarker=state.profile=null;
-  const canvas=document.querySelector('#profileCanvas');
-  canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas._geom=null;
-  document.querySelector('#profileStats').textContent='—';
+  for(const id of['profileCanvas','profileCanvasExpanded']){
+    const canvas=document.querySelector(`#${id}`);canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);canvas._geom=null;
+  }
+  document.querySelector('#profileStats').textContent='—';document.querySelector('#profileStatsExpanded').textContent='—';
+  const dialog=document.querySelector('#profileDialog');if(dialog.open)dialog.close();
   if(!keepStatus)document.querySelector('#routeStatus').textContent=state.point?'小学校または中学校の入口までの徒歩ルートを選んでください。':'地点を選ぶと学校入口までの徒歩ルートを表示できます。';
   updateButtons();
 }
@@ -249,24 +252,37 @@ async function makeProfile(route,feature,id){
   let up=0,down=0;for(let i=1;i<profile.length;i++){const d=profile[i].h-profile[i-1].h;if(d>0)up+=d;else down-=d;}
   state.profile={points:profile,total};drawProfile();
   const hs=profile.map(p=>p.h),min=Math.min(...hs),max=Math.max(...hs);
-  document.querySelector('#profileStats').innerHTML=`徒歩距離 <b>${(route.distance/1000).toFixed(2)} km</b><br>最低 <b>${min.toFixed(1)}m</b> → 最高 <b>${max.toFixed(1)}m</b><br>累積上り <b>+${up.toFixed(0)}m</b> ／ 累積下り <b>−${down.toFixed(0)}m</b>`;
-  document.querySelector('#routeStatus').textContent=`${feature.properties.name}の入口までの徒歩ルートと高低差を表示しています（指定通学路を示すものではありません）。`;
+  const statsHtml=`徒歩距離 <b>${(route.distance/1000).toFixed(2)} km</b><br>最低 <b>${min.toFixed(1)}m</b> → 最高 <b>${max.toFixed(1)}m</b><br>累積上り <b>+${up.toFixed(0)}m</b> ／ 累積下り <b>−${down.toFixed(0)}m</b>`;
+  document.querySelector('#profileStats').innerHTML=statsHtml;document.querySelector('#profileStatsExpanded').innerHTML=statsHtml;
+  if(document.querySelector('#profileDialog').open)renderProfileExpanded();
+  document.querySelector('#routeStatus').textContent=`${feature.properties.name}の入口までの徒歩ルートと高低差を表示しています。`;
 }
-function endpoint(ctx,x,y,color,label){ctx.save();ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.stroke();ctx.fillStyle=color;ctx.font='bold 19px sans-serif';ctx.textAlign='center';ctx.fillText(label,x,y-16);ctx.restore();}
-function drawProfile(){
-  const canvas=document.querySelector('#profileCanvas'),ctx=canvas.getContext('2d'),{points,total}=state.profile,W=canvas.width,H=canvas.height,L0=82,R0=24,T0=24,B0=55;
+function endpoint(ctx,x,y,color,label,k=1){ctx.save();ctx.beginPath();ctx.arc(x,y,8*k,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=3*k;ctx.stroke();ctx.fillStyle=color;ctx.font=`bold ${Math.round(19*k)}px sans-serif`;ctx.textAlign='center';ctx.fillText(label,x,y-16*k);ctx.restore();}
+function drawProfile(canvas=document.querySelector('#profileCanvas')){
+  const ctx=canvas.getContext('2d'),{points,total}=state.profile,W=canvas.width,H=canvas.height,k=Math.max(1,W/640),L0=82*k,R0=24*k,T0=24*k,B0=55*k;
   ctx.clearRect(0,0,W,H);const hs=points.map(p=>p.h),min=Math.min(...hs),max=Math.max(...hs),y0=Math.floor(Math.min(0,min)/10)*10,y1=Math.ceil((max+3)/10)*10||10;
   const X=d=>L0+d/total*(W-L0-R0),Y=h=>T0+(1-(h-y0)/(y1-y0))*(H-T0-B0);
-  ctx.strokeStyle='#dfe8eb';ctx.fillStyle='#667d8d';ctx.font='20px sans-serif';ctx.textAlign='right';
+  ctx.strokeStyle='#dfe8eb';ctx.fillStyle='#667d8d';ctx.font=`${Math.round(20*k)}px sans-serif`;ctx.textAlign='right';ctx.lineWidth=k;
   const hStep=(y1-y0)<=40?10:(y1-y0)<=100?20:25;
-  for(let h=y0;h<=y1;h+=hStep){ctx.beginPath();ctx.moveTo(L0,Y(h));ctx.lineTo(W-R0,Y(h));ctx.stroke();ctx.fillText(`${h}m`,L0-9,Y(h)+7);}
+  for(let h=y0;h<=y1;h+=hStep){ctx.beginPath();ctx.moveTo(L0,Y(h));ctx.lineTo(W-R0,Y(h));ctx.stroke();ctx.fillText(`${h}m`,L0-9*k,Y(h)+7*k);}
   ctx.textAlign='center';const dStep=total>4000?1000:total>1500?500:250;
-  for(let d=0;d<=total;d+=dStep){ctx.beginPath();ctx.moveTo(X(d),T0);ctx.lineTo(X(d),H-B0);ctx.stroke();ctx.fillText(d>=1000?`${(d/1000).toFixed(1)}km`:`${Math.round(d)}m`,X(d),H-B0+31);}
+  for(let d=0;d<=total;d+=dStep){ctx.beginPath();ctx.moveTo(X(d),T0);ctx.lineTo(X(d),H-B0);ctx.stroke();ctx.fillText(d>=1000?`${(d/1000).toFixed(1)}km`:`${Math.round(d)}m`,X(d),H-B0+31*k);}
   ctx.beginPath();ctx.moveTo(X(points[0].d),Y(points[0].h));points.forEach(p=>ctx.lineTo(X(p.d),Y(p.h)));ctx.lineTo(X(points.at(-1).d),Y(y0));ctx.lineTo(X(points[0].d),Y(y0));ctx.closePath();
   const grad=ctx.createLinearGradient(0,T0,0,H-B0);grad.addColorStop(0,'rgba(92,141,146,.55)');grad.addColorStop(1,'rgba(111,159,184,.20)');ctx.fillStyle=grad;ctx.fill();
-  ctx.beginPath();ctx.moveTo(X(points[0].d),Y(points[0].h));points.forEach(p=>ctx.lineTo(X(p.d),Y(p.h)));ctx.strokeStyle='#315f7b';ctx.lineWidth=4;ctx.stroke();
-  endpoint(ctx,X(points[0].d),Y(points[0].h),'#2f6f98','始');endpoint(ctx,X(points.at(-1).d),Y(points.at(-1).h),'#8d6577','校');
+  ctx.beginPath();ctx.moveTo(X(points[0].d),Y(points[0].h));points.forEach(p=>ctx.lineTo(X(p.d),Y(p.h)));ctx.strokeStyle='#315f7b';ctx.lineWidth=4*k;ctx.stroke();
+  endpoint(ctx,X(points[0].d),Y(points[0].h),'#2f6f98','始',k);endpoint(ctx,X(points.at(-1).d),Y(points.at(-1).h),'#8d6577','校',k);
   canvas._geom={L0,R0,W};
+}
+function renderProfileExpanded(){
+  if(!state.profile)return;
+  const canvas=document.querySelector('#profileCanvasExpanded'),dpr=window.devicePixelRatio||1;
+  const width=Math.min(window.innerWidth*.9,1400),height=Math.min(window.innerHeight*.66,width*.52);
+  canvas.style.width=`${Math.round(width)}px`;canvas.style.height=`${Math.round(height)}px`;
+  canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);drawProfile(canvas);
+}
+function openProfileDialog(){
+  if(!state.profile)return;
+  const dialog=document.querySelector('#profileDialog');dialog.showModal();renderProfileExpanded();
 }
 function profileClick(event){
   const canvas=event.currentTarget;if(!state.profile||!canvas._geom)return;
@@ -282,14 +298,14 @@ async function createRoute(level){
   const feature=level==='elementary'?state.elementary:state.juniorHigh;if(!state.point||!feature||state.busy)return;
   clearRoute(true);const id=++state.routeId;state.busy=true;updateButtons();
   document.querySelector('#routeStatus').textContent=`${feature.properties.name}までの徒歩ルートを取得しています…`;
-  document.querySelector('#profileStats').textContent='高低差を計算します。';
+  document.querySelector('#profileStats').textContent='高低差を計算します。';document.querySelector('#profileStatsExpanded').textContent='高低差を計算します。';
   try{
     const {end,route}=await walkingRouteToSchool(state.point,feature);if(id!==state.routeId)return;
     route.points=thin(route.points);state.routeLine=L.polyline(route.points,{color:'#315f7b',weight:5,opacity:.9}).addTo(state.map);
     state.targetMarker=L.marker(end,{title:`${feature.properties.name}（学校入口）`,bubblingMouseEvents:false}).addTo(state.map).bindTooltip(`${feature.properties.name}（学校入口）`,{direction:'top'});
     state.map.fitBounds(state.routeLine.getBounds().extend(state.point).extend(end),{padding:[34,34],maxZoom:16});
     await makeProfile(route,feature,id);
-  }catch(error){if(id===state.routeId){document.querySelector('#routeStatus').textContent=`徒歩ルートを表示できませんでした：${error.message}`;document.querySelector('#profileStats').textContent='—';}}
+  }catch(error){if(id===state.routeId){document.querySelector('#routeStatus').textContent=`徒歩ルートを表示できませんでした：${error.message}`;document.querySelector('#profileStats').textContent='—';document.querySelector('#profileStatsExpanded').textContent='—';}}
   finally{if(id===state.routeId){state.busy=false;updateButtons();}}
 }
 
@@ -306,6 +322,11 @@ async function init(){
   document.querySelector('#routeElementary').onclick=()=>createRoute('elementary');
   document.querySelector('#routeJuniorHigh').onclick=()=>createRoute('juniorHigh');
   document.querySelector('#clearSchoolRoute').onclick=()=>clearRoute();
-  document.querySelector('#profileCanvas').onclick=profileClick;updateButtons();
+  document.querySelector('#profileCanvas').onclick=profileClick;
+  document.querySelector('#profileCanvasExpanded').onclick=profileClick;
+  document.querySelector('#expandProfile').onclick=openProfileDialog;
+  document.querySelector('#closeProfile').onclick=()=>document.querySelector('#profileDialog').close();
+  window.addEventListener('resize',()=>{if(document.querySelector('#profileDialog').open)renderProfileExpanded();});
+  updateButtons();
 }
 init().catch(error=>{document.querySelector('#schoolMap').innerHTML=`<p class="load-error">${escapeHtml(error.message)}。ページを再読み込みしてください。</p>`;});
