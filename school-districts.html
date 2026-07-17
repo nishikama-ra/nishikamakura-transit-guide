@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="腰越地域・深沢地域・片瀬地区の公立小中学校の通学区域を地図で確認できます。">
+  <meta name="description" content="腰越地域・深沢地域・片瀬地区の公立小中学校の通学区域と、学校までの徒歩ルート・高低差を地図で確認できます。">
   <title>公立小中学校の学区｜西鎌倉周辺くらしの交通案内</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="school-districts.css">
@@ -26,14 +26,14 @@
     <section class="page-intro shell school-intro">
       <p class="eyebrow">地域の学校</p>
       <h1>公立小中学校の学区</h1>
-      <p>腰越地域・深沢地域・片瀬地区の通学区域を、小学校と中学校で切り替えて確認できます。</p>
+      <p>腰越地域・深沢地域・片瀬地区の通学区域を、小学校と中学校で切り替えて確認できます。地図をクリックすると、その地点の住所と小中学校区、各学校までの徒歩ルート・高低差を表示します。</p>
     </section>
 
     <section class="section school-map-section">
       <div class="shell">
         <div class="section-heading">
           <div><p class="section-kicker">通学区域</p><h2>地図で確認する</h2></div>
-          <p>学校名または地図上の区域を選ぶと、その学区を拡大表示します。</p>
+          <p>小学校・中学校を切り替えても、現在の地図の位置と縮尺は維持されます。</p>
         </div>
 
         <div id="levelFilters" class="type-filters school-level-filters" aria-label="学校種別"></div>
@@ -43,14 +43,35 @@
             <div id="schoolMap" class="school-map" aria-label="公立小中学校の学区地図"></div>
             <button id="resetMap" class="map-reset" type="button">全体を表示</button>
           </div>
-          <aside class="school-panel" aria-label="表示中の学校一覧">
-            <p id="schoolCount" class="place-count"></p>
+          <aside class="school-panel" aria-label="地点情報と学校一覧">
+            <section id="pointPanel" class="point-panel" hidden aria-live="polite">
+              <div class="panel-subheading">
+                <p class="section-kicker">地点から調べる</p>
+                <h3>住所・学区・徒歩ルート</h3>
+              </div>
+              <div id="pointInfo" class="point-info"></div>
+              <div class="school-route-actions">
+                <button id="routeElementary" type="button">小学校まで徒歩</button>
+                <button id="routeJuniorHigh" type="button">中学校まで徒歩</button>
+                <button id="clearSchoolRoute" class="route-clear" type="button">ルートを消去</button>
+              </div>
+              <p id="routeStatus" class="route-status">地点を選ぶと徒歩ルートを表示できます。</p>
+              <canvas id="profileCanvas" class="profile-canvas" width="640" height="320" aria-label="徒歩ルートの高低差グラフ"></canvas>
+              <div id="profileStats" class="profile-stats">—</div>
+              <p class="profile-help">高低差グラフをクリックすると、ルート上の位置を地図に表示します。</p>
+            </section>
+
+            <div class="panel-subheading school-list-heading">
+              <p class="section-kicker">表示中の学校</p>
+              <h3 id="schoolCount"></h3>
+            </div>
             <div id="schoolList" class="school-list"></div>
           </aside>
         </div>
 
         <div class="school-map-notes">
           <p>この地図は、国土交通省「国土数値情報 小学校区・中学校区データ（2023年度）」を加工して表示しています。境界は参考表示です。実際の指定校は、住所に基づき各市教育委員会の最新情報で確認してください。</p>
+          <p>住所は国土地理院の逆ジオコーディングによる町丁目レベルの参考表示です。徒歩ルートはMapbox、標高は国土地理院の標高タイルから取得します。表示ルートは指定通学路を示すものではありません。</p>
           <div class="official-links school-source-links">
             <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou02.html" target="_blank" rel="noopener">鎌倉市 小学校通学区域 ↗</a>
             <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou03.html" target="_blank" rel="noopener">鎌倉市 中学校通学区域 ↗</a>
