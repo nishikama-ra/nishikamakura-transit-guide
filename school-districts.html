@@ -6,7 +6,7 @@
   <meta name="description" content="腰越地域・深沢地域・片瀬地区の公立小中学校の通学区域と、学校までの徒歩ルート・高低差を地図で確認できます。">
   <title>公立小中学校の学区｜西鎌倉周辺くらしの交通案内</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="school-districts.css?v=20260717-9">
+  <link rel="stylesheet" href="school-districts.css?v=20260718-1">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
     <section class="page-intro shell school-intro">
       <p class="eyebrow">地域の学校</p>
       <h1>公立小中学校の学区</h1>
-      <p>腰越地域・深沢地域・片瀬地区の通学区域を、小学校と中学校で切り替えて確認できます。地図をクリックすると、その地点の住所と小中学校区、各学校までの徒歩ルート・高低差を表示します。</p>
+      <p>腰越地域・深沢地域・片瀬地区の通学区域・徒歩ルート・高低差が確認できます。</p>
     </section>
 
     <section class="section school-map-section">
@@ -35,26 +35,32 @@
           <div><p class="section-kicker">通学区域</p><h2>地図で確認する</h2></div>
         </div>
 
-        <div id="levelFilters" class="type-filters school-level-filters" aria-label="学校種別"></div>
+        <div id="routeControls" class="school-route-controls">
+          <p class="route-instruction">地図をクリックして地点を選び、小学校または中学校の「徒歩」ボタンを押すと、学校入口までの徒歩ルートと高低差を表示します。</p>
+          <div class="school-route-actions">
+            <button id="routeElementary" type="button">小学校まで徒歩</button>
+            <button id="routeJuniorHigh" type="button">中学校まで徒歩</button>
+            <button id="clearSchoolRoute" class="route-clear" type="button">ルートを消去</button>
+          </div>
+          <p id="routeStatus" class="route-status" aria-live="polite">地図をクリックして地点を選んでください。</p>
+        </div>
 
         <div class="school-map-layout">
           <div class="school-map-wrap">
             <div id="schoolMap" class="school-map" aria-label="公立小中学校の学区地図"></div>
             <button id="resetMap" class="map-reset" type="button">全体を表示</button>
           </div>
-          <aside class="school-panel" aria-label="地点情報と学校一覧">
+          <aside class="school-panel" aria-label="地点情報">
+            <div id="pointPlaceholder" class="point-placeholder">
+              <p class="section-kicker">地点情報</p>
+              <p>地図上で地点を選んでください。</p>
+            </div>
             <section id="pointPanel" class="point-panel" hidden aria-live="polite">
               <div class="panel-subheading">
-                <p class="section-kicker">地点から調べる</p>
-                <h3>住所・学区・徒歩ルート</h3>
+                <p class="section-kicker">地点情報</p>
+                <h3>選択した地点</h3>
               </div>
               <div id="pointInfo" class="point-info"></div>
-              <div class="school-route-actions">
-                <button id="routeElementary" type="button">小学校まで徒歩</button>
-                <button id="routeJuniorHigh" type="button">中学校まで徒歩</button>
-                <button id="clearSchoolRoute" class="route-clear" type="button">ルートを消去</button>
-              </div>
-              <p id="routeStatus" class="route-status">地点を選ぶと学校入口までの徒歩ルートを表示できます。</p>
               <canvas id="profileCanvas" class="profile-canvas" width="640" height="320" aria-label="徒歩ルートの高低差グラフ"></canvas>
               <div class="profile-actions">
                 <button id="expandProfile" type="button" disabled>高低差表示を拡大</button>
@@ -64,13 +70,21 @@
               <p class="profile-note">表示している標高はルート上の地面の高さです。トンネルや橋などでは、実際の路面の高さと異なります。</p>
             </section>
 
-            <div class="panel-subheading school-list-heading">
-              <p class="section-kicker">表示中の学校</p>
-              <h3 id="schoolCount"></h3>
-            </div>
-            <div id="schoolList" class="school-list"></div>
           </aside>
         </div>
+
+        <section class="school-browser" aria-labelledby="schoolBrowserTitle">
+          <div class="panel-subheading school-browser-heading">
+            <p class="section-kicker">表示する学区</p>
+            <h3 id="schoolBrowserTitle">小学校・中学校</h3>
+          </div>
+          <div id="levelFilters" class="type-filters school-level-filters" aria-label="学校種別"></div>
+          <div class="panel-subheading school-list-heading">
+            <p class="section-kicker">表示中の学校</p>
+            <h3 id="schoolCount"></h3>
+          </div>
+          <div id="schoolList" class="school-list"></div>
+        </section>
 
         <dialog id="profileDialog" class="profile-dialog" aria-labelledby="profileDialogTitle">
           <div class="profile-dialog-bar">
@@ -98,6 +112,6 @@
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="scripts/school-districts.js?v=20260717-9"></script>
+  <script src="scripts/school-districts.js?v=20260718-1"></script>
 </body>
 </html>

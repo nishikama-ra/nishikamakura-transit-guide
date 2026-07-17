@@ -46,17 +46,17 @@ function officialLink(p,label='公式サイト ↗'){
 }
 function popupHtml(p){return`<div class="school-popup"><strong>${escapeHtml(p.name)}</strong><span>${escapeHtml(p.region)}・${escapeHtml(p.city)}</span><br><span>${escapeHtml(p.address)}</span>${officialLink(p)}</div>`;}
 
+function setActiveLevel(level){
+  if(!levels[level]||state.activeLevel===level)return;
+  state.activeLevel=level;renderFilters();renderDistricts(false);
+}
 function renderFilters(){
   const box=document.querySelector('#levelFilters');
   box.innerHTML=Object.entries(levels).map(([id,item])=>{
     const count=state.data.features.filter(f=>f.properties.level===id).length;
     return`<button type="button" class="type-filter" data-level="${id}" aria-pressed="${id===state.activeLevel}" style="--filter-color:${item.color}"><strong>${item.label}</strong><span>${count}校</span></button>`;
   }).join('');
-  box.querySelectorAll('[data-level]').forEach(button=>button.onclick=()=>{
-    state.activeLevel=button.dataset.level;
-    box.querySelectorAll('[data-level]').forEach(el=>el.setAttribute('aria-pressed',String(el===button)));
-    renderDistricts(false);
-  });
+  box.querySelectorAll('[data-level]').forEach(button=>button.onclick=()=>setActiveLevel(button.dataset.level));
 }
 function focusSchool(id){
   const layer=state.layers.get(id);
@@ -150,11 +150,12 @@ function updateButtons(){
   j.disabled=!state.point||!state.juniorHigh||state.busy;
   c.disabled=!state.routeLine&&!state.profile||state.busy;
   x.disabled=!state.profile||state.busy;
-  e.textContent=state.elementary?`${state.elementary.properties.name}まで徒歩`:'小学校区を判定できません';
-  j.textContent=state.juniorHigh?`${state.juniorHigh.properties.name}まで徒歩`:'中学校区を判定できません';
+  e.textContent=!state.point?'小学校まで徒歩':state.elementary?`${state.elementary.properties.name}まで徒歩`:'小学校区を判定できません';
+  j.textContent=!state.point?'中学校まで徒歩':state.juniorHigh?`${state.juniorHigh.properties.name}まで徒歩`:'中学校区を判定できません';
 }
 function renderPoint(){
   const panel=document.querySelector('#pointPanel');
+  document.querySelector('#pointPlaceholder').hidden=!!state.point;
   panel.hidden=!state.point;if(!state.point)return;
   document.querySelector('#pointInfo').innerHTML=`<div class="point-address"><small>選択した地点</small><strong>${escapeHtml(state.address||'住所を確認しています…')}</strong><span>${state.point.lat.toFixed(6)}, ${state.point.lng.toFixed(6)}</span></div><div class="point-districts">${districtRow('小学校区',state.elementary)}${districtRow('中学校区',state.juniorHigh)}</div>`;
   updateButtons();
@@ -168,7 +169,7 @@ function clearRoute(keepStatus=false){
   }
   document.querySelector('#profileStats').textContent='—';document.querySelector('#profileStatsExpanded').textContent='—';
   const dialog=document.querySelector('#profileDialog');if(dialog.open)dialog.close();
-  if(!keepStatus)document.querySelector('#routeStatus').textContent=state.point?'小学校または中学校の入口までの徒歩ルートを選んでください。':'地点を選ぶと学校入口までの徒歩ルートを表示できます。';
+  if(!keepStatus)document.querySelector('#routeStatus').textContent=state.point?'小学校または中学校の「徒歩」ボタンを押してください。':'地図をクリックして地点を選んでください。';
   updateButtons();
 }
 async function selectPoint(latlng){
@@ -177,8 +178,11 @@ async function selectPoint(latlng){
   state.elementary=findDistrict(latlng,'elementary');state.juniorHigh=findDistrict(latlng,'juniorHigh');
   state.pointMarker?.remove();
   state.pointMarker=L.circleMarker(state.point,{radius:8,color:'#fff',weight:3,fillColor:'#294f67',fillOpacity:1}).addTo(state.map).bindTooltip('選択地点',{direction:'top',offset:[0,-8]});
-  renderPoint();document.querySelector('#routeStatus').textContent='小学校または中学校の入口までの徒歩ルートを選んでください。';
+  renderPoint();document.querySelector('#routeStatus').textContent='小学校または中学校の「徒歩」ボタンを押してください。';
   renderDistricts(false);
+  if(window.matchMedia('(max-width: 820px)').matches){
+    requestAnimationFrame(()=>document.querySelector('#routeControls').scrollIntoView({behavior:'smooth',block:'start'}));
+  }
   try{const address=await reverseAddress(state.point);if(id===state.selectId)state.address=address||'住所を取得できませんでした';}
   catch{if(id===state.selectId)state.address='住所を取得できませんでした';}
   if(id===state.selectId)renderPoint();
@@ -298,6 +302,7 @@ function profileClick(event){
 }
 async function createRoute(level){
   const feature=level==='elementary'?state.elementary:state.juniorHigh;if(!state.point||!feature||state.busy)return;
+  setActiveLevel(level);
   clearRoute(true);const id=++state.routeId;state.busy=true;updateButtons();
   document.querySelector('#routeStatus').textContent=`${feature.properties.name}までの徒歩ルートを取得しています…`;
   document.querySelector('#profileStats').textContent='高低差を計算します。';document.querySelector('#profileStatsExpanded').textContent='高低差を計算します。';
