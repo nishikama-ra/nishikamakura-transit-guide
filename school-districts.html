@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="腰越地域・深沢地域・片瀬地区の公立小中学校の通学区域を地図で確認できます。">
+  <title>公立小中学校の学区｜西鎌倉周辺くらしの交通案内</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="school-districts.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="トップページへ">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><small>西鎌倉周辺</small><strong>くらしの交通案内</strong></span>
+    </a>
+    <nav class="global-nav" aria-label="主なページ">
+      <a href="index.html#public-transit">電車・バス・モノレール</a>
+      <a href="services.html">その他の移動手段</a>
+      <a href="initiatives.html">交通に関する取り組み</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro shell school-intro">
+      <p class="eyebrow">地域の学校</p>
+      <h1>公立小中学校の学区</h1>
+      <p>腰越地域・深沢地域・片瀬地区の通学区域を、小学校と中学校で切り替えて確認できます。</p>
+    </section>
+
+    <section class="section school-map-section">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="section-kicker">通学区域</p><h2>地図で確認する</h2></div>
+          <p>学校名または地図上の区域を選ぶと、その学区を拡大表示します。</p>
+        </div>
+
+        <div id="levelFilters" class="type-filters school-level-filters" aria-label="学校種別"></div>
+
+        <div class="school-map-layout">
+          <div class="school-map-wrap">
+            <div id="schoolMap" class="school-map" aria-label="公立小中学校の学区地図"></div>
+            <button id="resetMap" class="map-reset" type="button">全体を表示</button>
+          </div>
+          <aside class="school-panel" aria-label="表示中の学校一覧">
+            <p id="schoolCount" class="place-count"></p>
+            <div id="schoolList" class="school-list"></div>
+          </aside>
+        </div>
+
+        <div class="school-map-notes">
+          <p>この地図は、国土交通省「国土数値情報 小学校区・中学校区データ（2023年度）」を加工して表示しています。境界は参考表示です。実際の指定校は、住所に基づき各市教育委員会の最新情報で確認してください。</p>
+          <div class="official-links school-source-links">
+            <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou02.html" target="_blank" rel="noopener">鎌倉市 小学校通学区域 ↗</a>
+            <a href="https://www.city.kamakura.kanagawa.jp/gakumu/gakuhyou03.html" target="_blank" rel="noopener">鎌倉市 中学校通学区域 ↗</a>
+            <a href="https://www.city.fujisawa.kanagawa.jp/gakumu/kyoiku/kyoiku/nyugaku/tsugakukuiki.html" target="_blank" rel="noopener">藤沢市 小・中学校通学区域 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/school-districts.js"></script>
+</body>
+</html>
