@@ -1,10 +1,11 @@
 {
-  "collectedAt": "2026-07-16",
+  "collectedAt": "2026-07-18",
   "scope": "西鎌倉・腰越・津西・手広・鎌倉山の指定地域から800m以内、または藤沢・大船・鎌倉・江の島の各駅から800m以内。指定された鎌倉梶原月極、鎌倉上町屋第2大栄駐車場、NPC大船駅前は必ず掲載。",
   "coordinateSources": {
     "times": "official-map-tokyo-datum-converted",
     "mitsui": "official-station-page",
-    "orix": "official-station-page"
+    "orix": "official-station-page",
+    "everygo": "operator-map-pin"
   },
   "source": {
     "times": "https://share.timescar.jp/view/station/teeda.ajax",
@@ -16,13 +17,15 @@
       "https://station.orix-carshare.com/orix-carshare/spot/list?address=14204",
       "https://station.orix-carshare.com/orix-carshare/spot/list?address=14205"
     ],
+    "everygo": "https://everygo.jp/station/kanagawa/oofunneekimae-station/",
     "boundary": "https://geoshape.ex.nii.ac.jp/ka/topojson/2020/14/r2ka14204.topojson"
   },
   "counts": {
     "times": 73,
     "mitsui": 10,
     "orix": 3,
-    "total": 86
+    "everygo": 1,
+    "total": 87
   },
   "places": [
     {
@@ -801,6 +804,17 @@
       "lng": 139.485256,
       "href": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st00168",
       "note": "24時間。"
+    },
+    {
+      "name": "Honda EveryGo 大船駅前ステーション",
+      "type": "carShare",
+      "provider": "Honda EveryGo",
+      "address": "神奈川県鎌倉市大船1-3-9 NPC24H大船駅前パーキング2F",
+      "lat": 35.350368,
+      "lng": 139.530688,
+      "coordinateSource": "operator-map-pin",
+      "href": "https://everygo.jp/station/kanagawa/oofunneekimae-station/",
+      "note": "24時間・スマホ完結型。scope（大船駅800m以内）適合"
     }
   ]
 }
