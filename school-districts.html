@@ -35,22 +35,21 @@
           <div><p class="section-kicker">通学区域</p><h2>地図で確認する</h2></div>
         </div>
 
-        <div id="routeControls" class="school-route-controls">
-          <p class="route-instruction">地図をクリックして地点を選び、小学校または中学校の「徒歩」ボタンを押すと、学校入口までの徒歩ルートと高低差を表示します。</p>
-          <div class="school-route-actions">
-            <button id="routeElementary" type="button">小学校まで徒歩</button>
-            <button id="routeJuniorHigh" type="button">中学校まで徒歩</button>
-            <button id="clearSchoolRoute" class="route-clear" type="button">ルートを消去</button>
-          </div>
-          <p id="routeStatus" class="route-status" aria-live="polite">地図をクリックして地点を選んでください。</p>
-        </div>
-
         <div class="school-map-layout">
           <div class="school-map-wrap">
             <div id="schoolMap" class="school-map" aria-label="公立小中学校の学区地図"></div>
             <button id="resetMap" class="map-reset" type="button">全体を表示</button>
           </div>
           <aside class="school-panel" aria-label="地点情報">
+            <div id="routeControls" class="school-route-controls">
+              <p class="route-instruction">地図で地点を選んだ後、徒歩ボタンを押すと、徒歩ルートと高低差を表示します。</p>
+              <div class="school-route-actions">
+                <button id="routeElementary" type="button">小学校まで徒歩</button>
+                <button id="routeJuniorHigh" type="button">中学校まで徒歩</button>
+                <button id="clearSchoolRoute" class="route-clear" type="button">ルートを消去</button>
+              </div>
+              <p id="routeStatus" class="route-status" aria-live="polite">地図をクリックして地点を選んでください。</p>
+            </div>
             <div id="pointPlaceholder" class="point-placeholder">
               <p class="section-kicker">地点情報</p>
               <p>地図上で地点を選んでください。</p>
@@ -112,6 +111,6 @@
   </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="scripts/school-districts.js?v=20260718-2"></script>
+  <script src="scripts/school-districts.js?v=20260718-4"></script>
 </body>
 </html>
