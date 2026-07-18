@@ -99,7 +99,7 @@ function ownershipText(campus) {
 function popupHtml(campus) {
   const listings = campus.listings
     .filter(item => item.types.some(type => state.types.has(type)))
-    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.types.filter(type => state.types.has(type)).map(type => state.data.meta.typeLabels[type]).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span><br>${item.officialUrl ? `<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : '<span class="school-popup-unverified">公式情報未確認</span>'}</li>`)
+    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.formalTypes.filter(formalType => state.types.has(formalType.type)).map(formalType => formalType.label).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span><br>${item.officialUrl ? `<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : '<span class="school-popup-unverified">公式情報未確認</span>'}</li>`)
     .join('');
   return `<div class="school-popup">
     <strong>${escapeHtml(campus.name)}</strong>

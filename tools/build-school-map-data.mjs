@@ -19,6 +19,21 @@ const typeLabels = {
 };
 const scopeLabels = { local: '地域', nearby: '周辺', wide: '広域' };
 const ownershipLabels = { municipal: '市立', prefectural: '県立', national: '国立', private: '私立' };
+const formalSchoolTypeLabels = {
+  '16001': '小学校',
+  '16002': '中学校',
+  '16003': '中等教育学校',
+  '16004': '高等学校',
+  '16005': '高等専門学校',
+  '16006': '短期大学',
+  '16007': '大学',
+  '16011': '幼稚園',
+  '16012': '特別支援学校',
+  '16013': '幼保連携型認定こども園',
+  '16014': '義務教育学校',
+  '16015': '各種学校',
+  '16016': '専修学校'
+};
 const officialUrls = {
   '片岡幼稚園': 'https://www.kataoka-gakuen.jp/',
   '江ノ島ともだち幼稚園': 'https://www.kamakurayyhp.com/',
@@ -85,7 +100,14 @@ const displayNames = {
   '認定こども園アワーキッズ鎌倉　(本園)': '認定こども園アワーキッズ鎌倉（本園）',
   '日本大学': '日本大学 生物資源科学部',
   '慶應義塾大学': '慶應義塾大学 湘南藤沢キャンパス',
-  '多摩大学': '多摩大学 湘南キャンパス'
+  '多摩大学': '多摩大学 湘南キャンパス',
+  '鎌倉女子大学中等部': '鎌倉国際文理中学校',
+  '鎌倉女子大学高等部': '鎌倉国際文理高等学校'
+};
+
+const nameVerificationStatuses = {
+  '鎌倉女子大学中等部': 'verified-current-official-name',
+  '鎌倉女子大学高等部': 'verified-current-official-name'
 };
 
 const combinedListingNames = {
@@ -107,8 +129,8 @@ const combinedListingNames = {
   '藤嶺学園藤沢高等学校': '藤嶺学園藤沢中学校・高等学校',
   '湘南白百合学園中学校': '湘南白百合学園中学・高等学校',
   '湘南白百合学園高等学校': '湘南白百合学園中学・高等学校',
-  '鎌倉女子大学中等部': '鎌倉女子大学中等部・高等部',
-  '鎌倉女子大学高等部': '鎌倉女子大学中等部・高等部',
+  '鎌倉女子大学中等部': '鎌倉国際文理中学校・高等学校',
+  '鎌倉女子大学高等部': '鎌倉国際文理中学校・高等学校',
   '慶應義塾湘南藤沢中等部': '慶應義塾湘南藤沢中等部・高等部',
   '慶應義塾湘南藤沢高等部': '慶應義塾湘南藤沢中等部・高等部'
 };
@@ -125,7 +147,14 @@ function typeFor(name) {
   if (/高等学校|高等部/.test(name)) return 'high';
   if (/専門学校/.test(name)) return 'vocational';
   if (/大学|短期大学/.test(name)) return 'university';
-  throw new Error(`校種を判定できません: ${name}`);
+  throw new Error(`施設種類を判定できません: ${name}`);
+}
+
+function formalSchoolTypeFor(feature) {
+  const code = String(feature.properties.P29_003 ?? '').trim();
+  const label = formalSchoolTypeLabels[code];
+  if (!label) throw new Error(`不明な学校分類コードです: ${code || '(空)'}（${feature.properties.P29_004 || '施設名不明'}）`);
+  return { code, label };
 }
 
 function ownershipFor(name) {
@@ -148,19 +177,22 @@ const institutions = source.features.map((feature, index) => {
   const displayName = displayNames[sourceName] || sourceName;
   const address = correctedAddresses[sourceName] || sourceAddress;
   const ownership = ownershipFor(sourceName);
+  const formalType = formalSchoolTypeFor(feature);
   const [lng, lat] = feature.geometry.coordinates;
   return {
     id: `source-${String(index + 1).padStart(2, '0')}`,
     sourceName,
     displayName,
     listingName: combinedListingNames[sourceName] || displayName,
-    nameVerificationStatus: officialUrls[sourceName] ? 'verified' : 'unverified',
+    nameVerificationStatus: nameVerificationStatuses[sourceName] || (officialUrls[sourceName] ? 'verified' : 'unverified'),
     sourceAddress,
     address,
     addressVerificationStatus: correctedAddresses[sourceName] ? 'verified-corrected' : 'source',
     lat,
     lng,
     type: typeFor(sourceName),
+    formalTypeCode: formalType.code,
+    formalTypeLabel: formalType.label,
     ownership,
     officialUrl: officialUrls[sourceName] || null,
     verificationStatus: officialUrls[sourceName] ? 'verified' : 'unverified',
@@ -181,6 +213,8 @@ institutions.push({
   lat: 35.3160451,
   lng: 139.4907829,
   type: 'juniorHigh',
+  formalTypeCode: null,
+  formalTypeLabel: '中学校',
   ownership: 'private',
   officialUrl: 'https://chukou.shonan-shirayuri.ac.jp/',
   verificationStatus: 'verified',
@@ -228,6 +262,8 @@ childcareFacilities.forEach((facility, index) => {
     lat: facility.lat,
     lng: facility.lng,
     type: 'nursery',
+    formalTypeCode: null,
+    formalTypeLabel: facility.category,
     ownership: facility.ownership || 'private',
     officialUrl: facility.url,
     verificationStatus: 'verified',
@@ -254,6 +290,8 @@ for (const collection of districtFiles) {
       lat: p.schoolLat,
       lng: p.schoolLng,
       type: p.level === 'elementary' ? 'elementary' : 'juniorHigh',
+      formalTypeCode: null,
+      formalTypeLabel: p.level === 'elementary' ? '小学校' : '中学校',
       ownership: 'municipal',
       officialUrl: p.schoolUrl || null,
       verificationStatus: p.schoolUrl ? 'verified' : 'unverified',
@@ -297,13 +335,23 @@ const campuses = [...grouped.entries()].map(([group, schools], index) => {
     if (!listingGroups.has(key)) listingGroups.set(key, []);
     listingGroups.get(key).push(school);
   }
-  const listings = [...listingGroups.values()].map(items => ({
-    name: items[0].listingName,
-    types: [...new Set(items.map(item => item.type))].sort((a, b) => typeOrder.indexOf(a) - typeOrder.indexOf(b)),
-    ownerships: [...new Set(items.map(item => item.ownership))],
-    officialUrl: items[0].officialUrl,
-    institutionIds: items.map(item => item.id)
-  }));
+  const listings = [...listingGroups.values()].map(items => {
+    const formalTypes = [...new Map(items.map(item => [`${item.type}\u0000${item.formalTypeCode || ''}\u0000${item.formalTypeLabel}`, {
+      type: item.type,
+      code: item.formalTypeCode,
+      label: item.formalTypeLabel
+    }])).values()].sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type));
+    return {
+      name: items[0].listingName,
+      types: [...new Set(items.map(item => item.type))].sort((a, b) => typeOrder.indexOf(a) - typeOrder.indexOf(b)),
+      formalTypeCodes: formalTypes.map(item => item.code).filter(Boolean),
+      formalTypeLabels: formalTypes.map(item => item.label),
+      formalTypes,
+      ownerships: [...new Set(items.map(item => item.ownership))],
+      officialUrl: items[0].officialUrl,
+      institutionIds: items.map(item => item.id)
+    };
+  });
   const rawAddress = schools[0].address;
   let name = schools.length === 1 ? schools[0].displayName : campusNamesByAddress.get(normalizeAddress(rawAddress));
   if (group === 'keio-sfc') name = '慶應義塾SFC（大学・中等部・高等部）';
@@ -350,7 +398,7 @@ const campuses = [...grouped.entries()].map(([group, schools], index) => {
 
 const output = {
   meta: {
-    title: '学校地図モックアップ用データ',
+    title: '学校・幼稚園・保育施設地図モックアップ用データ',
     generatedAt: '2026-07-18',
     sourceFeatureCount: source.features.length,
     reusedPublicSchoolCount: institutions.filter(item => item.source.startsWith('content/school-districts-')).length,
@@ -371,18 +419,18 @@ fs.writeFileSync(jsonPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
 
 const rows = campuses
   .sort((a, b) => typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0]) || a.name.localeCompare(b.name, 'ja'))
-  .map(campus => `| ${campus.viewModes.map(mode => scopeLabels[mode]).join('・') || '対象外'} | ${campus.name} | ${campus.types.map(type => typeLabels[type]).join('・')} | ${campus.ownerships.map(item => ownershipLabels[item]).join('・')} | ${campus.address} |`)
+  .map(campus => `| ${campus.viewModes.map(mode => scopeLabels[mode]).join('・') || '対象外'} | ${campus.name} | ${[...new Set(campus.types.flatMap(type => campus.institutions.filter(item => item.type === type).map(item => item.formalTypeLabel)))].join('・')} | ${campus.ownerships.map(item => ownershipLabels[item]).join('・')} | ${campus.address} |`)
   .join('\n');
 const unverified = institutions.filter(item => item.verificationStatus !== 'verified');
-const proposal = `# 学校地図 表示範囲・キャンパス統合案\n\n` +
+const proposal = `# 学校・幼稚園・保育施設地図 表示範囲・キャンパス統合案\n\n` +
   `この文書は \`school-map-mockup.html\` の確認用です。分類はモックアップ段階の暫定提案で、元の \`content/schools-source.geojson\` は変更していません。\n\n` +
   `- 元データ: ${source.features.length}施設\n` +
   `- 既存学区データから追加: ${output.meta.reusedPublicSchoolCount}校\n` +
   `- 公式サイトとの突合で補完: ${output.meta.officialSupplementCount}校（湘南白百合学園中学校）\n` +
   `- 腰越・深沢・片瀬から追加した保育施設: ${output.meta.childcareFacilityCount}件\n` +
-  `- 掲載する学校・保育施設: ${institutions.length}件\n` +
+  `- 掲載する学校・幼稚園・保育施設: ${institutions.length}件\n` +
   `- キャンパス統合後: ${campuses.length}マーカー\n\n` +
-  `## 表示一覧\n\n| 表示される地図 | キャンパス | 校種 | 設置区分 | 住所 |\n|---|---|---|---|---|\n${rows}\n\n` +
+  `## 表示一覧\n\n| 表示される地図 | キャンパス | 施設種類 | 設置区分 | 住所 |\n|---|---|---|---|---|\n${rows}\n\n` +
   `## 表示方針\n\n` +
   `- 地域・周辺・広域は学校の排他的な分類ではなく、地図の縮尺と情報量の切り替え。\n` +
   `- 地域・周辺: 同じ全施設を表示し、初期縮尺と中心位置だけを変更。\n` +

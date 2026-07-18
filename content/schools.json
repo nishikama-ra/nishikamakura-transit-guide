@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "学校地図モックアップ用データ",
+    "title": "学校・幼稚園・保育施設地図モックアップ用データ",
     "generatedAt": "2026-07-18",
     "sourceFeatureCount": 58,
     "reusedPublicSchoolCount": 11,
@@ -62,6 +62,8 @@
           "lat": 35.32903873696478,
           "lng": 139.5113670855532,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.kataoka-gakuen.jp/",
           "verificationStatus": "verified",
@@ -73,6 +75,19 @@
           "name": "片岡幼稚園",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -116,6 +131,8 @@
           "lat": 35.31078110446236,
           "lng": 139.49202119472804,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.kamakurayyhp.com/",
           "verificationStatus": "verified",
@@ -127,6 +144,19 @@
           "name": "江ノ島ともだち幼稚園",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -171,6 +201,8 @@
           "lat": 35.311634198296225,
           "lng": 139.51905237820114,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.kaede.ac.jp/",
           "verificationStatus": "verified",
@@ -188,6 +220,8 @@
           "lat": 35.311718,
           "lng": 139.519455,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
           "ownership": "private",
           "officialUrl": "https://www.kaede.ac.jp/",
           "verificationStatus": "verified",
@@ -203,6 +237,25 @@
           "types": [
             "nursery",
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -248,6 +301,8 @@
           "lat": 35.32503252285334,
           "lng": 139.5041330741121,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.nky.ed.jp/",
           "verificationStatus": "verified",
@@ -265,6 +320,8 @@
           "lat": 35.324795,
           "lng": 139.503998,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
           "ownership": "private",
           "officialUrl": "https://www.nky.ed.jp/krippe/",
           "verificationStatus": "verified",
@@ -280,6 +337,19 @@
           "types": [
             "kindergarten"
           ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
           "ownerships": [
             "private"
           ],
@@ -292,6 +362,17 @@
           "name": "キンダークリッペ西鎌倉",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -336,6 +417,8 @@
           "lat": 35.33455356476855,
           "lng": 139.5213820921149,
           "type": "kindergarten",
+          "formalTypeCode": "16013",
+          "formalTypeLabel": "幼保連携型認定こども園",
           "ownership": "private",
           "officialUrl": "https://ourkids.jp/fukasawa/",
           "verificationStatus": "verified",
@@ -353,6 +436,8 @@
           "lat": 35.33461824933394,
           "lng": 139.52138954899542,
           "type": "kindergarten",
+          "formalTypeCode": "16013",
+          "formalTypeLabel": "幼保連携型認定こども園",
           "ownership": "private",
           "officialUrl": "https://ourkids.jp/kamakura/",
           "verificationStatus": "verified",
@@ -370,6 +455,8 @@
           "lat": 35.333679,
           "lng": 139.522003,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
           "ownership": "private",
           "officialUrl": "https://ourkids.jp/kamakura/",
           "verificationStatus": "verified",
@@ -390,6 +477,8 @@
           "lat": 35.334412,
           "lng": 139.521454,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
           "ownership": "private",
           "officialUrl": "https://ourkids.jp/fukasawa/",
           "verificationStatus": "verified",
@@ -406,6 +495,25 @@
             "nursery",
             "kindergarten"
           ],
+          "formalTypeCodes": [
+            "16013"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼保連携型認定こども園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16013",
+              "label": "幼保連携型認定こども園"
+            }
+          ],
           "ownerships": [
             "private"
           ],
@@ -420,6 +528,25 @@
           "types": [
             "nursery",
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16013"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼保連携型認定こども園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16013",
+              "label": "幼保連携型認定こども園"
+            }
           ],
           "ownerships": [
             "private"
@@ -468,6 +595,8 @@
           "lat": 35.361064654648814,
           "lng": 139.5479395488441,
           "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u.ac.jp/elementary/",
           "verificationStatus": "verified",
@@ -476,15 +605,17 @@
         {
           "id": "source-11",
           "sourceName": "鎌倉女子大学中等部",
-          "displayName": "鎌倉女子大学中等部",
-          "listingName": "鎌倉女子大学中等部・高等部",
-          "nameVerificationStatus": "verified",
+          "displayName": "鎌倉国際文理中学校",
+          "listingName": "鎌倉国際文理中学校・高等学校",
+          "nameVerificationStatus": "verified-current-official-name",
           "sourceAddress": "神奈川県鎌倉市岩瀬1420",
           "address": "神奈川県鎌倉市岩瀬1420",
           "addressVerificationStatus": "source",
           "lat": 35.359405266997385,
           "lng": 139.54674578049782,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u-j.ed.jp/",
           "verificationStatus": "verified",
@@ -493,15 +624,17 @@
         {
           "id": "source-16",
           "sourceName": "鎌倉女子大学高等部",
-          "displayName": "鎌倉女子大学高等部",
-          "listingName": "鎌倉女子大学中等部・高等部",
-          "nameVerificationStatus": "verified",
+          "displayName": "鎌倉国際文理高等学校",
+          "listingName": "鎌倉国際文理中学校・高等学校",
+          "nameVerificationStatus": "verified-current-official-name",
           "sourceAddress": "神奈川県鎌倉市岩瀬1420",
           "address": "神奈川県鎌倉市岩瀬1420",
           "addressVerificationStatus": "source",
           "lat": 35.36055730439213,
           "lng": 139.54724708003405,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u-j.ed.jp/",
           "verificationStatus": "verified",
@@ -519,6 +652,8 @@
           "lat": 35.36063279417976,
           "lng": 139.54570071078547,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u.ac.jp/kindergarten/",
           "verificationStatus": "verified",
@@ -531,6 +666,19 @@
           "types": [
             "elementary"
           ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
           "ownerships": [
             "private"
           ],
@@ -540,10 +688,30 @@
           ]
         },
         {
-          "name": "鎌倉女子大学中等部・高等部",
+          "name": "鎌倉国際文理中学校・高等学校",
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -558,6 +726,19 @@
           "name": "鎌倉女子大学幼稚部",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -602,6 +783,8 @@
           "lat": 35.32505219138716,
           "lng": 139.56135983996975,
           "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
           "ownership": "private",
           "officialUrl": "https://seisen-e.ac.jp/",
           "verificationStatus": "verified",
@@ -613,6 +796,19 @@
           "name": "清泉小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -658,6 +854,8 @@
           "lat": 35.3251480502585,
           "lng": 139.55867309588808,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "national",
           "officialUrl": "https://kamachu.ynu.ac.jp/",
           "verificationStatus": "verified",
@@ -675,6 +873,8 @@
           "lat": 35.32426559522535,
           "lng": 139.55793803670412,
           "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
           "ownership": "national",
           "officialUrl": "https://www.kamakurasho.ynu.ac.jp/",
           "verificationStatus": "verified",
@@ -686,6 +886,19 @@
           "name": "横浜国立大学教育学部附属鎌倉中学校",
           "types": [
             "juniorHigh"
+          ],
+          "formalTypeCodes": [
+            "16002"
+          ],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            }
           ],
           "ownerships": [
             "national"
@@ -699,6 +912,19 @@
           "name": "横浜国立大学教育学部附属鎌倉小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "national"
@@ -744,6 +970,8 @@
           "lat": 35.31401755216128,
           "lng": 139.5500759748456,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.kamajo.ac.jp/",
           "verificationStatus": "verified",
@@ -761,6 +989,8 @@
           "lat": 35.31374750245152,
           "lng": 139.55019523750724,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.kamajo.ac.jp/",
           "verificationStatus": "verified",
@@ -773,6 +1003,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -818,6 +1068,8 @@
           "lat": 35.308723635893806,
           "lng": 139.50402327486327,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/",
           "verificationStatus": "verified",
@@ -829,6 +1081,19 @@
           "name": "神奈川県立鎌倉高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -873,6 +1138,8 @@
           "lat": 35.305300920753425,
           "lng": 139.51247583760937,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/",
           "verificationStatus": "verified",
@@ -884,6 +1151,19 @@
           "name": "神奈川県立七里ガ浜高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -928,6 +1208,8 @@
           "lat": 35.344603594815986,
           "lng": 139.54774801286976,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/",
           "verificationStatus": "verified",
@@ -939,6 +1221,19 @@
           "name": "神奈川県立大船高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -983,6 +1278,8 @@
           "lat": 35.36136068804772,
           "lng": 139.5151321552605,
           "type": "specialSupport",
+          "formalTypeCode": "16012",
+          "formalTypeLabel": "特別支援学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-sh/",
           "verificationStatus": "verified",
@@ -994,6 +1291,19 @@
           "name": "神奈川県立鎌倉支援学校",
           "types": [
             "specialSupport"
+          ],
+          "formalTypeCodes": [
+            "16012"
+          ],
+          "formalTypeLabels": [
+            "特別支援学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "specialSupport",
+              "code": "16012",
+              "label": "特別支援学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -1038,6 +1348,8 @@
           "lat": 35.31781507863913,
           "lng": 139.55078761461445,
           "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
           "ownership": "private",
           "officialUrl": "https://www.hayami.ac.jp/",
           "verificationStatus": "verified",
@@ -1049,6 +1361,19 @@
           "name": "鎌倉早見美容芸術専門学校",
           "types": [
             "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1093,6 +1418,8 @@
           "lat": 35.35322532954461,
           "lng": 139.53936917618793,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u.ac.jp/",
           "verificationStatus": "verified",
@@ -1110,6 +1437,8 @@
           "lat": 35.353625177497314,
           "lng": 139.53935435945152,
           "type": "university",
+          "formalTypeCode": "16006",
+          "formalTypeLabel": "短期大学",
           "ownership": "private",
           "officialUrl": "https://www.kamakura-u.ac.jp/",
           "verificationStatus": "verified",
@@ -1121,6 +1450,19 @@
           "name": "鎌倉女子大学",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -1134,6 +1476,19 @@
           "name": "鎌倉女子大学短期大学部",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16006"
+          ],
+          "formalTypeLabels": [
+            "短期大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16006",
+              "label": "短期大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -1178,6 +1533,8 @@
           "lat": 35.34253864728275,
           "lng": 139.52718117135228,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.sku.ac.jp/",
           "verificationStatus": "verified",
@@ -1189,6 +1546,19 @@
           "name": "湘南鎌倉医療大学",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -1232,6 +1602,8 @@
           "lat": 35.31191694403616,
           "lng": 139.50212034156138,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://www.montana-youchien.com/",
           "verificationStatus": "verified",
@@ -1243,6 +1615,19 @@
           "name": "モンタナ幼稚園",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -1288,6 +1673,8 @@
           "lat": 35.355941577566526,
           "lng": 139.5200584130449,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://ekh.jp/",
           "verificationStatus": "verified",
@@ -1305,6 +1692,8 @@
           "lat": 35.356377435106594,
           "lng": 139.5200933997257,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://ekh.jp/",
           "verificationStatus": "verified",
@@ -1317,6 +1706,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1363,6 +1772,8 @@
           "lat": 35.3311365303659,
           "lng": 139.55287394135416,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.kamagaku.ac.jp/",
           "verificationStatus": "verified",
@@ -1380,6 +1791,8 @@
           "lat": 35.33100103036691,
           "lng": 139.55310257318368,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.kamagaku.ac.jp/",
           "verificationStatus": "verified",
@@ -1392,6 +1805,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1438,6 +1871,8 @@
           "lat": 35.33695924192194,
           "lng": 139.5418131650567,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.kitakama.ac.jp/",
           "verificationStatus": "verified",
@@ -1455,6 +1890,8 @@
           "lat": 35.33714122386299,
           "lng": 139.5416643745958,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.kitakama.ac.jp/",
           "verificationStatus": "verified",
@@ -1467,6 +1904,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1513,6 +1970,8 @@
           "lat": 35.353854150120995,
           "lng": 139.51369769484242,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.seisen-h.ed.jp/",
           "verificationStatus": "verified",
@@ -1530,6 +1989,8 @@
           "lat": 35.35404413648175,
           "lng": 139.51369962930295,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.seisen-h.ed.jp/",
           "verificationStatus": "verified",
@@ -1542,6 +2003,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1586,6 +2067,8 @@
           "lat": 35.316804110448885,
           "lng": 139.48221230312927,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://katase-church.sakura.ne.jp/nozomi/",
           "verificationStatus": "verified",
@@ -1597,6 +2080,19 @@
           "name": "片瀬のぞみ幼稚園",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -1640,6 +2136,8 @@
           "lat": 35.31040044085493,
           "lng": 139.48299029922364,
           "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
           "ownership": "private",
           "officialUrl": "https://youchien.shonan-shirayuri.ac.jp/",
           "verificationStatus": "verified",
@@ -1651,6 +2149,19 @@
           "name": "湘南白百合学園幼稚園",
           "types": [
             "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
           ],
           "ownerships": [
             "private"
@@ -1695,6 +2206,8 @@
           "lat": 35.32468028366969,
           "lng": 139.4762027116708,
           "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
           "ownership": "private",
           "officialUrl": "https://www.shogak.ac.jp/elementary/",
           "verificationStatus": "verified",
@@ -1706,6 +2219,19 @@
           "name": "湘南学園小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1750,6 +2276,8 @@
           "lat": 35.311310512913096,
           "lng": 139.48465685734695,
           "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
           "ownership": "private",
           "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/",
           "verificationStatus": "verified",
@@ -1761,6 +2289,19 @@
           "name": "湘南白百合学園小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1806,6 +2347,8 @@
           "lat": 35.32405116411972,
           "lng": 139.4775833335211,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.shogak.ac.jp/highschool/",
           "verificationStatus": "verified",
@@ -1823,6 +2366,8 @@
           "lat": 35.3238652599651,
           "lng": 139.47738678511504,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.shogak.ac.jp/highschool/",
           "verificationStatus": "verified",
@@ -1835,6 +2380,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1881,6 +2446,8 @@
           "lat": 35.35414634570013,
           "lng": 139.4772359968933,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.misono.jp/",
           "verificationStatus": "verified",
@@ -1898,6 +2465,8 @@
           "lat": 35.354103067948856,
           "lng": 139.47712680130766,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.misono.jp/",
           "verificationStatus": "verified",
@@ -1910,6 +2479,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -1957,6 +2546,8 @@
           "lat": 35.38634683770012,
           "lng": 139.42584819786106,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.sfc-js.keio.ac.jp/",
           "verificationStatus": "verified",
@@ -1974,6 +2565,8 @@
           "lat": 35.38585634619178,
           "lng": 139.4262494262315,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.sfc-js.keio.ac.jp/",
           "verificationStatus": "verified",
@@ -1991,6 +2584,8 @@
           "lat": 35.388190654409954,
           "lng": 139.4272745415313,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.sfc.keio.ac.jp/",
           "verificationStatus": "verified",
@@ -2003,6 +2598,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2017,6 +2632,19 @@
           "name": "慶應義塾大学 湘南藤沢キャンパス",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -2062,6 +2690,8 @@
           "lat": 35.34890822418021,
           "lng": 139.48668725478203,
           "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
           "verificationStatus": "verified",
@@ -2079,6 +2709,8 @@
           "lat": 35.34855909077738,
           "lng": 139.48620158523255,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
           "verificationStatus": "verified",
@@ -2091,6 +2723,26 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2136,6 +2788,8 @@
           "lat": 35.358191806323546,
           "lng": 139.49368087952047,
           "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
           "ownership": "private",
           "officialUrl": "https://www.jp-garden-design.com/",
           "verificationStatus": "verified",
@@ -2147,6 +2801,19 @@
           "name": "日本ガーデンデザイン専門学校",
           "types": [
             "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2191,6 +2858,8 @@
           "lat": 35.3587990470883,
           "lng": 139.44583157217696,
           "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
           "ownership": "private",
           "officialUrl": "https://www.shounankango.ac.jp/",
           "verificationStatus": "verified",
@@ -2202,6 +2871,19 @@
           "name": "湘南看護専門学校",
           "types": [
             "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2247,6 +2929,8 @@
           "lat": 35.32535486556703,
           "lng": 139.45318227129724,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.shonan-it.ac.jp/",
           "verificationStatus": "verified",
@@ -2264,6 +2948,8 @@
           "lat": 35.32508928647561,
           "lng": 139.45119353352283,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.sh.shonan-it.ac.jp/",
           "verificationStatus": "verified",
@@ -2275,6 +2961,19 @@
           "name": "湘南工科大学",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -2288,6 +2987,19 @@
           "name": "湘南工科大学附属高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2332,6 +3044,8 @@
           "lat": 35.344656059136554,
           "lng": 139.47272421619942,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/",
           "verificationStatus": "verified",
@@ -2343,6 +3057,19 @@
           "name": "神奈川県立湘南高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -2387,6 +3114,8 @@
           "lat": 35.355531811282624,
           "lng": 139.48374984367942,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "prefectural",
           "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/",
           "verificationStatus": "verified",
@@ -2398,6 +3127,19 @@
           "name": "神奈川県立藤沢清流高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "prefectural"
@@ -2443,6 +3185,8 @@
           "lat": 35.31604507431686,
           "lng": 139.4907828959952,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
           "verificationStatus": "verified",
@@ -2460,6 +3204,8 @@
           "lat": 35.3160451,
           "lng": 139.4907829,
           "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
           "ownership": "private",
           "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
           "verificationStatus": "verified",
@@ -2472,6 +3218,25 @@
           "types": [
             "juniorHigh",
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2518,6 +3283,8 @@
           "lat": 35.37812530504569,
           "lng": 139.47034911526055,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/",
           "verificationStatus": "verified",
@@ -2535,6 +3302,8 @@
           "lat": 35.38056575595769,
           "lng": 139.46968150603814,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.brs.nihon-u.ac.jp/",
           "verificationStatus": "verified",
@@ -2546,6 +3315,19 @@
           "name": "日本大学藤沢高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2559,6 +3341,19 @@
           "name": "日本大学 生物資源科学部",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -2603,6 +3398,8 @@
           "lat": 35.3615445994135,
           "lng": 139.4743209364371,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://shoryo.ed.jp/",
           "verificationStatus": "verified",
@@ -2614,6 +3411,19 @@
           "name": "藤沢翔陵高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2658,6 +3468,8 @@
           "lat": 35.34086690115516,
           "lng": 139.48986640773944,
           "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
           "ownership": "private",
           "officialUrl": "https://niibori.ac.jp/ma/",
           "verificationStatus": "verified",
@@ -2669,6 +3481,19 @@
           "name": "専門学校国際新堀芸術学院",
           "types": [
             "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2713,6 +3538,8 @@
           "lat": 35.387140567234454,
           "lng": 139.46209731759944,
           "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
           "ownership": "private",
           "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html",
           "verificationStatus": "verified",
@@ -2724,6 +3551,19 @@
           "name": "多摩大学 湘南キャンパス",
           "types": [
             "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
           ],
           "ownerships": [
             "private"
@@ -2768,6 +3608,8 @@
           "lat": 35.3273356444044,
           "lng": 139.48308878906795,
           "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
           "ownership": "private",
           "officialUrl": "https://kugenuma.ed.jp/",
           "verificationStatus": "verified",
@@ -2779,6 +3621,19 @@
           "name": "鵠沼高等学校",
           "types": [
             "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
           ],
           "ownerships": [
             "private"
@@ -2822,6 +3677,8 @@
           "lat": 35.31139,
           "lng": 139.493393,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://www.shinkoufukushikai.com/hoiku/210/",
           "verificationStatus": "verified",
@@ -2836,6 +3693,17 @@
           "name": "キディ腰越保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -2879,6 +3747,8 @@
           "lat": 35.313732,
           "lng": 139.491577,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
           "ownership": "private",
           "officialUrl": "https://tetsunagu-works.com/",
           "verificationStatus": "verified",
@@ -2893,6 +3763,17 @@
           "name": "てつなぐ腰越保育室",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -2936,6 +3817,8 @@
           "lat": 35.314236,
           "lng": 139.500992,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
           "ownership": "private",
           "officialUrl": "https://www.kiminomama.com/",
           "verificationStatus": "verified",
@@ -2950,6 +3833,17 @@
           "name": "きみのまま保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -2993,6 +3887,8 @@
           "lat": 35.328674,
           "lng": 139.530533,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "municipal",
           "officialUrl": "https://www.city.kamakura.kanagawa.jp/annai/shisetsu/35_fukasawa_ns.html",
           "verificationStatus": "verified",
@@ -3007,6 +3903,17 @@
           "name": "深沢保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -3050,6 +3957,8 @@
           "lat": 35.326996,
           "lng": 139.527496,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://k-tanpopo.or.jp/kajiwara/",
           "verificationStatus": "verified",
@@ -3064,6 +3973,17 @@
           "name": "梶原の森たんぽぽ保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3107,6 +4027,8 @@
           "lat": 35.335526,
           "lng": 139.520065,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://yukarifukushikai.or.jp/terabun/",
           "verificationStatus": "verified",
@@ -3121,6 +4043,17 @@
           "name": "寺分保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3164,6 +4097,8 @@
           "lat": 35.343735,
           "lng": 139.527206,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://www.k-roufukukyo.jp/pages/11/",
           "verificationStatus": "verified",
@@ -3178,6 +4113,17 @@
           "name": "山崎保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3221,6 +4167,8 @@
           "lat": 35.327549,
           "lng": 139.510651,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://k-tanpopo.or.jp/tanpopo/",
           "verificationStatus": "verified",
@@ -3235,6 +4183,17 @@
           "name": "たんぽぽ共同保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3278,6 +4237,8 @@
           "lat": 35.324677,
           "lng": 139.506744,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://manmarusmile.com/",
           "verificationStatus": "verified",
@@ -3292,6 +4253,17 @@
           "name": "まんまる保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3335,6 +4307,8 @@
           "lat": 35.323765,
           "lng": 139.530762,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://piyo-kamakura.wixsite.com/my-site",
           "verificationStatus": "verified",
@@ -3349,6 +4323,17 @@
           "name": "ピヨピヨ保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3392,6 +4377,8 @@
           "lat": 35.331497,
           "lng": 139.51799,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
           "ownership": "private",
           "officialUrl": "https://www.atelier-c-house.com/",
           "verificationStatus": "verified",
@@ -3406,6 +4393,17 @@
           "name": "アトリエし～はうす保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3449,6 +4447,8 @@
           "lat": 35.325657,
           "lng": 139.524445,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
           "ownership": "private",
           "officialUrl": "https://shiawase-hoiku.com/introduction/fukazawa/",
           "verificationStatus": "verified",
@@ -3463,6 +4463,17 @@
           "name": "しあわせいっぱい保育園深沢",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3506,6 +4517,8 @@
           "lat": 35.324741,
           "lng": 139.523056,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
           "ownership": "private",
           "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
           "verificationStatus": "verified",
@@ -3520,6 +4533,17 @@
           "name": "ののはな",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3563,6 +4587,8 @@
           "lat": 35.33131,
           "lng": 139.514954,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
           "ownership": "private",
           "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
           "verificationStatus": "verified",
@@ -3577,6 +4603,17 @@
           "name": "モンテッソーリ鎌倉こどもの家",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3620,6 +4657,8 @@
           "lat": 35.316196,
           "lng": 139.522873,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
           "ownership": "private",
           "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
           "verificationStatus": "verified",
@@ -3634,6 +4673,17 @@
           "name": "鎌倉山インターナショナルスクール",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3677,6 +4727,8 @@
           "lat": 35.332127,
           "lng": 139.518204,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出・病児保育施設",
           "ownership": "private",
           "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
           "verificationStatus": "verified",
@@ -3691,6 +4743,17 @@
           "name": "送迎付病児保育室エルダーフラワー",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出・病児保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出・病児保育施設"
+            }
           ],
           "ownerships": [
             "private"
@@ -3734,6 +4797,8 @@
           "lat": 35.317123,
           "lng": 139.484528,
           "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
           "ownership": "private",
           "officialUrl": "https://www.ans.co.jp/u/fujisawa/fujimi.htm",
           "verificationStatus": "verified",
@@ -3748,6 +4813,17 @@
           "name": "富士見保育園",
           "types": [
             "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
           ],
           "ownerships": [
             "private"
@@ -3791,6 +4867,8 @@
           "lat": 35.312377,
           "lng": 139.493417,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosisyou/",
           "verificationStatus": "verified",
@@ -3802,6 +4880,17 @@
           "name": "腰越小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -3845,6 +4934,8 @@
           "lat": 35.323437,
           "lng": 139.507955,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-nisikama/",
           "verificationStatus": "verified",
@@ -3856,6 +4947,17 @@
           "name": "西鎌倉小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -3899,6 +5001,8 @@
           "lat": 35.311471,
           "lng": 139.512944,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-sitisyou/",
           "verificationStatus": "verified",
@@ -3910,6 +5014,17 @@
           "name": "七里ガ浜小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -3953,6 +5068,8 @@
           "lat": 35.330982,
           "lng": 139.519996,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukasyou/",
           "verificationStatus": "verified",
@@ -3964,6 +5081,17 @@
           "name": "深沢小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4007,6 +5135,8 @@
           "lat": 35.338919,
           "lng": 139.533308,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-yamasyou/",
           "verificationStatus": "verified",
@@ -4018,6 +5148,17 @@
           "name": "山崎小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4061,6 +5202,8 @@
           "lat": 35.336784,
           "lng": 139.520607,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-fujisyou/",
           "verificationStatus": "verified",
@@ -4072,6 +5215,17 @@
           "name": "富士塚小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4115,6 +5269,8 @@
           "lat": 35.320306,
           "lng": 139.487116,
           "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
           "ownership": "municipal",
           "officialUrl": "https://www1.fujisawa-kng.ed.jp/ekata/",
           "verificationStatus": "verified",
@@ -4126,6 +5282,17 @@
           "name": "片瀬小学校",
           "types": [
             "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4169,6 +5336,8 @@
           "lat": 35.312224,
           "lng": 139.497304,
           "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosityuu/",
           "verificationStatus": "verified",
@@ -4180,6 +5349,17 @@
           "name": "腰越中学校",
           "types": [
             "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4223,6 +5403,8 @@
           "lat": 35.324937,
           "lng": 139.504899,
           "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-tebityuu/",
           "verificationStatus": "verified",
@@ -4234,6 +5416,17 @@
           "name": "手広中学校",
           "types": [
             "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4277,6 +5470,8 @@
           "lat": 35.331229,
           "lng": 139.523308,
           "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
           "ownership": "municipal",
           "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukatyuu/",
           "verificationStatus": "verified",
@@ -4288,6 +5483,17 @@
           "name": "深沢中学校",
           "types": [
             "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
           ],
           "ownerships": [
             "municipal"
@@ -4331,6 +5537,8 @@
           "lat": 35.323071,
           "lng": 139.494149,
           "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
           "ownership": "municipal",
           "officialUrl": "https://www1.fujisawa-kng.ed.jp/jkata/",
           "verificationStatus": "verified",
@@ -4342,6 +5550,17 @@
           "name": "片瀬中学校",
           "types": [
             "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
           ],
           "ownerships": [
             "municipal"
