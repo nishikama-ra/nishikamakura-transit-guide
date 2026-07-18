@@ -132,9 +132,7 @@ function focusCampus(id) {
 }
 
 function renderList() {
-  const count = state.visible.reduce((sum, campus) => sum + campus.listings.filter(item => item.types.some(type => state.types.has(type))).length, 0);
   document.querySelector('#schoolCount').textContent = `${state.visible.length}地点`;
-  document.querySelector('#mapSummary').textContent = `${state.data.meta.scopeLabels[state.scope]}：${state.visible.length}マーカー・${count}施設`;
   document.querySelector('#schoolList').innerHTML = state.visible.length
     ? [...state.visible].sort((a, b) => a.name.localeCompare(b.name, 'ja')).map(campus => `
       <article class="school-list-item">

@@ -132,8 +132,15 @@ assert.ok(script.includes('ownershipToneClass(campus)'));
 assert.ok(html.includes('school-districts.html'));
 assert.ok(!html.includes('fitVisibleSchools'));
 assert.ok(!script.includes('fitVisible()'));
-assert.ok(html.includes('私立・国立'));
-assert.ok(html.includes('市立・県立'));
+assert.ok(html.includes('すべての施設種類に戻す'));
+assert.ok(html.includes('施設種類（複数選択）'));
+assert.ok(!html.includes('すべての施設種に戻す'));
+assert.ok(!html.includes('施設種（複数選択）'));
+assert.ok(!html.includes('mapSummary'));
+assert.ok(!html.includes('地域・周辺は同じ全施設を表示し'));
+assert.ok(!html.includes('私立・国立'));
+assert.ok(!html.includes('市立・県立'));
+assert.ok(!script.includes('mapSummary'));
 assert.ok(proposal.includes('地域・周辺・広域は学校の排他的な分類ではなく'));
 assert.ok(proposal.includes('湘南白百合学園中学校'));
 
