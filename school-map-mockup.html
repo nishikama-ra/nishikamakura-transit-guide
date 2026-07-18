@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="西鎌倉周辺から学校・保育施設を地図で探すための操作可能なモックアップです。">
+  <title>学校・保育施設｜にしかま周辺 まちノート</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="school-map-mockup.css">
+</head>
+<body>
+  <header class="school-site-header">
+    <a class="school-brand" href="index.html" aria-label="トップページへ">
+      <span class="school-brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="school-brand-copy">
+        <small>にしかま周辺</small>
+        <strong>まちノート</strong>
+        <em>Nishikama Area Notes</em>
+      </span>
+    </a>
+    <nav class="school-nav" aria-label="関連ページ">
+      <a href="index.html">トップ</a>
+      <a href="school-districts.html">公立小中学校の学区</a>
+    </nav>
+  </header>
+
+  <main class="school-shell">
+    <header class="school-page-heading">
+      <p>教育・保育施設</p>
+      <h1>学校・保育施設</h1>
+    </header>
+
+    <section class="school-filter-panel" aria-labelledby="filter-heading">
+      <div class="school-filter-title">
+        <h2 id="filter-heading">絞り込み</h2>
+        <button id="resetFilters" type="button">すべての施設種に戻す</button>
+      </div>
+      <div class="school-filter-groups">
+        <fieldset class="school-filter-group school-scope-filter">
+          <legend>表示範囲</legend>
+          <div class="school-segmented" id="scopeFilters">
+            <button type="button" data-scope="local" aria-pressed="true">地域</button>
+            <button type="button" data-scope="nearby" aria-pressed="false">周辺</button>
+            <button type="button" data-scope="wide" aria-pressed="false">広域</button>
+          </div>
+        </fieldset>
+        <fieldset class="school-filter-group school-type-filter">
+          <legend>施設種（複数選択）</legend>
+          <div class="school-filter-scroll" id="typeFilters"></div>
+        </fieldset>
+        <fieldset class="school-filter-group school-ownership-filter">
+          <legend>設置区分</legend>
+          <div class="school-segmented" id="ownershipFilters">
+            <button type="button" data-ownership="all" aria-pressed="true">すべて</button>
+            <button type="button" data-ownership="public" aria-pressed="false">国公立</button>
+            <button type="button" data-ownership="private" aria-pressed="false">私立</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="school-map-section" aria-labelledby="map-heading">
+      <div class="school-map-heading">
+        <div>
+          <h2 id="map-heading">地図で見る</h2>
+          <p id="mapSummary" aria-live="polite"></p>
+        </div>
+        <div class="school-proposal-note">
+          <p>地域・周辺は同じ全施設を表示し、初期縮尺だけを変更。広域では保育施設・幼稚園・市立小中学校を省いています。</p>
+          <p class="school-tone-key"><span class="tone-strong">● 私立・国立</span><span class="tone-soft">● 市立・県立</span></p>
+        </div>
+      </div>
+      <div class="school-map-layout">
+        <div class="school-map-wrap">
+          <div id="schoolMapMockup" class="school-map" aria-label="学校・保育施設の地図"></div>
+        </div>
+        <aside class="school-list-panel" aria-label="現在表示している施設">
+          <div class="school-list-heading">
+            <h3>表示中の施設</h3>
+            <span id="schoolCount"></span>
+          </div>
+          <div id="schoolList" class="school-list"></div>
+        </aside>
+      </div>
+    </section>
+
+    <aside class="school-related-link">
+      <span><small>関連情報</small><strong>公立小中学校の学区を調べる</strong></span>
+      <a href="school-districts.html">開く <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/school-map-mockup.js"></script>
+</body>
+</html>
