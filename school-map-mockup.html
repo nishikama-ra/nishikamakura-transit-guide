@@ -7,22 +7,11 @@
   <title>学校・幼稚園・保育施設｜にしかま周辺 まちノート</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="school-map-mockup.css">
+  <link rel="stylesheet" href="machinote-theme.css">
+  <link rel="stylesheet" href="existing-pages-theme.css">
 </head>
-<body>
-  <header class="school-site-header">
-    <a class="school-brand" href="index.html" aria-label="トップページへ">
-      <span class="school-brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="school-brand-copy">
-        <small>にしかま周辺</small>
-        <strong>まちノート</strong>
-        <em>Nishikama Area Notes</em>
-      </span>
-    </a>
-    <nav class="school-nav" aria-label="関連ページ">
-      <a href="index.html">トップ</a>
-      <a href="school-districts.html">公立小中学校の学区</a>
-    </nav>
-  </header>
+<body data-mn-page="maps" data-mn-base=".">
+  <div data-machinote-header></div>
 
   <main class="school-shell">
     <header class="school-page-heading">
@@ -85,6 +74,7 @@
     </aside>
   </main>
 
+  <script src="scripts/machinote-shell.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="scripts/school-map-mockup.js"></script>
 </body>

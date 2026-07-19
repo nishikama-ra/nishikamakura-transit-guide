@@ -1,0 +1,2544 @@
+{
+  "title": "公共施設・文化施設・郵便局",
+  "categories": [
+    "行政・公共施設",
+    "集会・交流施設",
+    "図書館・文化施設",
+    "スポーツ施設",
+    "郵便局"
+  ],
+  "places": [
+    {
+      "id": "PUB-050",
+      "name": "しちりがはま子どもの家・七里ガ浜子ども会館",
+      "address": "鎌倉市七里ガ浜東5-3-3",
+      "lat": 35.3108159,
+      "lng": 139.5125507,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-050",
+          "name": "しちりがはま子どもの家・七里ガ浜子ども会館",
+          "address": "鎌倉市七里ガ浜東5-3-3",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3108159,
+          "lng": 139.5125507,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-050"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-051",
+      "name": "にしかまくら子どもの家・西鎌倉子ども会館",
+      "address": "鎌倉市津西1-16-36",
+      "lat": 35.3184518,
+      "lng": 139.5004638,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-051",
+          "name": "にしかまくら子どもの家・西鎌倉子ども会館",
+          "address": "鎌倉市津西1-16-36",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3184518,
+          "lng": 139.5004638,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-051"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-010",
+      "name": "ふじづか子どもの家・富士塚子ども会館",
+      "address": "鎌倉市寺分418-10",
+      "lat": 35.3357578,
+      "lng": 139.5199268,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-010",
+          "name": "ふじづか子どもの家・富士塚子ども会館",
+          "address": "鎌倉市寺分418-10",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3357578,
+          "lng": 139.5199268,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。※市の放課後施策再編が進行中のため最新の運用形態は要留意。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-011",
+      "name": "やまさきこどもの家・山崎子ども会館",
+      "address": "鎌倉市山崎2456-1",
+      "lat": 35.3378688,
+      "lng": 139.5345718,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-011",
+          "name": "やまさきこどもの家・山崎子ども会館",
+          "address": "鎌倉市山崎2456-1",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3378688,
+          "lng": 139.5345718,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-002-03",
+      "name": "大船行政センター",
+      "address": "鎌倉市大船2-1-26",
+      "lat": 35.3499401,
+      "lng": 139.5334859,
+      "categories": [
+        "行政・公共施設",
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺",
+        "鎌倉市"
+      ],
+      "listings": [
+        {
+          "id": "ADD-002-03",
+          "name": "大船行政センター",
+          "address": "鎌倉市大船2-1-26",
+          "category": "行政・公共施設",
+          "detailType": "主要な行政・公共施設",
+          "lat": 35.3499401,
+          "lng": 139.5334859,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/oohuna_gyousei.html",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/oohuna_gyousei.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市公式ページで確認。支所、学習センター、図書館等の複合拠点。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "ADD-002-03"
+          ]
+        },
+        {
+          "id": "ADD-003-09",
+          "name": "鎌倉市大船図書館",
+          "address": "鎌倉市大船2-1-26（大船行政センター2階）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・図書室",
+          "lat": 35.349914,
+          "lng": 139.533463,
+          "officialUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map04.html",
+          "sourceUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map04.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "大船行政センターと同一建物。1マーカー内に複数施設として表示。国土数値情報の座標を使用。現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-001-02",
+      "name": "大船郵便局",
+      "address": "鎌倉市大船2-20-23",
+      "lat": 35.3544839,
+      "lng": 139.5367179,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "鎌倉市"
+      ],
+      "listings": [
+        {
+          "id": "ADD-001-02",
+          "name": "大船郵便局",
+          "address": "鎌倉市大船2-20-23",
+          "category": "郵便局",
+          "detailType": "主要郵便局",
+          "lat": 35.3544839,
+          "lng": 139.5367179,
+          "officialUrl": "https://map.japanpost.jp/p/search/dtl/300102095000/",
+          "sourceUrl": "https://map.japanpost.jp/p/search/dtl/300102095000/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "日本郵便の個別公式ページで現行名称・住所を確認。大船方面の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "nearby",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "ADD-001-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-012",
+      "name": "教養センター",
+      "address": "鎌倉市笛田2-17-1",
+      "lat": 35.3244878,
+      "lng": 139.5160298,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-012",
+          "name": "教養センター",
+          "address": "鎌倉市笛田2-17-1",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3244878,
+          "lng": 139.5160298,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/koureisya/ikigai_shisetsu.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市の高齢者いこい・老人福祉施設（社会福祉協議会運営）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-012"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-024",
+      "name": "新江ノ島水族館",
+      "address": "藤沢市片瀬海岸2-19-1",
+      "lat": 35.31012,
+      "lng": 139.479337,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-024",
+          "name": "新江ノ島水族館",
+          "address": "藤沢市片瀬海岸2-19-1",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・文化施設",
+          "lat": 35.31012,
+          "lng": 139.479337,
+          "officialUrl": "https://www.enosui.com/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P02 公共施設／P27 文化施設／P33 集客施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "公式サイトで現存確認。PUB-025と同一施設（重複）。 複数の公的データ区分に収録。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-024",
+            "PUB-025"
+          ],
+          "sourceRecords": [
+            {
+              "id": "PUB-024",
+              "sourceLabel": "P02 公共施設／P27 文化施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+              "baseYear": "2013"
+            },
+            {
+              "id": "PUB-025",
+              "sourceLabel": "P33 集客施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+              "baseYear": "2014"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-12",
+      "name": "村岡市民図書室",
+      "address": "藤沢市村岡東1-5-17（村岡市民センター内）",
+      "lat": 35.33777654,
+      "lng": 139.50574339,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "村岡"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-12",
+          "name": "村岡市民図書室",
+          "address": "藤沢市村岡東1-5-17（村岡市民センター内）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・図書室",
+          "lat": 35.33777654,
+          "lng": 139.50574339,
+          "officialUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/muraoka/",
+          "sourceUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/muraoka/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "村岡市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。",
+          "district": "村岡",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-013",
+      "name": "梶原子ども会館",
+      "address": "鎌倉市梶原4-4-2",
+      "lat": 35.3275658,
+      "lng": 139.5292528,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-013",
+          "name": "梶原子ども会館",
+          "address": "鎌倉市梶原4-4-2",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3275658,
+          "lng": 139.5292528,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-013"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-026",
+      "name": "江の島アイランドスパ（enospa）",
+      "address": "藤沢市江の島2-1-6",
+      "lat": 35.3021617,
+      "lng": 139.4805998,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-026",
+          "name": "江の島アイランドスパ（enospa）",
+          "address": "藤沢市江の島2-1-6",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・文化施設",
+          "lat": 35.3021617,
+          "lng": 139.4805998,
+          "officialUrl": "https://www.enospa.jp/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+          "sourceLabel": "P33 集客施設",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "公式サイトで現存確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-018",
+      "name": "江の島サムエル・コッキング苑",
+      "address": "藤沢市江の島2-3",
+      "lat": 35.2998897,
+      "lng": 139.4792803,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-018",
+          "name": "江の島サムエル・コッキング苑",
+          "address": "藤沢市江の島2-3",
+          "category": "図書館・文化施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.2998897,
+          "lng": 139.4792803,
+          "officialUrl": "https://www.fujisawa-kanko.jp/spot/enoshima/11.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+          "sourceLabel": "P33 集客施設",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "藤沢市営の庭園（藤沢市観光公式で確認）。入苑無料（夜間有料）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-018"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-019",
+      "name": "江の島シーキャンドル（展望灯台）",
+      "address": "藤沢市江の島2-3",
+      "lat": 35.299731,
+      "lng": 139.478662,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-019",
+          "name": "江の島シーキャンドル（展望灯台）",
+          "address": "藤沢市江の島2-3",
+          "category": "図書館・文化施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.299731,
+          "lng": 139.478662,
+          "officialUrl": "https://www.fujisawa-kanko.jp/spot/enoshima/12.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+          "sourceLabel": "P33 集客施設",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "サムエル・コッキング苑内の展望灯台。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-034",
+      "name": "江の島市民の家",
+      "address": "藤沢市江の島2-2-14",
+      "lat": 35.3008548,
+      "lng": 139.4800787,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-034",
+          "name": "江の島市民の家",
+          "address": "藤沢市江の島2-2-14",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3008548,
+          "lng": 139.4800787,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiminkatsudo/011.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "藤沢市の地域市民の家。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-034"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-030",
+      "name": "江ノ島郵便局",
+      "address": "藤沢市江の島1-4-13",
+      "lat": 35.30168,
+      "lng": 139.480891,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-030",
+          "name": "江ノ島郵便局",
+          "address": "藤沢市江の島1-4-13",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.30168,
+          "lng": 139.480891,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-027",
+      "name": "江島神社 奉安殿",
+      "address": "藤沢市江の島2-3-8",
+      "lat": 35.300344,
+      "lng": 139.479602,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-027",
+          "name": "江島神社 奉安殿",
+          "address": "藤沢市江の島2-3-8",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・文化施設",
+          "lat": 35.300344,
+          "lng": 139.479602,
+          "officialUrl": "https://www.fujisawa-kanko.jp/spot/enoshima/06.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P02 公共施設／P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "八臂弁財天・妙音弁財天等を安置。藤沢市観光公式で確認。拝観有料。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-027"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-014",
+      "name": "深沢子ども会館",
+      "address": "鎌倉市寺分436-2",
+      "lat": 35.3347538,
+      "lng": 139.5200658,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-014",
+          "name": "深沢子ども会館",
+          "address": "鎌倉市寺分436-2",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3347538,
+          "lng": 139.5200658,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市子ども会館一覧で確認。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-004",
+      "name": "深沢行政センター",
+      "address": "鎌倉市常盤111-3（深沢行政センター内）",
+      "lat": 35.331072,
+      "lng": 139.518761,
+      "categories": [
+        "図書館・文化施設",
+        "行政・公共施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-004",
+          "name": "鎌倉市深沢図書館",
+          "address": "鎌倉市常盤111-3（深沢行政センター内）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・文化施設",
+          "lat": 35.331072,
+          "lng": 139.518761,
+          "officialUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map03.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P02 公共施設／P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "深沢行政センター内。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-004"
+          ]
+        },
+        {
+          "id": "PUB-005",
+          "name": "深沢支所（深沢行政センター内）",
+          "address": "鎌倉市常盤111-3",
+          "category": "行政・公共施設",
+          "detailType": "行政・公共施設",
+          "lat": 35.331127,
+          "lng": 139.51885,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/fukasawa_gyoseisenta.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P34.html",
+          "sourceLabel": "P34 市区町村役場",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "支所は深沢行政センター1階。PUB-006と同一建物（重複）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "PUB-005"
+          ]
+        },
+        {
+          "id": "PUB-006",
+          "name": "深沢行政センター",
+          "address": "鎌倉市常盤111-3",
+          "category": "行政・公共施設",
+          "detailType": "行政・公共施設",
+          "lat": 35.3311278,
+          "lng": 139.5188508,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/fukasawa_gyoseisenta.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "支所・学習センター・図書館を併設。PUB-005と同一建物。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "PUB-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-007",
+      "name": "深沢郵便局",
+      "address": "鎌倉市常盤60-3",
+      "lat": 35.331141,
+      "lng": 139.518075,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-007",
+          "name": "深沢郵便局",
+          "address": "鎌倉市常盤60-3",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.331141,
+          "lng": 139.518075,
+          "officialUrl": "https://map.japanpost.jp/p/search/dtl/300102320000/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "日本郵便個別ページで現存確認。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-007"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-029",
+      "name": "湘南海上保安署",
+      "address": "藤沢市江の島1-12-2（湘南港内）",
+      "lat": 35.298908,
+      "lng": 139.484151,
+      "categories": [
+        "行政・公共施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-029",
+          "name": "湘南海上保安署",
+          "address": "藤沢市江の島1-12-2（湘南港内）",
+          "category": "行政・公共施設",
+          "detailType": "行政・公共施設",
+          "lat": 35.298908,
+          "lng": 139.484151,
+          "officialUrl": "https://www.kaiho.mlit.go.jp/03kanku/office/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P02.html",
+          "sourceLabel": "P02 公共施設",
+          "baseYear": "2006",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "第三管区海上保安本部の公式組織・所在地一覧で現行名称と所在を確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "PUB-029"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-020",
+      "name": "湘南港（江の島ヨットハーバー）",
+      "address": "藤沢市江の島1-12-2",
+      "lat": 35.299247,
+      "lng": 139.484923,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-020",
+          "name": "湘南港（江の島ヨットハーバー）",
+          "address": "藤沢市江の島1-12-2",
+          "category": "スポーツ施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.299247,
+          "lng": 139.484923,
+          "officialUrl": "https://www.fujisawa-kanko.jp/spot/enoshima/19.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "神奈川県立湘南港。東京五輪セーリング会場。元名称「湘南港（ヨット場）」。PUB-020と同一（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "PUB-020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-021",
+      "name": "片瀬しおさいセンター",
+      "address": "藤沢市片瀬4-9-22",
+      "lat": 35.315498,
+      "lng": 139.483728,
+      "categories": [
+        "スポーツ施設",
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-021",
+          "name": "片瀬しおさいセンター（体育館）",
+          "address": "藤沢市片瀬4-9-22",
+          "category": "スポーツ施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.315498,
+          "lng": 139.483728,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/010.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "片瀬公民館分館。PUB-035/036/038と同一施設（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "PUB-021"
+          ]
+        },
+        {
+          "id": "PUB-035",
+          "name": "片瀬しおさいセンター",
+          "address": "藤沢市片瀬4-9-22",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3154478,
+          "lng": 139.4838388,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/010.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "片瀬公民館分館。PUB-021/036/038と同一（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-035"
+          ]
+        },
+        {
+          "id": "PUB-036",
+          "name": "片瀬しおさいセンター（片瀬公民館分館）",
+          "address": "藤沢市片瀬4-9-22",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3154406,
+          "lng": 139.4837136,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/010.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+          "sourceLabel": "P33 集客施設",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "PUB-035と同一施設（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-036"
+          ]
+        },
+        {
+          "id": "PUB-038",
+          "name": "片瀬公民館分館（片瀬しおさいセンター）",
+          "address": "藤沢市片瀬4-9-22",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3154478,
+          "lng": 139.4838288,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/010.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "PUB-035と同一（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-038"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-039",
+      "name": "片瀬山市民の家",
+      "address": "藤沢市片瀬山3-1-14",
+      "lat": 35.3231418,
+      "lng": 139.4946558,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-039",
+          "name": "片瀬山市民の家",
+          "address": "藤沢市片瀬山3-1-14",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3231418,
+          "lng": 139.4946558,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiminkatsudo/005.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "藤沢市の地域市民の家。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-039"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-033",
+      "name": "片瀬市民センター",
+      "address": "藤沢市片瀬3-9-6",
+      "lat": 35.313678,
+      "lng": 139.487314,
+      "categories": [
+        "集会・交流施設",
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-033",
+          "name": "片瀬公民館（片瀬市民センター）",
+          "address": "藤沢市片瀬3-9-6",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.313678,
+          "lng": 139.487314,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/kata-c/kouminkan/top.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+          "sourceLabel": "P33 集客施設／P05 市町村役場・公的集会施設",
+          "baseYear": "2014",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "片瀬市民センターと一体。PUB-037/040と同一（重複）。 複数の公的データ区分に収録。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-033",
+            "PUB-037"
+          ],
+          "sourceRecords": [
+            {
+              "id": "PUB-033",
+              "sourceLabel": "P33 集客施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
+              "baseYear": "2014"
+            },
+            {
+              "id": "PUB-037",
+              "sourceLabel": "P05 市町村役場・公的集会施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+              "baseYear": "2022"
+            }
+          ]
+        },
+        {
+          "id": "PUB-040",
+          "name": "片瀬市民センター",
+          "address": "藤沢市片瀬3-9-6",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3136788,
+          "lng": 139.4873148,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/009.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "片瀬公民館を併設。PUB-033/037と同一（重複）。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-040"
+          ]
+        },
+        {
+          "id": "ADD-003-11",
+          "name": "片瀬市民図書室",
+          "address": "藤沢市片瀬3-9-6（片瀬市民センター内）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・図書室",
+          "lat": 35.313678,
+          "lng": 139.487314,
+          "officialUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/katase/",
+          "sourceUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/katase/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "片瀬市民センターと同一建物。1マーカー内に複数施設として表示。既存公共施設データの座標を使用。現行確認日：2026-07-19。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-041",
+      "name": "片瀬浪合市民の家",
+      "address": "藤沢市片瀬2-18-32",
+      "lat": 35.3188728,
+      "lng": 139.4873318,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-041",
+          "name": "片瀬浪合市民の家",
+          "address": "藤沢市片瀬2-18-32",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3188728,
+          "lng": 139.4873318,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/kurashi/shimin/shiminhouse/index.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "藤沢市の地域市民の家一覧で確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-041"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-031",
+      "name": "片瀬郵便局",
+      "address": "藤沢市片瀬4-14-10",
+      "lat": 35.315518,
+      "lng": 139.485719,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-031",
+          "name": "片瀬郵便局",
+          "address": "藤沢市片瀬4-14-10",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.315518,
+          "lng": 139.485719,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-031"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-002-04",
+      "name": "玉縄行政センター",
+      "address": "鎌倉市岡本2-16-3",
+      "lat": 35.349425,
+      "lng": 139.523244,
+      "categories": [
+        "行政・公共施設",
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "鎌倉市"
+      ],
+      "listings": [
+        {
+          "id": "ADD-002-04",
+          "name": "玉縄行政センター",
+          "address": "鎌倉市岡本2-16-3",
+          "category": "行政・公共施設",
+          "detailType": "主要な行政・公共施設",
+          "lat": 35.349425,
+          "lng": 139.523244,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/tamanawa_gyoseisenta.html",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/tamanawa_gyoseisenta.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "支所、学習センター、玉縄図書館を併設。玉縄図書館と同一マーカーにまとめる。国土数値情報の座標を使用。現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "nearby",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "ADD-002-04"
+          ]
+        },
+        {
+          "id": "ADD-003-10",
+          "name": "鎌倉市玉縄図書館",
+          "address": "鎌倉市岡本2-16-3（玉縄行政センター2階）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・図書室",
+          "lat": 35.349525,
+          "lng": 139.523299,
+          "officialUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map05.html",
+          "sourceUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map05.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "玉縄行政センターと同一建物。1マーカー内に複数施設として表示。国土数値情報の座標を使用。現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-08",
+      "name": "県立湘南海岸公園サーフビレッジ",
+      "address": "藤沢市鵠沼海岸1-17-3",
+      "lat": 35.313759,
+      "lng": 139.475298,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-08",
+          "name": "県立湘南海岸公園サーフビレッジ",
+          "address": "藤沢市鵠沼海岸1-17-3",
+          "category": "スポーツ施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.313759,
+          "lng": 139.475298,
+          "officialUrl": "https://www.s-n-p.jp/shonankaigan_park/surfvillage/",
+          "sourceUrl": "https://www.pref.kanagawa.jp/docs/en5/cnt/f6093/p929014.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "神奈川県公式ページと指定管理者公式ページで確認。海浜公園利用の案内・展示・更衣等を担う拠点。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "ADD-003-08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-05",
+      "name": "秩父宮記念体育館",
+      "address": "藤沢市鵠沼東8-2",
+      "lat": 35.332484,
+      "lng": 139.489479,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-05",
+          "name": "秩父宮記念体育館",
+          "address": "藤沢市鵠沼東8-2",
+          "category": "スポーツ施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.332484,
+          "lng": 139.489479,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/sports/005.html",
+          "sourceUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/sports/005.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "藤沢市公式ページで確認。片瀬地区から利用しやすい藤沢駅南側の主要体育施設。座標は公式ページの地図リンクを使用。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "ADD-003-05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-001",
+      "name": "笛田公園",
+      "address": "鎌倉市笛田3-30-1",
+      "lat": 35.323309,
+      "lng": 139.521353,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-001",
+          "name": "笛田公園",
+          "address": "鎌倉市笛田3-30-1",
+          "category": "スポーツ施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.323309,
+          "lng": 139.521353,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/koen/fueda01.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "鎌倉市営の運動公園（野球場・テニスコート・多目的広場等）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "PUB-001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-052",
+      "name": "老人いこいの家（腰越）",
+      "address": "鎌倉市腰越2-9-12",
+      "lat": 35.3066708,
+      "lng": 139.4934277,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-052",
+          "name": "老人いこいの家（腰越）",
+          "address": "鎌倉市腰越2-9-12",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3066708,
+          "lng": 139.4934277,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/koureisya/ikigai_shisetsu.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市の高齢者いこいの家。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-052"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-043",
+      "name": "腰越行政センター",
+      "address": "鎌倉市腰越864",
+      "lat": 35.313482,
+      "lng": 139.501031,
+      "categories": [
+        "行政・公共施設",
+        "図書館・文化施設",
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-043",
+          "name": "腰越支所（腰越行政センター内）",
+          "address": "鎌倉市腰越864",
+          "category": "行政・公共施設",
+          "detailType": "図書館・文化施設",
+          "lat": 35.313482,
+          "lng": 139.501031,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/kosigoe_hp.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P02 公共施設／P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "腰越行政センター1階。PUB-045と同一建物（重複）。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "PUB-043"
+          ]
+        },
+        {
+          "id": "PUB-044",
+          "name": "腰越行政センター",
+          "address": "鎌倉市腰越864",
+          "category": "行政・公共施設",
+          "detailType": "行政・公共施設",
+          "lat": 35.3133878,
+          "lng": 139.5007948,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/kosigoe_hp.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設／P34 市区町村役場",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "支所・学習センター・図書館を併設。PUB-044と同一建物。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "PUB-044"
+          ]
+        },
+        {
+          "id": "PUB-045",
+          "name": "鎌倉市腰越図書館",
+          "address": "鎌倉市腰越864（腰越行政センター3階）",
+          "category": "図書館・文化施設",
+          "detailType": "行政・公共施設",
+          "lat": 35.3134378,
+          "lng": 139.5008888,
+          "officialUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map02.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "腰越行政センター内。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "PUB-045"
+          ]
+        },
+        {
+          "id": "PUB-053",
+          "name": "腰越学習センター（きらら腰越）",
+          "address": "鎌倉市腰越864",
+          "category": "集会・交流施設",
+          "detailType": "集会・交流施設",
+          "lat": 35.3133878,
+          "lng": 139.5007748,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisyo/kosigoe_hp.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+          "sourceLabel": "P05 市町村役場・公的集会施設",
+          "baseYear": "2022",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "腰越行政センター内の生涯学習施設。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "PUB-053"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-046",
+      "name": "腰越郵便局",
+      "address": "鎌倉市腰越3-1-23",
+      "lat": 35.30867,
+      "lng": 139.492244,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-046",
+          "name": "腰越郵便局",
+          "address": "鎌倉市腰越3-1-23",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.30867,
+          "lng": 139.492244,
+          "officialUrl": "https://map.japanpost.jp/p/search/dtl/300102251000/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "日本郵便個別ページで現存確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-046"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-06",
+      "name": "藤沢市南市民図書館",
+      "address": "藤沢市南藤沢21-1 ODAKYU湘南GATE 6階",
+      "lat": 35.337556,
+      "lng": 139.48767,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-06",
+          "name": "藤沢市南市民図書館",
+          "address": "藤沢市南藤沢21-1 ODAKYU湘南GATE 6階",
+          "category": "図書館・文化施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.337556,
+          "lng": 139.48767,
+          "officialUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/minami/",
+          "sourceUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/minami/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "藤沢市図書館公式ページで確認。市民ギャラリーを併設する藤沢駅前の文化拠点。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-002-02",
+      "name": "藤沢市役所本庁舎",
+      "address": "藤沢市朝日町1-1",
+      "lat": 35.338856,
+      "lng": 139.491245,
+      "categories": [
+        "行政・公共施設"
+      ],
+      "scopes": [
+        "wide"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-002-02",
+          "name": "藤沢市役所本庁舎",
+          "address": "藤沢市朝日町1-1",
+          "category": "行政・公共施設",
+          "detailType": "主要な行政・公共施設",
+          "lat": 35.338856,
+          "lng": 139.491245,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/025.html",
+          "sourceUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/025.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "藤沢市公式の施設案内で確認。片瀬地区を含む藤沢市の行政中核施設。座標は公式ページの地図リンクを使用。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "wide",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "ADD-002-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-07",
+      "name": "藤沢市藤沢公民館・労働会館等複合施設（Fプレイス）",
+      "address": "藤沢市本町1-12-17",
+      "lat": 35.344405,
+      "lng": 139.481586,
+      "categories": [
+        "集会・交流施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-07",
+          "name": "藤沢市藤沢公民館・労働会館等複合施設（Fプレイス）",
+          "address": "藤沢市本町1-12-17",
+          "category": "集会・交流施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.344405,
+          "lng": 139.481586,
+          "officialUrl": "https://www.fujisawa-fplace.com/",
+          "sourceUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shiyakusho/020.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "藤沢市公式施設案内と施設公式サイトで確認。公民館、労働会館、福祉・相談機能等の複合施設。ADD-005のおあしすと同一建物のため、地図では1マーカー内に併記可能。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "集会・交流施設"
+          ],
+          "sourceIds": [
+            "ADD-003-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-032",
+      "name": "藤沢片瀬山郵便局",
+      "address": "藤沢市片瀬山2-8-8",
+      "lat": 35.323919,
+      "lng": 139.494466,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-032",
+          "name": "藤沢片瀬山郵便局",
+          "address": "藤沢市片瀬山2-8-8",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.323919,
+          "lng": 139.494466,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-032"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-001-03",
+      "name": "藤沢郵便局",
+      "address": "藤沢市藤沢115-2",
+      "lat": 35.3397058,
+      "lng": 139.4900178,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "wide"
+      ],
+      "districts": [
+        "鎌倉市"
+      ],
+      "listings": [
+        {
+          "id": "ADD-001-03",
+          "name": "藤沢郵便局",
+          "address": "藤沢市藤沢115-2",
+          "category": "郵便局",
+          "detailType": "主要郵便局",
+          "lat": 35.3397058,
+          "lng": 139.4900178,
+          "officialUrl": "https://map.japanpost.jp/p/search/dtl/300102008000/",
+          "sourceUrl": "https://map.japanpost.jp/p/search/dtl/300102008000/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "日本郵便の個別公式ページで現行名称・住所を確認。藤沢地域の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "wide",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "ADD-001-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-022",
+      "name": "西浜公園テニスコート（庭球場）",
+      "address": "藤沢市片瀬海岸3-1-30",
+      "lat": 35.312518,
+      "lng": 139.48382,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "PUB-022",
+          "name": "西浜公園テニスコート（庭球場）",
+          "address": "藤沢市片瀬海岸3-1-30",
+          "category": "スポーツ施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.312518,
+          "lng": 139.48382,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/sports/016.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P27 文化施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "藤沢市の個別公式施設ページで現存・住所を確認。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "PUB-022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-047",
+      "name": "西鎌倉郵便局",
+      "address": "鎌倉市西鎌倉1-3-4",
+      "lat": 35.322475,
+      "lng": 139.504104,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-047",
+          "name": "西鎌倉郵便局",
+          "address": "鎌倉市西鎌倉1-3-4",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.322475,
+          "lng": 139.504104,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-048",
+      "name": "鎌倉七里ガ浜郵便局",
+      "address": "鎌倉市七里ガ浜東4-13-4",
+      "lat": 35.310837,
+      "lng": 139.516382,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-048",
+          "name": "鎌倉七里ガ浜郵便局",
+          "address": "鎌倉市七里ガ浜東4-13-4",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.310837,
+          "lng": 139.516382,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-048"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-02",
+      "name": "鎌倉体育館",
+      "address": "鎌倉市由比ガ浜2-9-9",
+      "lat": 35.3142121,
+      "lng": 139.5487204,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-02",
+          "name": "鎌倉体育館",
+          "address": "鎌倉市由比ガ浜2-9-9",
+          "category": "スポーツ施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.3142121,
+          "lng": 139.5487204,
+          "officialUrl": "https://kamakura-shinko.com/facility/kamakura-gym/",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/sports/2023shiteikekka.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市公式情報で現行名称・住所を確認。施設公式サイトへリンク。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "ADD-003-02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-04",
+      "name": "鎌倉市中央図書館",
+      "address": "鎌倉市御成町20-35",
+      "lat": 35.3173942,
+      "lng": 139.5459634,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-04",
+          "name": "鎌倉市中央図書館",
+          "address": "鎌倉市御成町20-35",
+          "category": "図書館・文化施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.3173942,
+          "lng": 139.5459634,
+          "officialUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map01.html",
+          "sourceUrl": "https://lib.city.kamakura.kanagawa.jp/riyo_map01.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市図書館公式ページで現行名称・住所を確認。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-002-01",
+      "name": "鎌倉市役所本庁舎",
+      "address": "鎌倉市御成町18-10",
+      "lat": 35.3191992,
+      "lng": 139.5471464,
+      "categories": [
+        "行政・公共施設"
+      ],
+      "scopes": [
+        "wide"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-002-01",
+          "name": "鎌倉市役所本庁舎",
+          "address": "鎌倉市御成町18-10",
+          "category": "行政・公共施設",
+          "detailType": "主要な行政・公共施設",
+          "lat": 35.3191992,
+          "lng": 139.5471464,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/shisei/choushaannai/honchosha_annai.html",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/shisei/choushaannai/honchosha_annai.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市公式の本庁舎案内で確認。市全域の行政手続・相談の中核施設。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "wide",
+          "categories": [
+            "行政・公共施設"
+          ],
+          "sourceIds": [
+            "ADD-002-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-008",
+      "name": "鎌倉手広郵便局",
+      "address": "鎌倉市笛田1-8-4",
+      "lat": 35.33139,
+      "lng": 139.508437,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-008",
+          "name": "鎌倉手広郵便局",
+          "address": "鎌倉市笛田1-8-4",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.33139,
+          "lng": 139.508437,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。個別局番ページは同検索から参照。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-009",
+      "name": "鎌倉梶原郵便局",
+      "address": "鎌倉市梶原2-34-8",
+      "lat": 35.329863,
+      "lng": 139.53188,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-009",
+          "name": "鎌倉梶原郵便局",
+          "address": "鎌倉市梶原2-34-8",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.329863,
+          "lng": 139.53188,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-002",
+      "name": "鎌倉武道館",
+      "address": "鎌倉市山崎616-6",
+      "lat": 35.346138,
+      "lng": 139.524983,
+      "categories": [
+        "スポーツ施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "PUB-002",
+          "name": "鎌倉武道館",
+          "address": "鎌倉市山崎616-6",
+          "category": "スポーツ施設",
+          "detailType": "スポーツ施設",
+          "lat": 35.346138,
+          "lng": 139.524983,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/sports/shisetu_annai.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+          "sourceLabel": "P27 文化施設／P05 市町村役場・公的集会施設",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市スポーツ施設。PUB-015と同一施設（重複）。 複数の公的データ区分に収録。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "スポーツ施設"
+          ],
+          "sourceIds": [
+            "PUB-002",
+            "PUB-015"
+          ],
+          "sourceRecords": [
+            {
+              "id": "PUB-002",
+              "sourceLabel": "P27 文化施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P27.html",
+              "baseYear": "2013"
+            },
+            {
+              "id": "PUB-015",
+              "sourceLabel": "P05 市町村役場・公的集会施設",
+              "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
+              "baseYear": "2022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PUB-049",
+      "name": "鎌倉津西郵便局",
+      "address": "鎌倉市津西1-1-14",
+      "lat": 35.312392,
+      "lng": 139.499049,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "PUB-049",
+          "name": "鎌倉津西郵便局",
+          "address": "鎌倉市津西1-1-14",
+          "category": "郵便局",
+          "detailType": "郵便局",
+          "lat": 35.312392,
+          "lng": 139.499049,
+          "officialUrl": "https://map.japanpost.jp/p/search/",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P30.html",
+          "sourceLabel": "P30 郵便局",
+          "baseYear": "2013",
+          "checkedAt": "2026-07-19",
+          "linkType": "施設検索",
+          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "PUB-049"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-03",
+      "name": "鎌倉生涯学習センター（きらら鎌倉）",
+      "address": "鎌倉市小町1-10-5",
+      "lat": 35.3182456,
+      "lng": 139.5522277,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-03",
+          "name": "鎌倉生涯学習センター（きらら鎌倉）",
+          "address": "鎌倉市小町1-10-5",
+          "category": "図書館・文化施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.3182456,
+          "lng": 139.5522277,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/gakusyuc/kamakura.html",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/gakusyuc/kamakura.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市公式ページで確認。ホール、ギャラリー、会議室等を備える学習・文化拠点。座標は公式住所の代表点。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-01",
+      "name": "鎌倉芸術館",
+      "address": "鎌倉市大船6-1-2",
+      "lat": 35.3524639,
+      "lng": 139.5384572,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "3地区周辺"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-01",
+          "name": "鎌倉芸術館",
+          "address": "鎌倉市大船6-1-2",
+          "category": "図書館・文化施設",
+          "detailType": "主要な文化・スポーツ施設",
+          "lat": 35.3524639,
+          "lng": 139.5384572,
+          "officialUrl": "https://www.kamakura-arts.jp/",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/qa/shisetsu/shisetsu/shisetsu0104n.html",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鎌倉市公式ページと施設公式サイトで現行確認。大・小ホール、ギャラリー等を備える市内の主要文化施設。 現行確認日：2026-07-19。",
+          "district": "3地区周辺",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-001-01",
+      "name": "鎌倉郵便局",
+      "address": "鎌倉市小町1-10-3",
+      "lat": 35.3181169,
+      "lng": 139.5519633,
+      "categories": [
+        "郵便局"
+      ],
+      "scopes": [
+        "wide"
+      ],
+      "districts": [
+        "鎌倉市"
+      ],
+      "listings": [
+        {
+          "id": "ADD-001-01",
+          "name": "鎌倉郵便局",
+          "address": "鎌倉市小町1-10-3",
+          "category": "郵便局",
+          "detailType": "主要郵便局",
+          "lat": 35.3181169,
+          "lng": 139.5519633,
+          "officialUrl": "https://map.japanpost.jp/p/search/dtl/300102026000/",
+          "sourceUrl": "https://map.japanpost.jp/p/search/dtl/300102026000/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "日本郵便の個別公式ページで現行名称・住所を確認。鎌倉地域の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
+          "district": "鎌倉市",
+          "scope": "wide",
+          "categories": [
+            "郵便局"
+          ],
+          "sourceIds": [
+            "ADD-001-01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ADD-003-13",
+      "name": "鵠沼市民図書室",
+      "address": "藤沢市鵠沼海岸2-10-34（鵠沼市民センター内）",
+      "lat": 35.31971512,
+      "lng": 139.46998563,
+      "categories": [
+        "図書館・文化施設"
+      ],
+      "scopes": [
+        "nearby"
+      ],
+      "districts": [
+        "鵠沼"
+      ],
+      "listings": [
+        {
+          "id": "ADD-003-13",
+          "name": "鵠沼市民図書室",
+          "address": "藤沢市鵠沼海岸2-10-34（鵠沼市民センター内）",
+          "category": "図書館・文化施設",
+          "detailType": "図書館・図書室",
+          "lat": 35.31971512,
+          "lng": 139.46998563,
+          "officialUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/kugenuma/",
+          "sourceUrl": "https://www.lib.city.fujisawa.kanagawa.jp/libguide/kugenuma/",
+          "sourceLabel": "追加調査",
+          "baseYear": "",
+          "checkedAt": "2026-07-19",
+          "linkType": "",
+          "note": "鵠沼市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。",
+          "district": "鵠沼",
+          "scope": "nearby",
+          "categories": [
+            "図書館・文化施設"
+          ],
+          "sourceIds": [
+            "ADD-003-13"
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "checkedAt": "2026-07-19",
+    "additionalCandidatesPending": false,
+    "baseArea": "腰越・深沢・片瀬を基本に、鎌倉・大船・藤沢方面の主要施設を補完",
+    "placeCount": 52,
+    "listingCount": 64
+  }
+}

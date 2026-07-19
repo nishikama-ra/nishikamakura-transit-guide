@@ -1,0 +1,604 @@
+{
+  "title": "消防・警察",
+  "categories": [
+    "消防施設",
+    "警察施設"
+  ],
+  "places": [
+    {
+      "id": "SAF-002",
+      "name": "片瀬分遣所（藤沢市消防局南消防署）",
+      "address": "藤沢市片瀬3-15-17",
+      "lat": 35.312114,
+      "lng": 139.487605,
+      "categories": [
+        "消防施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "SAF-002",
+          "name": "片瀬分遣所（藤沢市消防局南消防署）",
+          "address": "藤沢市片瀬3-15-17",
+          "category": "消防施設",
+          "detailType": "消防施設",
+          "lat": 35.312114,
+          "lng": 139.487605,
+          "officialUrl": "https://www.city.fujisawa.kanagawa.jp/shisetsu/annai/shobosho/011.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P17.html",
+          "sourceLabel": "P17 消防施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式",
+          "note": "藤沢市消防局南消防署の分遣所。元名称「藤沢市南消防署片瀬分遣所」の現行公式名称は「片瀬分遣所」。湘南モノレール湘南江の島駅北側。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "消防施設"
+          ],
+          "sourceIds": [
+            "SAF-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-008",
+      "name": "藤沢警察署江の島駐在所",
+      "address": "藤沢市江の島2丁目2番13号",
+      "lat": 35.301115,
+      "lng": 139.480355,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "SAF-008",
+          "name": "藤沢警察署江の島駐在所",
+          "address": "藤沢市江の島2丁目2番13号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.301115,
+          "lng": 139.480355,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/fujisawa/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：江の島1・2丁目。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-009",
+      "name": "藤沢警察署片瀬山駐在所",
+      "address": "藤沢市片瀬山2丁目1番8号",
+      "lat": 35.323835,
+      "lng": 139.491744,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "SAF-009",
+          "name": "藤沢警察署片瀬山駐在所",
+          "address": "藤沢市片瀬山2丁目1番8号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.323835,
+          "lng": 139.491744,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/fujisawa/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：片瀬山1～5丁目。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-010",
+      "name": "藤沢警察署片瀬江の島交番",
+      "address": "藤沢市片瀬海岸1丁目14番1号",
+      "lat": 35.307643,
+      "lng": 139.484522,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "片瀬"
+      ],
+      "listings": [
+        {
+          "id": "SAF-010",
+          "name": "藤沢警察署片瀬江の島交番",
+          "address": "藤沢市片瀬海岸1丁目14番1号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.307643,
+          "lng": 139.484522,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/fujisawa/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：片瀬2～5丁目、片瀬海岸1～3丁目、片瀬目白山、鵠沼松が岡1丁目。",
+          "district": "片瀬",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-003",
+      "name": "鎌倉消防署七里ガ浜出張所",
+      "address": "鎌倉市七里ガ浜東1-2-5",
+      "lat": 35.308354,
+      "lng": 139.516192,
+      "categories": [
+        "消防施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-003",
+          "name": "鎌倉消防署七里ガ浜出張所",
+          "address": "鎌倉市七里ガ浜東1-2-5",
+          "category": "消防施設",
+          "detailType": "消防施設",
+          "lat": 35.308354,
+          "lng": 139.516192,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/fd-kamakura/fd-kamakura.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P17.html",
+          "sourceLabel": "P17 消防施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "平成23年4月設置。鎌倉消防署の出張所。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "消防施設"
+          ],
+          "sourceIds": [
+            "SAF-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-001",
+      "name": "鎌倉消防署深沢出張所",
+      "address": "鎌倉市手広1-16-12",
+      "lat": 35.327634,
+      "lng": 139.509593,
+      "categories": [
+        "消防施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "SAF-001",
+          "name": "鎌倉消防署深沢出張所",
+          "address": "鎌倉市手広1-16-12",
+          "category": "消防施設",
+          "detailType": "消防施設",
+          "lat": 35.327634,
+          "lng": 139.509593,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/fd-kamakura/fd-kamakura.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P17.html",
+          "sourceLabel": "P17 消防施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "鎌倉市消防本部鎌倉消防署の出張所。（仮称）雪ノ下消防出張所への移転統合対象は鎌倉消防署本署と浄明寺出張所であり、当出張所は対象外（令和11年度供用予定の再編は本署・浄明寺のみ）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "消防施設"
+          ],
+          "sourceIds": [
+            "SAF-001"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-004",
+      "name": "鎌倉消防署腰越出張所",
+      "address": "鎌倉市腰越4-9-12",
+      "lat": 35.311142,
+      "lng": 139.497632,
+      "categories": [
+        "消防施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-004",
+          "name": "鎌倉消防署腰越出張所",
+          "address": "鎌倉市腰越4-9-12",
+          "category": "消防施設",
+          "detailType": "消防施設",
+          "lat": 35.311142,
+          "lng": 139.497632,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/fd-kamakura/fd-kamakura.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P17.html",
+          "sourceLabel": "P17 消防施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "昭和23年設置、平成29年3月改築。鎌倉消防署の出張所。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "消防施設"
+          ],
+          "sourceIds": [
+            "SAF-004"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-011",
+      "name": "鎌倉警察署七里ガ浜駐在所",
+      "address": "鎌倉市七里ガ浜東1丁目2番1号",
+      "lat": 35.308726,
+      "lng": 139.516354,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-011",
+          "name": "鎌倉警察署七里ガ浜駐在所",
+          "address": "鎌倉市七里ガ浜東1丁目2番1号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.308726,
+          "lng": 139.516354,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：七里ガ浜東（全域）。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-005",
+      "name": "鎌倉警察署梶原口交番",
+      "address": "鎌倉市常盤345番地6",
+      "lat": 35.326474,
+      "lng": 139.523409,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "SAF-005",
+          "name": "鎌倉警察署梶原口交番",
+          "address": "鎌倉市常盤345番地6",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.326474,
+          "lng": 139.523409,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：梶原（1丁目1～13番を除く）、寺分（2・3丁目）、笛田（3・4丁目）、常盤（1～208番地を除く）。神奈川県警察本部告示（令和8年5月26日最終改正）で現存確認。告示表記は「常磐」、交番案内は「常盤」。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-005"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-012",
+      "name": "鎌倉警察署津駐在所",
+      "address": "鎌倉市津691番地5",
+      "lat": 35.315698,
+      "lng": 139.502826,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-012",
+          "name": "鎌倉警察署津駐在所",
+          "address": "鎌倉市津691番地5",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.315698,
+          "lng": 139.502826,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "元データ住所「津691-2」に対し、現行の公式位置は「津691番地5」。管轄区域：津（1,040～1,079番地を除く）、津西（1丁目）、腰越（1,179～1,587番地を除く）。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-012"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-006",
+      "name": "鎌倉警察署深沢交番",
+      "address": "鎌倉市笛田1丁目4番45号",
+      "lat": 35.331303,
+      "lng": 139.509474,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "SAF-006",
+          "name": "鎌倉警察署深沢交番",
+          "address": "鎌倉市笛田1丁目4番45号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.331303,
+          "lng": 139.509474,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：笛田（1・2丁目）、手広（1～6丁目及び672-3・673・678-1番地）、梶原（1丁目1～13番及び丁目なし番地）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-013",
+      "name": "鎌倉警察署腰越交番",
+      "address": "鎌倉市腰越3丁目2番18号",
+      "lat": 35.30892,
+      "lng": 139.49191,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-013",
+          "name": "鎌倉警察署腰越交番",
+          "address": "鎌倉市腰越3丁目2番18号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.30892,
+          "lng": 139.49191,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：腰越（1～5丁目）、七里ガ浜（1・2丁目）、津西（2丁目）。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-013"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-014",
+      "name": "鎌倉警察署西鎌倉駐在所",
+      "address": "鎌倉市西鎌倉1丁目18番1号",
+      "lat": 35.319392,
+      "lng": 139.503576,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "腰越"
+      ],
+      "listings": [
+        {
+          "id": "SAF-014",
+          "name": "鎌倉警察署西鎌倉駐在所",
+          "address": "鎌倉市西鎌倉1丁目18番1号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.319392,
+          "lng": 139.503576,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：西鎌倉（全域）、津（1,040～1,079番地）、腰越（1,179～1,587番地）、手広（702～703番地）。",
+          "district": "腰越",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SAF-007",
+      "name": "鎌倉警察署鎌倉山駐在所",
+      "address": "鎌倉市鎌倉山2丁目15番12号",
+      "lat": 35.317198,
+      "lng": 139.519048,
+      "categories": [
+        "警察施設"
+      ],
+      "scopes": [
+        "local"
+      ],
+      "districts": [
+        "深沢"
+      ],
+      "listings": [
+        {
+          "id": "SAF-007",
+          "name": "鎌倉警察署鎌倉山駐在所",
+          "address": "鎌倉市鎌倉山2丁目15番12号",
+          "category": "警察施設",
+          "detailType": "警察施設",
+          "lat": 35.317198,
+          "lng": 139.519048,
+          "officialUrl": "https://www.police.pref.kanagawa.jp/ps/kamakura/koban_guide.html",
+          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P18.html",
+          "sourceLabel": "P18 警察施設",
+          "baseYear": "2012",
+          "checkedAt": "2026-07-19",
+          "linkType": "公式一覧",
+          "note": "管轄区域：鎌倉山（全域）、笛田（5・6丁目）。",
+          "district": "深沢",
+          "scope": "local",
+          "categories": [
+            "警察施設"
+          ],
+          "sourceIds": [
+            "SAF-007"
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "checkedAt": "2026-07-19",
+    "additionalCandidatesPending": false,
+    "baseArea": "腰越・深沢・片瀬",
+    "placeCount": 14,
+    "listingCount": 14
+  }
+}

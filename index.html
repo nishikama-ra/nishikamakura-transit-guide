@@ -6,19 +6,11 @@
   <meta name="description" content="西鎌倉周辺から出かけるときに使える、乗りものやサービスの案内です。">
   <title>西鎌倉周辺くらしの交通案内</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="machinote-theme.css">
+  <link rel="stylesheet" href="existing-pages-theme.css">
 </head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="トップページへ">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span><small>西鎌倉周辺</small><strong>くらしの交通案内</strong></span>
-    </a>
-    <nav class="global-nav" aria-label="主なページ">
-      <a href="#public-transit">電車・バス・モノレール</a>
-      <a href="services.html">その他の移動手段</a>
-      <a href="initiatives.html">交通に関する取り組み</a>
-    </nav>
-  </header>
+<body data-mn-page="home" data-mn-base=".">
+  <div data-machinote-header></div>
 
   <main>
     <section class="hero shell">
@@ -68,9 +60,14 @@
         <div><p class="section-kicker">関連情報</p><h2 id="more-heading">地域の移動情報</h2></div>
       </div>
       <div class="home-card-grid" id="homeCards"></div>
+      <a class="late-link" href="regional-maps.html">
+        <span><small>暮らしと地域を地図で見る</small><strong>地域情報・地図</strong></span>
+        <span aria-hidden="true">→</span>
+      </a>
     </section>
 
   </main>
+  <script src="scripts/machinote-shell.js"></script>
   <script src="scripts/common.js"></script>
 </body>
 </html>

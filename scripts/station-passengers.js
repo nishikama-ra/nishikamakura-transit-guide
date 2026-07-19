@@ -1,0 +1,12 @@
+const COLORS=['#2f5fb3','#4f916d','#b15f64','#c27855'];
+const state={data:null,chart:null,station:null};
+const fmt=v=>v==null?'—':Number(v).toLocaleString('ja-JP');
+function stationSeries(){return state.data.series.filter(s=>s.station===state.station);}
+function renderTable(series){const root=document.querySelector('#stationSummaryBody');root.innerHTML=series.map(s=>{const v2024=s.values['2024'];const v2019=s.values['2019'];const change=v2024!=null&&v2019?((v2024/v2019-1)*100):null;return `<tr><td>${s.operator}</td><td>${s.route}</td><td>${fmt(v2024)}</td><td>${change==null?'—':`${change>=0?'+':''}${change.toFixed(1)}%`}</td></tr>`;}).join('');}
+function render(){const series=stationSeries();document.querySelector('#stationTitle').textContent=state.station;document.querySelector('#seriesCount').textContent=`${series.length}系列`;
+  const datasets=series.map((s,i)=>({label:`${s.operator}${s.route==='駅全体'?'':`／${s.route}`}`,data:state.data.meta.years.map(y=>s.values[String(y)]),borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length],spanGaps:true,tension:.18,pointRadius:3,pointHoverRadius:5}));
+  if(state.chart)state.chart.destroy();state.chart=new Chart(document.querySelector('#stationChart'),{type:'line',data:{labels:state.data.meta.years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{family:'BIZ UDPGothic'}}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmt(c.parsed.y)}人`}}},scales:{y:{beginAtZero:true,title:{display:true,text:'1日平均（人）'},ticks:{callback:v=>Number(v).toLocaleString('ja-JP')}},x:{title:{display:true,text:'年'}}}}});
+  renderTable(series);
+}
+async function init(){const res=await fetch('content/station-passengers.json');if(!res.ok)throw new Error('駅データを読み込めませんでした');state.data=await res.json();const select=document.querySelector('#stationSelect');select.innerHTML=state.data.stations.map(s=>`<option>${s}</option>`).join('');state.station=state.data.stations[0];select.addEventListener('change',()=>{state.station=select.value;render();});render();document.querySelector('#stationMeta').textContent=`${state.data.meta.stationCount}駅・${state.data.meta.seriesCount}系列／2011～2024年`;}
+init().catch(error=>{document.querySelector('#stationChartWrap').innerHTML=`<p class="mn-note">${error.message}。ローカルHTTPサーバーから開いてください。</p>`;});
