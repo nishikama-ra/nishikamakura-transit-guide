@@ -1,0 +1,8 @@
+/* Load after existing page CSS. This changes only presentation; map and route logic remain untouched. */
+:root { --ink:#203b5d; --muted:#64778b; --blue:#2f5fb3; --teal:#4f916d; --paper:#fffefd; --mist:#eaf5fb; --line:#cfdce5; --white:#fff; --shadow:0 8px 24px rgba(32,59,93,.06); }
+.school-site-header, .site-header { background:rgba(255,255,255,.97); border-color:var(--mn-line,#cfdce5); }
+.school-page-heading h1, .page-intro h1, .section-heading h2 { color:#17385d; }
+.school-page-heading p, .section-kicker, .eyebrow { color:#377456; }
+.school-filter-panel, .school-map-section, .action-card, .passenger-card, .initiative-card, .stop-card, .departure-panel { border-color:#cfdce5; box-shadow:0 8px 24px rgba(32,59,93,.06); }
+.school-segmented button[aria-pressed="true"], .type-filter[aria-pressed="true"] { background:#17385d; }
+.school-related-link a, .text-link, .action-card a { color:#2f5fb3; }
