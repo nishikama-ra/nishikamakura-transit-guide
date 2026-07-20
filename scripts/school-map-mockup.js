@@ -23,6 +23,9 @@ const FOCUS_AREA = {
   radiusMeters: 2400
 };
 
+const ALL_VIEW_MODES = ['local', 'nearby', 'wide'];
+const LOCAL_VIEW_ONLY = ['local'];
+
 const typeColors = {
   nursery: '#b16f68',
   kindergarten: '#9a705f',
@@ -91,6 +94,28 @@ function normalizeAddress(value) {
     .toLowerCase();
 }
 
+function normalizeSchoolName(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .replace(/^(?:学校法人)?(?:神奈川県立|県立|鎌倉市立|藤沢市立|横浜市立|市立)/u, '')
+    .replace(/高等学校/gu, '高校')
+    .replace(/[\s　・,，.．()（）]/gu, '')
+    .toLowerCase();
+}
+
+function campusNames(campus) {
+  return [campus.name, ...(campus.listings || []).map(listing => listing.name)]
+    .map(normalizeSchoolName)
+    .filter(Boolean);
+}
+
+function campusInstitutionIds(campus) {
+  return new Set([
+    ...(campus.institutions || []).map(institution => institution.id),
+    ...(campus.listings || []).flatMap(listing => listing.institutionIds || [])
+  ].filter(Boolean));
+}
+
 function distanceMeters(a, b) {
   const radians = degrees => degrees * Math.PI / 180;
   const lat1 = radians(Number(a.lat));
@@ -109,9 +134,19 @@ function hasTypeOverlap(a, b) {
 
 function isSameCampus(localCampus, broadCampus) {
   if (!hasTypeOverlap(localCampus, broadCampus)) return false;
+
+  const localIds = campusInstitutionIds(localCampus);
+  const broadIds = campusInstitutionIds(broadCampus);
+  if ([...localIds].some(id => broadIds.has(id))) return true;
+
   const localAddress = normalizeAddress(localCampus.address);
   const broadAddress = normalizeAddress(broadCampus.address);
   if (localAddress && localAddress === broadAddress) return true;
+
+  const broadNames = new Set(campusNames(broadCampus));
+  const sameName = campusNames(localCampus).some(name => broadNames.has(name));
+  if (sameName && distanceMeters(localCampus, broadCampus) <= 1500) return true;
+
   return distanceMeters(localCampus, broadCampus) <= 80;
 }
 
@@ -132,26 +167,33 @@ function campusOwnerships(campus) {
   return new Set(campus.ownerships || campus.listings?.flatMap(listing => listing.ownerships || []) || []);
 }
 
-function isPublicLocalCampus(campus) {
+function isMunicipalElementaryOrJuniorHigh(campus) {
   const ownerships = campusOwnerships(campus);
-  return ownerships.has('municipal') || ownerships.has('prefectural');
+  const types = new Set(campus.types || []);
+  return ownerships.has('municipal') && (types.has('elementary') || types.has('juniorHigh'));
 }
 
 function isChildcareCampus(campus) {
   return (campus.types || []).some(type => type === 'nursery' || type === 'kindergarten');
 }
 
+function viewModesForCampus(campus) {
+  return isChildcareCampus(campus) || isMunicipalElementaryOrJuniorHigh(campus)
+    ? [...LOCAL_VIEW_ONLY]
+    : [...ALL_VIEW_MODES];
+}
+
 function mergeSchoolData(broadData, localData) {
   const normalizedLocal = normalizeLocalData(localData).campuses;
-  const broadCampuses = broadData.campuses.map(campus => {
-    const isNearby = normalizedLocal.some(localCampus => isSameCampus(localCampus, campus));
-    return { ...campus, localOnly: isNearby && isPublicLocalCampus(campus) };
-  });
+  const broadCampuses = broadData.campuses.map(campus => ({
+    ...campus,
+    viewModes: [...ALL_VIEW_MODES]
+  }));
   const additionalLocalCampuses = normalizedLocal
     .filter(localCampus => !broadCampuses.some(broadCampus => isSameCampus(localCampus, broadCampus)))
     .map(campus => ({
       ...campus,
-      localOnly: isPublicLocalCampus(campus) || isChildcareCampus(campus)
+      viewModes: viewModesForCampus(campus)
     }));
 
   const typeOrder = ['nursery', 'kindergarten', 'elementary', 'juniorHigh', 'high', 'specialSupport', 'university', 'vocational'];
@@ -163,6 +205,7 @@ function mergeSchoolData(broadData, localData) {
     .filter(type => sourceTypeLabels[type])
     .map(type => [type, sourceTypeLabels[type]]));
 
+  const campuses = [...broadCampuses, ...additionalLocalCampuses];
   return {
     meta: {
       ...broadData.meta,
@@ -171,9 +214,9 @@ function mergeSchoolData(broadData, localData) {
         ...(localData.meta?.ownershipLabels || {}),
         ...(broadData.meta?.ownershipLabels || {})
       },
-      localOnlyCampusCount: [...broadCampuses, ...additionalLocalCampuses].filter(campus => campus.localOnly).length
+      localOnlyCampusCount: campuses.filter(campus => campus.viewModes.length === 1 && campus.viewModes[0] === 'local').length
     },
-    campuses: [...broadCampuses, ...additionalLocalCampuses]
+    campuses
   };
 }
 
@@ -215,10 +258,8 @@ function activeListings(campus) {
 }
 
 function visibleCampuses() {
-  // The local view shows every school, including distant schools, nearby public schools and childcare.
-  // The nearby and wide views hide nearby municipal/prefectural schools and childcare to reduce congestion.
   return state.data.campuses.filter(campus =>
-    (state.scope === 'local' || !campus.localOnly) && activeListings(campus).length > 0
+    campus.viewModes.includes(state.scope) && activeListings(campus).length > 0
   );
 }
 
