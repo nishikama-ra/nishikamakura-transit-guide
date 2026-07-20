@@ -128,11 +128,31 @@ function normalizeLocalData(data) {
   return data;
 }
 
+function campusOwnerships(campus) {
+  return new Set(campus.ownerships || campus.listings?.flatMap(listing => listing.ownerships || []) || []);
+}
+
+function isPublicLocalCampus(campus) {
+  const ownerships = campusOwnerships(campus);
+  return ownerships.has('municipal') || ownerships.has('prefectural');
+}
+
+function isChildcareCampus(campus) {
+  return (campus.types || []).some(type => type === 'nursery' || type === 'kindergarten');
+}
+
 function mergeSchoolData(broadData, localData) {
-  const broadCampuses = broadData.campuses.map(campus => ({ ...campus, localOnly: false }));
-  const localOnlyCampuses = normalizeLocalData(localData).campuses
+  const normalizedLocal = normalizeLocalData(localData).campuses;
+  const broadCampuses = broadData.campuses.map(campus => {
+    const isNearby = normalizedLocal.some(localCampus => isSameCampus(localCampus, campus));
+    return { ...campus, localOnly: isNearby && isPublicLocalCampus(campus) };
+  });
+  const additionalLocalCampuses = normalizedLocal
     .filter(localCampus => !broadCampuses.some(broadCampus => isSameCampus(localCampus, broadCampus)))
-    .map(campus => ({ ...campus, localOnly: true }));
+    .map(campus => ({
+      ...campus,
+      localOnly: isPublicLocalCampus(campus) || isChildcareCampus(campus)
+    }));
 
   const typeOrder = ['nursery', 'kindergarten', 'elementary', 'juniorHigh', 'high', 'specialSupport', 'university', 'vocational'];
   const sourceTypeLabels = {
@@ -151,9 +171,9 @@ function mergeSchoolData(broadData, localData) {
         ...(localData.meta?.ownershipLabels || {}),
         ...(broadData.meta?.ownershipLabels || {})
       },
-      localOnlyCampusCount: localOnlyCampuses.length
+      localOnlyCampusCount: [...broadCampuses, ...additionalLocalCampuses].filter(campus => campus.localOnly).length
     },
-    campuses: [...broadCampuses, ...localOnlyCampuses]
+    campuses: [...broadCampuses, ...additionalLocalCampuses]
   };
 }
 
@@ -195,8 +215,8 @@ function activeListings(campus) {
 }
 
 function visibleCampuses() {
-  // The local view shows every broad-area school plus nearby public schools and childcare.
-  // The nearby and wide views omit only the additional local facilities to avoid marker congestion.
+  // The local view shows every school, including distant schools, nearby public schools and childcare.
+  // The nearby and wide views hide nearby municipal/prefectural schools and childcare to reduce congestion.
   return state.data.campuses.filter(campus =>
     (state.scope === 'local' || !campus.localOnly) && activeListings(campus).length > 0
   );
