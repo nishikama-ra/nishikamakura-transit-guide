@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "title": "学校地図用データ",
+    "generatedAt": "2026-07-20",
+    "source": "国土数値情報 学校データ 2023年度版",
+    "sourcePage": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html",
+    "sourceFile": "P29-23_14_GML.zip",
+    "sourceSha256": "4cb0a33cde0017413b535be8e430c860d79a29588410f3b0e7cd56968c1a80e4",
+    "targetMunicipalities": [
+      "横浜市",
+      "横須賀市",
+      "逗子市",
+      "三浦市",
+      "葉山町",
+      "鎌倉市",
+      "藤沢市",
+      "大和市",
+      "綾瀬市",
+      "茅ヶ崎市"
+    ],
+    "sourceAdministrativeAreaCodes": [
+      "14101",
+      "14102",
+      "14103",
+      "14104",
+      "14105",
+      "14106",
+      "14107",
+      "14108",
+      "14109",
+      "14110",
+      "14111",
+      "14112",
+      "14113",
+      "14114",
+      "14115",
+      "14116",
+      "14117",
+      "14118",
+      "14201",
+      "14204",
+      "14205",
+      "14207",
+      "14208",
+      "14210",
+      "14213",
+      "14218",
+      "14301"
+    ],
+    "typeLabels": {
+      "elementary": "小学校",
+      "juniorHigh": "中学校",
+      "high": "高校",
+      "university": "大学・短期大学"
+    },
+    "ownershipLabels": {
+      "municipal": "市立",
+      "prefectural": "県立",
+      "national": "国立",
+      "private": "私立"
+    },
+    "institutionCount": 268,
+    "campusCount": 198,
+    "countsByType": {
+      "elementary": 22,
+      "juniorHigh": 52,
+      "high": 150,
+      "university": 45
+    },
+    "countsByMunicipality": {
+      "横浜市": 172,
+      "横須賀市": 18,
+      "逗子市": 6,
+      "三浦市": 1,
+      "葉山町": 2,
+      "鎌倉市": 23,
+      "藤沢市": 28,
+      "大和市": 8,
+      "綾瀬市": 2,
+      "茅ヶ崎市": 8
+    },
+    "selectionRule": "小中学校は市立を除外。高校と大学・短大は国立・県立・市立・私立を収録。保育施設・幼稚園・特別支援学校・専門学校等は除外。",
+    "schemaVersion": 5,
+    "officialUrlCount": 268,
+    "officialUrlMissingCount": 0,
+    "campusNamingRule": "大学は所在地と公式キャンパス情報を照合し、施設ID単位でキャンパス名を設定。"
+  },
+  "chunkFiles": [
+    "schools-wide-01.json",
+    "schools-wide-02.json",
+    "schools-wide-03.json",
+    "schools-wide-04.json"
+  ],
+  "overrideFiles": [
+    "schools-wide-overrides-01.json",
+    "schools-wide-overrides-02.json",
+    "schools-wide-overrides-03.json",
+    "schools-wide-overrides-04.json",
+    "schools-wide-overrides-05.json",
+    "schools-wide-overrides-06.json"
+  ]
+}

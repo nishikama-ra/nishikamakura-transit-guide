@@ -7,6 +7,7 @@
   <title>学校・幼稚園・保育施設｜にしかま周辺 まちノート</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="school-map-mockup.css">
+  <link rel="stylesheet" href="school-map-recovery.css">
   <link rel="stylesheet" href="machinote-theme.css">
   <link rel="stylesheet" href="existing-pages-theme.css">
 </head>
@@ -52,6 +53,11 @@
       <div class="school-map-heading">
         <div>
           <h2 id="map-heading">地図で見る</h2>
+        </div>
+        <div class="school-route-tools" aria-label="公共交通経路の出発地設定">
+          <button id="selectRouteOrigin" type="button" aria-pressed="false">出発地を地図で指定</button>
+          <button id="clearRouteOrigin" type="button" hidden>出発地を解除</button>
+          <span id="routeOriginStatus">出発地未指定（Googleマップ側でも指定できます）</span>
         </div>
       </div>
       <div class="school-map-layout">

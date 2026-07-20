@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "part": 2,
+    "institutionPatchCount": 45
+  },
+  "institutions": {
+    "F114310104810-00": {
+      "officialUrl": "https://toin.ac.jp/univ/"
+    },
+    "B114310000093-00": {
+      "officialUrl": "https://www.morimura.ac.jp/elementary/"
+    },
+    "C114310000260-00": {
+      "officialUrl": "https://www.morimura.ac.jp/jsh/"
+    },
+    "D114310000311-00": {
+      "officialUrl": "https://www.morimura.ac.jp/jsh/"
+    },
+    "B114310000084-00": {
+      "officialUrl": "https://www.yokohamasaniku.ed.jp/"
+    },
+    "C114310000180-00": {
+      "officialUrl": "https://www.yokohama-jsh.ac.jp/"
+    },
+    "C114310000108-00": {
+      "officialUrl": "https://kjg.ed.jp/"
+    },
+    "D114310000124-00": {
+      "officialUrl": "https://kjg.ed.jp/"
+    },
+    "D114310000213-00": {
+      "officialUrl": "https://so-gakukan.ed.jp/"
+    },
+    "C114310000064-00": {
+      "officialUrl": "https://www.soei.ed.jp/"
+    },
+    "D114310000080-00": {
+      "officialUrl": "https://www.soei.ed.jp/"
+    },
+    "F114310104687-00": {
+      "officialUrl": "https://www.shodai.ac.jp/access/",
+      "name": "横浜商科大学 つるみキャンパス"
+    },
+    "D114310000286-00": {
+      "officialUrl": "https://www.shodai-h.ed.jp/"
+    },
+    "F114110104592-00": {
+      "officialUrl": "https://www.ynu.ac.jp/access/",
+      "name": "横浜国立大学 常盤台キャンパス"
+    },
+    "C114110000022-00": {
+      "officialUrl": "https://yokochu.ynu.ac.jp/"
+    },
+    "B114110000024-00": {
+      "officialUrl": "https://yokosyo.ynu.ac.jp/"
+    },
+    "F214310104935-00": {
+      "officialUrl": "https://www.yokotan.ac.jp/"
+    },
+    "C114310000117-00": {
+      "officialUrl": "https://www.yjg.y-gakuin.ed.jp/"
+    },
+    "D114310000133-00": {
+      "officialUrl": "https://www.yjg.y-gakuin.ed.jp/"
+    },
+    "C114310000162-00": {
+      "officialUrl": "https://www.yokogaku.ed.jp/"
+    },
+    "D114310000188-00": {
+      "officialUrl": "https://www.yokogaku.ed.jp/"
+    },
+    "C114310000251-00": {
+      "officialUrl": "https://fujimigaoka.ed.jp/"
+    },
+    "D114310000302-00": {
+      "officialUrl": "https://fujimigaoka.ed.jp/"
+    },
+    "D114210020079-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/m-sogo/"
+    },
+    "D114210020042-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/minami/"
+    },
+    "F114210104616-01": {
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/hakkei_campusmap.html",
+      "name": "横浜市立大学 金沢八景キャンパス"
+    },
+    "F114210104616-02": {
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/fukuura_campusmap.html",
+      "name": "横浜市立大学 福浦キャンパス"
+    },
+    "F114210104616-03": {
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/tsurumi_campusmap.html",
+      "name": "横浜市立大学 鶴見キャンパス"
+    },
+    "F114210104616-04": {
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/maioka_campusmap.html",
+      "name": "横浜市立大学 舞岡キャンパス"
+    },
+    "D114210020015-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/totsuka/"
+    },
+    "D114210020051-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/higashi/"
+    },
+    "D114210020024-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/sakuraoka/"
+    },
+    "D114210020088-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/sfh/"
+    },
+    "D114210020060-01": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-shogyo/"
+    },
+    "D114210020060-02": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-shogyo/"
+    },
+    "D114210020097-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-sogo/"
+    },
+    "D114210020033-00": {
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/kanazawa/"
+    },
+    "C114310000153-00": {
+      "officialUrl": "https://www.y-seifu.ac.jp/"
+    },
+    "D114310000179-00": {
+      "officialUrl": "https://www.y-seifu.ac.jp/"
+    },
+    "F114310104856-00": {
+      "officialUrl": "https://www.yokohama-art.ac.jp/"
+    },
+    "C114310000288-00": {
+      "officialUrl": "https://www.suiryo.ed.jp/"
+    },
+    "D114310000339-00": {
+      "officialUrl": "https://www.suiryo.ed.jp/"
+    },
+    "F114310104874-00": {
+      "officialUrl": "https://www.soei.ac.jp/"
+    },
+    "F114310104712-00": {
+      "officialUrl": "https://www.hamayaku.ac.jp/"
+    },
+    "C114310000297-00": {
+      "officialUrl": "https://www.hayato.ed.jp/"
+    }
+  },
+  "campuses": {}
+}

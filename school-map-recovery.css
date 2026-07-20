@@ -1,0 +1,53 @@
+/* Additive styles for Google route controls. Existing school-map styles remain unchanged. */
+.school-route-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 620px;
+}
+.school-route-tools button {
+  padding: 6px 10px;
+  color: var(--teal-dark);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 11.5px;
+  cursor: pointer;
+}
+.school-route-tools button[aria-pressed="true"] {
+  color: #fff;
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+.school-route-tools span {
+  color: var(--muted);
+  font-size: 10.5px;
+}
+.school-map.is-selecting-route-origin { cursor: crosshair; }
+.school-list-item { display: grid; }
+.school-list-transit-link,
+.school-transit-link {
+  color: #2d6865;
+  font-size: 10.5px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.school-list-transit-link {
+  display: block;
+  padding: 7px 14px 9px;
+  border-top: 1px solid #eef2ef;
+}
+.school-transit-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .school-route-tools {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .school-route-tools span { flex-basis: 100%; }
+}

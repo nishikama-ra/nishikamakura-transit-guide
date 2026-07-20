@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "part": 6,
+    "institutionPatchCount": 43
+  },
+  "institutions": {
+    "D114320500048-00": {
+      "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/"
+    },
+    "B114320500024-00": {
+      "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/"
+    },
+    "D114220510066-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shonandai-h/"
+    },
+    "D114220510011-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/"
+    },
+    "D114220510039-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawakoka-th/"
+    },
+    "D114220510048-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/"
+    },
+    "D114220510057-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawasogo-ih/"
+    },
+    "D114220510020-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawanishi-h/"
+    },
+    "C114320500031-00": {
+      "officialUrl": "https://www.misono.jp/"
+    },
+    "D114320500084-00": {
+      "officialUrl": "https://www.misono.jp/"
+    },
+    "C114320500059-00": {
+      "officialUrl": "https://www.tohrei-fujisawa.ed.jp/"
+    },
+    "D114320500066-00": {
+      "officialUrl": "https://www.tohrei-fujisawa.ed.jp/"
+    },
+    "D114320500075-00": {
+      "officialUrl": "https://shoryo.ed.jp/"
+    },
+    "D114320500011-00": {
+      "officialUrl": "https://kugenuma.ed.jp/"
+    },
+    "D114220810036-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/zushihayama-h/"
+    },
+    "B114320800012-00": {
+      "officialUrl": "https://www.seimaria-es.jp/"
+    },
+    "C114320800010-00": {
+      "officialUrl": "https://www.seiwagakuin.ed.jp/"
+    },
+    "D114320800018-00": {
+      "officialUrl": "https://www.seiwagakuin.ed.jp/"
+    },
+    "C114320800029-00": {
+      "officialUrl": "https://www.zushi-kaisei.ac.jp/"
+    },
+    "D114320800027-00": {
+      "officialUrl": "https://www.zushi-kaisei.ac.jp/"
+    },
+    "C114320400041-00": {
+      "officialUrl": "https://www.kitakama.ac.jp/"
+    },
+    "D114320400049-00": {
+      "officialUrl": "https://www.kitakama.ac.jp/"
+    },
+    "C114320400014-00": {
+      "officialUrl": "https://ekh.jp/"
+    },
+    "D114320400012-00": {
+      "officialUrl": "https://ekh.jp/"
+    },
+    "B114110000015-00": {
+      "officialUrl": "https://www.kamakurasho.ynu.ac.jp/"
+    },
+    "C114110000013-00": {
+      "officialUrl": "https://kamachu.ynu.ac.jp/"
+    },
+    "C114320400069-00": {
+      "officialUrl": "https://www.seisen-h.ed.jp/"
+    },
+    "D114320400067-00": {
+      "officialUrl": "https://www.seisen-h.ed.jp/"
+    },
+    "B114320400025-00": {
+      "officialUrl": "https://seisen-e.ac.jp/"
+    },
+    "F114310104892-00": {
+      "officialUrl": "https://www.sku.ac.jp/"
+    },
+    "D114220410021-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/"
+    },
+    "D114220410030-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/"
+    },
+    "D114220410049-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fukasawa-h/"
+    },
+    "D114220410012-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/"
+    },
+    "B114320400016-00": {
+      "officialUrl": "https://www.kamakura-u.ac.jp/elementary/"
+    },
+    "C114320400050-00": {
+      "officialUrl": "https://www.kamakura-u-j.ed.jp/"
+    },
+    "D114320400058-00": {
+      "officialUrl": "https://www.kamakura-u-j.ed.jp/"
+    },
+    "F114310104749-00": {
+      "officialUrl": "https://www.kamakura-u.ac.jp/access/print/index.html",
+      "name": "鎌倉女子大学 大船キャンパス"
+    },
+    "F214310104971-00": {
+      "officialUrl": "https://www.kamakura-u.ac.jp/access/print/index.html",
+      "name": "鎌倉女子大学短期大学部 大船キャンパス"
+    },
+    "C114320400032-00": {
+      "officialUrl": "https://www.kamajo.ac.jp/"
+    },
+    "D114320400030-00": {
+      "officialUrl": "https://www.kamajo.ac.jp/"
+    },
+    "C114320400023-00": {
+      "officialUrl": "https://www.kamagaku.ac.jp/"
+    },
+    "D114320400021-00": {
+      "officialUrl": "https://www.kamagaku.ac.jp/"
+    }
+  },
+  "campuses": {}
+}

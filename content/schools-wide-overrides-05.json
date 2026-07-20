@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "part": 5,
+    "institutionPatchCount": 45
+  },
+  "institutions": {
+    "F214310104926-00": {
+      "officialUrl": "https://www.tsurumi-u.ac.jp/"
+    },
+    "D114320100024-00": {
+      "officialUrl": "https://miura.ed.jp/"
+    },
+    "B114320100019-00": {
+      "officialUrl": "https://es.yokosukagakuin.ac.jp/"
+    },
+    "C114320100026-00": {
+      "officialUrl": "https://jhs.yokosukagakuin.ac.jp/"
+    },
+    "D114320100042-00": {
+      "officialUrl": "https://jhs.yokosukagakuin.ac.jp/"
+    },
+    "F114310104730-00": {
+      "officialUrl": "https://www.kdu.ac.jp/dental/outline/campusmap/",
+      "name": "神奈川歯科大学 横須賀キャンパス"
+    },
+    "F214310105006-00": {
+      "officialUrl": "https://www.kdu.ac.jp/college/",
+      "name": "神奈川歯科大学短期大学部 横須賀キャンパス"
+    },
+    "D114220120013-00": {
+      "officialUrl": "https://schoolnet.edu.city.yokosuka.kanagawa.jp/schoolnet/highschool/301sougou/"
+    },
+    "D114320100015-00": {
+      "officialUrl": "https://shonangakuin.ed.jp/"
+    },
+    "F114210104625-00": {
+      "officialUrl": "https://www.kuhs.ac.jp/access/",
+      "name": "神奈川県立保健福祉大学 横須賀キャンパス"
+    },
+    "D114220110079-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosukaminami-h/"
+    },
+    "D114220110024-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosukaotsu-h/"
+    },
+    "D114220110033-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosuka-th/"
+    },
+    "D114220110015-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosuka-h/"
+    },
+    "D114220110060-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsukuihama-h/"
+    },
+    "D114220110042-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kaiyokagaku-h/"
+    },
+    "D114220110051-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/oppama-h/"
+    },
+    "C114320100017-00": {
+      "officialUrl": "https://midorigaoka.ed.jp/"
+    },
+    "D114320100033-00": {
+      "officialUrl": "https://midorigaoka.ed.jp/"
+    },
+    "D114221810025-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ayasenishi-h/"
+    },
+    "D114221810016-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ayase-h/"
+    },
+    "B114320700013-00": {
+      "officialUrl": "https://www.aletheia.ac.jp/primary/"
+    },
+    "C114320700011-00": {
+      "officialUrl": "https://www.aletheia.ac.jp/jr-high/"
+    },
+    "D114320700019-00": {
+      "officialUrl": "https://www.aletheia.ac.jp/high/"
+    },
+    "F113310102868-03": {
+      "officialUrl": "https://www.bunkyo.ac.jp/access/shonan/",
+      "name": "文教大学 湘南キャンパス"
+    },
+    "D114220710028-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasakihokuryo-h/"
+    },
+    "D114220710046-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasakinishihama-h/"
+    },
+    "D114220710019-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasaki-h/"
+    },
+    "D114220710037-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumine-h/"
+    },
+    "F114110104609-01": {
+      "officialUrl": "https://www.soken.ac.jp/access/",
+      "name": "総合研究大学院大学 葉山キャンパス"
+    },
+    "F114110104609-15": {
+      "officialUrl": "https://www.soken.ac.jp/access/",
+      "name": "総合研究大学院大学 葉山キャンパス"
+    },
+    "F113310103938-02": {
+      "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html"
+    },
+    "F113310102984-06": {
+      "officialUrl": "https://www.sfc.keio.ac.jp/"
+    },
+    "C114320500040-00": {
+      "officialUrl": "https://www.sfc-js.keio.ac.jp/"
+    },
+    "D114320500093-00": {
+      "officialUrl": "https://www.sfc-js.keio.ac.jp/"
+    },
+    "B114320500033-00": {
+      "officialUrl": "https://fujisawa.es.nihon-u.ac.jp/"
+    },
+    "C114320500068-00": {
+      "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/"
+    },
+    "D114320500057-00": {
+      "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/"
+    },
+    "F113310103395-16": {
+      "officialUrl": "https://www.brs.nihon-u.ac.jp/"
+    },
+    "C114320500013-00": {
+      "officialUrl": "https://www.shogak.ac.jp/highschool/"
+    },
+    "D114320500039-00": {
+      "officialUrl": "https://www.shogak.ac.jp/highschool/"
+    },
+    "B114320500015-00": {
+      "officialUrl": "https://www.shogak.ac.jp/elementary/"
+    },
+    "D114320500020-00": {
+      "officialUrl": "https://www.sh.shonan-it.ac.jp/"
+    },
+    "F114310104758-00": {
+      "officialUrl": "https://www.shonan-it.ac.jp/"
+    },
+    "C114320500022-00": {
+      "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/"
+    }
+  },
+  "campuses": {}
+}

@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "part": 3,
+    "institutionPatchCount": 45
+  },
+  "institutions": {
+    "D114310000348-00": {
+      "officialUrl": "https://www.hayato.ed.jp/"
+    },
+    "C114310000126-00": {
+      "officialUrl": "https://www.yokohamafutaba.ed.jp/"
+    },
+    "D114310000142-00": {
+      "officialUrl": "https://www.yokohamafutaba.ed.jp/"
+    },
+    "B114310000048-00": {
+      "officialUrl": "https://www.y-futaba-e.ed.jp/"
+    },
+    "D114310000204-00": {
+      "officialUrl": "https://www.yokohama-jsh.ac.jp/"
+    },
+    "C114310000028-00": {
+      "officialUrl": "https://www.tachibana.ac.jp/"
+    },
+    "D114310000035-00": {
+      "officialUrl": "https://www.tachibana.ac.jp/"
+    },
+    "C114310000215-00": {
+      "officialUrl": "https://buso.ac.jp/"
+    },
+    "D114310000259-00": {
+      "officialUrl": "https://buso.ac.jp/"
+    },
+    "D114310000053-00": {
+      "officialUrl": "https://kokusai-high.ws.hosei.ac.jp/"
+    },
+    "C114310000046-00": {
+      "officialUrl": "https://www.asano.ed.jp/"
+    },
+    "D114310000062-00": {
+      "officialUrl": "https://www.asano.ed.jp/"
+    },
+    "D114310000384-00": {
+      "officialUrl": "https://www.seisin.ed.jp/"
+    },
+    "F114310104883-00": {
+      "officialUrl": "https://sums.ac.jp/",
+      "name": "湘南医療大学 東戸塚キャンパス"
+    },
+    "D114310000017-00": {
+      "officialUrl": "https://www.hakuhojoshi-h.ed.jp/"
+    },
+    "F114310104641-01": {
+      "officialUrl": "https://www.kanagawa-u.ac.jp/access/yokohama/",
+      "name": "神奈川大学 横浜キャンパス"
+    },
+    "F114310104641-03": {
+      "officialUrl": "https://www.kanagawa-u.ac.jp/access/minatomirai/",
+      "name": "神奈川大学 みなとみらいキャンパス"
+    },
+    "C114310000279-00": {
+      "officialUrl": "https://www.fhs.kanagawa-u.ac.jp/"
+    },
+    "D114310000320-00": {
+      "officialUrl": "https://www.fhs.kanagawa-u.ac.jp/"
+    },
+    "D114210010393-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamiyabe-h/"
+    },
+    "D114210010197-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/futamatagawa-h/"
+    },
+    "D114210010179-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hodogaya-h/"
+    },
+    "D114210010339-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/motoishikawa-h/"
+    },
+    "D114210010151-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/koryo-h/"
+    },
+    "D114210010160-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shoko-h/"
+    },
+    "D114210010062-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shirosato-h/"
+    },
+    "D114210010286-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kishine-h/"
+    },
+    "D114210010348-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kawawa-h/"
+    },
+    "D114210010311-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ichigao-h/"
+    },
+    "D114210010188-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kibogaoka-h/"
+    },
+    "D114210010366-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shinei-h/"
+    },
+    "D114210010277-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/nippa-h/"
+    },
+    "D114210010204-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/asahi-h/"
+    },
+    "D114210010437-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shoyo-h/"
+    },
+    "D114210010400-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hakuyo-h/"
+    },
+    "D114210010455-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-shuyukan-h/"
+    },
+    "D114210010124-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-nanryo-h/"
+    },
+    "D114210010115-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamakokusai-h/"
+    },
+    "D114210010071-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamahiranuma-h/"
+    },
+    "D114210010213-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-kyokuryo-h/"
+    },
+    "D114210010133-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-meiho-h/"
+    },
+    "D114210010428-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamasakae-h/"
+    },
+    "D114210010384-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-oyo-h/"
+    },
+    "D114210010231-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-hitorizawa-h/"
+    },
+    "D114210010106-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-seiryo-h/"
+    }
+  },
+  "campuses": {}
+}

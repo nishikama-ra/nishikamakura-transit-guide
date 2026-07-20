@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "schemaVersion": 2,
+    "part": 4,
+    "institutionPatchCount": 45
+  },
+  "institutions": {
+    "D114210010482-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamaseya-h/"
+    },
+    "D114210010099-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-tateno-h/"
+    },
+    "D114210010080-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-midorigaoka-h/"
+    },
+    "D114210010446-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-ryokuen-h/"
+    },
+    "D114210010053-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamasuiran-h/"
+    },
+    "D114210010142-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/nagaya-h/"
+    },
+    "D114210010268-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kohoku-h/"
+    },
+    "D114210010320-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tana-h/"
+    },
+    "D114210010302-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hakusan-h/"
+    },
+    "D114210010222-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/isogo-th/"
+    },
+    "D114210010035-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanagawa-th/"
+    },
+    "D114210010044-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanagawasohgoh-h/"
+    },
+    "D114210010375-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/maioka-h/"
+    },
+    "D114210010357-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/eda-h/"
+    },
+    "D114210010419-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanai-h/"
+    },
+    "D114210010240-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanazawasogo-ih/"
+    },
+    "D114210010259-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamariya-h/"
+    },
+    "D114210010295-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kirigaoka-h/"
+    },
+    "D114210010026-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumisogo-ih/"
+    },
+    "D114210010017-00": {
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumi-h/"
+    },
+    "D114310000393-00": {
+      "officialUrl": "https://www.shuei.ed.jp/"
+    },
+    "B114310000020-00": {
+      "officialUrl": "https://www.seika-net.ed.jp/"
+    },
+    "C114310000055-00": {
+      "officialUrl": "https://www.kanagawa-kgs.ac.jp/"
+    },
+    "D114310000071-00": {
+      "officialUrl": "https://www.kanagawa-kgs.ac.jp/"
+    },
+    "B114310000011-00": {
+      "officialUrl": "https://www.st-joseph.ac.jp/primary/"
+    },
+    "C114310000019-00": {
+      "officialUrl": "https://www.st-joseph.ac.jp/"
+    },
+    "D114310000026-00": {
+      "officialUrl": "https://www.st-joseph.ac.jp/"
+    },
+    "C114310000082-00": {
+      "officialUrl": "https://www.seiko.ac.jp/"
+    },
+    "D114310000106-00": {
+      "officialUrl": "https://www.seiko.ac.jp/"
+    },
+    "D114310000231-00": {
+      "officialUrl": "https://www.eiri.ed.jp/"
+    },
+    "B114310000057-00": {
+      "officialUrl": "https://es.kanto-gakuin.ac.jp/"
+    },
+    "C114310000135-00": {
+      "officialUrl": "https://kantogakuin.ed.jp/"
+    },
+    "D114310000151-00": {
+      "officialUrl": "https://kantogakuin.ed.jp/"
+    },
+    "B114310000075-00": {
+      "officialUrl": "https://es.kgm.ed.jp/"
+    },
+    "C11431000171-00": {
+      "officialUrl": "https://www.kgm.ed.jp/"
+    },
+    "D11431000197-00": {
+      "officialUrl": "https://www.kgm.ed.jp/"
+    },
+    "F114310104650-01": {
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html",
+      "name": "関東学院大学 横浜・金沢八景キャンパス"
+    },
+    "F114310104650-02": {
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html",
+      "name": "関東学院大学 横浜・金沢文庫キャンパス"
+    },
+    "F114310104650-03": {
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html",
+      "name": "関東学院大学 横浜・関内キャンパス"
+    },
+    "B114310000066-00": {
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/shougakkou/"
+    },
+    "C114310000144-00": {
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/chukou/"
+    },
+    "D114310000160-00": {
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/chukou/"
+    },
+    "C114310000037-00": {
+      "officialUrl": "https://tsurumi-fuzok.ed.jp/"
+    },
+    "D114310000044-00": {
+      "officialUrl": "https://tsurumi-fuzoku.ed.jp/"
+    },
+    "F114310104669-00": {
+      "officialUrl": "https://www.tsurumi-u.ac.jp/"
+    }
+  },
+  "campuses": {}
+}
