@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="西鎌倉周辺から出かけるときに使える、乗りものやサービスの案内です。">
-  <title>西鎌倉周辺くらしの交通案内</title>
+  <meta name="description" content="西鎌倉・鎌倉山・手広・腰越・津周辺の学校、医療・福祉、公共施設、交通、人口などを調べる地域生活情報サイトです。">
+  <title>にしかま周辺 まちノート</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="machinote-theme.css">
   <link rel="stylesheet" href="existing-pages-theme.css">
@@ -17,29 +17,83 @@
       <p class="eyebrow" id="heroEyebrow"></p>
       <h1 id="heroTitle"></h1>
       <p class="hero-lead" id="heroLead"></p>
+      <div class="home-hero-actions">
+        <a class="home-hero-primary" href="regional-maps.html">地域情報・地図を開く <span aria-hidden="true">→</span></a>
+        <a class="home-hero-secondary" href="#public-transit">交通情報を見る</a>
+      </div>
     </section>
 
-    <section class="section shell" id="public-transit">
+    <section class="section shell" aria-labelledby="life-heading">
       <div class="section-heading">
-        <div><p class="section-kicker">公共交通</p><h2>電車・モノレール・路線バス</h2></div>
-        <p>西鎌倉周辺の駅やバス停の情報です。</p>
+        <div><p class="section-kicker">地域情報・地図</p><h2 id="life-heading">暮らしの分野から探す</h2></div>
+        <p>施設の場所や地域の状況を、地図やグラフで確認できます。</p>
       </div>
-      <a class="primary-feature" href="https://nishikama-ra.github.io/nishikama-transit-map/" target="_blank" rel="noopener">
-        <span class="feature-route" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>
-          <strong>駅・バス停を地図で探す</strong>
-          <span class="feature-explanation">地図で駅やバス停を選ぶと、藤沢・大船・鎌倉へ向かう本数と公式時刻表がわかります。<br>また、「標高ツール」の「断面図モード」で自宅など任意の地点から駅・バス停までの徒歩経路を選ぶと、距離と上り下りも確認できます。</span>
-          <em class="feature-button">開く <span aria-hidden="true">↗</span></em>
-        </span>
-      </a>
-      <a class="late-link transit-late-link" href="last-bus.html">
-        <span><small>帰る時間を確認する</small><strong>藤沢・大船・鎌倉からの最終電車・最終バス</strong></span>
-        <span aria-hidden="true">→</span>
-      </a>
-      <a class="late-link" href="stops.html">
-        <span><small>近くの駅・バス停から出る便</small><strong>駅・バス停ごとの始発・終発・本数</strong></span>
-        <span aria-hidden="true">→</span>
-      </a>
+      <div class="home-topic-grid">
+        <a class="home-topic-card" href="education.html">
+          <img src="assets/icons/school.svg" alt="">
+          <span><small>教育・子育て</small><strong>教育</strong><em>学校、幼稚園・保育施設、公立小中学校の学区</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="medical-welfare.html">
+          <img src="assets/icons/medical.svg" alt="">
+          <span><small>生活支援</small><strong>医療・福祉</strong><em>病院、診療所、歯科、福祉施設</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="public-facilities.html">
+          <img src="assets/icons/public.svg" alt="">
+          <span><small>施設・活動場所</small><strong>公共・文化・郵便</strong><em>公共施設、文化・スポーツ施設、郵便局</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="culture-history.html">
+          <img src="assets/icons/culture.svg" alt="">
+          <span><small>地域を知る</small><strong>文化・歴史・見どころ</strong><em>文化財、史跡、寺社、地域資源</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="safety-map.html">
+          <img src="assets/icons/safety.svg" alt="">
+          <span><small>防災・行政</small><strong>消防・警察</strong><em>消防署、警察署、交番と所管区域</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="population-outlook.html">
+          <img src="assets/icons/population.svg" alt="">
+          <span><small>地域の変化</small><strong>人口の見通し</strong><em>将来推計人口を地図で確認</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+        <a class="home-topic-card" href="station-passengers.html">
+          <img src="assets/icons/station.svg" alt="">
+          <span><small>交通</small><strong>駅の利用状況</strong><em>周辺駅の乗降客数の推移</em></span>
+          <b aria-hidden="true">›</b>
+        </a>
+      </div>
+      <a class="home-section-link" href="regional-maps.html">地域情報・地図の一覧を開く <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="section home-transport-section" id="public-transit">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="section-kicker">交通</p><h2>電車・モノレール・路線バス</h2></div>
+          <p>駅・バス停、運行本数、最終便など、西鎌倉周辺から移動するときの情報です。</p>
+        </div>
+        <a class="primary-feature" href="https://nishikama-ra.github.io/nishikama-transit-map/" target="_blank" rel="noopener">
+          <span class="feature-route" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>
+            <strong>駅・バス停を地図で探す</strong>
+            <span class="feature-explanation">駅やバス停を選ぶと、藤沢・大船・鎌倉へ向かう本数と公式時刻表を確認できます。標高ツールでは、徒歩経路の距離と上り下りも確認できます。</span>
+            <em class="feature-button">開く <span aria-hidden="true">↗</span></em>
+          </span>
+        </a>
+        <div class="home-transport-links">
+          <a class="late-link" href="last-bus.html">
+            <span><small>帰る時間を確認する</small><strong>藤沢・大船・鎌倉からの最終電車・最終バス</strong></span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="late-link" href="stops.html">
+            <span><small>近くの駅・バス停から出る便</small><strong>駅・バス停ごとの始発・終発・本数</strong></span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="home-card-grid" id="homeCards"></div>
+      </div>
     </section>
 
     <section class="section official-section" aria-labelledby="official-heading">
@@ -54,19 +108,9 @@
         </div>
       </div>
     </section>
-
-    <section class="section shell" aria-labelledby="more-heading">
-      <div class="section-heading compact">
-        <div><p class="section-kicker">関連情報</p><h2 id="more-heading">地域の移動情報</h2></div>
-      </div>
-      <div class="home-card-grid" id="homeCards"></div>
-      <a class="late-link" href="regional-maps.html">
-        <span><small>暮らしと地域を地図で見る</small><strong>地域情報・地図</strong></span>
-        <span aria-hidden="true">→</span>
-      </a>
-    </section>
-
   </main>
+
+  <footer class="mn-site-footer">© にしかま周辺 まちノート</footer>
   <script src="scripts/machinote-shell.js"></script>
   <script src="scripts/common.js"></script>
 </body>
