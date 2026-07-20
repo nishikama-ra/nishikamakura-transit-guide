@@ -1,0 +1,47 @@
+name: Apply school red-circle fix
+
+on:
+  push:
+    branches:
+      - agent/red-circle-wide-only-20260720
+    paths:
+      - .github/workflows/apply-red-circle-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rebuild and validate JavaScript
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .redcircle-payload/part*.txt > /tmp/school-map-mockup.js.b64
+          base64 --decode /tmp/school-map-mockup.js.b64 > /tmp/school-map-mockup.js
+          echo "71efa026531bf3a34b0534ae5a86ed26e85846d1b8147955e7ee55b20c627d87  /tmp/school-map-mockup.js" | sha256sum --check
+          node --check /tmp/school-map-mockup.js
+          grep -F "center: [35.3190, 139.5030]" /tmp/school-map-mockup.js
+          grep -F "radiusMeters: 2400" /tmp/school-map-mockup.js
+          grep -F "const shouldShow = state.scope === 'wide';" /tmp/school-map-mockup.js
+          grep -F "state.focusAreaCircle.remove();" /tmp/school-map-mockup.js
+          grep -F "interactive: false" /tmp/school-map-mockup.js
+
+      - name: Commit validated fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp /tmp/school-map-mockup.js scripts/school-map-mockup.js
+          rm -rf .redcircle-payload
+          rm -f .github/workflows/apply-red-circle-fix.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/school-map-mockup.js .redcircle-payload .github/workflows/apply-red-circle-fix.yml
+          test "$(git diff --cached --name-only)" = "scripts/school-map-mockup.js"
+          git commit -m "Show school focus circle only in wide view"
+          git push origin HEAD:agent/red-circle-wide-only-20260720
