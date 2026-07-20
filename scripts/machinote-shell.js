@@ -9,7 +9,7 @@
     ['home', href('mnHome', 'index.html'), 'ホーム'],
     ['maps', href('mnMaps', 'regional-maps.html'), '地域情報・地図'],
     ['transport', href('mnTransport', 'index.html#public-transit'), '交通'],
-    ['school', href('mnSchool', 'school-districts.html'), '公立小中学校の学区']
+    ['school', href('mnSchool', 'education.html'), '教育']
   ];
   root.innerHTML = `
     <header class="mn-site-header">
