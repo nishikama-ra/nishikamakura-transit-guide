@@ -54,7 +54,7 @@ function popupHtml(place) {
   const listings = visibleListings.map(item => {
     const itemCategories = item.categories || [item.category].filter(Boolean);
     const description = item.publicDescription ? `<p class="mn-popup-description">${escapeHtml(item.publicDescription)}</p>` : '';
-    const link = item.officialUrl ? `<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式ページ ↗</a>` : '';
+    const link = item.officialUrl ? `<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : '';
     return `<li><strong>${escapeHtml(item.name)}</strong>${itemCategories.length ? `<div class="mn-popup-item-categories">${escapeHtml(itemCategories.join('・'))}</div>` : ''}${description}${link}</li>`;
   }).join('');
   return `<div class="mn-popup"><strong>${escapeHtml(place.name)}</strong><span class="mn-popup-address">${escapeHtml(place.address)}</span><div class="mn-popup-tags">${place.categories.map(category => `<span>${escapeHtml(category)}</span>`).join('')}</div>${listings ? `<ul>${listings}</ul>` : ''}</div>`;
