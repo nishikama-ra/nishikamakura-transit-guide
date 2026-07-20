@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="神奈川県内の高校・大学等を含む学校を、近隣から広域まで地図で確認できます。">
-  <title>広域の学校地図｜にしかま周辺 まちノート</title>
+  <meta name="description" content="近隣から広域までの学校・幼稚園・保育施設を地図で確認できます。">
+  <title>学校・幼稚園・保育施設｜にしかま周辺 まちノート</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="school-map-mockup.css">
   <link rel="stylesheet" href="machinote-theme.css">
@@ -16,14 +16,13 @@
   <main class="school-shell">
     <header class="school-page-heading">
       <p>教育・子育て</p>
-      <h1>広域の学校地図</h1>
+      <h1>学校・幼稚園・保育施設</h1>
     </header>
 
     <nav class="mn-subnav" aria-label="教育の各ページ">
       <a href="education.html">教育案内</a>
-      <a href="education-nearby.html">近隣施設</a>
+      <a aria-current="page" href="school-map-mockup.html">学校・幼稚園・保育施設</a>
       <a href="school-districts.html">公立小中学校の学区</a>
-      <a aria-current="page" href="school-map-mockup.html">広域の学校</a>
     </nav>
 
     <section class="school-filter-panel" aria-labelledby="filter-heading">
@@ -35,7 +34,7 @@
         <fieldset class="school-filter-group school-scope-filter">
           <legend>表示範囲</legend>
           <div class="school-segmented" id="scopeFilters">
-            <button type="button" data-scope="local" aria-pressed="false">地域</button>
+            <button type="button" data-scope="local" aria-pressed="false">近隣</button>
             <button type="button" data-scope="nearby" aria-pressed="false">周辺</button>
             <button type="button" data-scope="wide" aria-pressed="true">広域</button>
           </div>
@@ -68,7 +67,7 @@
       </div>
       <div class="school-map-layout">
         <div class="school-map-wrap">
-          <div id="schoolMapMockup" class="school-map" aria-label="広域の学校地図"></div>
+          <div id="schoolMapMockup" class="school-map" aria-label="学校・幼稚園・保育施設の地図"></div>
         </div>
         <aside class="school-list-panel" aria-label="現在表示している施設">
           <div class="school-list-heading">
