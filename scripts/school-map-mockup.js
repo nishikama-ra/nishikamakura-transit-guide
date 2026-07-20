@@ -24,12 +24,25 @@ const FOCUS_AREA = {
 };
 
 const typeColors = {
+  nursery: '#b16f68',
+  kindergarten: '#9a705f',
   elementary: '#4c8580',
   juniorHigh: '#55768a',
   high: '#55768a',
-  university: '#756c89'
+  specialSupport: '#8c7d52',
+  university: '#756c89',
+  vocational: '#756c89'
 };
-const typeShort = { elementary: '小', juniorHigh: '中', high: '高', university: '大' };
+const typeShort = {
+  nursery: '保',
+  kindergarten: '幼',
+  elementary: '小',
+  juniorHigh: '中',
+  high: '高',
+  specialSupport: '支',
+  university: '大',
+  vocational: '専'
+};
 const state = {
   data: null,
   map: null,
@@ -53,13 +66,14 @@ function syncMapTileTone() {
   container.dataset.tileTone = zoom >= 17 ? 'closest' : zoom === 16 ? 'close' : zoom === 15 ? 'detail' : 'normal';
 }
 
-async function loadData() {
-  const response = await fetch('content/schools.json');
-  if (!response.ok) throw new Error('学校データを読み込めませんでした');
+async function loadSchoolData(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`学校データを読み込めませんでした: ${path}`);
   const manifest = await response.json();
   if (!Array.isArray(manifest.files)) return manifest;
+  const base = path.slice(0, path.lastIndexOf('/') + 1);
   const parts = await Promise.all(manifest.files.map(async file => {
-    const partResponse = await fetch(`content/${file}`);
+    const partResponse = await fetch(`${base}${file}`);
     if (!partResponse.ok) throw new Error(`学校データを読み込めませんでした: ${file}`);
     return partResponse.json();
   }));
@@ -67,6 +81,88 @@ async function loadData() {
     meta: manifest.meta,
     campuses: parts.flatMap(part => part.campuses || [])
   };
+}
+
+function normalizeAddress(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .replace(/^神奈川県/u, '')
+    .replace(/[\s　丁目番地号−ー‐‑–—・,，.．]/gu, '')
+    .toLowerCase();
+}
+
+function distanceMeters(a, b) {
+  const radians = degrees => degrees * Math.PI / 180;
+  const lat1 = radians(Number(a.lat));
+  const lat2 = radians(Number(b.lat));
+  const deltaLat = lat2 - lat1;
+  const deltaLng = radians(Number(b.lng) - Number(a.lng));
+  const value = Math.sin(deltaLat / 2) ** 2
+    + Math.cos(lat1) * Math.cos(lat2) * Math.sin(deltaLng / 2) ** 2;
+  return 6371000 * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+}
+
+function hasTypeOverlap(a, b) {
+  const bTypes = new Set(b.types || []);
+  return (a.types || []).some(type => bTypes.has(type));
+}
+
+function isSameCampus(localCampus, broadCampus) {
+  if (!hasTypeOverlap(localCampus, broadCampus)) return false;
+  const localAddress = normalizeAddress(localCampus.address);
+  const broadAddress = normalizeAddress(broadCampus.address);
+  if (localAddress && localAddress === broadAddress) return true;
+  return distanceMeters(localCampus, broadCampus) <= 80;
+}
+
+function normalizeLocalData(data) {
+  const oldAddress = '神奈川県藤沢市鵜沼松が岡4-1-32';
+  const newAddress = '神奈川県藤沢市鵠沼松が岡4-1-32';
+  data.campuses.forEach(campus => {
+    if (campus.address === oldAddress) campus.address = newAddress;
+    campus.institutions?.forEach(institution => {
+      if (institution.address === oldAddress) institution.address = newAddress;
+      if (institution.sourceAddress === oldAddress) institution.sourceAddress = newAddress;
+    });
+  });
+  return data;
+}
+
+function mergeSchoolData(broadData, localData) {
+  const broadCampuses = broadData.campuses.map(campus => ({ ...campus, localOnly: false }));
+  const localOnlyCampuses = normalizeLocalData(localData).campuses
+    .filter(localCampus => !broadCampuses.some(broadCampus => isSameCampus(localCampus, broadCampus)))
+    .map(campus => ({ ...campus, localOnly: true }));
+
+  const typeOrder = ['nursery', 'kindergarten', 'elementary', 'juniorHigh', 'high', 'specialSupport', 'university', 'vocational'];
+  const sourceTypeLabels = {
+    ...(localData.meta?.typeLabels || {}),
+    ...(broadData.meta?.typeLabels || {})
+  };
+  const typeLabels = Object.fromEntries(typeOrder
+    .filter(type => sourceTypeLabels[type])
+    .map(type => [type, sourceTypeLabels[type]]));
+
+  return {
+    meta: {
+      ...broadData.meta,
+      typeLabels,
+      ownershipLabels: {
+        ...(localData.meta?.ownershipLabels || {}),
+        ...(broadData.meta?.ownershipLabels || {})
+      },
+      localOnlyCampusCount: localOnlyCampuses.length
+    },
+    campuses: [...broadCampuses, ...localOnlyCampuses]
+  };
+}
+
+async function loadData() {
+  const [broadData, localData] = await Promise.all([
+    loadSchoolData('content/schools.json'),
+    loadSchoolData('content/education-nearby.json')
+  ]);
+  return mergeSchoolData(broadData, localData);
 }
 
 function readHash() {
@@ -99,8 +195,11 @@ function activeListings(campus) {
 }
 
 function visibleCampuses() {
-  // The range selector changes only the viewport. It never removes schools from the data set.
-  return state.data.campuses.filter(campus => activeListings(campus).length > 0);
+  // The local view shows every broad-area school plus nearby public schools and childcare.
+  // The nearby and wide views omit only the additional local facilities to avoid marker congestion.
+  return state.data.campuses.filter(campus =>
+    (state.scope === 'local' || !campus.localOnly) && activeListings(campus).length > 0
+  );
 }
 
 function activeCampusTypes(campus) {
