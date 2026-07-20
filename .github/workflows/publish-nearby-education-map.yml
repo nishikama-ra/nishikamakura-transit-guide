@@ -1,0 +1,180 @@
+name: Publish nearby education map
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-nearby-education-map.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore and validate nearby education data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git show c349314a1aff07ffef4191d7a3111751be4d5c37:content/schools.json > /tmp/education-nearby.json
+          python - <<'PYDATA'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('/tmp/education-nearby.json').read_text(encoding='utf-8'))
+          if data.get('meta', {}).get('institutionCount') != 91:
+              raise SystemExit('Historical nearby data does not contain 91 institutions')
+          if data.get('meta', {}).get('campusCount') != 68 or len(data.get('campuses', [])) != 68:
+              raise SystemExit('Historical nearby data does not contain 68 campuses')
+
+          data['meta']['title'] = '近隣の学校・幼稚園・保育施設地図用データ'
+          data['meta']['generatedAt'] = '2026-07-20'
+          data['meta']['reviewedAt'] = '2026-07-20'
+          data['meta']['selectionRule'] = '腰越・深沢・片瀬周辺の学校、幼稚園、保育施設。公立小中学校を含む。'
+          data['meta'].pop('scopeLabels', None)
+          data['meta'].pop('note', None)
+
+          old_address = '神奈川県藤沢市鵜沼松が岡4-1-32'
+          new_address = '神奈川県藤沢市鵠沼松が岡4-1-32'
+          replacements = 0
+          for campus in data['campuses']:
+              if campus.get('address') == old_address:
+                  campus['address'] = new_address
+                  replacements += 1
+              for institution in campus.get('institutions', []):
+                  for key in ('address', 'sourceAddress'):
+                      if institution.get(key) == old_address:
+                          institution[key] = new_address
+                          replacements += 1
+          if replacements != 3:
+              raise SystemExit(f'Expected 3 address replacements, found {replacements}')
+
+          institutions = [item for campus in data['campuses'] for item in campus.get('institutions', [])]
+          if len(institutions) != 91:
+              raise SystemExit(f'Institution count changed: {len(institutions)}')
+          if sum(item.get('type') == 'nursery' for item in institutions) != 21:
+              raise SystemExit('Childcare count changed')
+          required = {
+              '腰越小学校', '西鎌倉小学校', '七里ガ浜小学校', '深沢小学校',
+              '山崎小学校', '富士塚小学校', '片瀬小学校', '腰越中学校',
+              '手広中学校', '深沢中学校', '片瀬中学校', '鎌倉国際文理中学校',
+              '鎌倉国際文理高等学校', 'キディ腰越保育園', '深沢保育園', '富士見保育園'
+          }
+          names = {item.get('displayName') for item in institutions}
+          missing = required - names
+          if missing:
+              raise SystemExit(f'Missing required nearby facilities: {sorted(missing)}')
+          if any('鵜沼松が岡' in json.dumps(campus, ensure_ascii=False) for campus in data['campuses']):
+              raise SystemExit('Old Shonan Gakuen address remains')
+
+          Path('content/education-nearby.json').write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8'
+          )
+          PYDATA
+
+      - name: Update education navigation and wide-map labels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PYPAGES'
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected one occurrence, found {count}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          old_cards = '''      <div class="mn-card-grid">
+                  <a class="mn-card" href="school-map-mockup.html"><img class="mn-card-icon" src="assets/icons/school.svg" alt=""><span><small>小学校・中学校・高校・大学等</small><strong>近隣・広域の学校地図</strong></span><span>›</span></a>
+                  <a class="mn-card" href="school-districts.html"><img class="mn-card-icon" src="assets/icons/map.svg" alt=""><span><small>腰越・深沢・片瀬</small><strong>公立小中学校の学区・徒歩ルート</strong></span><span>›</span></a>
+                </div>'''
+          new_cards = '''      <div class="mn-card-grid">
+                  <a class="mn-card" href="education-nearby.html"><img class="mn-card-icon" src="assets/icons/school.svg" alt=""><span><small>腰越・深沢・片瀬周辺</small><strong>近隣の学校・幼稚園・保育施設</strong></span><span>›</span></a>
+                  <a class="mn-card" href="school-districts.html"><img class="mn-card-icon" src="assets/icons/map.svg" alt=""><span><small>公立小中学校</small><strong>学区・徒歩ルート</strong></span><span>›</span></a>
+                  <a class="mn-card" href="school-map-mockup.html"><img class="mn-card-icon" src="assets/icons/school.svg" alt=""><span><small>高校・大学等を含む</small><strong>広域の学校地図</strong></span><span>›</span></a>
+                </div>'''
+          replace_once('education.html', old_cards, new_cards)
+
+          replace_once(
+              'school-map-mockup.html',
+              '西鎌倉周辺から学校・幼稚園・保育施設を地図で探すための操作可能なモックアップです。',
+              '神奈川県内の高校・大学等を含む学校を、近隣から広域まで地図で確認できます。'
+          )
+          replace_once(
+              'school-map-mockup.html',
+              '<title>学校・幼稚園・保育施設｜にしかま周辺 まちノート</title>',
+              '<title>広域の学校地図｜にしかま周辺 まちノート</title>'
+          )
+          replace_once('school-map-mockup.html', '<h1>学校・幼稚園・保育施設</h1>', '<h1>広域の学校地図</h1>')
+          replace_once(
+              'school-map-mockup.html',
+              'aria-label="学校・幼稚園・保育施設の地図"',
+              'aria-label="広域の学校地図"'
+          )
+          replace_once(
+              'school-map-mockup.html',
+              '''    </header>
+
+    <section class="school-filter-panel"''',
+              '''    </header>
+
+    <nav class="mn-subnav" aria-label="教育の各ページ"><a href="education.html">教育案内</a><a href="education-nearby.html">近隣施設</a><a href="school-districts.html">公立小中学校の学区</a><a aria-current="page" href="school-map-mockup.html">広域の学校</a></nav>
+
+    <section class="school-filter-panel"'''
+          )
+
+          replace_once(
+              'school-districts.html',
+              '''    </section>
+
+    <section class="section school-map-section">''',
+              '''    </section>
+
+    <div class="shell"><nav class="mn-subnav" aria-label="教育の各ページ"><a href="education.html">教育案内</a><a href="education-nearby.html">近隣施設</a><a aria-current="page" href="school-districts.html">公立小中学校の学区</a><a href="school-map-mockup.html">広域の学校</a></nav></div>
+
+    <section class="section school-map-section">'''
+          )
+          PYPAGES
+
+      - name: Validate nearby education release
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check scripts/education-nearby.js
+          python -m json.tool content/education-nearby.json > /dev/null
+          grep -F '"institutionCount": 91' content/education-nearby.json
+          grep -F '"campusCount": 68' content/education-nearby.json
+          grep -F '近隣の学校・幼稚園・保育施設' education-nearby.html
+          grep -F 'href="education-nearby.html"' education.html
+          grep -F '<h1>広域の学校地図</h1>' school-map-mockup.html
+          grep -F 'aria-current="page" href="school-districts.html"' school-districts.html
+          if grep -F 'data-scope' education-nearby.html scripts/education-nearby.js; then
+            echo 'Scope switching must not exist in the nearby map' >&2
+            exit 1
+          fi
+          if grep -F 'fitBounds' scripts/education-nearby.js; then
+            echo 'Nearby filters must not move the map' >&2
+            exit 1
+          fi
+          git diff --check
+
+      - name: Commit validated release
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/publish-nearby-education-map.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add education.html school-map-mockup.html school-districts.html content/education-nearby.json .github/workflows/publish-nearby-education-map.yml
+          git commit -m "Publish nearby education facilities map"
+          git push origin HEAD:main
