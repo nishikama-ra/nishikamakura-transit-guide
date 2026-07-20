@@ -65,11 +65,14 @@
           <span id="routeOriginStatus">出発地未指定（Googleマップ側でも指定できます）</span>
         </div>
       </div>
+      <div class="school-map-toolbar">
+        <button id="toggleSchoolList" class="mn-text-button" type="button">施設一覧を閉じる</button>
+      </div>
       <div class="school-map-layout">
         <div class="school-map-wrap">
           <div id="schoolMapMockup" class="school-map" aria-label="学校・幼稚園・保育施設の地図"></div>
         </div>
-        <aside class="school-list-panel" aria-label="現在表示している施設">
+        <aside id="schoolListPanel" class="school-list-panel" aria-label="現在表示している施設">
           <div class="school-list-heading">
             <h3>表示中の施設</h3>
             <span id="schoolCount"></span>
