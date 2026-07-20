@@ -25,6 +25,8 @@ const FOCUS_AREA = {
 
 const ALL_VIEW_MODES = ['local', 'nearby', 'wide'];
 const LOCAL_VIEW_ONLY = ['local'];
+const MOBILE_WIDE_BREAKPOINT = 640;
+const MOBILE_WIDE_MARGIN = 18;
 
 const typeColors = {
   nursery: '#b16f68',
@@ -331,8 +333,38 @@ function syncFocusAreaVisibility() {
   if (!shouldShow && isShown) state.focusAreaCircle.remove();
 }
 
+function mobileWideView() {
+  const zoom = VIEW_CONFIG.wide.zoom;
+  const mapSize = state.map.getSize();
+  const focusBounds = state.focusAreaCircle.getBounds();
+  const northWest = state.map.project(focusBounds.getNorthWest(), zoom);
+  const southEast = state.map.project(focusBounds.getSouthEast(), zoom);
+  const radiusX = (southEast.x - northWest.x) / 2;
+  const radiusY = (southEast.y - northWest.y) / 2;
+  const minX = radiusX + MOBILE_WIDE_MARGIN;
+  const maxX = mapSize.x - radiusX - MOBILE_WIDE_MARGIN;
+  const minY = radiusY + MOBILE_WIDE_MARGIN;
+  const maxY = mapSize.y - radiusY - MOBILE_WIDE_MARGIN;
+  const targetPoint = L.point(
+    minX <= maxX ? minX : mapSize.x / 2,
+    minY <= maxY ? maxY : mapSize.y / 2
+  );
+  const focusPoint = state.map.project(FOCUS_AREA.center, zoom);
+  const centerPoint = focusPoint.add(L.point(
+    mapSize.x / 2 - targetPoint.x,
+    mapSize.y / 2 - targetPoint.y
+  ));
+  return { center: state.map.unproject(centerPoint, zoom), zoom };
+}
+
+function selectedView() {
+  return state.scope === 'wide' && window.matchMedia(`(max-width: ${MOBILE_WIDE_BREAKPOINT}px)`).matches
+    ? mobileWideView()
+    : VIEW_CONFIG[state.scope];
+}
+
 function fitSelectedView() {
-  const view = VIEW_CONFIG[state.scope];
+  const view = selectedView();
   state.map.setView(view.center, view.zoom, { animate: false });
   document.querySelector('#schoolMapMockup').dataset.viewZoom = String(view.zoom);
   syncFocusAreaVisibility();
