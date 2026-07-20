@@ -19,8 +19,8 @@ const VIEW_CONFIG = {
 };
 
 const FOCUS_AREA = {
-  center: [35.3245, 139.5290],
-  radiusMeters: 2300
+  center: [35.3190, 139.5030],
+  radiusMeters: 2400
 };
 
 const typeColors = {
@@ -40,6 +40,7 @@ const state = {
   visible: [],
   routeOrigin: null,
   routeOriginMarker: null,
+  focusAreaCircle: null,
   selectingRouteOrigin: false
 };
 
@@ -153,7 +154,7 @@ function popupHtml(campus) {
       <span>${escapeHtml(ownershipText(campus))}</span>
     </div>
     <ul>${listings}</ul>
-    <a class="school-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">公共交通で行く ↗</a>
+    <a class="school-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">GoogleMapでルートを見る ↗</a>
   </div>`;
 }
 
@@ -162,10 +163,19 @@ function clearMarkers() {
   state.markers.clear();
 }
 
+function syncFocusAreaVisibility() {
+  if (!state.focusAreaCircle) return;
+  const shouldShow = state.scope === 'wide';
+  const isShown = state.map.hasLayer(state.focusAreaCircle);
+  if (shouldShow && !isShown) state.focusAreaCircle.addTo(state.map);
+  if (!shouldShow && isShown) state.focusAreaCircle.remove();
+}
+
 function fitSelectedView() {
   const view = VIEW_CONFIG[state.scope];
   state.map.setView(view.center, view.zoom, { animate: false });
   document.querySelector('#schoolMapMockup').dataset.viewZoom = String(view.zoom);
+  syncFocusAreaVisibility();
 }
 
 function focusCampus(id) {
@@ -186,7 +196,7 @@ function renderList() {
           <strong>${escapeHtml(campus.name)}</strong>
           <span>${escapeHtml(campus.address)}</span>
         </button>
-        <a class="school-list-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">公共交通で行く ↗</a>
+        <a class="school-list-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">GoogleMapでルートを見る ↗</a>
       </article>`).join('')
     : '<p class="load-error">条件に合う施設がありません。</p>';
   document.querySelectorAll('[data-campus-id]').forEach(button => button.addEventListener('click', () => focusCampus(button.dataset.campusId)));
@@ -306,7 +316,7 @@ function addFocusArea() {
   state.map.getPane('schoolMarkerPane').style.zIndex = '600';
   state.map.createPane('routeOriginPane');
   state.map.getPane('routeOriginPane').style.zIndex = '650';
-  L.circle(FOCUS_AREA.center, {
+  state.focusAreaCircle = L.circle(FOCUS_AREA.center, {
     pane: 'focusAreaPane',
     radius: FOCUS_AREA.radiusMeters,
     color: '#d96f6f',
@@ -315,7 +325,8 @@ function addFocusArea() {
     fillColor: '#e88989',
     fillOpacity: 0.22,
     interactive: false
-  }).addTo(state.map);
+  });
+  syncFocusAreaVisibility();
 }
 
 async function init() {
