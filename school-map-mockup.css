@@ -192,6 +192,7 @@ button { color: inherit; font: inherit; }
   .school-map { height: 410px; }
 }
 
+
 /* School map: public-transit origin controls and route links */
 .school-route-tools {
   display: flex;
