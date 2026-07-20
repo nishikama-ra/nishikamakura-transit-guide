@@ -1,6 +1,7 @@
 .leaflet-container { font: inherit; }
 .leaflet-control-attribution { font-size: 9px; }
 .mn-map-wrap { position: relative; }
+.mn-map-layout:has(> .mn-list-panel[hidden]) { grid-template-columns: minmax(0, 1fr); }
 .mn-marker-shell { background: transparent; border: 0; }
 .mn-marker {
   display: grid;
