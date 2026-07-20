@@ -14,7 +14,7 @@
   root.innerHTML = `
     <header class="mn-site-header">
       <div class="mn-shell mn-header-inner">
-        <a class="mn-brand" href="${href('mnMaps', 'regional-maps.html')}" aria-label="にしかま周辺 まちノート 地域情報・地図">
+        <a class="mn-brand" href="${href('mnHome', 'index.html')}" aria-label="にしかま周辺 まちノート ホーム">
           <img class="mn-brand-logo" src="${base}/assets/icons/brand.svg" alt="">
           <span class="mn-brand-copy"><small>にしかま周辺</small><strong>まちノート</strong><em>Nishikama Area Notes</em></span>
         </a>
