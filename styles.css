@@ -335,3 +335,9 @@ body > main {
   .stop-controls select, .stop-controls input { width: 100%; min-width: 0; }
   .instagram-frame { min-height: 520px; }
 }
+
+
+/* REVIEW1_HOME_CARD_LAYOUT */
+.home-card { grid-template-columns: minmax(0,1fr); gap: 2px; align-content: start; }
+.home-card .card-number { position: static; inset: auto; display: block; margin-bottom: 3px; }
+.home-card h3, .home-card p, .home-card .card-link { grid-column: 1; }

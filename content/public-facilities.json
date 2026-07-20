@@ -9,58 +9,13 @@
   ],
   "places": [
     {
-      "id": "PUB-050",
-      "name": "しちりがはま子どもの家・七里ガ浜子ども会館",
-      "address": "鎌倉市七里ガ浜東5-3-3",
-      "lat": 35.3108159,
-      "lng": 139.5125507,
-      "categories": [
-        "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
-      ],
-      "districts": [
-        "腰越"
-      ],
-      "listings": [
-        {
-          "id": "PUB-050",
-          "name": "しちりがはま子どもの家・七里ガ浜子ども会館",
-          "address": "鎌倉市七里ガ浜東5-3-3",
-          "category": "集会・交流施設",
-          "detailType": "集会・交流施設",
-          "lat": 35.3108159,
-          "lng": 139.5125507,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。",
-          "district": "腰越",
-          "scope": "local",
-          "categories": [
-            "集会・交流施設"
-          ],
-          "sourceIds": [
-            "PUB-050"
-          ]
-        }
-      ]
-    },
-    {
       "id": "PUB-051",
-      "name": "にしかまくら子どもの家・西鎌倉子ども会館",
+      "name": "西鎌みんなの家",
       "address": "鎌倉市津西1-16-36",
       "lat": 35.3184518,
       "lng": 139.5004638,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -68,113 +23,22 @@
       "listings": [
         {
           "id": "PUB-051",
-          "name": "にしかまくら子どもの家・西鎌倉子ども会館",
+          "name": "西鎌みんなの家",
           "address": "鎌倉市津西1-16-36",
           "category": "集会・交流施設",
+          "categories": [
+            "集会・交流施設"
+          ],
           "detailType": "集会・交流施設",
           "lat": 35.3184518,
           "lng": 139.5004638,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。",
-          "district": "腰越",
-          "scope": "local",
-          "categories": [
-            "集会・交流施設"
-          ],
-          "sourceIds": [
-            "PUB-051"
-          ]
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/kodomokyoku/sd115.html",
+          "publicDescription": "全世代が利用できる地域の交流・活動拠点。自由利用や貸切利用、地域行事などが行われています。",
+          "verificationNote": "旧にしかまくら子どもの家・西鎌倉子ども会館の建物を、多世代交流施設として転用。施設サイト：https://www.24minna.org/。",
+          "checkedAt": "2026-07-20"
         }
-      ]
-    },
-    {
-      "id": "PUB-010",
-      "name": "ふじづか子どもの家・富士塚子ども会館",
-      "address": "鎌倉市寺分418-10",
-      "lat": 35.3357578,
-      "lng": 139.5199268,
-      "categories": [
-        "集会・交流施設"
       ],
-      "scopes": [
-        "local"
-      ],
-      "districts": [
-        "深沢"
-      ],
-      "listings": [
-        {
-          "id": "PUB-010",
-          "name": "ふじづか子どもの家・富士塚子ども会館",
-          "address": "鎌倉市寺分418-10",
-          "category": "集会・交流施設",
-          "detailType": "集会・交流施設",
-          "lat": 35.3357578,
-          "lng": 139.5199268,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。※市の放課後施策再編が進行中のため最新の運用形態は要留意。",
-          "district": "深沢",
-          "scope": "local",
-          "categories": [
-            "集会・交流施設"
-          ],
-          "sourceIds": [
-            "PUB-010"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PUB-011",
-      "name": "やまさきこどもの家・山崎子ども会館",
-      "address": "鎌倉市山崎2456-1",
-      "lat": 35.3378688,
-      "lng": 139.5345718,
-      "categories": [
-        "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
-      ],
-      "districts": [
-        "深沢"
-      ],
-      "listings": [
-        {
-          "id": "PUB-011",
-          "name": "やまさきこどもの家・山崎子ども会館",
-          "address": "鎌倉市山崎2456-1",
-          "category": "集会・交流施設",
-          "detailType": "集会・交流施設",
-          "lat": 35.3378688,
-          "lng": 139.5345718,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。",
-          "district": "深沢",
-          "scope": "local",
-          "categories": [
-            "集会・交流施設"
-          ],
-          "sourceIds": [
-            "PUB-011"
-          ]
-        }
-      ]
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "ADD-002-03",
@@ -185,9 +49,6 @@
       "categories": [
         "行政・公共施設",
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺",
@@ -208,15 +69,15 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市公式ページで確認。支所、学習センター、図書館等の複合拠点。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "ADD-002-03"
-          ]
+          ],
+          "publicDescription": "支所、学習センター、図書館等の複合拠点。",
+          "verificationNote": "鎌倉市公式ページで確認。現行確認日：2026-07-19。"
         },
         {
           "id": "ADD-003-09",
@@ -232,17 +93,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "大船行政センターと同一建物。1マーカー内に複数施設として表示。国土数値情報の座標を使用。現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-09"
-          ]
+          ],
+          "publicDescription": "図書館・図書室。1マーカー内に複数施設として表示。",
+          "verificationNote": "大船行政センターと同一建物。国土数値情報の座標を使用。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "ADD-001-02",
@@ -252,9 +114,6 @@
       "lng": 139.5367179,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "鎌倉市"
@@ -274,17 +133,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "日本郵便の個別公式ページで現行名称・住所を確認。大船方面の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "nearby",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "ADD-001-02"
-          ]
+          ],
+          "publicDescription": "主要郵便局。大船方面の中核局として掲載。",
+          "verificationNote": "日本郵便の個別公式ページで現行名称・住所を確認。座標は公式住所を地図上で照合。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-012",
@@ -294,9 +154,6 @@
       "lng": 139.5160298,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -316,17 +173,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式一覧",
-          "note": "鎌倉市の高齢者いこい・老人福祉施設（社会福祉協議会運営）。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-012"
-          ]
+          ],
+          "publicDescription": "鎌倉市の高齢者いこい・老人福祉施設（社会福祉協議会運営）。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-024",
@@ -336,9 +193,6 @@
       "lng": 139.479337,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -358,9 +212,7 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "公式サイトで現存確認。PUB-025と同一施設（重複）。 複数の公的データ区分に収録。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
@@ -381,9 +233,11 @@
               "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P33.html",
               "baseYear": "2014"
             }
-          ]
+          ],
+          "verificationNote": "公式サイトで現存確認。PUB-025と同一施設（重複）。複数の公的データ区分に収録。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "ADD-003-12",
@@ -393,9 +247,6 @@
       "lng": 139.50574339,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "村岡"
@@ -415,29 +266,27 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "村岡市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。",
           "district": "村岡",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-12"
-          ]
+          ],
+          "publicDescription": "図書館・図書室。",
+          "verificationNote": "村岡市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-013",
-      "name": "梶原子ども会館",
+      "name": "かまくら冒険遊び場・梶原",
       "address": "鎌倉市梶原4-4-2",
       "lat": 35.3275658,
       "lng": 139.5292528,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -445,29 +294,22 @@
       "listings": [
         {
           "id": "PUB-013",
-          "name": "梶原子ども会館",
+          "name": "かまくら冒険遊び場・梶原",
           "address": "鎌倉市梶原4-4-2",
           "category": "集会・交流施設",
-          "detailType": "集会・交流施設",
-          "lat": 35.3275658,
-          "lng": 139.5292528,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。",
-          "district": "深沢",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
-          "sourceIds": [
-            "PUB-013"
-          ]
+          "detailType": "集会・交流施設",
+          "lat": 35.3275658,
+          "lng": 139.5292528,
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/kodomokyoku/bouken.html",
+          "publicDescription": "未就学児と保護者、小学生、中学生、高校生が利用できる常設の冒険遊び場です。",
+          "verificationNote": "旧梶原子ども会館の現行用途へ置換。",
+          "checkedAt": "2026-07-20"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-026",
@@ -477,9 +319,6 @@
       "lng": 139.4805998,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -499,17 +338,17 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "公式サイトで現存確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-026"
-          ]
+          ],
+          "verificationNote": "公式サイトで現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-018",
@@ -519,9 +358,6 @@
       "lng": 139.4792803,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -541,17 +377,18 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "藤沢市営の庭園（藤沢市観光公式で確認）。入苑無料（夜間有料）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-018"
-          ]
+          ],
+          "publicDescription": "入苑無料（夜間有料）。",
+          "verificationNote": "藤沢市営の庭園（藤沢市観光公式で確認）。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-019",
@@ -561,9 +398,6 @@
       "lng": 139.478662,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -583,17 +417,17 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "サムエル・コッキング苑内の展望灯台。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-019"
-          ]
+          ],
+          "publicDescription": "サムエル・コッキング苑内の展望灯台。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-034",
@@ -603,9 +437,6 @@
       "lng": 139.4800787,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -625,17 +456,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "藤沢市の地域市民の家。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-034"
-          ]
+          ],
+          "publicDescription": "藤沢市の地域市民の家。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-030",
@@ -645,9 +476,6 @@
       "lng": 139.480891,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -667,17 +495,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-030"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-027",
@@ -687,9 +515,6 @@
       "lng": 139.479602,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -709,59 +534,18 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "八臂弁財天・妙音弁財天等を安置。藤沢市観光公式で確認。拝観有料。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-027"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "PUB-014",
-      "name": "深沢子ども会館",
-      "address": "鎌倉市寺分436-2",
-      "lat": 35.3347538,
-      "lng": 139.5200658,
-      "categories": [
-        "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
-      ],
-      "districts": [
-        "深沢"
-      ],
-      "listings": [
-        {
-          "id": "PUB-014",
-          "name": "深沢子ども会館",
-          "address": "鎌倉市寺分436-2",
-          "category": "集会・交流施設",
-          "detailType": "集会・交流施設",
-          "lat": 35.3347538,
-          "lng": 139.5200658,
-          "officialUrl": "https://www.city.kamakura.kanagawa.jp/seisyo/shisetu2.html",
-          "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
-          "sourceLabel": "P05 市町村役場・公的集会施設",
-          "baseYear": "2022",
-          "checkedAt": "2026-07-19",
-          "linkType": "公式一覧",
-          "note": "鎌倉市子ども会館一覧で確認。",
-          "district": "深沢",
-          "scope": "local",
-          "categories": [
-            "集会・交流施設"
           ],
-          "sourceIds": [
-            "PUB-014"
-          ]
+          "publicDescription": "八臂弁財天・妙音弁財天等を安置。拝観有料。",
+          "verificationNote": "藤沢市観光公式で確認。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-004",
@@ -772,9 +556,6 @@
       "categories": [
         "図書館・文化施設",
         "行政・公共施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -794,15 +575,14 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "深沢行政センター内。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-004"
-          ]
+          ],
+          "publicDescription": "深沢行政センター内。"
         },
         {
           "id": "PUB-005",
@@ -818,15 +598,15 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "支所は深沢行政センター1階。PUB-006と同一建物（重複）。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "PUB-005"
-          ]
+          ],
+          "publicDescription": "支所は深沢行政センター1階。",
+          "verificationNote": "PUB-006と同一建物（重複）。"
         },
         {
           "id": "PUB-006",
@@ -842,17 +622,18 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "支所・学習センター・図書館を併設。PUB-005と同一建物。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "PUB-006"
-          ]
+          ],
+          "publicDescription": "支所・学習センター・図書館を併設。",
+          "verificationNote": "PUB-005と同一建物。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "PUB-007",
@@ -862,9 +643,6 @@
       "lng": 139.518075,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -884,17 +662,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "日本郵便個別ページで現存確認。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-007"
-          ]
+          ],
+          "verificationNote": "日本郵便個別ページで現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-029",
@@ -904,9 +682,6 @@
       "lng": 139.484151,
       "categories": [
         "行政・公共施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -926,17 +701,17 @@
           "baseYear": "2006",
           "checkedAt": "2026-07-19",
           "linkType": "公式一覧",
-          "note": "第三管区海上保安本部の公式組織・所在地一覧で現行名称と所在を確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "PUB-029"
-          ]
+          ],
+          "verificationNote": "第三管区海上保安本部の公式組織・所在地一覧で現行名称と所在を確認。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "PUB-020",
@@ -946,9 +721,6 @@
       "lng": 139.484923,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -968,17 +740,18 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "神奈川県立湘南港。東京五輪セーリング会場。元名称「湘南港（ヨット場）」。PUB-020と同一（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "PUB-020"
-          ]
+          ],
+          "publicDescription": "神奈川県立湘南港。東京五輪セーリング会場。",
+          "verificationNote": "元名称「湘南港（ヨット場）」。PUB-020と同一（重複）。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-021",
@@ -989,9 +762,6 @@
       "categories": [
         "スポーツ施設",
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1011,15 +781,15 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "片瀬公民館分館。PUB-035/036/038と同一施設（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "PUB-021"
-          ]
+          ],
+          "publicDescription": "片瀬公民館分館。",
+          "verificationNote": "PUB-035/036/038と同一施設（重複）。"
         },
         {
           "id": "PUB-035",
@@ -1035,15 +805,15 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "片瀬公民館分館。PUB-021/036/038と同一（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-035"
-          ]
+          ],
+          "publicDescription": "片瀬公民館分館。",
+          "verificationNote": "PUB-021/036/038と同一（重複）。"
         },
         {
           "id": "PUB-036",
@@ -1059,15 +829,14 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "PUB-035と同一施設（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-036"
-          ]
+          ],
+          "verificationNote": "PUB-035と同一施設（重複）。"
         },
         {
           "id": "PUB-038",
@@ -1083,17 +852,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "PUB-035と同一（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-038"
-          ]
+          ],
+          "verificationNote": "PUB-035と同一（重複）。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-039",
@@ -1103,9 +872,6 @@
       "lng": 139.4946558,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1125,17 +891,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "藤沢市の地域市民の家。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-039"
-          ]
+          ],
+          "publicDescription": "藤沢市の地域市民の家。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-033",
@@ -1146,9 +912,6 @@
       "categories": [
         "集会・交流施設",
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1168,9 +931,7 @@
           "baseYear": "2014",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "片瀬市民センターと一体。PUB-037/040と同一（重複）。 複数の公的データ区分に収録。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
@@ -1191,7 +952,9 @@
               "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
               "baseYear": "2022"
             }
-          ]
+          ],
+          "publicDescription": "片瀬市民センターと一体。",
+          "verificationNote": "PUB-037/040と同一（重複）。複数の公的データ区分に収録。"
         },
         {
           "id": "PUB-040",
@@ -1207,15 +970,15 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "片瀬公民館を併設。PUB-033/037と同一（重複）。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-040"
-          ]
+          ],
+          "publicDescription": "片瀬公民館を併設。",
+          "verificationNote": "PUB-033/037と同一（重複）。"
         },
         {
           "id": "ADD-003-11",
@@ -1231,17 +994,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "片瀬市民センターと同一建物。1マーカー内に複数施設として表示。既存公共施設データの座標を使用。現行確認日：2026-07-19。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-11"
-          ]
+          ],
+          "publicDescription": "図書館・図書室。1マーカー内に複数施設として表示。",
+          "verificationNote": "片瀬市民センターと同一建物。既存公共施設データの座標を使用。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-041",
@@ -1251,9 +1015,6 @@
       "lng": 139.4873318,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1273,17 +1034,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式一覧",
-          "note": "藤沢市の地域市民の家一覧で確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-041"
-          ]
+          ],
+          "verificationNote": "藤沢市の地域市民の家一覧で確認。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-031",
@@ -1293,9 +1054,6 @@
       "lng": 139.485719,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1315,17 +1073,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-031"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-002-04",
@@ -1336,9 +1094,6 @@
       "categories": [
         "行政・公共施設",
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "鎌倉市"
@@ -1358,15 +1113,15 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "支所、学習センター、玉縄図書館を併設。玉縄図書館と同一マーカーにまとめる。国土数値情報の座標を使用。現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "nearby",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "ADD-002-04"
-          ]
+          ],
+          "publicDescription": "支所、学習センター、玉縄図書館を併設。玉縄図書館と同一マーカーにまとめる。",
+          "verificationNote": "国土数値情報の座標を使用。現行確認日：2026-07-19。"
         },
         {
           "id": "ADD-003-10",
@@ -1382,17 +1137,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "玉縄行政センターと同一建物。1マーカー内に複数施設として表示。国土数値情報の座標を使用。現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-10"
-          ]
+          ],
+          "publicDescription": "図書館・図書室。1マーカー内に複数施設として表示。",
+          "verificationNote": "玉縄行政センターと同一建物。国土数値情報の座標を使用。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "ADD-003-08",
@@ -1402,9 +1158,6 @@
       "lng": 139.475298,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -1424,17 +1177,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "神奈川県公式ページと指定管理者公式ページで確認。海浜公園利用の案内・展示・更衣等を担う拠点。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "ADD-003-08"
-          ]
+          ],
+          "publicDescription": "海浜公園利用の案内・展示・更衣等を担う拠点。",
+          "verificationNote": "神奈川県公式ページと指定管理者公式ページで確認。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "ADD-003-05",
@@ -1444,9 +1198,6 @@
       "lng": 139.489479,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -1466,17 +1217,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "藤沢市公式ページで確認。片瀬地区から利用しやすい藤沢駅南側の主要体育施設。座標は公式ページの地図リンクを使用。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "ADD-003-05"
-          ]
+          ],
+          "publicDescription": "片瀬地区から利用しやすい藤沢駅南側の主要体育施設。",
+          "verificationNote": "藤沢市公式ページで確認。座標は公式ページの地図リンクを使用。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-001",
@@ -1486,9 +1238,6 @@
       "lng": 139.521353,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -1508,17 +1257,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "鎌倉市営の運動公園（野球場・テニスコート・多目的広場等）。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "PUB-001"
-          ]
+          ],
+          "publicDescription": "鎌倉市営の運動公園（野球場・テニスコート・多目的広場等）。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-052",
@@ -1528,9 +1277,6 @@
       "lng": 139.4934277,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -1550,17 +1296,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式一覧",
-          "note": "鎌倉市の高齢者いこいの家。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-052"
-          ]
+          ],
+          "publicDescription": "鎌倉市の高齢者いこいの家。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-043",
@@ -1572,9 +1318,6 @@
         "行政・公共施設",
         "図書館・文化施設",
         "集会・交流施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -1594,15 +1337,15 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "腰越行政センター1階。PUB-045と同一建物（重複）。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "PUB-043"
-          ]
+          ],
+          "publicDescription": "腰越行政センター1階。",
+          "verificationNote": "PUB-045と同一建物（重複）。"
         },
         {
           "id": "PUB-044",
@@ -1618,15 +1361,15 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "支所・学習センター・図書館を併設。PUB-044と同一建物。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "PUB-044"
-          ]
+          ],
+          "publicDescription": "支所・学習センター・図書館を併設。",
+          "verificationNote": "PUB-044と同一建物。"
         },
         {
           "id": "PUB-045",
@@ -1642,15 +1385,14 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "腰越行政センター内。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "PUB-045"
-          ]
+          ],
+          "publicDescription": "腰越行政センター内。"
         },
         {
           "id": "PUB-053",
@@ -1666,17 +1408,17 @@
           "baseYear": "2022",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "腰越行政センター内の生涯学習施設。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "PUB-053"
-          ]
+          ],
+          "publicDescription": "腰越行政センター内の生涯学習施設。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "PUB-046",
@@ -1686,9 +1428,6 @@
       "lng": 139.492244,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -1708,17 +1447,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "日本郵便個別ページで現存確認。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-046"
-          ]
+          ],
+          "verificationNote": "日本郵便個別ページで現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-003-06",
@@ -1728,9 +1467,6 @@
       "lng": 139.48767,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -1750,17 +1486,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "藤沢市図書館公式ページで確認。市民ギャラリーを併設する藤沢駅前の文化拠点。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-06"
-          ]
+          ],
+          "publicDescription": "市民ギャラリーを併設する藤沢駅前の文化拠点。",
+          "verificationNote": "藤沢市図書館公式ページで確認。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "ADD-002-02",
@@ -1770,9 +1507,6 @@
       "lng": 139.491245,
       "categories": [
         "行政・公共施設"
-      ],
-      "scopes": [
-        "wide"
       ],
       "districts": [
         "3地区周辺"
@@ -1792,17 +1526,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "藤沢市公式の施設案内で確認。片瀬地区を含む藤沢市の行政中核施設。座標は公式ページの地図リンクを使用。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "wide",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "ADD-002-02"
-          ]
+          ],
+          "publicDescription": "片瀬地区を含む藤沢市の行政中核施設。",
+          "verificationNote": "藤沢市公式の施設案内で確認。座標は公式ページの地図リンクを使用。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "ADD-003-07",
@@ -1812,9 +1547,6 @@
       "lng": 139.481586,
       "categories": [
         "集会・交流施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -1834,17 +1566,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "藤沢市公式施設案内と施設公式サイトで確認。公民館、労働会館、福祉・相談機能等の複合施設。ADD-005のおあしすと同一建物のため、地図では1マーカー内に併記可能。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "集会・交流施設"
           ],
           "sourceIds": [
             "ADD-003-07"
-          ]
+          ],
+          "publicDescription": "公民館、労働会館、福祉・相談機能等の複合施設。",
+          "verificationNote": "藤沢市公式施設案内と施設公式サイトで確認。ADD-005のおあしすと同一建物のため、地図では1マーカー内に併記可能。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "集会・交流施設"
     },
     {
       "id": "PUB-032",
@@ -1854,9 +1587,6 @@
       "lng": 139.494466,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1876,17 +1606,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-032"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-001-03",
@@ -1896,9 +1626,6 @@
       "lng": 139.4900178,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "wide"
       ],
       "districts": [
         "鎌倉市"
@@ -1918,17 +1645,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "日本郵便の個別公式ページで現行名称・住所を確認。藤沢地域の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "wide",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "ADD-001-03"
-          ]
+          ],
+          "publicDescription": "主要郵便局。藤沢地域の中核局として掲載。",
+          "verificationNote": "日本郵便の個別公式ページで現行名称・住所を確認。座標は公式住所を地図上で照合。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-022",
@@ -1938,9 +1666,6 @@
       "lng": 139.48382,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "片瀬"
@@ -1960,17 +1685,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式",
-          "note": "藤沢市の個別公式施設ページで現存・住所を確認。",
           "district": "片瀬",
-          "scope": "local",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "PUB-022"
-          ]
+          ],
+          "verificationNote": "藤沢市の個別公式施設ページで現存・住所を確認。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-047",
@@ -1980,9 +1705,6 @@
       "lng": 139.504104,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -2002,17 +1724,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-047"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-048",
@@ -2022,9 +1744,6 @@
       "lng": 139.516382,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -2044,17 +1763,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-048"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-003-02",
@@ -2064,9 +1783,6 @@
       "lng": 139.5487204,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -2086,17 +1802,17 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市公式情報で現行名称・住所を確認。施設公式サイトへリンク。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "スポーツ施設"
           ],
           "sourceIds": [
             "ADD-003-02"
-          ]
+          ],
+          "verificationNote": "鎌倉市公式情報で現行名称・住所を確認。施設公式サイトへリンク。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "ADD-003-04",
@@ -2106,9 +1822,6 @@
       "lng": 139.5459634,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -2128,17 +1841,17 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市図書館公式ページで現行名称・住所を確認。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-04"
-          ]
+          ],
+          "verificationNote": "鎌倉市図書館公式ページで現行名称・住所を確認。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "ADD-002-01",
@@ -2148,9 +1861,6 @@
       "lng": 139.5471464,
       "categories": [
         "行政・公共施設"
-      ],
-      "scopes": [
-        "wide"
       ],
       "districts": [
         "3地区周辺"
@@ -2170,17 +1880,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市公式の本庁舎案内で確認。市全域の行政手続・相談の中核施設。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "wide",
           "categories": [
             "行政・公共施設"
           ],
           "sourceIds": [
             "ADD-002-01"
-          ]
+          ],
+          "publicDescription": "市全域の行政手続・相談の中核施設。",
+          "verificationNote": "鎌倉市公式の本庁舎案内で確認。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "行政・公共施設"
     },
     {
       "id": "PUB-008",
@@ -2190,9 +1901,6 @@
       "lng": 139.508437,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -2212,17 +1920,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。個別局番ページは同検索から参照。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-008"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。個別局番ページは同検索から参照。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-009",
@@ -2232,9 +1940,6 @@
       "lng": 139.53188,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -2254,17 +1959,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-009"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "PUB-002",
@@ -2274,9 +1979,6 @@
       "lng": 139.524983,
       "categories": [
         "スポーツ施設"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "深沢"
@@ -2296,9 +1998,7 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "公式一覧",
-          "note": "鎌倉市スポーツ施設。PUB-015と同一施設（重複）。 複数の公的データ区分に収録。",
           "district": "深沢",
-          "scope": "local",
           "categories": [
             "スポーツ施設"
           ],
@@ -2319,9 +2019,12 @@
               "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05.html",
               "baseYear": "2022"
             }
-          ]
+          ],
+          "publicDescription": "鎌倉市スポーツ施設。",
+          "verificationNote": "PUB-015と同一施設（重複）。複数の公的データ区分に収録。"
         }
-      ]
+      ],
+      "primaryCategory": "スポーツ施設"
     },
     {
       "id": "PUB-049",
@@ -2331,9 +2034,6 @@
       "lng": 139.499049,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "local"
       ],
       "districts": [
         "腰越"
@@ -2353,17 +2053,17 @@
           "baseYear": "2013",
           "checkedAt": "2026-07-19",
           "linkType": "施設検索",
-          "note": "日本郵便「郵便局・ATMをさがす」で現存確認。",
           "district": "腰越",
-          "scope": "local",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "PUB-049"
-          ]
+          ],
+          "verificationNote": "日本郵便「郵便局・ATMをさがす」で現存確認。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-003-03",
@@ -2373,9 +2073,6 @@
       "lng": 139.5522277,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -2395,17 +2092,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市公式ページで確認。ホール、ギャラリー、会議室等を備える学習・文化拠点。座標は公式住所の代表点。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-03"
-          ]
+          ],
+          "publicDescription": "ホール、ギャラリー、会議室等を備える学習・文化拠点。",
+          "verificationNote": "鎌倉市公式ページで確認。座標は公式住所の代表点。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "ADD-003-01",
@@ -2415,9 +2113,6 @@
       "lng": 139.5384572,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "3地区周辺"
@@ -2437,17 +2132,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鎌倉市公式ページと施設公式サイトで現行確認。大・小ホール、ギャラリー等を備える市内の主要文化施設。 現行確認日：2026-07-19。",
           "district": "3地区周辺",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-01"
-          ]
+          ],
+          "publicDescription": "大・小ホール、ギャラリー等を備える市内の主要文化施設。",
+          "verificationNote": "鎌倉市公式ページと施設公式サイトで現行確認。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     },
     {
       "id": "ADD-001-01",
@@ -2457,9 +2153,6 @@
       "lng": 139.5519633,
       "categories": [
         "郵便局"
-      ],
-      "scopes": [
-        "wide"
       ],
       "districts": [
         "鎌倉市"
@@ -2479,17 +2172,18 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "日本郵便の個別公式ページで現行名称・住所を確認。鎌倉地域の中核局として掲載。座標は公式住所を地図上で照合。 現行確認日：2026-07-19。",
           "district": "鎌倉市",
-          "scope": "wide",
           "categories": [
             "郵便局"
           ],
           "sourceIds": [
             "ADD-001-01"
-          ]
+          ],
+          "publicDescription": "主要郵便局。鎌倉地域の中核局として掲載。",
+          "verificationNote": "日本郵便の個別公式ページで現行名称・住所を確認。座標は公式住所を地図上で照合。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "郵便局"
     },
     {
       "id": "ADD-003-13",
@@ -2499,9 +2193,6 @@
       "lng": 139.46998563,
       "categories": [
         "図書館・文化施設"
-      ],
-      "scopes": [
-        "nearby"
       ],
       "districts": [
         "鵠沼"
@@ -2521,21 +2212,22 @@
           "baseYear": "",
           "checkedAt": "2026-07-19",
           "linkType": "",
-          "note": "鵠沼市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。",
           "district": "鵠沼",
-          "scope": "nearby",
           "categories": [
             "図書館・文化施設"
           ],
           "sourceIds": [
             "ADD-003-13"
-          ]
+          ],
+          "publicDescription": "図書館・図書室。",
+          "verificationNote": "鵠沼市民センターと同一建物。住所を藤沢市図書館公式で確認し、座標は住所地点を地図で照合。現行確認日：2026-07-19。"
         }
-      ]
+      ],
+      "primaryCategory": "図書館・文化施設"
     }
   ],
   "meta": {
-    "checkedAt": "2026-07-19",
+    "checkedAt": "2026-07-20",
     "additionalCandidatesPending": false,
     "baseArea": "腰越・深沢・片瀬を基本に、鎌倉・大船・藤沢方面の主要施設を補完",
     "placeCount": 52,
