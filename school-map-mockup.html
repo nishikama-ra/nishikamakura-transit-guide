@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="school-map-mockup.css">
   <link rel="stylesheet" href="machinote-theme.css">
   <link rel="stylesheet" href="existing-pages-theme.css">
+  <style>
+    .school-map-toolbar { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+    .school-map-layout.is-list-hidden { grid-template-columns: minmax(0, 1fr); }
+  </style>
 </head>
 <body data-mn-page="school" data-mn-base=".">
   <div data-machinote-header></div>
@@ -91,5 +95,29 @@
   <script src="scripts/machinote-shell.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="scripts/school-map-mockup.js"></script>
+  <script>
+    (() => {
+      let attempts = 0;
+      const setupSchoolListPanel = () => {
+        const panel = document.querySelector('#schoolListPanel');
+        const toggle = document.querySelector('#toggleSchoolList');
+        if (!panel || !toggle) return;
+        if (typeof state === 'undefined' || !state.map) {
+          if (attempts++ < 300) requestAnimationFrame(setupSchoolListPanel);
+          return;
+        }
+        const layout = panel.closest('.school-map-layout');
+        const setPanel = open => {
+          panel.hidden = !open;
+          layout?.classList.toggle('is-list-hidden', !open);
+          toggle.textContent = open ? '施設一覧を閉じる' : '施設一覧を開く';
+          setTimeout(() => state.map.invalidateSize(), 0);
+        };
+        toggle.addEventListener('click', () => setPanel(panel.hidden));
+        if (matchMedia('(max-width:640px)').matches) setPanel(false);
+      };
+      setupSchoolListPanel();
+    })();
+  </script>
 </body>
 </html>
