@@ -25,10 +25,23 @@ const state = {
   visible: []
 };
 
+function normalizeCurrentData(data) {
+  const oldAddress = '神奈川県藤沢市鵜沼松が岡4-1-32';
+  const newAddress = '神奈川県藤沢市鵠沼松が岡4-1-32';
+  data.campuses.forEach(campus => {
+    if (campus.address === oldAddress) campus.address = newAddress;
+    campus.institutions?.forEach(institution => {
+      if (institution.address === oldAddress) institution.address = newAddress;
+      if (institution.sourceAddress === oldAddress) institution.sourceAddress = newAddress;
+    });
+  });
+  return data;
+}
+
 async function loadData() {
   const response = await fetch('content/education-nearby.json');
   if (!response.ok) throw new Error('近隣教育施設データを読み込めませんでした');
-  return response.json();
+  return normalizeCurrentData(await response.json());
 }
 
 function listingMatchesOwnership(listing) {
