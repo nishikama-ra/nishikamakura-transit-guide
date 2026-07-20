@@ -1,0 +1,89 @@
+name: Apply medical welfare name fix
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/apply-medical-welfare-name-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch and validate medical-welfare data
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data_path = Path('content/medical-welfare.json')
+          text = data_path.read_text(encoding='utf-8')
+
+          old_name = '"name": "湘南記念病院"'
+          new_name = '"name": "医療法人湘和会 湘南記念病院"'
+          expected = 4
+          actual = text.count(old_name)
+          if actual != expected:
+              raise SystemExit(f'Expected {expected} old-name occurrences, found {actual}')
+
+          text = text.replace(old_name, new_name)
+          data = json.loads(text)
+
+          old_hospitals = {
+              '一般財団法人同友会 藤沢湘南台病院',
+              '藤沢市北保健センター・藤沢市保健医療センター',
+              '鎌倉ヒロ病院',
+          }
+          names = []
+          for place in data['places']:
+              names.append(place.get('name', ''))
+              names.extend(item.get('name', '') for item in place.get('listings', []))
+          remaining = old_hospitals.intersection(names)
+          if remaining:
+              raise SystemExit(f'Old hospitals remain: {sorted(remaining)}')
+
+          target_ids = {'HSP-021', 'MED-022'}
+          targets = {place['id']: place for place in data['places'] if place.get('id') in target_ids}
+          if set(targets) != target_ids:
+              raise SystemExit(f'Missing target IDs: {sorted(target_ids - set(targets))}')
+          for target_id, place in targets.items():
+              if place['name'] != '医療法人湘和会 湘南記念病院':
+                  raise SystemExit(f'Unexpected top-level name for {target_id}: {place["name"]}')
+              matching = [item for item in place.get('listings', []) if item.get('id') == target_id]
+              if len(matching) != 1 or matching[0].get('name') != '医療法人湘和会 湘南記念病院':
+                  raise SystemExit(f'Unexpected listing name for {target_id}')
+
+          data_path.write_text(text, encoding='utf-8')
+          PY
+
+          grep -F '"center":[35.322,139.508378]' medical-welfare.html
+          grep -F '"zoom":15' medical-welfare.html
+          grep -F 'state.categories = new Set(state.data.categories);' scripts/facility-map.js
+          for forbidden in 'fitBounds' 'scopeMatches' 'state.scope' 'hasWideScope' 'scopeFilters' 'data-scope'; do
+            if grep -F "$forbidden" scripts/facility-map.js; then
+              echo "Forbidden facility-map token remains: $forbidden" >&2
+              exit 1
+            fi
+          done
+          git diff --check
+
+      - name: Commit validated change
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/apply-medical-welfare-name-fix.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/medical-welfare.json .github/workflows/apply-medical-welfare-name-fix.yml
+          git commit -m "Use official name for Shonan Memorial Hospital"
+          git push origin HEAD:main
