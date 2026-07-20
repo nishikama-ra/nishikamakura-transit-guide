@@ -10,25 +10,37 @@ const MAP_CONFIG = {
   }
 };
 
+// The wide view is fixed from the supplied reference screenshot. At the desktop map width,
+// the Yokohama Station label sits near the top while the three required coastal schools remain visible.
 const VIEW_CONFIG = {
   local: { center: [35.3230, 139.5050], zoom: 14 },
   nearby: { center: [35.3300, 139.5050], zoom: 13 },
-  wide: { center: [35.3475, 139.4950], zoom: 12 }
+  wide: { center: [35.3860, 139.5840], zoom: 12 }
+};
+
+const FOCUS_AREA = {
+  center: [35.3245, 139.5290],
+  radiusMeters: 2300
 };
 
 const typeColors = {
-  nursery: '#b16f68', kindergarten: '#9a705f', elementary: '#4c8580', juniorHigh: '#55768a', high: '#55768a',
-  specialSupport: '#8c7d52', university: '#756c89', vocational: '#756c89'
+  elementary: '#4c8580',
+  juniorHigh: '#55768a',
+  high: '#55768a',
+  university: '#756c89'
 };
-const typeShort = { nursery: '保', kindergarten: '幼', elementary: '小', juniorHigh: '中', high: '高', specialSupport: '支', university: '大', vocational: '専' };
+const typeShort = { elementary: '小', juniorHigh: '中', high: '高', university: '大' };
 const state = {
   data: null,
   map: null,
-  scope: 'local',
+  scope: 'wide',
   types: new Set(),
   ownership: 'all',
   markers: new Map(),
-  visible: []
+  visible: [],
+  routeOrigin: null,
+  routeOriginMarker: null,
+  selectingRouteOrigin: false
 };
 
 function syncMapTileTone() {
@@ -43,7 +55,17 @@ function syncMapTileTone() {
 async function loadData() {
   const response = await fetch('content/schools.json');
   if (!response.ok) throw new Error('学校データを読み込めませんでした');
-  return response.json();
+  const manifest = await response.json();
+  if (!Array.isArray(manifest.files)) return manifest;
+  const parts = await Promise.all(manifest.files.map(async file => {
+    const partResponse = await fetch(`content/${file}`);
+    if (!partResponse.ok) throw new Error(`学校データを読み込めませんでした: ${file}`);
+    return partResponse.json();
+  }));
+  return {
+    meta: manifest.meta,
+    campuses: parts.flatMap(part => part.campuses || [])
+  };
 }
 
 function readHash() {
@@ -63,52 +85,75 @@ function writeHash() {
   history.replaceState(null, '', `${location.pathname}${location.search}#${params}`);
 }
 
-function matchesOwnership(campus) {
+function listingMatchesOwnership(listing) {
   if (state.ownership === 'all') return true;
-  if (state.ownership === 'private') return campus.ownerships.includes('private');
-  return campus.ownerships.some(item => item !== 'private');
+  if (state.ownership === 'private') return listing.ownerships.includes('private');
+  return listing.ownerships.some(item => item !== 'private');
 }
 
-function visibleCampuses() {
-  return state.data.campuses.filter(campus =>
-    campus.viewModes.includes(state.scope)
-    && campus.types.some(type => state.types.has(type))
-    && matchesOwnership(campus)
+function activeListings(campus) {
+  return campus.listings.filter(item =>
+    item.types.some(type => state.types.has(type)) && listingMatchesOwnership(item)
   );
 }
 
+function visibleCampuses() {
+  // The range selector changes only the viewport. It never removes schools from the data set.
+  return state.data.campuses.filter(campus => activeListings(campus).length > 0);
+}
+
+function activeCampusTypes(campus) {
+  return [...new Set(activeListings(campus).flatMap(item => item.types))]
+    .filter(type => state.types.has(type));
+}
+
+function activeCampusOwnerships(campus) {
+  return [...new Set(activeListings(campus).flatMap(item => item.ownerships))];
+}
+
 function markerLabel(campus) {
-  const values = campus.types.map(type => typeShort[type]);
+  const values = activeCampusTypes(campus).map(type => typeShort[type]);
   return values.length <= 2 ? values.join('') : '複';
 }
 
 function markerClass(campus) {
-  return campus.types.length > 2 ? 'marker-mixed' : `marker-${campus.types[0]}`;
+  const activeTypes = activeCampusTypes(campus);
+  return activeTypes.length > 1 ? 'marker-mixed' : `marker-${activeTypes[0] || campus.types[0]}`;
 }
 
 function ownershipToneClass(campus) {
-  return campus.ownerships.some(item => ['private', 'national'].includes(item))
+  return activeCampusOwnerships(campus).some(item => ['private', 'national'].includes(item))
     ? 'marker-tone-strong'
     : 'marker-tone-soft';
 }
 
 function ownershipText(campus) {
-  return campus.ownerships.map(item => state.data.meta.ownershipLabels[item]).join('・');
+  return activeCampusOwnerships(campus).map(item => state.data.meta.ownershipLabels[item]).join('・');
+}
+
+function googleTransitUrl(campus) {
+  const params = new URLSearchParams({
+    api: '1',
+    destination: `${campus.lat},${campus.lng}`,
+    travelmode: 'transit'
+  });
+  if (state.routeOrigin) params.set('origin', `${state.routeOrigin.lat},${state.routeOrigin.lng}`);
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
 function popupHtml(campus) {
-  const listings = campus.listings
-    .filter(item => item.types.some(type => state.types.has(type)))
-    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.formalTypes.filter(formalType => state.types.has(formalType.type)).map(formalType => formalType.label).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span><br>${item.officialUrl ? `<a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : '<span class="school-popup-unverified">公式情報未確認</span>'}</li>`)
+  const listings = activeListings(campus)
+    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.formalTypes.filter(formalType => state.types.has(formalType.type)).map(formalType => formalType.label).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span>${item.officialUrl ? `<br><a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : ''}</li>`)
     .join('');
   return `<div class="school-popup">
     <strong>${escapeHtml(campus.name)}</strong>
     <span class="school-popup-address">${escapeHtml(campus.address)}</span>
     <div class="school-popup-tags">
-      ${campus.types.filter(type => state.types.has(type)).map(type => `<span>${escapeHtml(state.data.meta.typeLabels[type])}</span>`).join('')}
+      ${activeCampusTypes(campus).map(type => `<span>${escapeHtml(state.data.meta.typeLabels[type])}</span>`).join('')}
       <span>${escapeHtml(ownershipText(campus))}</span>
     </div>
     <ul>${listings}</ul>
+    <a class="school-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">公共交通で行く ↗</a>
   </div>`;
 }
 
@@ -141,6 +186,7 @@ function renderList() {
           <strong>${escapeHtml(campus.name)}</strong>
           <span>${escapeHtml(campus.address)}</span>
         </button>
+        <a class="school-list-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">公共交通で行く ↗</a>
       </article>`).join('')
     : '<p class="load-error">条件に合う施設がありません。</p>';
   document.querySelectorAll('[data-campus-id]').forEach(button => button.addEventListener('click', () => focusCampus(button.dataset.campusId)));
@@ -157,7 +203,7 @@ function renderMap({ fit = false } = {}) {
       iconAnchor: [17, 32],
       popupAnchor: [0, -29]
     });
-    const marker = L.marker([campus.lat, campus.lng], { icon, title: campus.name, riseOnHover: true })
+    const marker = L.marker([campus.lat, campus.lng], { pane: 'schoolMarkerPane', icon, title: campus.name, riseOnHover: true })
       .addTo(state.map)
       .bindPopup(popupHtml(campus), { maxWidth: 310 });
     state.markers.set(campus.id, marker);
@@ -171,6 +217,45 @@ function syncPressedStates() {
   document.querySelectorAll('[data-scope]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.scope === state.scope)));
   document.querySelectorAll('[data-ownership]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.ownership === state.ownership)));
   document.querySelectorAll('[data-school-type]').forEach(button => button.setAttribute('aria-pressed', String(state.types.has(button.dataset.schoolType))));
+}
+
+function updateRouteOriginUi() {
+  const selectButton = document.querySelector('#selectRouteOrigin');
+  const clearButton = document.querySelector('#clearRouteOrigin');
+  const status = document.querySelector('#routeOriginStatus');
+  selectButton.setAttribute('aria-pressed', String(state.selectingRouteOrigin));
+  selectButton.textContent = state.selectingRouteOrigin ? '地図上の出発地をクリック' : '出発地を地図で指定';
+  clearButton.hidden = !state.routeOrigin;
+  status.textContent = state.routeOrigin
+    ? `出発地：${state.routeOrigin.lat.toFixed(5)}, ${state.routeOrigin.lng.toFixed(5)}`
+    : '出発地未指定（Googleマップ側でも指定できます）';
+  state.map.getContainer().classList.toggle('is-selecting-route-origin', state.selectingRouteOrigin);
+}
+
+function setRouteOrigin(latlng) {
+  state.routeOrigin = { lat: latlng.lat, lng: latlng.lng };
+  if (state.routeOriginMarker) state.routeOriginMarker.remove();
+  state.routeOriginMarker = L.circleMarker(latlng, {
+    pane: 'routeOriginPane',
+    radius: 8,
+    color: '#17385d',
+    weight: 3,
+    fillColor: '#fff',
+    fillOpacity: 1,
+    interactive: false
+  }).addTo(state.map);
+  state.selectingRouteOrigin = false;
+  updateRouteOriginUi();
+  renderMap();
+}
+
+function clearRouteOrigin() {
+  state.routeOrigin = null;
+  state.selectingRouteOrigin = false;
+  if (state.routeOriginMarker) state.routeOriginMarker.remove();
+  state.routeOriginMarker = null;
+  updateRouteOriginUi();
+  renderMap();
 }
 
 function renderFilters() {
@@ -201,6 +286,38 @@ function renderFilters() {
   syncPressedStates();
 }
 
+function initRouteOriginControls() {
+  document.querySelector('#selectRouteOrigin').addEventListener('click', () => {
+    state.selectingRouteOrigin = !state.selectingRouteOrigin;
+    updateRouteOriginUi();
+  });
+  document.querySelector('#clearRouteOrigin').addEventListener('click', clearRouteOrigin);
+  state.map.on('click', event => {
+    if (!state.selectingRouteOrigin) return;
+    setRouteOrigin(event.latlng);
+  });
+  updateRouteOriginUi();
+}
+
+function addFocusArea() {
+  state.map.createPane('focusAreaPane');
+  state.map.getPane('focusAreaPane').style.zIndex = '350';
+  state.map.createPane('schoolMarkerPane');
+  state.map.getPane('schoolMarkerPane').style.zIndex = '600';
+  state.map.createPane('routeOriginPane');
+  state.map.getPane('routeOriginPane').style.zIndex = '650';
+  L.circle(FOCUS_AREA.center, {
+    pane: 'focusAreaPane',
+    radius: FOCUS_AREA.radiusMeters,
+    color: '#d96f6f',
+    weight: 1.5,
+    opacity: 0.48,
+    fillColor: '#e88989',
+    fillOpacity: 0.22,
+    interactive: false
+  }).addTo(state.map);
+}
+
 async function init() {
   if (!window.L) throw new Error('地図ライブラリを読み込めませんでした');
   state.data = await loadData();
@@ -211,10 +328,12 @@ async function init() {
   state.map = L.map('schoolMapMockup', { scrollWheelZoom: true, zoomControl: true })
     .setView(VIEW_CONFIG[state.scope].center, VIEW_CONFIG[state.scope].zoom);
   L.tileLayer(MAP_CONFIG.tileUrl, MAP_CONFIG.tileOptions).addTo(state.map);
+  addFocusArea();
   state.map.on('zoomend', syncMapTileTone);
   syncMapTileTone();
   L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(state.map);
   renderFilters();
+  initRouteOriginControls();
   renderMap({ fit: true });
 }
 

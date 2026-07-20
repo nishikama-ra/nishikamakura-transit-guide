@@ -28,9 +28,9 @@
         <fieldset class="school-filter-group school-scope-filter">
           <legend>表示範囲</legend>
           <div class="school-segmented" id="scopeFilters">
-            <button type="button" data-scope="local" aria-pressed="true">地域</button>
+            <button type="button" data-scope="local" aria-pressed="false">地域</button>
             <button type="button" data-scope="nearby" aria-pressed="false">周辺</button>
-            <button type="button" data-scope="wide" aria-pressed="false">広域</button>
+            <button type="button" data-scope="wide" aria-pressed="true">広域</button>
           </div>
         </fieldset>
         <fieldset class="school-filter-group school-type-filter">
@@ -52,6 +52,11 @@
       <div class="school-map-heading">
         <div>
           <h2 id="map-heading">地図で見る</h2>
+        </div>
+        <div class="school-route-tools" aria-label="公共交通経路の出発地設定">
+          <button id="selectRouteOrigin" type="button" aria-pressed="false">出発地を地図で指定</button>
+          <button id="clearRouteOrigin" type="button" hidden>出発地を解除</button>
+          <span id="routeOriginStatus">出発地未指定（Googleマップ側でも指定できます）</span>
         </div>
       </div>
       <div class="school-map-layout">
