@@ -1,0 +1,5578 @@
+{
+  "meta": {
+    "title": "学校・幼稚園・保育施設地図モックアップ用データ",
+    "generatedAt": "2026-07-18",
+    "sourceFeatureCount": 58,
+    "reusedPublicSchoolCount": 11,
+    "officialSupplementCount": 1,
+    "childcareFacilityCount": 21,
+    "institutionCount": 91,
+    "campusCount": 68,
+    "scopeLabels": {
+      "local": "地域",
+      "nearby": "周辺",
+      "wide": "広域"
+    },
+    "typeLabels": {
+      "nursery": "保育施設",
+      "kindergarten": "幼稚園・こども園",
+      "elementary": "小学校",
+      "juniorHigh": "中学校",
+      "high": "高校",
+      "specialSupport": "特別支援学校",
+      "university": "大学・短期大学",
+      "vocational": "専門学校"
+    },
+    "ownershipLabels": {
+      "municipal": "市立",
+      "prefectural": "県立",
+      "national": "国立",
+      "private": "私立"
+    },
+    "note": "地域・周辺は全施設を表示して初期縮尺だけを変え、広域は保育施設・幼稚園・市立小中学校を省きます。元GeoJSONは変更していません。"
+  },
+  "campuses": [
+    {
+      "id": "campus-01",
+      "name": "片岡幼稚園",
+      "address": "神奈川県鎌倉市手広1-11-32",
+      "lat": 35.3290387,
+      "lng": 139.5113671,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-01",
+          "sourceName": "片岡幼稚園",
+          "displayName": "片岡幼稚園",
+          "listingName": "片岡幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市手広1-11-32",
+          "address": "神奈川県鎌倉市手広1-11-32",
+          "addressVerificationStatus": "source",
+          "lat": 35.32903873696478,
+          "lng": 139.5113670855532,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.kataoka-gakuen.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "片岡幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kataoka-gakuen.jp/",
+          "institutionIds": [
+            "source-01"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kataoka-gakuen.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-02",
+      "name": "江ノ島ともだち幼稚園",
+      "address": "神奈川県鎌倉市腰越3-18-9",
+      "lat": 35.3107811,
+      "lng": 139.4920212,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-02",
+          "sourceName": "江ノ島ともだち幼稚園",
+          "displayName": "江ノ島ともだち幼稚園",
+          "listingName": "江ノ島ともだち幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市腰越3-18-9",
+          "address": "神奈川県鎌倉市腰越3-18-9",
+          "addressVerificationStatus": "source",
+          "lat": 35.31078110446236,
+          "lng": 139.49202119472804,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakurayyhp.com/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "江ノ島ともだち幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakurayyhp.com/",
+          "institutionIds": [
+            "source-02"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kamakurayyhp.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-03",
+      "name": "七里が浜楓幼稚園（認定こども園）",
+      "address": "神奈川県鎌倉市七里ガ浜東3-14-6・3-13-12",
+      "lat": 35.3116761,
+      "lng": 139.5192537,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery",
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-03",
+          "sourceName": "七里が浜楓幼稚園",
+          "displayName": "七里が浜楓幼稚園",
+          "listingName": "七里が浜楓幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市七里ガ浜東3-13-12",
+          "address": "神奈川県鎌倉市七里ガ浜東3-13-12",
+          "addressVerificationStatus": "source",
+          "lat": 35.311634198296225,
+          "lng": 139.51905237820114,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.kaede.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "childcare-02",
+          "sourceName": "七里が浜楓幼稚園",
+          "displayName": "七里が浜楓幼稚園",
+          "listingName": "七里が浜楓幼稚園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市七里ガ浜東3-14-6（1・2歳児）／七里ガ浜東3-13-12（3歳児以上）",
+          "address": "神奈川県鎌倉市七里ガ浜東3-14-6（1・2歳児）／七里ガ浜東3-13-12（3歳児以上）",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.311718,
+          "lng": 139.519455,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
+          "ownership": "private",
+          "officialUrl": "https://www.kaede.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "腰越",
+          "childcareCategory": "認定こども園"
+        }
+      ],
+      "listings": [
+        {
+          "name": "七里が浜楓幼稚園",
+          "types": [
+            "nursery",
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kaede.ac.jp/",
+          "institutionIds": [
+            "source-03",
+            "childcare-02"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kaede.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-04",
+      "name": "西鎌倉幼稚園・キンダークリッペ西鎌倉",
+      "address": "神奈川県鎌倉市西鎌倉2-17-1",
+      "lat": 35.3249138,
+      "lng": 139.5040655,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery",
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-04",
+          "sourceName": "西鎌倉幼稚園",
+          "displayName": "西鎌倉幼稚園",
+          "listingName": "西鎌倉幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市西鎌倉2-17-1",
+          "address": "神奈川県鎌倉市西鎌倉2-17-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.32503252285334,
+          "lng": 139.5041330741121,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.nky.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "childcare-04",
+          "sourceName": "キンダークリッペ西鎌倉",
+          "displayName": "キンダークリッペ西鎌倉",
+          "listingName": "キンダークリッペ西鎌倉",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市西鎌倉2-17-1",
+          "address": "神奈川県鎌倉市西鎌倉2-17-1",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.324795,
+          "lng": 139.503998,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.nky.ed.jp/krippe/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "腰越",
+          "childcareCategory": "小規模保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "西鎌倉幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.nky.ed.jp/",
+          "institutionIds": [
+            "source-04"
+          ]
+        },
+        {
+          "name": "キンダークリッペ西鎌倉",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.nky.ed.jp/krippe/",
+          "institutionIds": [
+            "childcare-04"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.nky.ed.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-05",
+      "name": "認定こども園アワーキッズ鎌倉 本園・分園",
+      "address": "神奈川県鎌倉市寺分1-13-5・1-15-4",
+      "lat": 35.3343157,
+      "lng": 139.5215572,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery",
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-05",
+          "sourceName": "認定こども園アワーキッズ鎌倉　（分園）",
+          "displayName": "認定こども園アワーキッズ鎌倉（分園）",
+          "listingName": "認定こども園アワーキッズ鎌倉（分園）",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市寺分1-15-4",
+          "address": "神奈川県鎌倉市寺分1-15-4",
+          "addressVerificationStatus": "source",
+          "lat": 35.33455356476855,
+          "lng": 139.5213820921149,
+          "type": "kindergarten",
+          "formalTypeCode": "16013",
+          "formalTypeLabel": "幼保連携型認定こども園",
+          "ownership": "private",
+          "officialUrl": "https://ourkids.jp/fukasawa/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-24",
+          "sourceName": "認定こども園アワーキッズ鎌倉　(本園)",
+          "displayName": "認定こども園アワーキッズ鎌倉（本園）",
+          "listingName": "認定こども園アワーキッズ鎌倉（本園）",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市寺分1-13-5",
+          "address": "神奈川県鎌倉市寺分1-13-5",
+          "addressVerificationStatus": "source",
+          "lat": 35.33461824933394,
+          "lng": 139.52138954899542,
+          "type": "kindergarten",
+          "formalTypeCode": "16013",
+          "formalTypeLabel": "幼保連携型認定こども園",
+          "ownership": "private",
+          "officialUrl": "https://ourkids.jp/kamakura/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "childcare-13",
+          "sourceName": "認定こども園アワーキッズ鎌倉（本園）",
+          "displayName": "認定こども園アワーキッズ鎌倉（本園）",
+          "listingName": "認定こども園アワーキッズ鎌倉（本園）",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市寺分1-13-5",
+          "address": "神奈川県鎌倉市寺分1-13-5",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.333679,
+          "lng": 139.522003,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
+          "ownership": "private",
+          "officialUrl": "https://ourkids.jp/kamakura/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認定こども園"
+        },
+        {
+          "id": "childcare-14",
+          "sourceName": "認定こども園アワーキッズ鎌倉（分園）",
+          "displayName": "認定こども園アワーキッズ鎌倉（分園）",
+          "listingName": "認定こども園アワーキッズ鎌倉（分園）",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市寺分1-15-4",
+          "address": "神奈川県鎌倉市寺分1-15-4",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.334412,
+          "lng": 139.521454,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認定こども園",
+          "ownership": "private",
+          "officialUrl": "https://ourkids.jp/fukasawa/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認定こども園"
+        }
+      ],
+      "listings": [
+        {
+          "name": "認定こども園アワーキッズ鎌倉（分園）",
+          "types": [
+            "nursery",
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16013"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼保連携型認定こども園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16013",
+              "label": "幼保連携型認定こども園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://ourkids.jp/fukasawa/",
+          "institutionIds": [
+            "source-05",
+            "childcare-14"
+          ]
+        },
+        {
+          "name": "認定こども園アワーキッズ鎌倉（本園）",
+          "types": [
+            "nursery",
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16013"
+          ],
+          "formalTypeLabels": [
+            "認定こども園",
+            "幼保連携型認定こども園"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認定こども園"
+            },
+            {
+              "type": "kindergarten",
+              "code": "16013",
+              "label": "幼保連携型認定こども園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://ourkids.jp/kamakura/",
+          "institutionIds": [
+            "source-24",
+            "childcare-13"
+          ]
+        }
+      ],
+      "officialUrl": "https://ourkids.jp/fukasawa/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-06",
+      "name": "鎌倉女子大学 岩瀬キャンパス",
+      "address": "神奈川県鎌倉市岩瀬1420",
+      "lat": 35.360415,
+      "lng": 139.5469083,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "kindergarten",
+        "elementary",
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-06",
+          "sourceName": "鎌倉女子大学初等部",
+          "displayName": "鎌倉女子大学初等部",
+          "listingName": "鎌倉女子大学初等部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市岩瀬1420",
+          "address": "神奈川県鎌倉市岩瀬1420",
+          "addressVerificationStatus": "source",
+          "lat": 35.361064654648814,
+          "lng": 139.5479395488441,
+          "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u.ac.jp/elementary/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-11",
+          "sourceName": "鎌倉女子大学中等部",
+          "displayName": "鎌倉国際文理中学校",
+          "listingName": "鎌倉国際文理中学校・高等学校",
+          "nameVerificationStatus": "verified-current-official-name",
+          "sourceAddress": "神奈川県鎌倉市岩瀬1420",
+          "address": "神奈川県鎌倉市岩瀬1420",
+          "addressVerificationStatus": "source",
+          "lat": 35.359405266997385,
+          "lng": 139.54674578049782,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u-j.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-16",
+          "sourceName": "鎌倉女子大学高等部",
+          "displayName": "鎌倉国際文理高等学校",
+          "listingName": "鎌倉国際文理中学校・高等学校",
+          "nameVerificationStatus": "verified-current-official-name",
+          "sourceAddress": "神奈川県鎌倉市岩瀬1420",
+          "address": "神奈川県鎌倉市岩瀬1420",
+          "addressVerificationStatus": "source",
+          "lat": 35.36055730439213,
+          "lng": 139.54724708003405,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u-j.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-22",
+          "sourceName": "鎌倉女子大学幼稚部",
+          "displayName": "鎌倉女子大学幼稚部",
+          "listingName": "鎌倉女子大学幼稚部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市岩瀬1420",
+          "address": "神奈川県鎌倉市岩瀬1420",
+          "addressVerificationStatus": "source",
+          "lat": 35.36063279417976,
+          "lng": 139.54570071078547,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u.ac.jp/kindergarten/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉女子大学初等部",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakura-u.ac.jp/elementary/",
+          "institutionIds": [
+            "source-06"
+          ]
+        },
+        {
+          "name": "鎌倉国際文理中学校・高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakura-u-j.ed.jp/",
+          "institutionIds": [
+            "source-11",
+            "source-16"
+          ]
+        },
+        {
+          "name": "鎌倉女子大学幼稚部",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakura-u.ac.jp/kindergarten/",
+          "institutionIds": [
+            "source-22"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kamakura-u.ac.jp/elementary/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-07",
+      "name": "清泉小学校",
+      "address": "神奈川県鎌倉市雪ノ下3-11-45",
+      "lat": 35.3250522,
+      "lng": 139.5613598,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-07",
+          "sourceName": "清泉小学校",
+          "displayName": "清泉小学校",
+          "listingName": "清泉小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市雪ノ下3-11-45",
+          "address": "神奈川県鎌倉市雪ノ下3-11-45",
+          "addressVerificationStatus": "source",
+          "lat": 35.32505219138716,
+          "lng": 139.56135983996975,
+          "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
+          "ownership": "private",
+          "officialUrl": "https://seisen-e.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "清泉小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://seisen-e.ac.jp/",
+          "institutionIds": [
+            "source-07"
+          ]
+        }
+      ],
+      "officialUrl": "https://seisen-e.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-08",
+      "name": "横浜国立大学教育学部附属鎌倉小・中学校",
+      "address": "神奈川県鎌倉市雪ノ下3-5-10",
+      "lat": 35.3247068,
+      "lng": 139.5583056,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "elementary",
+        "juniorHigh"
+      ],
+      "ownerships": [
+        "national"
+      ],
+      "institutions": [
+        {
+          "id": "source-08",
+          "sourceName": "横浜国立大学教育学部附属鎌倉中学校",
+          "displayName": "横浜国立大学教育学部附属鎌倉中学校",
+          "listingName": "横浜国立大学教育学部附属鎌倉中学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市雪ノ下3-5-10",
+          "address": "神奈川県鎌倉市雪ノ下3-5-10",
+          "addressVerificationStatus": "source",
+          "lat": 35.3251480502585,
+          "lng": 139.55867309588808,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "national",
+          "officialUrl": "https://kamachu.ynu.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-09",
+          "sourceName": "横浜国立大学教育学部附属鎌倉小学校",
+          "displayName": "横浜国立大学教育学部附属鎌倉小学校",
+          "listingName": "横浜国立大学教育学部附属鎌倉小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市雪ノ下3-5-10",
+          "address": "神奈川県鎌倉市雪ノ下3-5-10",
+          "addressVerificationStatus": "source",
+          "lat": 35.32426559522535,
+          "lng": 139.55793803670412,
+          "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
+          "ownership": "national",
+          "officialUrl": "https://www.kamakurasho.ynu.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "横浜国立大学教育学部附属鎌倉中学校",
+          "types": [
+            "juniorHigh"
+          ],
+          "formalTypeCodes": [
+            "16002"
+          ],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            }
+          ],
+          "ownerships": [
+            "national"
+          ],
+          "officialUrl": "https://kamachu.ynu.ac.jp/",
+          "institutionIds": [
+            "source-08"
+          ]
+        },
+        {
+          "name": "横浜国立大学教育学部附属鎌倉小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "national"
+          ],
+          "officialUrl": "https://www.kamakurasho.ynu.ac.jp/",
+          "institutionIds": [
+            "source-09"
+          ]
+        }
+      ],
+      "officialUrl": "https://kamachu.ynu.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-09",
+      "name": "鎌倉女学院",
+      "address": "神奈川県鎌倉市由比ガ浜2-10-4",
+      "lat": 35.3138825,
+      "lng": 139.5501356,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-10",
+          "sourceName": "鎌倉女学院中学校",
+          "displayName": "鎌倉女学院中学校",
+          "listingName": "鎌倉女学院",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市由比ガ浜2-10-4",
+          "address": "神奈川県鎌倉市由比ガ浜2-10-4",
+          "addressVerificationStatus": "source",
+          "lat": 35.31401755216128,
+          "lng": 139.5500759748456,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamajo.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-15",
+          "sourceName": "鎌倉女学院高等学校",
+          "displayName": "鎌倉女学院高等学校",
+          "listingName": "鎌倉女学院",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市由比ガ浜2-10-4",
+          "address": "神奈川県鎌倉市由比ガ浜2-10-4",
+          "addressVerificationStatus": "source",
+          "lat": 35.31374750245152,
+          "lng": 139.55019523750724,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamajo.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉女学院",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamajo.ac.jp/",
+          "institutionIds": [
+            "source-10",
+            "source-15"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kamajo.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-10",
+      "name": "神奈川県立鎌倉高等学校",
+      "address": "神奈川県鎌倉市七里ガ浜2-21-1",
+      "lat": 35.3087236,
+      "lng": 139.5040233,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-12",
+          "sourceName": "神奈川県立鎌倉高等学校",
+          "displayName": "神奈川県立鎌倉高等学校",
+          "listingName": "神奈川県立鎌倉高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市七里ガ浜2-21-1",
+          "address": "神奈川県鎌倉市七里ガ浜2-21-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.308723635893806,
+          "lng": 139.50402327486327,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立鎌倉高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/",
+          "institutionIds": [
+            "source-12"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-11",
+      "name": "神奈川県立七里ガ浜高等学校",
+      "address": "神奈川県鎌倉市七里ガ浜東2-3-1",
+      "lat": 35.3053009,
+      "lng": 139.5124758,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-13",
+          "sourceName": "神奈川県立七里ガ浜高等学校",
+          "displayName": "神奈川県立七里ガ浜高等学校",
+          "listingName": "神奈川県立七里ガ浜高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市七里ガ浜東2-3-1",
+          "address": "神奈川県鎌倉市七里ガ浜東2-3-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.305300920753425,
+          "lng": 139.51247583760937,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立七里ガ浜高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/",
+          "institutionIds": [
+            "source-13"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-12",
+      "name": "神奈川県立大船高等学校",
+      "address": "神奈川県鎌倉市高野8-1",
+      "lat": 35.3446036,
+      "lng": 139.547748,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-14",
+          "sourceName": "神奈川県立大船高等学校",
+          "displayName": "神奈川県立大船高等学校",
+          "listingName": "神奈川県立大船高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市高野8-1",
+          "address": "神奈川県鎌倉市高野8-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.344603594815986,
+          "lng": 139.54774801286976,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立大船高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/",
+          "institutionIds": [
+            "source-14"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-13",
+      "name": "神奈川県立鎌倉支援学校",
+      "address": "神奈川県鎌倉市関谷566",
+      "lat": 35.3613607,
+      "lng": 139.5151322,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "specialSupport"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-17",
+          "sourceName": "神奈川県立鎌倉支援学校",
+          "displayName": "神奈川県立鎌倉支援学校",
+          "listingName": "神奈川県立鎌倉支援学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市関谷566",
+          "address": "神奈川県鎌倉市関谷566",
+          "addressVerificationStatus": "source",
+          "lat": 35.36136068804772,
+          "lng": 139.5151321552605,
+          "type": "specialSupport",
+          "formalTypeCode": "16012",
+          "formalTypeLabel": "特別支援学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-sh/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立鎌倉支援学校",
+          "types": [
+            "specialSupport"
+          ],
+          "formalTypeCodes": [
+            "16012"
+          ],
+          "formalTypeLabels": [
+            "特別支援学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "specialSupport",
+              "code": "16012",
+              "label": "特別支援学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-sh/",
+          "institutionIds": [
+            "source-17"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-sh/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-14",
+      "name": "鎌倉早見美容芸術専門学校",
+      "address": "神奈川県鎌倉市小町1-2-16",
+      "lat": 35.3178151,
+      "lng": 139.5507876,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "vocational"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-18",
+          "sourceName": "鎌倉早見美容芸術専門学校",
+          "displayName": "鎌倉早見美容芸術専門学校",
+          "listingName": "鎌倉早見美容芸術専門学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市小町1-2-16",
+          "address": "神奈川県鎌倉市小町1-2-16",
+          "addressVerificationStatus": "source",
+          "lat": 35.31781507863913,
+          "lng": 139.55078761461445,
+          "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
+          "ownership": "private",
+          "officialUrl": "https://www.hayami.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉早見美容芸術専門学校",
+          "types": [
+            "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.hayami.ac.jp/",
+          "institutionIds": [
+            "source-18"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.hayami.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-15",
+      "name": "鎌倉女子大学 大船キャンパス",
+      "address": "神奈川県鎌倉市大船6-1-3",
+      "lat": 35.3534253,
+      "lng": 139.5393618,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-19",
+          "sourceName": "鎌倉女子大学",
+          "displayName": "鎌倉女子大学",
+          "listingName": "鎌倉女子大学",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市大船6-1-3",
+          "address": "神奈川県鎌倉市大船6-1-3",
+          "addressVerificationStatus": "source",
+          "lat": 35.35322532954461,
+          "lng": 139.53936917618793,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-21",
+          "sourceName": "鎌倉女子大学短期大学部",
+          "displayName": "鎌倉女子大学短期大学部",
+          "listingName": "鎌倉女子大学短期大学部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市大船6-1-3",
+          "address": "神奈川県鎌倉市大船6-1-3",
+          "addressVerificationStatus": "source",
+          "lat": 35.353625177497314,
+          "lng": 139.53935435945152,
+          "type": "university",
+          "formalTypeCode": "16006",
+          "formalTypeLabel": "短期大学",
+          "ownership": "private",
+          "officialUrl": "https://www.kamakura-u.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉女子大学",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakura-u.ac.jp/",
+          "institutionIds": [
+            "source-19"
+          ]
+        },
+        {
+          "name": "鎌倉女子大学短期大学部",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16006"
+          ],
+          "formalTypeLabels": [
+            "短期大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16006",
+              "label": "短期大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamakura-u.ac.jp/",
+          "institutionIds": [
+            "source-21"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kamakura-u.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-16",
+      "name": "湘南鎌倉医療大学",
+      "address": "神奈川県鎌倉市山崎1195-3",
+      "lat": 35.3425386,
+      "lng": 139.5271812,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-20",
+          "sourceName": "湘南鎌倉医療大学",
+          "displayName": "湘南鎌倉医療大学",
+          "listingName": "湘南鎌倉医療大学",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市山崎1195-3",
+          "address": "神奈川県鎌倉市山崎1195-3",
+          "addressVerificationStatus": "source",
+          "lat": 35.34253864728275,
+          "lng": 139.52718117135228,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.sku.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南鎌倉医療大学",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.sku.ac.jp/",
+          "institutionIds": [
+            "source-20"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.sku.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-17",
+      "name": "モンタナ幼稚園",
+      "address": "神奈川県鎌倉市津550",
+      "lat": 35.3119169,
+      "lng": 139.5021203,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-23",
+          "sourceName": "モンタナ幼稚園",
+          "displayName": "モンタナ幼稚園",
+          "listingName": "モンタナ幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市津550",
+          "address": "神奈川県鎌倉市津550",
+          "addressVerificationStatus": "source",
+          "lat": 35.31191694403616,
+          "lng": 139.50212034156138,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://www.montana-youchien.com/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "モンタナ幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.montana-youchien.com/",
+          "institutionIds": [
+            "source-23"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.montana-youchien.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-18",
+      "name": "栄光学園中学高等学校",
+      "address": "神奈川県鎌倉市玉縄4-1-1",
+      "lat": 35.3561595,
+      "lng": 139.5200759,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-25",
+          "sourceName": "栄光学園中学校",
+          "displayName": "栄光学園中学校",
+          "listingName": "栄光学園中学高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市玉縄4-1-1",
+          "address": "神奈川県鎌倉市玉縄4-1-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.355941577566526,
+          "lng": 139.5200584130449,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://ekh.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-29",
+          "sourceName": "栄光学園高等学校",
+          "displayName": "栄光学園高等学校",
+          "listingName": "栄光学園中学高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市玉縄4-1-1",
+          "address": "神奈川県鎌倉市玉縄4-1-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.356377435106594,
+          "lng": 139.5200933997257,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://ekh.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "栄光学園中学高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://ekh.jp/",
+          "institutionIds": [
+            "source-25",
+            "source-29"
+          ]
+        }
+      ],
+      "officialUrl": "https://ekh.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-19",
+      "name": "鎌倉学園 中学校・高等学校",
+      "address": "神奈川県鎌倉市山ノ内110",
+      "lat": 35.3310688,
+      "lng": 139.5529883,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-26",
+          "sourceName": "鎌倉学園中学校",
+          "displayName": "鎌倉学園中学校",
+          "listingName": "鎌倉学園 中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市山ノ内110",
+          "address": "神奈川県鎌倉市山ノ内110",
+          "addressVerificationStatus": "source",
+          "lat": 35.3311365303659,
+          "lng": 139.55287394135416,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamagaku.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-30",
+          "sourceName": "鎌倉学園高等学校",
+          "displayName": "鎌倉学園高等学校",
+          "listingName": "鎌倉学園 中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市山ノ内110",
+          "address": "神奈川県鎌倉市山ノ内110",
+          "addressVerificationStatus": "source",
+          "lat": 35.33100103036691,
+          "lng": 139.55310257318368,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kamagaku.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉学園 中学校・高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kamagaku.ac.jp/",
+          "institutionIds": [
+            "source-26",
+            "source-30"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kamagaku.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-20",
+      "name": "北鎌倉女子学園中学校高等学校",
+      "address": "神奈川県鎌倉市山ノ内913",
+      "lat": 35.3370502,
+      "lng": 139.5417388,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-27",
+          "sourceName": "北鎌倉女子学園中学校",
+          "displayName": "北鎌倉女子学園中学校",
+          "listingName": "北鎌倉女子学園中学校高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市山之内913",
+          "address": "神奈川県鎌倉市山之内913",
+          "addressVerificationStatus": "source",
+          "lat": 35.33695924192194,
+          "lng": 139.5418131650567,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kitakama.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-31",
+          "sourceName": "北鎌倉女子学園高等学校",
+          "displayName": "北鎌倉女子学園高等学校",
+          "listingName": "北鎌倉女子学園中学校高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市山ノ内913",
+          "address": "神奈川県鎌倉市山ノ内913",
+          "addressVerificationStatus": "source",
+          "lat": 35.33714122386299,
+          "lng": 139.5416643745958,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.kitakama.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "北鎌倉女子学園中学校高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kitakama.ac.jp/",
+          "institutionIds": [
+            "source-27",
+            "source-31"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kitakama.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-21",
+      "name": "清泉女学院中学高等学校",
+      "address": "神奈川県鎌倉市城廻200",
+      "lat": 35.3539491,
+      "lng": 139.5136987,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-28",
+          "sourceName": "清泉女学院中学校",
+          "displayName": "清泉女学院中学校",
+          "listingName": "清泉女学院中学高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市城廻200",
+          "address": "神奈川県鎌倉市城廻200",
+          "addressVerificationStatus": "source",
+          "lat": 35.353854150120995,
+          "lng": 139.51369769484242,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.seisen-h.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-32",
+          "sourceName": "清泉女学院高等学校",
+          "displayName": "清泉女学院高等学校",
+          "listingName": "清泉女学院中学高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県鎌倉市城廻200",
+          "address": "神奈川県鎌倉市城廻200",
+          "addressVerificationStatus": "source",
+          "lat": 35.35404413648175,
+          "lng": 139.51369962930295,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.seisen-h.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "清泉女学院中学高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.seisen-h.ed.jp/",
+          "institutionIds": [
+            "source-28",
+            "source-32"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.seisen-h.ed.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-22",
+      "name": "片瀬のぞみ幼稚園",
+      "address": "神奈川県藤沢市片瀬4-3-14",
+      "lat": 35.3168041,
+      "lng": 139.4822123,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-33",
+          "sourceName": "片瀬のぞみ幼稚園",
+          "displayName": "片瀬のぞみ幼稚園",
+          "listingName": "片瀬のぞみ幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市片瀬4-3-14",
+          "address": "神奈川県藤沢市片瀬4-3-14",
+          "addressVerificationStatus": "source",
+          "lat": 35.316804110448885,
+          "lng": 139.48221230312927,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://katase-church.sakura.ne.jp/nozomi/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "片瀬のぞみ幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://katase-church.sakura.ne.jp/nozomi/",
+          "institutionIds": [
+            "source-33"
+          ]
+        }
+      ],
+      "officialUrl": "https://katase-church.sakura.ne.jp/nozomi/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-23",
+      "name": "湘南白百合学園幼稚園",
+      "address": "神奈川県藤沢市片瀬海岸2-10-1",
+      "lat": 35.3104004,
+      "lng": 139.4829903,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "kindergarten"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-34",
+          "sourceName": "湘南白百合学園幼稚園",
+          "displayName": "湘南白百合学園幼稚園",
+          "listingName": "湘南白百合学園幼稚園",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市片瀬海岸2-10-1",
+          "address": "神奈川県藤沢市片瀬海岸2-10-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.31040044085493,
+          "lng": 139.48299029922364,
+          "type": "kindergarten",
+          "formalTypeCode": "16011",
+          "formalTypeLabel": "幼稚園",
+          "ownership": "private",
+          "officialUrl": "https://youchien.shonan-shirayuri.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南白百合学園幼稚園",
+          "types": [
+            "kindergarten"
+          ],
+          "formalTypeCodes": [
+            "16011"
+          ],
+          "formalTypeLabels": [
+            "幼稚園"
+          ],
+          "formalTypes": [
+            {
+              "type": "kindergarten",
+              "code": "16011",
+              "label": "幼稚園"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://youchien.shonan-shirayuri.ac.jp/",
+          "institutionIds": [
+            "source-34"
+          ]
+        }
+      ],
+      "officialUrl": "https://youchien.shonan-shirayuri.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-24",
+      "name": "湘南学園小学校",
+      "address": "神奈川県藤沢市鵠沼松が岡4-1-32",
+      "lat": 35.3246803,
+      "lng": 139.4762027,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-35",
+          "sourceName": "湘南学園小学校",
+          "displayName": "湘南学園小学校",
+          "listingName": "湘南学園小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市鵜沼松が岡4-1-32",
+          "address": "神奈川県藤沢市鵠沼松が岡4-1-32",
+          "addressVerificationStatus": "verified-corrected",
+          "lat": 35.32468028366969,
+          "lng": 139.4762027116708,
+          "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
+          "ownership": "private",
+          "officialUrl": "https://www.shogak.ac.jp/elementary/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南学園小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.shogak.ac.jp/elementary/",
+          "institutionIds": [
+            "source-35"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.shogak.ac.jp/elementary/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-25",
+      "name": "湘南白百合学園小学校",
+      "address": "神奈川県藤沢市片瀬海岸2-2-30",
+      "lat": 35.3113105,
+      "lng": 139.4846569,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-36",
+          "sourceName": "湘南白百合学園小学校",
+          "displayName": "湘南白百合学園小学校",
+          "listingName": "湘南白百合学園小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市片瀬海岸2-2-30",
+          "address": "神奈川県藤沢市片瀬海岸2-2-30",
+          "addressVerificationStatus": "source",
+          "lat": 35.311310512913096,
+          "lng": 139.48465685734695,
+          "type": "elementary",
+          "formalTypeCode": "16001",
+          "formalTypeLabel": "小学校",
+          "ownership": "private",
+          "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南白百合学園小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [
+            "16001"
+          ],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": "16001",
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/",
+          "institutionIds": [
+            "source-36"
+          ]
+        }
+      ],
+      "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-26",
+      "name": "湘南学園中学校高等学校",
+      "address": "神奈川県藤沢市鵠沼松が岡3-4-27",
+      "lat": 35.3239582,
+      "lng": 139.4774851,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-37",
+          "sourceName": "湘南学園中学校",
+          "displayName": "湘南学園中学校",
+          "listingName": "湘南学園中学校高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市鵠沼松が岡3-4-27",
+          "address": "神奈川県藤沢市鵠沼松が岡3-4-27",
+          "addressVerificationStatus": "source",
+          "lat": 35.32405116411972,
+          "lng": 139.4775833335211,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.shogak.ac.jp/highschool/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-41",
+          "sourceName": "湘南学園高等学校",
+          "displayName": "湘南学園高等学校",
+          "listingName": "湘南学園中学校高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市鵠沼松が岡3-4-27",
+          "address": "神奈川県藤沢市鵠沼松が岡3-4-27",
+          "addressVerificationStatus": "source",
+          "lat": 35.3238652599651,
+          "lng": 139.47738678511504,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.shogak.ac.jp/highschool/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南学園中学校高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.shogak.ac.jp/highschool/",
+          "institutionIds": [
+            "source-37",
+            "source-41"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.shogak.ac.jp/highschool/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-27",
+      "name": "聖園女学院中学校・高等学校",
+      "address": "神奈川県藤沢市みその台1-4",
+      "lat": 35.3541247,
+      "lng": 139.4771814,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-38",
+          "sourceName": "聖園女学院中学校",
+          "displayName": "聖園女学院中学校",
+          "listingName": "聖園女学院中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市みその台1-4",
+          "address": "神奈川県藤沢市みその台1-4",
+          "addressVerificationStatus": "source",
+          "lat": 35.35414634570013,
+          "lng": 139.4772359968933,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.misono.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-43",
+          "sourceName": "聖園女学院高等学校",
+          "displayName": "聖園女学院高等学校",
+          "listingName": "聖園女学院中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市みその台1-4",
+          "address": "神奈川県藤沢市みその台1-4",
+          "addressVerificationStatus": "source",
+          "lat": 35.354103067948856,
+          "lng": 139.47712680130766,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.misono.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "聖園女学院中学校・高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.misono.jp/",
+          "institutionIds": [
+            "source-38",
+            "source-43"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.misono.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-28",
+      "name": "慶應義塾SFC（大学・中等部・高等部）",
+      "address": "神奈川県藤沢市遠藤5322・5466",
+      "lat": 35.3867979,
+      "lng": 139.4264574,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high",
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-39",
+          "sourceName": "慶應義塾湘南藤沢中等部",
+          "displayName": "慶應義塾湘南藤沢中等部",
+          "listingName": "慶應義塾湘南藤沢中等部・高等部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市遠藤5466",
+          "address": "神奈川県藤沢市遠藤5466",
+          "addressVerificationStatus": "source",
+          "lat": 35.38634683770012,
+          "lng": 139.42584819786106,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.sfc-js.keio.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-44",
+          "sourceName": "慶應義塾湘南藤沢高等部",
+          "displayName": "慶應義塾湘南藤沢高等部",
+          "listingName": "慶應義塾湘南藤沢中等部・高等部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市遠藤5466",
+          "address": "神奈川県藤沢市遠藤5466",
+          "addressVerificationStatus": "source",
+          "lat": 35.38585634619178,
+          "lng": 139.4262494262315,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.sfc-js.keio.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-55",
+          "sourceName": "慶應義塾大学",
+          "displayName": "慶應義塾大学 湘南藤沢キャンパス",
+          "listingName": "慶應義塾大学 湘南藤沢キャンパス",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市遠藤5322",
+          "address": "神奈川県藤沢市遠藤5322",
+          "addressVerificationStatus": "source",
+          "lat": 35.388190654409954,
+          "lng": 139.4272745415313,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.sfc.keio.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "慶應義塾湘南藤沢中等部・高等部",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.sfc-js.keio.ac.jp/",
+          "institutionIds": [
+            "source-39",
+            "source-44"
+          ]
+        },
+        {
+          "name": "慶應義塾大学 湘南藤沢キャンパス",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.sfc.keio.ac.jp/",
+          "institutionIds": [
+            "source-55"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.sfc-js.keio.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-29",
+      "name": "藤嶺学園藤沢中学校・高等学校",
+      "address": "神奈川県藤沢市西富1-7-1",
+      "lat": 35.3487337,
+      "lng": 139.4864444,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-40",
+          "sourceName": "藤嶺学園藤沢中学校",
+          "displayName": "藤嶺学園藤沢中学校",
+          "listingName": "藤嶺学園藤沢中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市西富1-7-1",
+          "address": "神奈川県藤沢市西富1-7-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.34890822418021,
+          "lng": 139.48668725478203,
+          "type": "juniorHigh",
+          "formalTypeCode": "16002",
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-42",
+          "sourceName": "藤嶺学園藤沢高等学校",
+          "displayName": "藤嶺学園藤沢高等学校",
+          "listingName": "藤嶺学園藤沢中学校・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市西富1-7-1",
+          "address": "神奈川県藤沢市西富1-7-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.34855909077738,
+          "lng": 139.48620158523255,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "藤嶺学園藤沢中学校・高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16002",
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": "16002",
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
+          "institutionIds": [
+            "source-40",
+            "source-42"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.tohrei-fujisawa.ed.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-30",
+      "name": "日本ガーデンデザイン専門学校",
+      "address": "神奈川県藤沢市大鋸1218-1",
+      "lat": 35.3581918,
+      "lng": 139.4936809,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "vocational"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-45",
+          "sourceName": "日本ガーデンデザイン専門学校",
+          "displayName": "日本ガーデンデザイン専門学校",
+          "listingName": "日本ガーデンデザイン専門学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市大鋸1218-1",
+          "address": "神奈川県藤沢市大鋸1218-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.358191806323546,
+          "lng": 139.49368087952047,
+          "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
+          "ownership": "private",
+          "officialUrl": "https://www.jp-garden-design.com/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "日本ガーデンデザイン専門学校",
+          "types": [
+            "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.jp-garden-design.com/",
+          "institutionIds": [
+            "source-45"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.jp-garden-design.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-31",
+      "name": "湘南看護専門学校",
+      "address": "神奈川県藤沢市大庭5062-3",
+      "lat": 35.358799,
+      "lng": 139.4458316,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "vocational"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-46",
+          "sourceName": "湘南看護専門学校",
+          "displayName": "湘南看護専門学校",
+          "listingName": "湘南看護専門学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市大庭5062-3",
+          "address": "神奈川県藤沢市大庭5062-3",
+          "addressVerificationStatus": "source",
+          "lat": 35.3587990470883,
+          "lng": 139.44583157217696,
+          "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
+          "ownership": "private",
+          "officialUrl": "https://www.shounankango.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南看護専門学校",
+          "types": [
+            "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.shounankango.ac.jp/",
+          "institutionIds": [
+            "source-46"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.shounankango.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-32",
+      "name": "湘南工科大学・附属高等学校",
+      "address": "神奈川県藤沢市辻堂西海岸1-1-25",
+      "lat": 35.3252221,
+      "lng": 139.4521879,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high",
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-47",
+          "sourceName": "湘南工科大学",
+          "displayName": "湘南工科大学",
+          "listingName": "湘南工科大学",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市辻堂西海岸1-1-25",
+          "address": "神奈川県藤沢市辻堂西海岸1-1-25",
+          "addressVerificationStatus": "source",
+          "lat": 35.32535486556703,
+          "lng": 139.45318227129724,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.shonan-it.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-50",
+          "sourceName": "湘南工科大学附属高等学校",
+          "displayName": "湘南工科大学附属高等学校",
+          "listingName": "湘南工科大学附属高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市辻堂西海岸1-1-25",
+          "address": "神奈川県藤沢市辻堂西海岸1-1-25",
+          "addressVerificationStatus": "source",
+          "lat": 35.32508928647561,
+          "lng": 139.45119353352283,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.sh.shonan-it.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南工科大学",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.shonan-it.ac.jp/",
+          "institutionIds": [
+            "source-47"
+          ]
+        },
+        {
+          "name": "湘南工科大学附属高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.sh.shonan-it.ac.jp/",
+          "institutionIds": [
+            "source-50"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.shonan-it.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-33",
+      "name": "神奈川県立湘南高等学校",
+      "address": "神奈川県藤沢市鵠沼神明5-6-10",
+      "lat": 35.3446561,
+      "lng": 139.4727242,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-48",
+          "sourceName": "神奈川県立湘南高等学校",
+          "displayName": "神奈川県立湘南高等学校",
+          "listingName": "神奈川県立湘南高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市鵠沼神明5-6-10",
+          "address": "神奈川県藤沢市鵠沼神明5-6-10",
+          "addressVerificationStatus": "source",
+          "lat": 35.344656059136554,
+          "lng": 139.47272421619942,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立湘南高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/",
+          "institutionIds": [
+            "source-48"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-34",
+      "name": "神奈川県立藤沢清流高等学校",
+      "address": "神奈川県藤沢市大鋸1450",
+      "lat": 35.3555318,
+      "lng": 139.4837498,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "prefectural"
+      ],
+      "institutions": [
+        {
+          "id": "source-49",
+          "sourceName": "神奈川県立藤沢清流高等学校",
+          "displayName": "神奈川県立藤沢清流高等学校",
+          "listingName": "神奈川県立藤沢清流高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市大鋸1450",
+          "address": "神奈川県藤沢市大鋸1450",
+          "addressVerificationStatus": "source",
+          "lat": 35.355531811282624,
+          "lng": 139.48374984367942,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "prefectural",
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "神奈川県立藤沢清流高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "prefectural"
+          ],
+          "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/",
+          "institutionIds": [
+            "source-49"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-35",
+      "name": "湘南白百合学園中学・高等学校",
+      "address": "神奈川県藤沢市片瀬目白山4-1",
+      "lat": 35.3160451,
+      "lng": 139.4907829,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "juniorHigh",
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-51",
+          "sourceName": "湘南白百合学園高等学校",
+          "displayName": "湘南白百合学園高等学校",
+          "listingName": "湘南白百合学園中学・高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市片瀬目白山4-1",
+          "address": "神奈川県藤沢市片瀬目白山4-1",
+          "addressVerificationStatus": "source",
+          "lat": 35.31604507431686,
+          "lng": 139.4907828959952,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "official-supplement-shonan-shirayuri-junior-high",
+          "sourceName": "湘南白百合学園中学校",
+          "displayName": "湘南白百合学園中学校",
+          "listingName": "湘南白百合学園中学・高等学校",
+          "nameVerificationStatus": "verified-official-supplement",
+          "sourceAddress": "神奈川県藤沢市片瀬目白山4-1",
+          "address": "神奈川県藤沢市片瀬目白山4-1",
+          "addressVerificationStatus": "verified",
+          "lat": 35.3160451,
+          "lng": 139.4907829,
+          "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
+          "ownership": "private",
+          "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "official-site-supplement"
+        }
+      ],
+      "listings": [
+        {
+          "name": "湘南白百合学園中学・高等学校",
+          "types": [
+            "juniorHigh",
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "中学校",
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            },
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
+          "institutionIds": [
+            "source-51",
+            "official-supplement-shonan-shirayuri-junior-high"
+          ]
+        }
+      ],
+      "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-36",
+      "name": "日本大学藤沢キャンパス",
+      "address": "神奈川県藤沢市亀井野1866",
+      "lat": 35.3793455,
+      "lng": 139.4700153,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high",
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-52",
+          "sourceName": "日本大学藤沢高等学校",
+          "displayName": "日本大学藤沢高等学校",
+          "listingName": "日本大学藤沢高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市亀井野1866",
+          "address": "神奈川県藤沢市亀井野1866",
+          "addressVerificationStatus": "source",
+          "lat": 35.37812530504569,
+          "lng": 139.47034911526055,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        },
+        {
+          "id": "source-56",
+          "sourceName": "日本大学",
+          "displayName": "日本大学 生物資源科学部",
+          "listingName": "日本大学 生物資源科学部",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市亀井野1866",
+          "address": "神奈川県藤沢市亀井野1866",
+          "addressVerificationStatus": "source",
+          "lat": 35.38056575595769,
+          "lng": 139.46968150603814,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.brs.nihon-u.ac.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "日本大学藤沢高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/",
+          "institutionIds": [
+            "source-52"
+          ]
+        },
+        {
+          "name": "日本大学 生物資源科学部",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.brs.nihon-u.ac.jp/",
+          "institutionIds": [
+            "source-56"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-37",
+      "name": "藤沢翔陵高等学校",
+      "address": "神奈川県藤沢市善行7-1-3",
+      "lat": 35.3615446,
+      "lng": 139.4743209,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-53",
+          "sourceName": "藤沢翔陵高等学校",
+          "displayName": "藤沢翔陵高等学校",
+          "listingName": "藤沢翔陵高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市善行7-1-3",
+          "address": "神奈川県藤沢市善行7-1-3",
+          "addressVerificationStatus": "source",
+          "lat": 35.3615445994135,
+          "lng": 139.4743209364371,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://shoryo.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "藤沢翔陵高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://shoryo.ed.jp/",
+          "institutionIds": [
+            "source-53"
+          ]
+        }
+      ],
+      "officialUrl": "https://shoryo.ed.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-38",
+      "name": "専門学校国際新堀芸術学院",
+      "address": "神奈川県藤沢市藤沢143-13",
+      "lat": 35.3408669,
+      "lng": 139.4898664,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "vocational"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-54",
+          "sourceName": "専門学校国際新堀芸術学院",
+          "displayName": "専門学校国際新堀芸術学院",
+          "listingName": "専門学校国際新堀芸術学院",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市藤沢143-13",
+          "address": "神奈川県藤沢市藤沢143-13",
+          "addressVerificationStatus": "source",
+          "lat": 35.34086690115516,
+          "lng": 139.48986640773944,
+          "type": "vocational",
+          "formalTypeCode": "16016",
+          "formalTypeLabel": "専修学校",
+          "ownership": "private",
+          "officialUrl": "https://niibori.ac.jp/ma/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "専門学校国際新堀芸術学院",
+          "types": [
+            "vocational"
+          ],
+          "formalTypeCodes": [
+            "16016"
+          ],
+          "formalTypeLabels": [
+            "専修学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "vocational",
+              "code": "16016",
+              "label": "専修学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://niibori.ac.jp/ma/",
+          "institutionIds": [
+            "source-54"
+          ]
+        }
+      ],
+      "officialUrl": "https://niibori.ac.jp/ma/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-39",
+      "name": "多摩大学 湘南キャンパス",
+      "address": "神奈川県藤沢市円行802",
+      "lat": 35.3871406,
+      "lng": 139.4620973,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "university"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-57",
+          "sourceName": "多摩大学",
+          "displayName": "多摩大学 湘南キャンパス",
+          "listingName": "多摩大学 湘南キャンパス",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市円行802",
+          "address": "神奈川県藤沢市円行802",
+          "addressVerificationStatus": "source",
+          "lat": 35.387140567234454,
+          "lng": 139.46209731759944,
+          "type": "university",
+          "formalTypeCode": "16007",
+          "formalTypeLabel": "大学",
+          "ownership": "private",
+          "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "多摩大学 湘南キャンパス",
+          "types": [
+            "university"
+          ],
+          "formalTypeCodes": [
+            "16007"
+          ],
+          "formalTypeLabels": [
+            "大学"
+          ],
+          "formalTypes": [
+            {
+              "type": "university",
+              "code": "16007",
+              "label": "大学"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html",
+          "institutionIds": [
+            "source-57"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-40",
+      "name": "鵠沼高等学校",
+      "address": "神奈川県藤沢市鵠沼藤が谷4-9-10",
+      "lat": 35.3273356,
+      "lng": 139.4830888,
+      "viewModes": [
+        "local",
+        "nearby",
+        "wide"
+      ],
+      "detailLevel": "major",
+      "types": [
+        "high"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "source-58",
+          "sourceName": "鵠沼高等学校",
+          "displayName": "鵠沼高等学校",
+          "listingName": "鵠沼高等学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "神奈川県藤沢市鵠沼藤が谷4-9-10",
+          "address": "神奈川県藤沢市鵠沼藤が谷4-9-10",
+          "addressVerificationStatus": "source",
+          "lat": 35.3273356444044,
+          "lng": 139.48308878906795,
+          "type": "high",
+          "formalTypeCode": "16004",
+          "formalTypeLabel": "高等学校",
+          "ownership": "private",
+          "officialUrl": "https://kugenuma.ed.jp/",
+          "verificationStatus": "verified",
+          "source": "content/schools-source.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鵠沼高等学校",
+          "types": [
+            "high"
+          ],
+          "formalTypeCodes": [
+            "16004"
+          ],
+          "formalTypeLabels": [
+            "高等学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "high",
+              "code": "16004",
+              "label": "高等学校"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://kugenuma.ed.jp/",
+          "institutionIds": [
+            "source-58"
+          ]
+        }
+      ],
+      "officialUrl": "https://kugenuma.ed.jp/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-41",
+      "name": "キディ腰越保育園",
+      "address": "神奈川県鎌倉市腰越5-11-17",
+      "lat": 35.31139,
+      "lng": 139.493393,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-01",
+          "sourceName": "キディ腰越保育園",
+          "displayName": "キディ腰越保育園",
+          "listingName": "キディ腰越保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市腰越5-11-17",
+          "address": "神奈川県鎌倉市腰越5-11-17",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.31139,
+          "lng": 139.493393,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://www.shinkoufukushikai.com/hoiku/210/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "腰越",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "キディ腰越保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.shinkoufukushikai.com/hoiku/210/",
+          "institutionIds": [
+            "childcare-01"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.shinkoufukushikai.com/hoiku/210/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-42",
+      "name": "てつなぐ腰越保育室",
+      "address": "神奈川県鎌倉市腰越5-2-1",
+      "lat": 35.313732,
+      "lng": 139.491577,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-03",
+          "sourceName": "てつなぐ腰越保育室",
+          "displayName": "てつなぐ腰越保育室",
+          "listingName": "てつなぐ腰越保育室",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市腰越5-2-1",
+          "address": "神奈川県鎌倉市腰越5-2-1",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.313732,
+          "lng": 139.491577,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
+          "ownership": "private",
+          "officialUrl": "https://tetsunagu-works.com/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "腰越",
+          "childcareCategory": "小規模保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "てつなぐ腰越保育室",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://tetsunagu-works.com/",
+          "institutionIds": [
+            "childcare-03"
+          ]
+        }
+      ],
+      "officialUrl": "https://tetsunagu-works.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-43",
+      "name": "きみのまま保育園",
+      "address": "神奈川県鎌倉市津西1-5-15",
+      "lat": 35.314236,
+      "lng": 139.500992,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-05",
+          "sourceName": "きみのまま保育園",
+          "displayName": "きみのまま保育園",
+          "listingName": "きみのまま保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市津西1-5-15",
+          "address": "神奈川県鎌倉市津西1-5-15",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.314236,
+          "lng": 139.500992,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.kiminomama.com/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "腰越",
+          "childcareCategory": "小規模保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "きみのまま保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.kiminomama.com/",
+          "institutionIds": [
+            "childcare-05"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.kiminomama.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-44",
+      "name": "深沢保育園",
+      "address": "神奈川県鎌倉市梶原2-33-2",
+      "lat": 35.328674,
+      "lng": 139.530533,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-06",
+          "sourceName": "深沢保育園",
+          "displayName": "深沢保育園",
+          "listingName": "深沢保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市梶原2-33-2",
+          "address": "神奈川県鎌倉市梶原2-33-2",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.328674,
+          "lng": 139.530533,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "municipal",
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/annai/shisetsu/35_fukasawa_ns.html",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "深沢保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/annai/shisetsu/35_fukasawa_ns.html",
+          "institutionIds": [
+            "childcare-06"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/annai/shisetsu/35_fukasawa_ns.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-45",
+      "name": "梶原の森たんぽぽ保育園",
+      "address": "神奈川県鎌倉市梶原4-2-10",
+      "lat": 35.326996,
+      "lng": 139.527496,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-07",
+          "sourceName": "梶原の森たんぽぽ保育園",
+          "displayName": "梶原の森たんぽぽ保育園",
+          "listingName": "梶原の森たんぽぽ保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市梶原4-2-10",
+          "address": "神奈川県鎌倉市梶原4-2-10",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.326996,
+          "lng": 139.527496,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://k-tanpopo.or.jp/kajiwara/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "梶原の森たんぽぽ保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://k-tanpopo.or.jp/kajiwara/",
+          "institutionIds": [
+            "childcare-07"
+          ]
+        }
+      ],
+      "officialUrl": "https://k-tanpopo.or.jp/kajiwara/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-46",
+      "name": "寺分保育園",
+      "address": "神奈川県鎌倉市寺分418-10",
+      "lat": 35.335526,
+      "lng": 139.520065,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-08",
+          "sourceName": "寺分保育園",
+          "displayName": "寺分保育園",
+          "listingName": "寺分保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市寺分418-10",
+          "address": "神奈川県鎌倉市寺分418-10",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.335526,
+          "lng": 139.520065,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://yukarifukushikai.or.jp/terabun/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "寺分保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://yukarifukushikai.or.jp/terabun/",
+          "institutionIds": [
+            "childcare-08"
+          ]
+        }
+      ],
+      "officialUrl": "https://yukarifukushikai.or.jp/terabun/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-47",
+      "name": "山崎保育園",
+      "address": "神奈川県鎌倉市山崎1148",
+      "lat": 35.343735,
+      "lng": 139.527206,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-09",
+          "sourceName": "山崎保育園",
+          "displayName": "山崎保育園",
+          "listingName": "山崎保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市山崎1148",
+          "address": "神奈川県鎌倉市山崎1148",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.343735,
+          "lng": 139.527206,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://www.k-roufukukyo.jp/pages/11/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "山崎保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.k-roufukukyo.jp/pages/11/",
+          "institutionIds": [
+            "childcare-09"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.k-roufukukyo.jp/pages/11/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-48",
+      "name": "たんぽぽ共同保育園",
+      "address": "神奈川県鎌倉市手広2-18-27",
+      "lat": 35.327549,
+      "lng": 139.510651,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-10",
+          "sourceName": "たんぽぽ共同保育園",
+          "displayName": "たんぽぽ共同保育園",
+          "listingName": "たんぽぽ共同保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市手広2-18-27",
+          "address": "神奈川県鎌倉市手広2-18-27",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.327549,
+          "lng": 139.510651,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://k-tanpopo.or.jp/tanpopo/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "たんぽぽ共同保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://k-tanpopo.or.jp/tanpopo/",
+          "institutionIds": [
+            "childcare-10"
+          ]
+        }
+      ],
+      "officialUrl": "https://k-tanpopo.or.jp/tanpopo/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-49",
+      "name": "まんまる保育園",
+      "address": "神奈川県鎌倉市手広5-5-5",
+      "lat": 35.324677,
+      "lng": 139.506744,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-11",
+          "sourceName": "まんまる保育園",
+          "displayName": "まんまる保育園",
+          "listingName": "まんまる保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市手広5-5-5",
+          "address": "神奈川県鎌倉市手広5-5-5",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.324677,
+          "lng": 139.506744,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://manmarusmile.com/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "まんまる保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://manmarusmile.com/",
+          "institutionIds": [
+            "childcare-11"
+          ]
+        }
+      ],
+      "officialUrl": "https://manmarusmile.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-50",
+      "name": "ピヨピヨ保育園",
+      "address": "神奈川県鎌倉市常盤666",
+      "lat": 35.323765,
+      "lng": 139.530762,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-12",
+          "sourceName": "ピヨピヨ保育園",
+          "displayName": "ピヨピヨ保育園",
+          "listingName": "ピヨピヨ保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市常盤666",
+          "address": "神奈川県鎌倉市常盤666",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.323765,
+          "lng": 139.530762,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://piyo-kamakura.wixsite.com/my-site",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "ピヨピヨ保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://piyo-kamakura.wixsite.com/my-site",
+          "institutionIds": [
+            "childcare-12"
+          ]
+        }
+      ],
+      "officialUrl": "https://piyo-kamakura.wixsite.com/my-site",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-51",
+      "name": "アトリエし～はうす保育園",
+      "address": "神奈川県鎌倉市常盤64-5",
+      "lat": 35.331497,
+      "lng": 139.51799,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-15",
+          "sourceName": "アトリエし～はうす保育園",
+          "displayName": "アトリエし～はうす保育園",
+          "listingName": "アトリエし～はうす保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市常盤64-5",
+          "address": "神奈川県鎌倉市常盤64-5",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.331497,
+          "lng": 139.51799,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.atelier-c-house.com/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "小規模保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "アトリエし～はうす保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.atelier-c-house.com/",
+          "institutionIds": [
+            "childcare-15"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.atelier-c-house.com/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-52",
+      "name": "しあわせいっぱい保育園深沢",
+      "address": "神奈川県鎌倉市常盤362-7",
+      "lat": 35.325657,
+      "lng": 139.524445,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-16",
+          "sourceName": "しあわせいっぱい保育園深沢",
+          "displayName": "しあわせいっぱい保育園深沢",
+          "listingName": "しあわせいっぱい保育園深沢",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市常盤362-7",
+          "address": "神奈川県鎌倉市常盤362-7",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.325657,
+          "lng": 139.524445,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小規模保育施設",
+          "ownership": "private",
+          "officialUrl": "https://shiawase-hoiku.com/introduction/fukazawa/",
+          "verificationStatus": "verified",
+          "source": "kamakura-licensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf",
+          "district": "深沢",
+          "childcareCategory": "小規模保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "しあわせいっぱい保育園深沢",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小規模保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "小規模保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://shiawase-hoiku.com/introduction/fukazawa/",
+          "institutionIds": [
+            "childcare-16"
+          ]
+        }
+      ],
+      "officialUrl": "https://shiawase-hoiku.com/introduction/fukazawa/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-53",
+      "name": "ののはな",
+      "address": "神奈川県鎌倉市笛田4-8-9",
+      "lat": 35.324741,
+      "lng": 139.523056,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-17",
+          "sourceName": "ののはな",
+          "displayName": "ののはな",
+          "listingName": "ののはな",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市笛田4-8-9",
+          "address": "神奈川県鎌倉市笛田4-8-9",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.324741,
+          "lng": 139.523056,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "verificationStatus": "verified",
+          "source": "kamakura-unlicensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/ninkagai.pdf",
+          "district": "深沢",
+          "childcareCategory": "届出保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "ののはな",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "institutionIds": [
+            "childcare-17"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-54",
+      "name": "モンテッソーリ鎌倉こどもの家",
+      "address": "神奈川県鎌倉市梶原58-3",
+      "lat": 35.33131,
+      "lng": 139.514954,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-18",
+          "sourceName": "モンテッソーリ鎌倉こどもの家",
+          "displayName": "モンテッソーリ鎌倉こどもの家",
+          "listingName": "モンテッソーリ鎌倉こどもの家",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市梶原58-3",
+          "address": "神奈川県鎌倉市梶原58-3",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.33131,
+          "lng": 139.514954,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "verificationStatus": "verified",
+          "source": "kamakura-unlicensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/ninkagai.pdf",
+          "district": "深沢",
+          "childcareCategory": "届出保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "モンテッソーリ鎌倉こどもの家",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "institutionIds": [
+            "childcare-18"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-55",
+      "name": "鎌倉山インターナショナルスクール",
+      "address": "神奈川県鎌倉市鎌倉山1-19-24",
+      "lat": 35.316196,
+      "lng": 139.522873,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-19",
+          "sourceName": "鎌倉山インターナショナルスクール",
+          "displayName": "鎌倉山インターナショナルスクール",
+          "listingName": "鎌倉山インターナショナルスクール",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市鎌倉山1-19-24",
+          "address": "神奈川県鎌倉市鎌倉山1-19-24",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.316196,
+          "lng": 139.522873,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "verificationStatus": "verified",
+          "source": "kamakura-unlicensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/ninkagai.pdf",
+          "district": "深沢",
+          "childcareCategory": "届出保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "鎌倉山インターナショナルスクール",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "institutionIds": [
+            "childcare-19"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-56",
+      "name": "送迎付病児保育室エルダーフラワー",
+      "address": "神奈川県鎌倉市梶原1-5-12 ピュア湘南405",
+      "lat": 35.332127,
+      "lng": 139.518204,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-20",
+          "sourceName": "送迎付病児保育室エルダーフラワー",
+          "displayName": "送迎付病児保育室エルダーフラワー",
+          "listingName": "送迎付病児保育室エルダーフラワー",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県鎌倉市梶原1-5-12 ピュア湘南405",
+          "address": "神奈川県鎌倉市梶原1-5-12 ピュア湘南405",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.332127,
+          "lng": 139.518204,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "届出・病児保育施設",
+          "ownership": "private",
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "verificationStatus": "verified",
+          "source": "kamakura-unlicensed-childcare-pdf",
+          "sourceUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/documents/ninkagai.pdf",
+          "district": "深沢",
+          "childcareCategory": "届出・病児保育施設"
+        }
+      ],
+      "listings": [
+        {
+          "name": "送迎付病児保育室エルダーフラワー",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "届出・病児保育施設"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "届出・病児保育施設"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+          "institutionIds": [
+            "childcare-20"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-57",
+      "name": "富士見保育園",
+      "address": "神奈川県藤沢市片瀬5-13-15",
+      "lat": 35.317123,
+      "lng": 139.484528,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "nursery"
+      ],
+      "ownerships": [
+        "private"
+      ],
+      "institutions": [
+        {
+          "id": "childcare-21",
+          "sourceName": "富士見保育園",
+          "displayName": "富士見保育園",
+          "listingName": "富士見保育園",
+          "nameVerificationStatus": "verified-official-source",
+          "sourceAddress": "神奈川県藤沢市片瀬5-13-15",
+          "address": "神奈川県藤沢市片瀬5-13-15",
+          "addressVerificationStatus": "verified-official-source",
+          "lat": 35.317123,
+          "lng": 139.484528,
+          "type": "nursery",
+          "formalTypeCode": null,
+          "formalTypeLabel": "認可保育所",
+          "ownership": "private",
+          "officialUrl": "https://www.ans.co.jp/u/fujisawa/fujimi.htm",
+          "verificationStatus": "verified",
+          "source": "fujisawa-licensed-childcare-page",
+          "sourceUrl": "https://www.city.fujisawa.kanagawa.jp/hoiku/kenko/kosodate/hoikuen/ninka-ichiran.html",
+          "district": "片瀬",
+          "childcareCategory": "認可保育所"
+        }
+      ],
+      "listings": [
+        {
+          "name": "富士見保育園",
+          "types": [
+            "nursery"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "認可保育所"
+          ],
+          "formalTypes": [
+            {
+              "type": "nursery",
+              "code": null,
+              "label": "認可保育所"
+            }
+          ],
+          "ownerships": [
+            "private"
+          ],
+          "officialUrl": "https://www.ans.co.jp/u/fujisawa/fujimi.htm",
+          "institutionIds": [
+            "childcare-21"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.ans.co.jp/u/fujisawa/fujimi.htm",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-58",
+      "name": "腰越小学校",
+      "address": "鎌倉市腰越5-7-1",
+      "lat": 35.312377,
+      "lng": 139.493417,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420069",
+          "sourceName": "腰越小学校",
+          "displayName": "腰越小学校",
+          "listingName": "腰越小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市腰越5-7-1",
+          "address": "鎌倉市腰越5-7-1",
+          "addressVerificationStatus": "verified",
+          "lat": 35.312377,
+          "lng": 139.493417,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosisyou/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "腰越小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosisyou/",
+          "institutionIds": [
+            "district-B114220420069"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosisyou/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-59",
+      "name": "西鎌倉小学校",
+      "address": "鎌倉市津1069",
+      "lat": 35.323437,
+      "lng": 139.507955,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420078",
+          "sourceName": "西鎌倉小学校",
+          "displayName": "西鎌倉小学校",
+          "listingName": "西鎌倉小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市津1069",
+          "address": "鎌倉市津1069",
+          "addressVerificationStatus": "verified",
+          "lat": 35.323437,
+          "lng": 139.507955,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-nisikama/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "西鎌倉小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-nisikama/",
+          "institutionIds": [
+            "district-B114220420078"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-nisikama/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-60",
+      "name": "七里ガ浜小学校",
+      "address": "鎌倉市七里ガ浜東5-3-2",
+      "lat": 35.311471,
+      "lng": 139.512944,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420050",
+          "sourceName": "七里ガ浜小学校",
+          "displayName": "七里ガ浜小学校",
+          "listingName": "七里ガ浜小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市七里ガ浜東5-3-2",
+          "address": "鎌倉市七里ガ浜東5-3-2",
+          "addressVerificationStatus": "verified",
+          "lat": 35.311471,
+          "lng": 139.512944,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-sitisyou/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "七里ガ浜小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-sitisyou/",
+          "institutionIds": [
+            "district-B114220420050"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-sitisyou/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-61",
+      "name": "深沢小学校",
+      "address": "鎌倉市梶原1-11-1",
+      "lat": 35.330982,
+      "lng": 139.519996,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420087",
+          "sourceName": "深沢小学校",
+          "displayName": "深沢小学校",
+          "listingName": "深沢小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市梶原1-11-1",
+          "address": "鎌倉市梶原1-11-1",
+          "addressVerificationStatus": "verified",
+          "lat": 35.330982,
+          "lng": 139.519996,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukasyou/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "深沢小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukasyou/",
+          "institutionIds": [
+            "district-B114220420087"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukasyou/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-62",
+      "name": "山崎小学校",
+      "address": "鎌倉市山崎2500",
+      "lat": 35.338919,
+      "lng": 139.533308,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420103",
+          "sourceName": "山崎小学校",
+          "displayName": "山崎小学校",
+          "listingName": "山崎小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市山崎2500",
+          "address": "鎌倉市山崎2500",
+          "addressVerificationStatus": "verified",
+          "lat": 35.338919,
+          "lng": 139.533308,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-yamasyou/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "山崎小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-yamasyou/",
+          "institutionIds": [
+            "district-B114220420103"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-yamasyou/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-63",
+      "name": "富士塚小学校",
+      "address": "鎌倉市上町屋810",
+      "lat": 35.336784,
+      "lng": 139.520607,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220420096",
+          "sourceName": "富士塚小学校",
+          "displayName": "富士塚小学校",
+          "listingName": "富士塚小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市上町屋810",
+          "address": "鎌倉市上町屋810",
+          "addressVerificationStatus": "verified",
+          "lat": 35.336784,
+          "lng": 139.520607,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-fujisyou/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "富士塚小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-fujisyou/",
+          "institutionIds": [
+            "district-B114220420096"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-fujisyou/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-64",
+      "name": "片瀬小学校",
+      "address": "藤沢市片瀬2-14-29",
+      "lat": 35.320306,
+      "lng": 139.487116,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "elementary"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-B114220520095",
+          "sourceName": "片瀬小学校",
+          "displayName": "片瀬小学校",
+          "listingName": "片瀬小学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "藤沢市片瀬2-14-29",
+          "address": "藤沢市片瀬2-14-29",
+          "addressVerificationStatus": "verified",
+          "lat": 35.320306,
+          "lng": 139.487116,
+          "type": "elementary",
+          "formalTypeCode": null,
+          "formalTypeLabel": "小学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www1.fujisawa-kng.ed.jp/ekata/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-elementary.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "片瀬小学校",
+          "types": [
+            "elementary"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "小学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "elementary",
+              "code": null,
+              "label": "小学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www1.fujisawa-kng.ed.jp/ekata/",
+          "institutionIds": [
+            "district-B114220520095"
+          ]
+        }
+      ],
+      "officialUrl": "https://www1.fujisawa-kng.ed.jp/ekata/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-65",
+      "name": "腰越中学校",
+      "address": "鎌倉市腰越4-11-5",
+      "lat": 35.312224,
+      "lng": 139.497304,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "juniorHigh"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-C114220420049",
+          "sourceName": "腰越中学校",
+          "displayName": "腰越中学校",
+          "listingName": "腰越中学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市腰越4-11-5",
+          "address": "鎌倉市腰越4-11-5",
+          "addressVerificationStatus": "verified",
+          "lat": 35.312224,
+          "lng": 139.497304,
+          "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosityuu/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-juniorHigh.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "腰越中学校",
+          "types": [
+            "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosityuu/",
+          "institutionIds": [
+            "district-C114220420049"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-kosityuu/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-66",
+      "name": "手広中学校",
+      "address": "鎌倉市手広888",
+      "lat": 35.324937,
+      "lng": 139.504899,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "juniorHigh"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-C114220420067",
+          "sourceName": "手広中学校",
+          "displayName": "手広中学校",
+          "listingName": "手広中学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市手広888",
+          "address": "鎌倉市手広888",
+          "addressVerificationStatus": "verified",
+          "lat": 35.324937,
+          "lng": 139.504899,
+          "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-tebityuu/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-juniorHigh.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "手広中学校",
+          "types": [
+            "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-tebityuu/",
+          "institutionIds": [
+            "district-C114220420067"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-tebityuu/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-67",
+      "name": "深沢中学校",
+      "address": "鎌倉市梶原1-14-1",
+      "lat": 35.331229,
+      "lng": 139.523308,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "juniorHigh"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-C114220420058",
+          "sourceName": "深沢中学校",
+          "displayName": "深沢中学校",
+          "listingName": "深沢中学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "鎌倉市梶原1-14-1",
+          "address": "鎌倉市梶原1-14-1",
+          "addressVerificationStatus": "verified",
+          "lat": 35.331229,
+          "lng": 139.523308,
+          "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukatyuu/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-juniorHigh.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "深沢中学校",
+          "types": [
+            "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukatyuu/",
+          "institutionIds": [
+            "district-C114220420058"
+          ]
+        }
+      ],
+      "officialUrl": "https://www.fureai-cloud.jp/kamakura-hukatyuu/",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "campus-68",
+      "name": "片瀬中学校",
+      "address": "藤沢市片瀬山4-1-1",
+      "lat": 35.323071,
+      "lng": 139.494149,
+      "viewModes": [
+        "local",
+        "nearby"
+      ],
+      "detailLevel": "fine",
+      "types": [
+        "juniorHigh"
+      ],
+      "ownerships": [
+        "municipal"
+      ],
+      "institutions": [
+        {
+          "id": "district-C114220520057",
+          "sourceName": "片瀬中学校",
+          "displayName": "片瀬中学校",
+          "listingName": "片瀬中学校",
+          "nameVerificationStatus": "verified",
+          "sourceAddress": "藤沢市片瀬山4-1-1",
+          "address": "藤沢市片瀬山4-1-1",
+          "addressVerificationStatus": "verified",
+          "lat": 35.323071,
+          "lng": 139.494149,
+          "type": "juniorHigh",
+          "formalTypeCode": null,
+          "formalTypeLabel": "中学校",
+          "ownership": "municipal",
+          "officialUrl": "https://www1.fujisawa-kng.ed.jp/jkata/",
+          "verificationStatus": "verified",
+          "source": "content/school-districts-juniorHigh.geojson"
+        }
+      ],
+      "listings": [
+        {
+          "name": "片瀬中学校",
+          "types": [
+            "juniorHigh"
+          ],
+          "formalTypeCodes": [],
+          "formalTypeLabels": [
+            "中学校"
+          ],
+          "formalTypes": [
+            {
+              "type": "juniorHigh",
+              "code": null,
+              "label": "中学校"
+            }
+          ],
+          "ownerships": [
+            "municipal"
+          ],
+          "officialUrl": "https://www1.fujisawa-kng.ed.jp/jkata/",
+          "institutionIds": [
+            "district-C114220520057"
+          ]
+        }
+      ],
+      "officialUrl": "https://www1.fujisawa-kng.ed.jp/jkata/",
+      "verificationStatus": "verified"
+    }
+  ]
+}
