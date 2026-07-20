@@ -1,446 +1,454 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const readJson = relative => JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
-const normalizeAddress = value => String(value || '').normalize('NFKC').replace(/[\s　]/g, '').replace(/−/g, '-');
+// Build content/schools.json from the extracted P29-23_14.geojson file.
+// The official P29 ZIP must be extracted first; this script intentionally does not
+// download data or guess an archive structure.
+const SOURCE_PAGE = 'https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html';
+const TYPE_LABELS = {
+  "elementary": "小学校",
+  "juniorHigh": "中学校",
+  "high": "高校",
+  "university": "大学・短期大学"
+};
+const TYPE_ORDER = Object.keys(TYPE_LABELS);
+const OWNERSHIP_LABELS = {
+  "municipal": "市立",
+  "prefectural": "県立",
+  "national": "国立",
+  "private": "私立"
+};
+const OWNERSHIP_CODES = {
+  "1": "national",
+  "2": "prefectural",
+  "3": "municipal",
+  "4": "private"
+};
+const FORMAL_TYPE_LABELS = {
+  "16001": "小学校",
+  "16002": "中学校",
+  "16003": "中等教育学校",
+  "16004": "高等学校",
+  "16006": "短期大学",
+  "16007": "大学",
+  "16014": "義務教育学校"
+};
+const FORMAL_TYPE_TO_TYPES = {
+  "16001": [
+    "elementary"
+  ],
+  "16002": [
+    "juniorHigh"
+  ],
+  "16003": [
+    "juniorHigh",
+    "high"
+  ],
+  "16004": [
+    "high"
+  ],
+  "16006": [
+    "university"
+  ],
+  "16007": [
+    "university"
+  ],
+  "16014": [
+    "elementary",
+    "juniorHigh"
+  ]
+};
+const TARGET_MUNICIPALITIES = [
+  "横浜市",
+  "横須賀市",
+  "逗子市",
+  "三浦市",
+  "葉山町",
+  "鎌倉市",
+  "藤沢市",
+  "大和市",
+  "綾瀬市",
+  "茅ヶ崎市"
+];
+const OFFICIAL_URLS = {
+  "湘南白百合学園小学校": "https://syougakkou.shonan-shirayuri.ac.jp/",
+  "湘南白百合学園中学校": "https://chukou.shonan-shirayuri.ac.jp/",
+  "湘南白百合学園高等学校": "https://chukou.shonan-shirayuri.ac.jp/",
+  "鎌倉女子大学初等部": "https://www.kamakura-u.ac.jp/elementary/",
+  "鎌倉女子大学中等部": "https://www.kamakura-u-j.ed.jp/",
+  "鎌倉女子大学高等部": "https://www.kamakura-u-j.ed.jp/",
+  "鎌倉女子大学": "https://www.kamakura-u.ac.jp/",
+  "鎌倉女子大学短期大学部": "https://www.kamakura-u.ac.jp/",
+  "清泉小学校": "https://seisen-e.ac.jp/",
+  "横浜国立大学教育学部附属鎌倉小学校": "https://www.kamakurasho.ynu.ac.jp/",
+  "横浜国立大学教育学部附属鎌倉中学校": "https://kamachu.ynu.ac.jp/",
+  "鎌倉女学院中学校": "https://www.kamajo.ac.jp/",
+  "鎌倉女学院高等学校": "https://www.kamajo.ac.jp/",
+  "栄光学園中学校": "https://ekh.jp/",
+  "栄光学園高等学校": "https://ekh.jp/",
+  "鎌倉学園中学校": "https://www.kamagaku.ac.jp/",
+  "鎌倉学園高等学校": "https://www.kamagaku.ac.jp/",
+  "北鎌倉女子学園中学校": "https://www.kitakama.ac.jp/",
+  "北鎌倉女子学園高等学校": "https://www.kitakama.ac.jp/",
+  "清泉女学院中学校": "https://www.seisen-h.ed.jp/",
+  "清泉女学院高等学校": "https://www.seisen-h.ed.jp/",
+  "湘南学園小学校": "https://www.shogak.ac.jp/elementary/",
+  "湘南学園中学校": "https://www.shogak.ac.jp/highschool/",
+  "湘南学園高等学校": "https://www.shogak.ac.jp/highschool/",
+  "聖園女学院中学校": "https://www.misono.jp/",
+  "聖園女学院高等学校": "https://www.misono.jp/",
+  "慶應義塾湘南藤沢中等部": "https://www.sfc-js.keio.ac.jp/",
+  "慶應義塾湘南藤沢高等部": "https://www.sfc-js.keio.ac.jp/",
+  "慶應義塾大学": "https://www.sfc.keio.ac.jp/",
+  "藤嶺学園藤沢中学校": "https://www.tohrei-fujisawa.ed.jp/",
+  "藤嶺学園藤沢高等学校": "https://www.tohrei-fujisawa.ed.jp/",
+  "湘南工科大学": "https://www.shonan-it.ac.jp/",
+  "湘南工科大学附属高等学校": "https://www.sh.shonan-it.ac.jp/",
+  "日本大学": "https://www.brs.nihon-u.ac.jp/",
+  "日本大学藤沢高等学校": "https://www.fujisawa.hs.nihon-u.ac.jp/",
+  "多摩大学": "https://www.tama.ac.jp/guide/campus/shonan.html",
+  "湘南鎌倉医療大学": "https://www.sku.ac.jp/",
+  "鵠沼高等学校": "https://kugenuma.ed.jp/",
+  "藤沢翔陵高等学校": "https://shoryo.ed.jp/",
+  "神奈川県立鎌倉高等学校": "https://www.pen-kanagawa.ed.jp/kamakura-h/",
+  "神奈川県立七里ガ浜高等学校": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/",
+  "神奈川県立大船高等学校": "https://www.pen-kanagawa.ed.jp/ofuna-h/",
+  "神奈川県立湘南高等学校": "https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/",
+  "神奈川県立藤沢清流高等学校": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/"
+};
+const DISPLAY_NAMES_BY_ID = {
+  "F114310104678-01": "フェリス女学院大学 緑園キャンパス",
+  "F114310104678-02": "フェリス女学院大学 山手キャンパス",
+  "F113310102984-04": "慶應義塾大学 矢上キャンパス",
+  "F113310102984-05": "慶應義塾大学 日吉キャンパス",
+  "F113310103545-02": "明治学院大学 横浜キャンパス",
+  "F113310103073-02": "昭和医科大学 横浜キャンパス",
+  "F113110102746-02": "東京科学大学 横浜キャンパス",
+  "F113110102737-03": "東京藝術大学 横浜キャンパス",
+  "F113310103518-02": "東京都市大学 横浜キャンパス",
+  "F114210104616-01": "横浜市立大学 金沢八景キャンパス",
+  "F114210104616-02": "横浜市立大学 福浦キャンパス",
+  "F114210104616-03": "横浜市立大学 鶴見キャンパス",
+  "F114210104616-04": "横浜市立大学 舞岡キャンパス",
+  "D114210020060-02": "横浜商業高等学校別科",
+  "F114310104641-01": "神奈川大学 横浜キャンパス",
+  "F114310104641-03": "神奈川大学 みなとみらいキャンパス",
+  "D114210010197-00": "神奈川県立二俣川高等学校",
+  "D114210010320-00": "神奈川県立青葉総合高等学校",
+  "F114310104650-01": "関東学院大学 横浜・金沢八景キャンパス",
+  "F114310104650-02": "関東学院大学 横浜・金沢文庫キャンパス",
+  "F114310104650-03": "関東学院大学 横浜・関内キャンパス",
+  "C114320100017-00": "神奈川歯科大学系属緑ヶ丘女子中学校",
+  "D114320100033-00": "神奈川歯科大学系属緑ヶ丘女子高等学校",
+  "F113310102868-03": "文教大学 湘南キャンパス",
+  "F114110104609-01": "総合研究大学院大学 葉山キャンパス",
+  "F114110104609-15": "総合研究大学院大学 葉山キャンパス",
+  "C114320400050-00": "鎌倉国際文理中学校",
+  "D114320400058-00": "鎌倉国際文理高等学校",
+  "F113310102984-06": "慶應義塾大学 湘南藤沢キャンパス",
+  "F113310103395-16": "日本大学 生物資源科学部",
+  "F113310103938-02": "多摩大学 湘南キャンパス"
+};
+const OFFICIAL_URLS_BY_ID = {
+  "F114310104909-00": "https://www.b-w.ac.jp/access/",
+  "F114310104678-01": "https://www.ferris.ac.jp/access/",
+  "F114310104678-02": "https://www.ferris.ac.jp/access/",
+  "F114310104696-00": "https://www.yashima.ac.jp/univ/information/access.php",
+  "F114310104703-00": "https://www.iisec.ac.jp/",
+  "F113310102984-04": "https://www.keio.ac.jp/ja/about/campus/yagami/",
+  "F113310102984-05": "https://www.keio.ac.jp/ja/about/campus/hiyoshi/",
+  "F113310103545-02": "https://www.meijigakuin.ac.jp/campus/yokohama/",
+  "F113310103073-02": "https://www.showa-u.ac.jp/about_us/campus/yokohama.html",
+  "F113110102746-02": "https://www.isct.ac.jp/ja/001/about/campuses-and-offices/yokohama",
+  "F113110102737-03": "https://www.geidai.ac.jp/access/yokohama",
+  "F113310103518-02": "https://www.asc.tcu.ac.jp/campus_yokohama/",
+  "F114310104829-00": "https://www.toyoeiwa.ac.jp/daigaku/",
+  "F114310104810-00": "https://toin.ac.jp/univ/accessmap/",
+  "F114310104687-00": "https://www.shodai.ac.jp/access/",
+  "F114110104592-00": "https://www.ynu.ac.jp/access/",
+  "F214310104935-00": "https://www.yokotan.ac.jp/access",
+  "F114210104616-01": "https://www.yokohama-cu.ac.jp/access/index.html",
+  "F114210104616-02": "https://www.yokohama-cu.ac.jp/access/index.html",
+  "F114210104616-03": "https://www.yokohama-cu.ac.jp/access/index.html",
+  "F114210104616-04": "https://www.yokohama-cu.ac.jp/access/index.html",
+  "F114310104856-00": "https://www.yokohama-art.ac.jp/about/access",
+  "F114310104874-00": "https://www.soei.ac.jp/guide/access/",
+  "F114310104712-00": "https://www.hamayaku.ac.jp/",
+  "F114310104883-00": "https://sums.ac.jp/html/access/",
+  "F114310104641-01": "https://www.kanagawa-u.ac.jp/access/yokohama/",
+  "F114310104641-03": "https://www.kanagawa-u.ac.jp/access/minatomirai/",
+  "F114310104650-01": "https://univ.kanto-gakuin.ac.jp/about-university/campus-facilities/campus.html",
+  "F114310104650-02": "https://univ.kanto-gakuin.ac.jp/about-university/campus-facilities/campus.html",
+  "F114310104650-03": "https://univ.kanto-gakuin.ac.jp/about-university/campus-facilities/campus.html",
+  "F114310104669-00": "https://www.tsurumi-u.ac.jp/site/about/accessmap-index.html",
+  "F214310104926-00": "https://www.tsurumi-u.ac.jp/site/about/accessmap-index.html",
+  "F114310104730-00": "https://www.kdu.ac.jp/",
+  "F214310105006-00": "https://www.kdu.ac.jp/college/",
+  "F114210104625-00": "https://www.kuhs.ac.jp/",
+  "F113310102868-03": "https://www.bunkyo.ac.jp/access/shonan/",
+  "F114110104609-01": "https://www.soken.ac.jp/about/access/",
+  "F114110104609-15": "https://www.soken.ac.jp/prog/ies/",
+  "F113310103938-02": "https://www.tama.ac.jp/guide/campus/shonan.html",
+  "F113310102984-06": "https://www.keio.ac.jp/ja/about/campus/sfc/",
+  "F113310103395-16": "https://www.brs.nihon-u.ac.jp/",
+  "F114310104758-00": "https://www.shonan-it.ac.jp/",
+  "F114310104892-00": "https://www.sku.ac.jp/",
+  "F114310104749-00": "https://www.kamakura-u.ac.jp/",
+  "F214310104971-00": "https://www.kamakura-u.ac.jp/",
+  "D114210020060-02": "https://www.edu.city.yokohama.lg.jp/school/hs/y-sho-bekka/",
+  "D114210010197-00": "https://www.pen-kanagawa.ed.jp/futamatagawa-h/",
+  "D114210010320-00": "https://www.pen-kanagawa.ed.jp/aobasogo-ih/",
+  "C114320100017-00": "https://www.kdu.ac.jp/corporation/news/topics/20241225_news.html",
+  "D114320100033-00": "https://www.kdu.ac.jp/corporation/news/topics/20241225_news.html",
+  "B114110000015-00": "https://www.ynu.ac.jp/inquiry/school.html",
+  "C114110000013-00": "https://www.ynu.ac.jp/inquiry/school.html",
+  "B114110000024-00": "https://www.ynu.ac.jp/inquiry/school.html",
+  "C114110000022-00": "https://www.ynu.ac.jp/inquiry/school.html",
+  "B114320500015-00": "https://www.shogak.ac.jp/elementary/access"
+};
+const ADDRESSES_BY_ID = {
+  "B114320500015-00": "神奈川県藤沢市鵠沼松が岡4-1-32"
+};
+const DISPLAY_NAMES = {
+  "日本大学": "日本大学 生物資源科学部",
+  "慶應義塾大学": "慶應義塾大学 湘南藤沢キャンパス",
+  "多摩大学": "多摩大学 湘南キャンパス",
+  "鎌倉女子大学中等部": "鎌倉国際文理中学校",
+  "鎌倉女子大学高等部": "鎌倉国際文理高等学校"
+};
 
-const source = readJson('content/schools-source.geojson');
-const districtFiles = [
-  readJson('content/school-districts-elementary.geojson'),
-  readJson('content/school-districts-juniorHigh.geojson')
+const municipalityPatterns = [
+  ['横浜市', /^(?:神奈川県)?横浜市/],
+  ['横須賀市', /^(?:神奈川県)?横須賀市/],
+  ['逗子市', /^(?:神奈川県)?逗子市/],
+  ['三浦市', /^(?:神奈川県)?三浦市/],
+  ['葉山町', /^(?:神奈川県)?(?:三浦郡)?葉山町/],
+  ['鎌倉市', /^(?:神奈川県)?鎌倉市/],
+  ['藤沢市', /^(?:神奈川県)?藤沢市/],
+  ['大和市', /^(?:神奈川県)?大和市/],
+  ['綾瀬市', /^(?:神奈川県)?綾瀬市/],
+  ['茅ヶ崎市', /^(?:神奈川県)?茅ヶ崎市/],
 ];
 
-const typeOrder = ['nursery', 'kindergarten', 'elementary', 'juniorHigh', 'high', 'specialSupport', 'university', 'vocational'];
-const typeLabels = {
-  nursery: '保育施設', kindergarten: '幼稚園・こども園', elementary: '小学校', juniorHigh: '中学校', high: '高校',
-  specialSupport: '特別支援学校', university: '大学・短期大学', vocational: '専門学校'
-};
-const scopeLabels = { local: '地域', nearby: '周辺', wide: '広域' };
-const ownershipLabels = { municipal: '市立', prefectural: '県立', national: '国立', private: '私立' };
-const formalSchoolTypeLabels = {
-  '16001': '小学校',
-  '16002': '中学校',
-  '16003': '中等教育学校',
-  '16004': '高等学校',
-  '16005': '高等専門学校',
-  '16006': '短期大学',
-  '16007': '大学',
-  '16011': '幼稚園',
-  '16012': '特別支援学校',
-  '16013': '幼保連携型認定こども園',
-  '16014': '義務教育学校',
-  '16015': '各種学校',
-  '16016': '専修学校'
-};
-const officialUrls = {
-  '片岡幼稚園': 'https://www.kataoka-gakuen.jp/',
-  '江ノ島ともだち幼稚園': 'https://www.kamakurayyhp.com/',
-  '七里が浜楓幼稚園': 'https://www.kaede.ac.jp/',
-  '西鎌倉幼稚園': 'https://www.nky.ed.jp/',
-  '認定こども園アワーキッズ鎌倉　（分園）': 'https://ourkids.jp/fukasawa/',
-  '認定こども園アワーキッズ鎌倉　(本園)': 'https://ourkids.jp/kamakura/',
-  'モンタナ幼稚園': 'https://www.montana-youchien.com/',
-  '片瀬のぞみ幼稚園': 'https://katase-church.sakura.ne.jp/nozomi/',
-  '湘南白百合学園幼稚園': 'https://youchien.shonan-shirayuri.ac.jp/',
-  '湘南白百合学園小学校': 'https://syougakkou.shonan-shirayuri.ac.jp/',
-  '湘南白百合学園高等学校': 'https://chukou.shonan-shirayuri.ac.jp/',
-  '鎌倉女子大学幼稚部': 'https://www.kamakura-u.ac.jp/kindergarten/',
-  '鎌倉女子大学初等部': 'https://www.kamakura-u.ac.jp/elementary/',
-  '鎌倉女子大学中等部': 'https://www.kamakura-u-j.ed.jp/',
-  '鎌倉女子大学高等部': 'https://www.kamakura-u-j.ed.jp/',
-  '鎌倉女子大学': 'https://www.kamakura-u.ac.jp/',
-  '鎌倉女子大学短期大学部': 'https://www.kamakura-u.ac.jp/',
-  '清泉小学校': 'https://seisen-e.ac.jp/',
-  '横浜国立大学教育学部附属鎌倉小学校': 'https://www.kamakurasho.ynu.ac.jp/',
-  '横浜国立大学教育学部附属鎌倉中学校': 'https://kamachu.ynu.ac.jp/',
-  '鎌倉女学院中学校': 'https://www.kamajo.ac.jp/',
-  '鎌倉女学院高等学校': 'https://www.kamajo.ac.jp/',
-  '栄光学園中学校': 'https://ekh.jp/',
-  '栄光学園高等学校': 'https://ekh.jp/',
-  '鎌倉学園中学校': 'https://www.kamagaku.ac.jp/',
-  '鎌倉学園高等学校': 'https://www.kamagaku.ac.jp/',
-  '北鎌倉女子学園中学校': 'https://www.kitakama.ac.jp/',
-  '北鎌倉女子学園高等学校': 'https://www.kitakama.ac.jp/',
-  '清泉女学院中学校': 'https://www.seisen-h.ed.jp/',
-  '清泉女学院高等学校': 'https://www.seisen-h.ed.jp/',
-  '湘南学園小学校': 'https://www.shogak.ac.jp/elementary/',
-  '湘南学園中学校': 'https://www.shogak.ac.jp/highschool/',
-  '湘南学園高等学校': 'https://www.shogak.ac.jp/highschool/',
-  '聖園女学院中学校': 'https://www.misono.jp/',
-  '聖園女学院高等学校': 'https://www.misono.jp/',
-  '慶應義塾湘南藤沢中等部': 'https://www.sfc-js.keio.ac.jp/',
-  '慶應義塾湘南藤沢高等部': 'https://www.sfc-js.keio.ac.jp/',
-  '慶應義塾大学': 'https://www.sfc.keio.ac.jp/',
-  '藤嶺学園藤沢中学校': 'https://www.tohrei-fujisawa.ed.jp/',
-  '藤嶺学園藤沢高等学校': 'https://www.tohrei-fujisawa.ed.jp/',
-  '湘南工科大学': 'https://www.shonan-it.ac.jp/',
-  '湘南工科大学附属高等学校': 'https://www.sh.shonan-it.ac.jp/',
-  '日本大学': 'https://www.brs.nihon-u.ac.jp/',
-  '日本大学藤沢高等学校': 'https://www.fujisawa.hs.nihon-u.ac.jp/',
-  '多摩大学': 'https://www.tama.ac.jp/guide/campus/shonan.html',
-  '湘南鎌倉医療大学': 'https://www.sku.ac.jp/',
-  '鎌倉早見美容芸術専門学校': 'https://www.hayami.ac.jp/',
-  '日本ガーデンデザイン専門学校': 'https://www.jp-garden-design.com/',
-  '湘南看護専門学校': 'https://www.shounankango.ac.jp/',
-  '専門学校国際新堀芸術学院': 'https://niibori.ac.jp/ma/',
-  '鵠沼高等学校': 'https://kugenuma.ed.jp/',
-  '藤沢翔陵高等学校': 'https://shoryo.ed.jp/',
-  '神奈川県立鎌倉高等学校': 'https://www.pen-kanagawa.ed.jp/kamakura-h/',
-  '神奈川県立七里ガ浜高等学校': 'https://www.pen-kanagawa.ed.jp/shichirigahama-h/',
-  '神奈川県立大船高等学校': 'https://www.pen-kanagawa.ed.jp/ofuna-h/',
-  '神奈川県立湘南高等学校': 'https://www.pen-kanagawa.ed.jp/shonan-h/zennichi/',
-  '神奈川県立藤沢清流高等学校': 'https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/',
-  '神奈川県立鎌倉支援学校': 'https://www.pen-kanagawa.ed.jp/kamakura-sh/'
-};
-
-const displayNames = {
-  '認定こども園アワーキッズ鎌倉　（分園）': '認定こども園アワーキッズ鎌倉（分園）',
-  '認定こども園アワーキッズ鎌倉　(本園)': '認定こども園アワーキッズ鎌倉（本園）',
-  '日本大学': '日本大学 生物資源科学部',
-  '慶應義塾大学': '慶應義塾大学 湘南藤沢キャンパス',
-  '多摩大学': '多摩大学 湘南キャンパス',
-  '鎌倉女子大学中等部': '鎌倉国際文理中学校',
-  '鎌倉女子大学高等部': '鎌倉国際文理高等学校'
-};
-
-const nameVerificationStatuses = {
-  '鎌倉女子大学中等部': 'verified-current-official-name',
-  '鎌倉女子大学高等部': 'verified-current-official-name'
-};
-
-const combinedListingNames = {
-  '鎌倉女学院中学校': '鎌倉女学院',
-  '鎌倉女学院高等学校': '鎌倉女学院',
-  '栄光学園中学校': '栄光学園中学高等学校',
-  '栄光学園高等学校': '栄光学園中学高等学校',
-  '鎌倉学園中学校': '鎌倉学園 中学校・高等学校',
-  '鎌倉学園高等学校': '鎌倉学園 中学校・高等学校',
-  '北鎌倉女子学園中学校': '北鎌倉女子学園中学校高等学校',
-  '北鎌倉女子学園高等学校': '北鎌倉女子学園中学校高等学校',
-  '清泉女学院中学校': '清泉女学院中学高等学校',
-  '清泉女学院高等学校': '清泉女学院中学高等学校',
-  '湘南学園中学校': '湘南学園中学校高等学校',
-  '湘南学園高等学校': '湘南学園中学校高等学校',
-  '聖園女学院中学校': '聖園女学院中学校・高等学校',
-  '聖園女学院高等学校': '聖園女学院中学校・高等学校',
-  '藤嶺学園藤沢中学校': '藤嶺学園藤沢中学校・高等学校',
-  '藤嶺学園藤沢高等学校': '藤嶺学園藤沢中学校・高等学校',
-  '湘南白百合学園中学校': '湘南白百合学園中学・高等学校',
-  '湘南白百合学園高等学校': '湘南白百合学園中学・高等学校',
-  '鎌倉女子大学中等部': '鎌倉国際文理中学校・高等学校',
-  '鎌倉女子大学高等部': '鎌倉国際文理中学校・高等学校',
-  '慶應義塾湘南藤沢中等部': '慶應義塾湘南藤沢中等部・高等部',
-  '慶應義塾湘南藤沢高等部': '慶應義塾湘南藤沢中等部・高等部'
-};
-
-const correctedAddresses = {
-  '湘南学園小学校': '神奈川県藤沢市鵠沼松が岡4-1-32'
-};
-
-function typeFor(name) {
-  if (/支援学校/.test(name)) return 'specialSupport';
-  if (/幼稚園|幼稚部|こども園/.test(name)) return 'kindergarten';
-  if (/小学校|初等部/.test(name)) return 'elementary';
-  if (/中学校|中等部/.test(name)) return 'juniorHigh';
-  if (/高等学校|高等部/.test(name)) return 'high';
-  if (/専門学校/.test(name)) return 'vocational';
-  if (/大学|短期大学/.test(name)) return 'university';
-  throw new Error(`施設種類を判定できません: ${name}`);
+function parseArgs(argv) {
+  const args = { source: null, output: 'content/schools.json' };
+  for (let i = 0; i < argv.length; i += 1) {
+    if (argv[i] === '--source') args.source = argv[++i];
+    else if (argv[i] === '--output') args.output = argv[++i];
+    else throw new Error(`Unknown argument: ${argv[i]}`);
+  }
+  if (!args.source) throw new Error('--source is required (extracted P29 GeoJSON file).');
+  return args;
 }
 
-function formalSchoolTypeFor(feature) {
-  const code = String(feature.properties.P29_003 ?? '').trim();
-  const label = formalSchoolTypeLabels[code];
-  if (!label) throw new Error(`不明な学校分類コードです: ${code || '(空)'}（${feature.properties.P29_004 || '施設名不明'}）`);
-  return { code, label };
+function first(properties, names, fallback = '') {
+  for (const name of names) {
+    const value = properties[name];
+    if (value !== undefined && value !== null && value !== '') return value;
+  }
+  return fallback;
 }
 
-function ownershipFor(name) {
-  if (/^神奈川県立/.test(name)) return 'prefectural';
-  if (/^横浜国立大学/.test(name)) return 'national';
-  return 'private';
+function municipalityFromAddress(raw) {
+  const address = String(raw ?? '').normalize('NFKC').trim();
+  for (const [municipality, pattern] of municipalityPatterns) {
+    if (pattern.test(address)) return municipality;
+  }
+  return null;
 }
 
-function campusGroupFor(name, address) {
-  if (/^慶應義塾(湘南藤沢|大学)/.test(name)) return 'keio-sfc';
-  if (/^認定こども園アワーキッズ鎌倉/.test(name)) return 'ourkids-kamakura';
-  if (/^七里が浜楓幼稚園/.test(name)) return 'kaede-shichirigahama';
-  if (/^北鎌倉女子学園/.test(name)) return 'kitakamakura-jogakuen';
-  return `address:${normalizeAddress(address)}`;
+function fullAddress(raw) {
+  const value = String(raw ?? '').trim();
+  if (!value || value.startsWith('神奈川県')) return value;
+  return municipalityFromAddress(value) ? `神奈川県${value}` : value;
 }
 
-const institutions = source.features.map((feature, index) => {
-  const sourceName = feature.properties.P29_004.trim();
-  const sourceAddress = feature.properties.P29_005.trim();
-  const displayName = displayNames[sourceName] || sourceName;
-  const address = correctedAddresses[sourceName] || sourceAddress;
-  const ownership = ownershipFor(sourceName);
-  const formalType = formalSchoolTypeFor(feature);
-  const [lng, lat] = feature.geometry.coordinates;
+function normalizeAddress(value) {
+  return String(value ?? '')
+    .replace(/[\s　−ー‐‑–—]/g, '')
+    .replaceAll('丁目', '')
+    .replaceAll('番地', '')
+    .replaceAll('番', '-')
+    .replaceAll('号', '');
+}
+
+function featureToInstitution(feature) {
+  const properties = feature?.properties ?? {};
+  const sourceAddress = String(first(properties, ['P29_005_ja', 'P29_005', 'location_ja', 'address', 'location', '所在地'])).trim();
+  const municipality = municipalityFromAddress(sourceAddress);
+  if (!municipality) return null;
+
+  const formalTypeCode = String(first(properties, ['P29_003', 'SchooltypeCode', 'schoolClassCode', '学校分類コード'])).trim();
+  const types = FORMAL_TYPE_TO_TYPES[formalTypeCode];
+  if (!types) return null;
+
+  const ownershipCode = String(first(properties, ['P29_006', 'AdministratorCode', 'administratorCode', '管理者コード'])).trim();
+  const ownership = OWNERSHIP_CODES[ownershipCode];
+  if (!ownership) return null;
+
+  const closeCode = String(first(properties, ['P29_007', 'ClosedSchoolCode', 'closedSchoolCode', 'closeSchoolCode', '休校コード'], '0')).trim();
+  if (closeCode === '2' || closeCode === '9') return null;
+  if (!['', '0', '1'].includes(closeCode)) throw new Error(`Unsupported closed-school code: ${closeCode}`);
+  if (['16001', '16002', '16014'].includes(formalTypeCode) && ownership === 'municipal') return null;
+
+  const geometry = feature?.geometry ?? {};
+  if (geometry.type !== 'Point' || !Array.isArray(geometry.coordinates) || geometry.coordinates.length < 2) return null;
+  const [lng, lat] = geometry.coordinates.map(Number);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+
+  const sourceName = String(first(properties, ['P29_004_ja', 'P29_004', 'name_ja', 'name', '名称'])).trim();
+  if (!sourceName) return null;
+  const schoolCode = String(first(properties, ['P29_002', 'SchoolCode', 'schoolCode', '学校コード'])).trim();
+  const campusCode = String(first(properties, ['P29_008', 'CampusCode', 'campusCode', 'キャンパスコード'], '00')).trim() || '00';
+  const campusName = String(first(properties, ['P29_009', 'CampusName', 'campusName', 'キャンパス名'])).trim();
+  const id = `${schoolCode || 'unknown'}-${campusCode}`;
+  const defaultDisplayName = DISPLAY_NAMES[sourceName] ?? sourceName;
+  const displayName = DISPLAY_NAMES_BY_ID[id]
+    ?? (types.includes('university') && campusName ? `${defaultDisplayName} ${campusName}` : defaultDisplayName);
   return {
-    id: `source-${String(index + 1).padStart(2, '0')}`,
+    id,
+    schoolCode,
+    campusCode,
+    campusName,
     sourceName,
     displayName,
-    listingName: combinedListingNames[sourceName] || displayName,
-    nameVerificationStatus: nameVerificationStatuses[sourceName] || (officialUrls[sourceName] ? 'verified' : 'unverified'),
-    sourceAddress,
-    address,
-    addressVerificationStatus: correctedAddresses[sourceName] ? 'verified-corrected' : 'source',
+    address: ADDRESSES_BY_ID[id] ?? fullAddress(sourceAddress),
+    municipality,
+    municipalityCode: String(first(properties, ['P29_001', 'administrativeAreaCode', '行政区域コード'])).trim(),
     lat,
     lng,
-    type: typeFor(sourceName),
-    formalTypeCode: formalType.code,
-    formalTypeLabel: formalType.label,
+    types: [...types],
+    formalTypeCode,
+    formalTypeLabel: FORMAL_TYPE_LABELS[formalTypeCode],
     ownership,
-    officialUrl: officialUrls[sourceName] || null,
-    verificationStatus: officialUrls[sourceName] ? 'verified' : 'unverified',
-    campusGroup: campusGroupFor(sourceName, address),
-    source: 'content/schools-source.geojson'
+    officialUrl: OFFICIAL_URLS_BY_ID[id] ?? OFFICIAL_URLS[sourceName] ?? null,
   };
-});
+}
 
-institutions.push({
-  id: 'official-supplement-shonan-shirayuri-junior-high',
-  sourceName: '湘南白百合学園中学校',
-  displayName: '湘南白百合学園中学校',
-  listingName: '湘南白百合学園中学・高等学校',
-  nameVerificationStatus: 'verified-official-supplement',
-  sourceAddress: '神奈川県藤沢市片瀬目白山4-1',
-  address: '神奈川県藤沢市片瀬目白山4-1',
-  addressVerificationStatus: 'verified',
-  lat: 35.3160451,
-  lng: 139.4907829,
-  type: 'juniorHigh',
-  formalTypeCode: null,
-  formalTypeLabel: '中学校',
-  ownership: 'private',
-  officialUrl: 'https://chukou.shonan-shirayuri.ac.jp/',
-  verificationStatus: 'verified',
-  campusGroup: campusGroupFor('湘南白百合学園中学校', '神奈川県藤沢市片瀬目白山4-1'),
-  source: 'official-site-supplement'
-});
+function compareText(a, b) {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
 
-const KAMAKURA_CHILDCARE_SOURCE = 'https://www.city.kamakura.kanagawa.jp/hoiku/documents/r8_kamakurahoikusyo.pdf';
-const KAMAKURA_UNLICENSED_SOURCE = 'https://www.city.kamakura.kanagawa.jp/hoiku/documents/ninkagai.pdf';
-const FUJISAWA_CHILDCARE_SOURCE = 'https://www.city.fujisawa.kanagawa.jp/hoiku/kenko/kosodate/hoikuen/ninka-ichiran.html';
-const childcareFacilities = [
-  { name: 'キディ腰越保育園', address: '神奈川県鎌倉市腰越5-11-17', lat: 35.311390, lng: 139.493393, district: '腰越', category: '認可保育所', url: 'https://www.shinkoufukushikai.com/hoiku/210/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '七里が浜楓幼稚園', address: '神奈川県鎌倉市七里ガ浜東3-14-6（1・2歳児）／七里ガ浜東3-13-12（3歳児以上）', lat: 35.311718, lng: 139.519455, district: '腰越', category: '認定こども園', url: 'https://www.kaede.ac.jp/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'てつなぐ腰越保育室', address: '神奈川県鎌倉市腰越5-2-1', lat: 35.313732, lng: 139.491577, district: '腰越', category: '小規模保育施設', url: 'https://tetsunagu-works.com/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'キンダークリッペ西鎌倉', address: '神奈川県鎌倉市西鎌倉2-17-1', lat: 35.324795, lng: 139.503998, district: '腰越', category: '小規模保育施設', url: 'https://www.nky.ed.jp/krippe/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'きみのまま保育園', address: '神奈川県鎌倉市津西1-5-15', lat: 35.314236, lng: 139.500992, district: '腰越', category: '小規模保育施設', url: 'https://www.kiminomama.com/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '深沢保育園', address: '神奈川県鎌倉市梶原2-33-2', lat: 35.328674, lng: 139.530533, district: '深沢', category: '認可保育所', ownership: 'municipal', url: 'https://www.city.kamakura.kanagawa.jp/annai/shisetsu/35_fukasawa_ns.html', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '梶原の森たんぽぽ保育園', address: '神奈川県鎌倉市梶原4-2-10', lat: 35.326996, lng: 139.527496, district: '深沢', category: '認可保育所', url: 'https://k-tanpopo.or.jp/kajiwara/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '寺分保育園', address: '神奈川県鎌倉市寺分418-10', lat: 35.335526, lng: 139.520065, district: '深沢', category: '認可保育所', url: 'https://yukarifukushikai.or.jp/terabun/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '山崎保育園', address: '神奈川県鎌倉市山崎1148', lat: 35.343735, lng: 139.527206, district: '深沢', category: '認可保育所', url: 'https://www.k-roufukukyo.jp/pages/11/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'たんぽぽ共同保育園', address: '神奈川県鎌倉市手広2-18-27', lat: 35.327549, lng: 139.510651, district: '深沢', category: '認可保育所', url: 'https://k-tanpopo.or.jp/tanpopo/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'まんまる保育園', address: '神奈川県鎌倉市手広5-5-5', lat: 35.324677, lng: 139.506744, district: '深沢', category: '認可保育所', url: 'https://manmarusmile.com/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'ピヨピヨ保育園', address: '神奈川県鎌倉市常盤666', lat: 35.323765, lng: 139.530762, district: '深沢', category: '認可保育所', url: 'https://piyo-kamakura.wixsite.com/my-site', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '認定こども園アワーキッズ鎌倉（本園）', address: '神奈川県鎌倉市寺分1-13-5', lat: 35.333679, lng: 139.522003, district: '深沢', category: '認定こども園', url: 'https://ourkids.jp/kamakura/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: '認定こども園アワーキッズ鎌倉（分園）', address: '神奈川県鎌倉市寺分1-15-4', lat: 35.334412, lng: 139.521454, district: '深沢', category: '認定こども園', url: 'https://ourkids.jp/fukasawa/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'アトリエし～はうす保育園', address: '神奈川県鎌倉市常盤64-5', lat: 35.331497, lng: 139.517990, district: '深沢', category: '小規模保育施設', url: 'https://www.atelier-c-house.com/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'しあわせいっぱい保育園深沢', address: '神奈川県鎌倉市常盤362-7', lat: 35.325657, lng: 139.524445, district: '深沢', category: '小規模保育施設', url: 'https://shiawase-hoiku.com/introduction/fukazawa/', source: 'kamakura-licensed-childcare-pdf', sourceUrl: KAMAKURA_CHILDCARE_SOURCE },
-  { name: 'ののはな', address: '神奈川県鎌倉市笛田4-8-9', lat: 35.324741, lng: 139.523056, district: '深沢', category: '届出保育施設', url: 'https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html', source: 'kamakura-unlicensed-childcare-pdf', sourceUrl: KAMAKURA_UNLICENSED_SOURCE },
-  { name: 'モンテッソーリ鎌倉こどもの家', address: '神奈川県鎌倉市梶原58-3', lat: 35.331310, lng: 139.514954, district: '深沢', category: '届出保育施設', url: 'https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html', source: 'kamakura-unlicensed-childcare-pdf', sourceUrl: KAMAKURA_UNLICENSED_SOURCE },
-  { name: '鎌倉山インターナショナルスクール', address: '神奈川県鎌倉市鎌倉山1-19-24', lat: 35.316196, lng: 139.522873, district: '深沢', category: '届出保育施設', url: 'https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html', source: 'kamakura-unlicensed-childcare-pdf', sourceUrl: KAMAKURA_UNLICENSED_SOURCE },
-  { name: '送迎付病児保育室エルダーフラワー', address: '神奈川県鎌倉市梶原1-5-12 ピュア湘南405', lat: 35.332127, lng: 139.518204, district: '深沢', category: '届出・病児保育施設', url: 'https://www.city.kamakura.kanagawa.jp/hoiku/bf510.html', source: 'kamakura-unlicensed-childcare-pdf', sourceUrl: KAMAKURA_UNLICENSED_SOURCE },
-  { name: '富士見保育園', address: '神奈川県藤沢市片瀬5-13-15', lat: 35.317123, lng: 139.484528, district: '片瀬', category: '認可保育所', url: 'https://www.ans.co.jp/u/fujisawa/fujimi.htm', source: 'fujisawa-licensed-childcare-page', sourceUrl: FUJISAWA_CHILDCARE_SOURCE }
-];
-
-childcareFacilities.forEach((facility, index) => {
-  institutions.push({
-    id: `childcare-${String(index + 1).padStart(2, '0')}`,
-    sourceName: facility.name,
-    displayName: facility.name,
-    listingName: facility.name,
-    nameVerificationStatus: 'verified-official-source',
-    sourceAddress: facility.address,
-    address: facility.address,
-    addressVerificationStatus: 'verified-official-source',
-    lat: facility.lat,
-    lng: facility.lng,
-    type: 'nursery',
-    formalTypeCode: null,
-    formalTypeLabel: facility.category,
-    ownership: facility.ownership || 'private',
-    officialUrl: facility.url,
-    verificationStatus: 'verified',
-    campusGroup: campusGroupFor(facility.name, facility.address),
-    source: facility.source,
-    sourceUrl: facility.sourceUrl,
-    district: facility.district,
-    childcareCategory: facility.category
+function commonCampusName(items) {
+  const names = [...new Set(items.map(item => item.displayName))];
+  if (names.length === 1) return names[0];
+  const suffixes = ['中等教育学校', '義務教育学校', '短期大学部', '短期大学', '高等学校', '中学校', '小学校', '高等部', '中等部', '初等部', '大学'];
+  const bases = names.map(name => {
+    const suffix = suffixes.find(value => name.endsWith(value));
+    return (suffix ? name.slice(0, -suffix.length) : name).replace(/[・ 　]+$/u, '');
   });
-});
+  if (new Set(bases).size === 1 && bases[0].length >= 2) {
+    const formal = [...new Set(items.map(item => item.formalTypeLabel))];
+    return `${bases[0]} ${formal.join('・')}`;
+  }
+  return names.join('／');
+}
 
-for (const collection of districtFiles) {
-  for (const feature of collection.features) {
-    const p = feature.properties;
-    institutions.push({
-      id: `district-${p.id}`,
-      sourceName: p.name,
-      displayName: p.name,
-      listingName: p.name,
-      nameVerificationStatus: 'verified',
-      sourceAddress: p.address,
-      address: p.address,
-      addressVerificationStatus: 'verified',
-      lat: p.schoolLat,
-      lng: p.schoolLng,
-      type: p.level === 'elementary' ? 'elementary' : 'juniorHigh',
-      formalTypeCode: null,
-      formalTypeLabel: p.level === 'elementary' ? '小学校' : '中学校',
-      ownership: 'municipal',
-      officialUrl: p.schoolUrl || null,
-      verificationStatus: p.schoolUrl ? 'verified' : 'unverified',
-      campusGroup: `district:${p.id}`,
-      source: p.level === 'elementary'
-        ? 'content/school-districts-elementary.geojson'
-        : 'content/school-districts-juniorHigh.geojson'
+function buildOutput(features, sourceName, sourceSha256) {
+  const sourceMunicipalities = new Set(features.map(feature => municipalityFromAddress(String(first(feature?.properties ?? {}, ['P29_005_ja', 'P29_005', 'location_ja', 'address', 'location', '所在地'])))).filter(Boolean));
+  const missing = TARGET_MUNICIPALITIES.filter(value => !sourceMunicipalities.has(value));
+  if (missing.length) throw new Error(`Input is missing target municipalities: ${missing.join(', ')}`);
+
+  const institutions = features.map(featureToInstitution).filter(Boolean);
+  if (institutions.length < 50) throw new Error(`Too few selected institutions: ${institutions.length}`);
+
+  const groups = new Map();
+  for (const item of institutions) {
+    const key = `${item.municipality}:${normalizeAddress(item.address)}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
+  }
+
+  const campuses = [];
+  let sequence = 1;
+  for (const items of groups.values()) {
+    items.sort((a, b) => TYPE_ORDER.indexOf(a.types[0]) - TYPE_ORDER.indexOf(b.types[0]) || compareText(a.displayName, b.displayName));
+    const types = TYPE_ORDER.filter(kind => items.some(item => item.types.includes(kind)));
+    const ownerships = Object.keys(OWNERSHIP_LABELS).filter(kind => items.some(item => item.ownership === kind));
+    const firstItem = items[0];
+    campuses.push({
+      id: `campus-${String(sequence++).padStart(3, '0')}`,
+      name: commonCampusName(items),
+      address: firstItem.address,
+      municipality: firstItem.municipality,
+      lat: Number((items.reduce((sum, item) => sum + item.lat, 0) / items.length).toFixed(7)),
+      lng: Number((items.reduce((sum, item) => sum + item.lng, 0) / items.length).toFixed(7)),
+      types,
+      ownerships,
+      listings: (() => {
+        const grouped = new Map();
+        for (const item of items) {
+          const key = JSON.stringify([item.displayName, item.types, item.formalTypeCode, item.ownership]);
+          if (!grouped.has(key)) {
+            grouped.set(key, {
+              name: item.displayName,
+              types: item.types,
+              formalTypes: item.types.map(kind => ({ type: kind, code: item.formalTypeCode, label: item.formalTypeLabel })),
+              ownerships: [item.ownership],
+              officialUrl: item.officialUrl,
+              institutionIds: [item.id],
+            });
+          } else {
+            const listing = grouped.get(key);
+            listing.institutionIds.push(item.id);
+            if (!listing.officialUrl && item.officialUrl) listing.officialUrl = item.officialUrl;
+          }
+        }
+        return [...grouped.values()];
+      })(),
+      officialUrl: items.find(item => item.officialUrl)?.officialUrl ?? null,
     });
   }
-}
+  campuses.sort((a, b) => compareText(a.municipality, b.municipality) || compareText(a.name, b.name));
 
-const campusNamesByAddress = new Map(Object.entries({
-  '神奈川県鎌倉市岩瀬1420': '鎌倉女子大学 岩瀬キャンパス',
-  '神奈川県鎌倉市大船6-1-3': '鎌倉女子大学 大船キャンパス',
-  '神奈川県鎌倉市雪ノ下3-5-10': '横浜国立大学教育学部附属鎌倉小・中学校',
-  '神奈川県鎌倉市由比ガ浜2-10-4': '鎌倉女学院中学校・高等学校',
-  '神奈川県鎌倉市玉縄4-1-1': '栄光学園中学校・高等学校',
-  '神奈川県鎌倉市山ノ内110': '鎌倉学園中学校・高等学校',
-  '神奈川県鎌倉市山之内913': '北鎌倉女子学園中学校・高等学校',
-  '神奈川県鎌倉市城廻200': '清泉女学院中学校・高等学校',
-  '神奈川県藤沢市鵠沼松が岡3-4-27': '湘南学園中学校・高等学校',
-  '神奈川県藤沢市みその台1-4': '聖園女学院中学校・高等学校',
-  '神奈川県藤沢市西富1-7-1': '藤嶺学園藤沢中学校・高等学校',
-  '神奈川県藤沢市片瀬目白山4-1': '湘南白百合学園中学・高等学校',
-  '神奈川県藤沢市辻堂西海岸1-1-25': '湘南工科大学・附属高等学校',
-  '神奈川県藤沢市亀井野1866': '日本大学藤沢キャンパス'
-}).map(([address, name]) => [normalizeAddress(address), name]));
-
-const grouped = new Map();
-for (const institution of institutions) {
-  if (!grouped.has(institution.campusGroup)) grouped.set(institution.campusGroup, []);
-  grouped.get(institution.campusGroup).push(institution);
-}
-
-const campuses = [...grouped.entries()].map(([group, schools], index) => {
-  const types = [...new Set(schools.map(item => item.type))].sort((a, b) => typeOrder.indexOf(a) - typeOrder.indexOf(b));
-  const ownerships = [...new Set(schools.map(item => item.ownership))];
-  const listingGroups = new Map();
-  for (const school of schools) {
-    const key = `${school.listingName}\u0000${school.officialUrl || ''}`;
-    if (!listingGroups.has(key)) listingGroups.set(key, []);
-    listingGroups.get(key).push(school);
-  }
-  const listings = [...listingGroups.values()].map(items => {
-    const formalTypes = [...new Map(items.map(item => [`${item.type}\u0000${item.formalTypeCode || ''}\u0000${item.formalTypeLabel}`, {
-      type: item.type,
-      code: item.formalTypeCode,
-      label: item.formalTypeLabel
-    }])).values()].sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type));
-    return {
-      name: items[0].listingName,
-      types: [...new Set(items.map(item => item.type))].sort((a, b) => typeOrder.indexOf(a) - typeOrder.indexOf(b)),
-      formalTypeCodes: formalTypes.map(item => item.code).filter(Boolean),
-      formalTypeLabels: formalTypes.map(item => item.label),
-      formalTypes,
-      ownerships: [...new Set(items.map(item => item.ownership))],
-      officialUrl: items[0].officialUrl,
-      institutionIds: items.map(item => item.id)
-    };
-  });
-  const rawAddress = schools[0].address;
-  let name = schools.length === 1 ? schools[0].displayName : campusNamesByAddress.get(normalizeAddress(rawAddress));
-  if (group === 'keio-sfc') name = '慶應義塾SFC（大学・中等部・高等部）';
-  if (group === 'ourkids-kamakura') name = '認定こども園アワーキッズ鎌倉 本園・分園';
-  if (group === 'kaede-shichirigahama') name = '七里が浜楓幼稚園（認定こども園）';
-  if (group === 'kitakamakura-jogakuen') name = '北鎌倉女子学園中学校・高等学校';
-  if (schools.some(item => item.sourceName === '湘南白百合学園高等学校')) name = '湘南白百合学園中学・高等学校';
-  if (listings.length === 1 && listings[0].types.includes('juniorHigh') && listings[0].types.includes('high')) name = listings[0].name;
-  if (!name) name = schools.map(item => item.displayName).join('・');
-  const address = group === 'keio-sfc'
-    ? '神奈川県藤沢市遠藤5322・5466'
-    : group === 'ourkids-kamakura'
-      ? '神奈川県鎌倉市寺分1-13-5・1-15-4'
-      : group === 'kaede-shichirigahama'
-        ? '神奈川県鎌倉市七里ガ浜東3-14-6・3-13-12'
-      : group === 'kitakamakura-jogakuen'
-        ? '神奈川県鎌倉市山ノ内913'
-      : rawAddress;
-  const lat = Number((schools.reduce((sum, item) => sum + item.lat, 0) / schools.length).toFixed(7));
-  const lng = Number((schools.reduce((sum, item) => sum + item.lng, 0) / schools.length).toFixed(7));
-  const wideDetailOnly = schools.every(item =>
-    item.type === 'nursery'
-    || item.type === 'kindergarten'
-    || (item.ownership === 'municipal' && ['elementary', 'juniorHigh'].includes(item.type))
-  );
-  const viewModes = ['local', 'nearby'];
-  if (!wideDetailOnly) viewModes.push('wide');
+  const countsByType = Object.fromEntries(TYPE_ORDER.map(kind => [kind, institutions.filter(item => item.types.includes(kind)).length]));
+  const countsByMunicipality = Object.fromEntries(TARGET_MUNICIPALITIES.map(name => [name, institutions.filter(item => item.municipality === name).length]));
   return {
-    id: `campus-${String(index + 1).padStart(2, '0')}`,
-    name,
-    address,
-    lat,
-    lng,
-    viewModes,
-    detailLevel: wideDetailOnly ? 'fine' : 'major',
-    types,
-    ownerships,
-    institutions: schools.map(({ campusGroup, ...item }) => item),
-    listings,
-    officialUrl: schools.find(item => item.officialUrl)?.officialUrl || null,
-    verificationStatus: schools.every(item => item.verificationStatus === 'verified') ? 'verified' : 'partly-unverified'
+    meta: {
+      title: '学校地図用データ',
+      generatedAt: '2026-07-20',
+      source: '国土数値情報 学校データ 2023年度版',
+      sourcePage: SOURCE_PAGE,
+      sourceFile: sourceName,
+      sourceSha256,
+      targetMunicipalities: TARGET_MUNICIPALITIES,
+      sourceAdministrativeAreaCodes: [...new Set(institutions.map(item => item.municipalityCode))].sort(),
+      typeLabels: TYPE_LABELS,
+      ownershipLabels: OWNERSHIP_LABELS,
+      institutionCount: institutions.length,
+      campusCount: campuses.length,
+      reviewedAt: '2026-07-20',
+      reviewBasis: '文部科学省 学校コード一覧および各学校・大学の公式ページ',
+      countsByType,
+      countsByMunicipality,
+      selectionRule: '小中学校は市立を除外。高校と大学・短大は国立・県立・市立・私立を収録。保育施設・幼稚園・特別支援学校・専門学校等は除外。',
+    },
+    campuses,
   };
-});
+}
 
-const output = {
-  meta: {
-    title: '学校・幼稚園・保育施設地図モックアップ用データ',
-    generatedAt: '2026-07-18',
-    sourceFeatureCount: source.features.length,
-    reusedPublicSchoolCount: institutions.filter(item => item.source.startsWith('content/school-districts-')).length,
-    officialSupplementCount: institutions.filter(item => item.source === 'official-site-supplement').length,
-    childcareFacilityCount: institutions.filter(item => item.type === 'nursery').length,
-    institutionCount: institutions.length,
-    campusCount: campuses.length,
-    scopeLabels,
-    typeLabels,
-    ownershipLabels,
-    note: '地域・周辺は全施設を表示して初期縮尺だけを変え、広域は保育施設・幼稚園・市立小中学校を省きます。元GeoJSONは変更していません。'
-  },
-  campuses
-};
-
-const jsonPath = path.join(root, 'content/schools.json');
-fs.writeFileSync(jsonPath, `${JSON.stringify(output, null, 2)}\n`, 'utf8');
-
-const rows = campuses
-  .sort((a, b) => typeOrder.indexOf(a.types[0]) - typeOrder.indexOf(b.types[0]) || a.name.localeCompare(b.name, 'ja'))
-  .map(campus => `| ${campus.viewModes.map(mode => scopeLabels[mode]).join('・') || '対象外'} | ${campus.name} | ${[...new Set(campus.types.flatMap(type => campus.institutions.filter(item => item.type === type).map(item => item.formalTypeLabel)))].join('・')} | ${campus.ownerships.map(item => ownershipLabels[item]).join('・')} | ${campus.address} |`)
-  .join('\n');
-const unverified = institutions.filter(item => item.verificationStatus !== 'verified');
-const proposal = `# 学校・幼稚園・保育施設地図 表示範囲・キャンパス統合案\n\n` +
-  `この文書は \`school-map-mockup.html\` の確認用です。分類はモックアップ段階の暫定提案で、元の \`content/schools-source.geojson\` は変更していません。\n\n` +
-  `- 元データ: ${source.features.length}施設\n` +
-  `- 既存学区データから追加: ${output.meta.reusedPublicSchoolCount}校\n` +
-  `- 公式サイトとの突合で補完: ${output.meta.officialSupplementCount}校（湘南白百合学園中学校）\n` +
-  `- 腰越・深沢・片瀬から追加した保育施設: ${output.meta.childcareFacilityCount}件\n` +
-  `- 掲載する学校・幼稚園・保育施設: ${institutions.length}件\n` +
-  `- キャンパス統合後: ${campuses.length}マーカー\n\n` +
-  `## 表示一覧\n\n| 表示される地図 | キャンパス | 施設種類 | 設置区分 | 住所 |\n|---|---|---|---|---|\n${rows}\n\n` +
-  `## 表示方針\n\n` +
-  `- 地域・周辺・広域は学校の排他的な分類ではなく、地図の縮尺と情報量の切り替え。\n` +
-  `- 地域・周辺: 同じ全施設を表示し、初期縮尺と中心位置だけを変更。\n` +
-  `- 広域: 全域を対象にしつつ、保育施設、幼稚園・こども園、市立小学校、市立中学校は混雑防止のため省略。私立・国立の小中学校と中高一貫校は表示。\n` +
-  `- 同一住所は原則1マーカー。慶應義塾SFCは「大学」と「中等部・高等部」の2施設を1キャンパスマーカー内に表示。アワーキッズ鎌倉本園・分園は1キャンパスマーカーに統合。\n` +
-  `- 湘南白百合学園は幼稚園、小学校、中学・高等学校を所在地別の3マーカーにした。中学校は公式サイトとの突合で補完。\n` +
-  `- 同一住所・同一公式サイトの中高は、ポップアップ内でも公式サイト側の一体名称にまとめる。\n\n` +
-  `## 公式サイト未確認\n\n` +
-  (unverified.length ? unverified.map(item => `- ${item.displayName}`).join('\n') : '- なし') + '\n';
-fs.mkdirSync(path.join(root, 'docs'), { recursive: true });
-fs.writeFileSync(path.join(root, 'docs/school-scope-proposal.md'), proposal, 'utf8');
-
-console.log(JSON.stringify({ source: source.features.length, publicSchools: output.meta.reusedPublicSchoolCount, officialSupplements: output.meta.officialSupplementCount, institutions: institutions.length, campuses: campuses.length, viewCounts: Object.fromEntries(Object.keys(scopeLabels).map(mode => [mode, campuses.filter(campus => campus.viewModes.includes(mode)).length])), unverified: unverified.map(item => item.displayName) }));
+const args = parseArgs(process.argv.slice(2));
+const sourcePath = path.resolve(args.source);
+const outputPath = path.resolve(args.output);
+const bytes = fs.readFileSync(sourcePath);
+const sourceSha256 = crypto.createHash('sha256').update(bytes).digest('hex');
+const source = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/u, ''));
+if (source.type !== 'FeatureCollection' || !Array.isArray(source.features)) throw new Error('Source is not a GeoJSON FeatureCollection.');
+const output = buildOutput(source.features, path.basename(sourcePath), sourceSha256);
+fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+const shardSize = 50;
+const shardFiles = [];
+const shardCampusCounts = [];
+for (let index = 0; index < output.campuses.length; index += shardSize) {
+  const shardNumber = shardFiles.length + 1;
+  const shardName = `${path.basename(outputPath, path.extname(outputPath))}-${String(shardNumber).padStart(2, '0')}${path.extname(outputPath) || '.json'}`;
+  const shardPath = path.join(path.dirname(outputPath), shardName);
+  const campuses = output.campuses.slice(index, index + shardSize);
+  fs.writeFileSync(shardPath, `${JSON.stringify({ campuses })}\n`, 'utf8');
+  shardFiles.push(shardName);
+  shardCampusCounts.push(campuses.length);
+}
+const manifest = { meta: { ...output.meta, shardCampusCounts }, files: shardFiles };
+fs.writeFileSync(outputPath, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+console.log(JSON.stringify({ output: outputPath, shardFiles, shardCampusCounts, institutionCount: output.meta.institutionCount, campusCount: output.meta.campusCount, countsByType: output.meta.countsByType, countsByMunicipality: output.meta.countsByMunicipality, sourceSha256 }, null, 2));
