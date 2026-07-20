@@ -23,6 +23,7 @@ const FOCUS_AREA = {
   radiusMeters: 2300
 };
 
+
 const FORMAL_TYPE_DEFS = {
   '16001': { label: '小学校', types: ['elementary'] },
   '16002': { label: '中学校', types: ['juniorHigh'] },
@@ -145,6 +146,7 @@ function activeListings(campus) {
 }
 
 function visibleCampuses() {
+  // The range selector changes only the viewport. It never removes schools from the data set.
   return state.data.campuses.filter(campus => activeListings(campus).length > 0);
 }
 
