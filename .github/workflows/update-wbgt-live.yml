@@ -168,6 +168,16 @@ jobs:
 
           html_path = Path('weather-top-mockup.html')
           html = html_path.read_text(encoding='utf-8')
+          if 'scripts/weather-page.js' not in html:
+              html, count = re.subn(
+                  r'\s*<script>\s*\(\(\)=>\{\s*const jmaUrl=.*?</script>',
+                  '\n  <script src="scripts/weather-page.js?v=20260722-1"></script>',
+                  html,
+                  count=1,
+                  flags=re.S,
+              )
+              if count != 1:
+                  raise RuntimeError('天気ページの旧インライン処理を置換できませんでした。')
           html = re.sub(
               r'scripts/weather-live\.js(?:\?v=[^"\']*)?',
               'scripts/weather-live.js?v=20260722-24',
