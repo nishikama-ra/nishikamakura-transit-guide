@@ -4,177 +4,124 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>天気表示つきトップページ案｜にしかま周辺 まちノート</title>
+  <meta name="description" content="西鎌倉・鎌倉山・手広・腰越・津周辺の学校、医療・福祉、公共施設、交通、人口などを調べる地域生活情報サイトです。">
+  <title>にしかま周辺 まちノート</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="machinote-theme.css">
+  <link rel="stylesheet" href="existing-pages-theme.css">
   <style>
-    :root {
-      --ink:#20343a;
-      --muted:#64777c;
-      --line:#dbe5e7;
-      --paper:#f6f9f8;
-      --white:#fff;
-      --blue:#356e83;
-      --blue-soft:#e8f2f5;
-      --alert:#a6433e;
-      --alert-soft:#fff0ed;
-      --shadow:0 8px 28px rgba(32,52,58,.08);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.65}
-    a{color:inherit}
-    .shell{width:min(1120px,calc(100% - 32px));margin:auto}
-    .demo-note{background:#243b42;color:#fff;font-size:.82rem;text-align:center;padding:7px 16px}
-    header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
-    .header-inner{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-weight:750;letter-spacing:.03em;text-decoration:none}
-    nav{display:flex;gap:20px;color:var(--muted);font-size:.92rem}
-    nav a{text-decoration:none}
-    main{padding-bottom:70px}
-    .weather-zone{padding:26px 0 34px;background:linear-gradient(180deg,#eef6f7 0,#f6f9f8 100%)}
-    .alert-banner{display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--alert-soft);border:1px solid #efc8c2;border-left:5px solid var(--alert);border-radius:12px;padding:13px 16px;margin-bottom:14px}
-    .alert-banner strong{display:block;color:#812f2b}
-    .alert-banner small{color:#765c59}
-    .alert-banner a{white-space:nowrap;color:#812f2b;font-weight:700;text-decoration:none}
-    .weather-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:16px}
-    .card{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
-    .current{padding:22px 24px}
-    .card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}
-    .eyebrow{margin:0 0 3px;color:var(--blue);font-size:.78rem;font-weight:750;letter-spacing:.12em}
-    h1,h2,h3,p{margin-top:0}
-    .current h1{font-size:1.2rem;margin-bottom:0}
-    .updated{font-size:.78rem;color:var(--muted);white-space:nowrap}
-    .current-main{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:22px}
-    .weather-icon{width:94px;height:94px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);font-size:3.2rem}
-    .temp-line{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-    .temperature{font-size:3.5rem;line-height:1;font-weight:650;letter-spacing:-.04em}
-    .condition{font-size:1.15rem;font-weight:700}
-    .details{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:.92rem;margin-top:12px}
-    .today-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
-    .today-summary div{padding-right:10px;border-right:1px solid var(--line)}
-    .today-summary div:last-child{border-right:0}
-    .today-summary small{display:block;color:var(--muted)}
-    .today-summary strong{font-size:1.05rem}
-    .forecast{padding:22px}
-    .forecast h2,.radar h2{font-size:1.05rem;margin-bottom:13px}
-    .forecast-row{display:grid;grid-template-columns:66px 42px 1fr;align-items:center;gap:8px;padding:11px 0;border-top:1px solid var(--line)}
-    .forecast-row:first-of-type{border-top:0}
-    .forecast-row .day{font-weight:700}
-    .forecast-row .icon{font-size:1.6rem;text-align:center}
-    .forecast-row .numbers{font-size:.9rem;color:var(--muted)}
-    .forecast-row .numbers b{color:var(--ink);font-weight:700}
-    .radar{margin-top:16px;padding:20px 22px;display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:center}
-    .radar p{color:var(--muted);font-size:.9rem;margin-bottom:14px}
-    .radar-button{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;text-decoration:none;border-radius:9px;padding:10px 14px;font-weight:700;font-size:.9rem}
-    .radar-map{height:150px;border-radius:12px;overflow:hidden;position:relative;background:
-      radial-gradient(circle at 70% 36%,rgba(70,126,190,.75) 0 8%,transparent 9%),
-      radial-gradient(circle at 58% 58%,rgba(64,158,195,.55) 0 12%,transparent 13%),
-      radial-gradient(circle at 82% 68%,rgba(49,110,174,.5) 0 8%,transparent 9%),
-      linear-gradient(135deg,#d7e5df,#eef2e8 55%,#d4e2df)}
-    .radar-map:before,.radar-map:after{content:"";position:absolute;background:rgba(255,255,255,.75)}
-    .radar-map:before{width:2px;height:100%;left:48%;transform:rotate(28deg)}
-    .radar-map:after{height:2px;width:100%;top:53%;transform:rotate(-9deg)}
-    .pin{position:absolute;left:47%;top:54%;width:14px;height:14px;background:#b5413a;border:3px solid #fff;border-radius:50%;box-shadow:0 1px 6px rgba(0,0,0,.3)}
-    .map-label{position:absolute;left:calc(47% + 14px);top:calc(54% - 8px);font-size:.73rem;font-weight:750;background:rgba(255,255,255,.88);padding:2px 5px;border-radius:4px}
-    .hero{padding:55px 0 48px}
-    .hero h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.2;letter-spacing:-.035em;max-width:760px;margin-bottom:16px}
-    .hero p{max-width:660px;color:var(--muted);font-size:1.05rem}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-    .hero-actions a{padding:12px 17px;border-radius:9px;text-decoration:none;font-weight:700}
-    .primary{background:var(--ink);color:#fff}
-    .secondary{border:1px solid #b9c9cc;background:#fff}
-    .section{padding:28px 0}
-    .section-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}
-    .section-heading h2{margin:0;font-size:1.55rem}
-    .section-heading p{margin:0;color:var(--muted);font-size:.92rem}
-    .topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .topic{background:#fff;border:1px solid var(--line);border-radius:13px;padding:19px;text-decoration:none;min-height:138px;box-shadow:0 4px 14px rgba(32,52,58,.035)}
-    .topic span{font-size:1.65rem}
-    .topic strong{display:block;margin-top:8px}
-    .topic small{display:block;color:var(--muted);margin-top:3px}
-    footer{border-top:1px solid var(--line);padding:28px 16px;text-align:center;color:var(--muted);font-size:.85rem;background:#fff}
-    @media(max-width:760px){
-      nav{display:none}.weather-zone{padding-top:16px}.alert-banner{align-items:flex-start}.alert-banner a{font-size:.82rem}.weather-grid{grid-template-columns:1fr}.current{padding:18px}.current-main{gap:14px}.weather-icon{width:70px;height:70px;font-size:2.4rem}.temperature{font-size:2.8rem}.today-summary{grid-template-columns:1fr 1fr}.today-summary div:nth-child(2){border-right:0}.today-summary div:nth-child(3){grid-column:1/-1;border-top:1px solid var(--line);border-right:0;padding-top:9px}.radar{grid-template-columns:1fr}.radar-map{order:-1;height:180px}.hero{padding:38px 0}.topic-grid{grid-template-columns:1fr}.section-heading{display:block}.section-heading p{margin-top:7px}}
+    .weather-preview{padding:0 0 30px}
+    .weather-alert{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px;padding:12px 16px;border:1px solid #e4c4b9;border-left:4px solid #a9573f;border-radius:10px;background:#fff7f3;color:#6f3022}
+    .weather-alert strong{font-size:.95rem}.weather-alert a{font-size:.86rem;font-weight:700;text-decoration:none;white-space:nowrap}
+    .weather-panel{display:grid;grid-template-columns:1.4fr .9fr;gap:14px}
+    .weather-card{border:1px solid var(--mn-border,#dbe3e2);border-radius:14px;background:#fff;box-shadow:0 8px 24px rgba(40,65,70,.06)}
+    .weather-current{padding:20px 22px}
+    .weather-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:16px}
+    .weather-card-head h2{margin:0;font-size:1.2rem}.weather-update{font-size:.76rem;color:#718084;white-space:nowrap}
+    .weather-main{display:flex;align-items:center;gap:18px}.weather-symbol{font-size:3.3rem;line-height:1}.weather-temp{font-size:3rem;line-height:1;font-weight:700;letter-spacing:-.04em}.weather-condition{margin-left:10px;font-weight:700}
+    .weather-detail{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:11px;color:#66777b;font-size:.88rem}
+    .weather-today{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:17px;padding-top:15px;border-top:1px solid #e1e7e6}.weather-today small{display:block;color:#708084;font-size:.76rem}.weather-today strong{font-size:.95rem}
+    .weather-forecast{padding:18px 20px}.weather-forecast h2{margin:0 0 8px;font-size:1.05rem}.weather-day{display:grid;grid-template-columns:54px 32px 1fr;align-items:center;gap:8px;padding:10px 0;border-top:1px solid #e4e9e8;font-size:.87rem}.weather-day:first-of-type{border-top:0}.weather-day b{font-size:.9rem}.weather-day span:last-child{color:#66777b}
+    .weather-radar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:12px;padding:13px 17px;border:1px solid var(--mn-border,#dbe3e2);border-radius:12px;background:#f5f8f7}.weather-radar strong{display:block}.weather-radar small{color:#66777b}.weather-radar a{display:inline-flex;align-items:center;padding:9px 13px;border-radius:8px;background:#355f69;color:#fff;text-decoration:none;font-size:.86rem;font-weight:700;white-space:nowrap}
+    @media(max-width:760px){.weather-preview{padding-bottom:22px}.weather-panel{grid-template-columns:1fr}.weather-alert{align-items:flex-start}.weather-alert a{font-size:.78rem}.weather-current{padding:17px}.weather-card-head{display:block}.weather-update{display:block;margin-top:4px}.weather-main{gap:12px}.weather-symbol{font-size:2.6rem}.weather-temp{font-size:2.5rem}.weather-condition{display:block;margin:5px 0 0}.weather-radar{align-items:flex-start;flex-direction:column}.weather-radar a{width:100%;justify-content:center}}
   </style>
 </head>
-<body>
-  <div class="demo-note">画面確認用のダミーページです。天気・警報の数値は実際の情報ではありません。</div>
-  <header>
-    <div class="shell header-inner">
-      <a class="brand" href="#">にしかま周辺 まちノート</a>
-      <nav aria-label="仮メニュー"><a href="#life">地域情報</a><a href="#transport">交通</a><a href="#weather">天気・防災</a></nav>
-    </div>
-  </header>
+<body data-mn-page="home" data-mn-base=".">
+  <div data-machinote-header></div>
 
   <main>
-    <section class="weather-zone" id="weather">
-      <div class="shell">
-        <div class="alert-banner">
-          <div><strong>鎌倉市に雷注意報が発表されています</strong><small>発表中の情報がない場合、この帯は表示しません。</small></div>
-          <a href="#">詳しい防災情報 →</a>
-        </div>
-
-        <div class="weather-grid">
-          <article class="card current">
-            <div class="card-head">
-              <div><p class="eyebrow">WEATHER IN NISHIKAMAKURA</p><h1>西鎌倉周辺の天気</h1></div>
-              <span class="updated">7月22日 14:10更新</span>
-            </div>
-            <div class="current-main">
-              <div class="weather-icon" aria-hidden="true">⛅</div>
-              <div>
-                <div class="temp-line"><strong class="temperature">29.4°</strong><span class="condition">晴れ時々くもり</span></div>
-                <div class="details"><span>降水量 0 mm</span><span>湿度 68%</span><span>南の風 3 m/s</span></div>
-              </div>
-            </div>
-            <div class="today-summary">
-              <div><small>今日の気温</small><strong>最高 32° / 最低 25°</strong></div>
-              <div><small>降水確率</small><strong>夕方 30%</strong></div>
-              <div><small>ひとこと</small><strong>夕方は急な雨に注意</strong></div>
-            </div>
-          </article>
-
-          <aside class="card forecast">
-            <h2>3日間の予報</h2>
-            <div class="forecast-row"><span class="day">今日</span><span class="icon">⛅</span><span class="numbers"><b>32° / 25°</b><br>降水 30%</span></div>
-            <div class="forecast-row"><span class="day">明日</span><span class="icon">🌦️</span><span class="numbers"><b>30° / 24°</b><br>降水 50%</span></div>
-            <div class="forecast-row"><span class="day">金曜</span><span class="icon">☀️</span><span class="numbers"><b>33° / 25°</b><br>降水 20%</span></div>
-          </aside>
-        </div>
-
-        <article class="card radar">
-          <div>
-            <p class="eyebrow">RAIN CLOUDS</p>
-            <h2>雨雲の動き</h2>
-            <p>トップでは西鎌倉周辺の小さなプレビューを表示し、詳しい地図は別画面で開く想定です。</p>
-            <a class="radar-button" href="#">雨雲レーダーを開く <span aria-hidden="true">→</span></a>
-          </div>
-          <div class="radar-map" aria-label="雨雲レーダーのダミー画像"><span class="pin"></span><span class="map-label">西鎌倉</span></div>
-        </article>
-      </div>
-    </section>
-
     <section class="hero shell">
-      <p class="eyebrow">NISHIKAMAKURA AREA GUIDE</p>
-      <h2>西鎌倉周辺の暮らしと移動を、ひとつの入口から。</h2>
-      <p>学校、医療、公共施設、地域の地図、電車・モノレール・路線バスなど、日々の生活に役立つ情報をまとめます。</p>
-      <div class="hero-actions"><a class="primary" href="#life">地域情報・地図を開く →</a><a class="secondary" href="#transport">交通情報を見る</a></div>
-    </section>
-
-    <section class="section shell" id="life">
-      <div class="section-heading"><div><p class="eyebrow">LOCAL INFORMATION</p><h2>暮らしの分野から探す</h2></div><p>現在のトップページの内容を、この下へ続ける想定です。</p></div>
-      <div class="topic-grid">
-        <a class="topic" href="#"><span>🎓</span><strong>教育</strong><small>学校、幼稚園・保育施設、公立小中学校の学区</small></a>
-        <a class="topic" href="#"><span>🏥</span><strong>医療・福祉</strong><small>病院、診療所、歯科、福祉施設</small></a>
-        <a class="topic" href="#"><span>🏛️</span><strong>公共・文化・郵便</strong><small>公共施設、文化・スポーツ施設、郵便局</small></a>
+      <p class="eyebrow" id="heroEyebrow"></p>
+      <h1 id="heroTitle"></h1>
+      <p class="hero-lead" id="heroLead"></p>
+      <div class="home-hero-actions">
+        <a class="home-hero-primary" href="regional-maps.html">地域情報・地図を開く <span aria-hidden="true">→</span></a>
+        <a class="home-hero-secondary" href="#public-transit">交通情報を見る</a>
       </div>
     </section>
 
-    <section class="section shell" id="transport">
-      <div class="section-heading"><div><p class="eyebrow">PUBLIC TRANSIT</p><h2>電車・モノレール・路線バス</h2></div><p>交通案内も現在と同じ位置づけで続きます。</p></div>
-      <article class="card" style="padding:24px"><strong style="font-size:1.25rem">駅・バス停を地図で探す</strong><p style="color:var(--muted);margin:6px 0 0">運行本数、公式時刻表、最終便などを確認する入口。</p></article>
+    <section class="weather-preview shell" aria-labelledby="weather-heading">
+      <div class="weather-alert">
+        <strong>鎌倉市　雷注意報</strong>
+        <a href="#">詳しく見る →</a>
+      </div>
+      <div class="weather-panel">
+        <article class="weather-card weather-current">
+          <div class="weather-card-head">
+            <h2 id="weather-heading">西鎌倉周辺の天気</h2>
+            <span class="weather-update">7月22日 14:10更新・表示例</span>
+          </div>
+          <div class="weather-main">
+            <span class="weather-symbol" aria-hidden="true">⛅</span>
+            <div>
+              <span class="weather-temp">29.4℃</span><span class="weather-condition">晴れ時々くもり</span>
+              <div class="weather-detail"><span>降水量 0 mm</span><span>湿度 68%</span><span>南の風 3 m/s</span></div>
+            </div>
+          </div>
+          <div class="weather-today">
+            <div><small>今日の気温</small><strong>最高 32℃／最低 25℃</strong></div>
+            <div><small>降水確率</small><strong>30%</strong></div>
+          </div>
+        </article>
+        <aside class="weather-card weather-forecast">
+          <h2>天気予報</h2>
+          <div class="weather-day"><b>今日</b><span>⛅</span><span><b>32℃／25℃</b><br>降水 30%</span></div>
+          <div class="weather-day"><b>明日</b><span>🌦️</span><span><b>30℃／24℃</b><br>降水 50%</span></div>
+          <div class="weather-day"><b>金曜</b><span>☀️</span><span><b>33℃／25℃</b><br>降水 20%</span></div>
+        </aside>
+      </div>
+      <div class="weather-radar">
+        <div><strong>雨雲の動き</strong><small>西鎌倉周辺の雨雲レーダー</small></div>
+        <a href="#">雨雲レーダーを開く →</a>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="life-heading">
+      <div class="section-heading">
+        <div><p class="section-kicker">地域情報・地図</p><h2 id="life-heading">暮らしの分野から探す</h2></div>
+        <p>施設の場所や地域の状況を、地図やグラフで確認できます。</p>
+      </div>
+      <div class="home-topic-grid">
+        <a class="home-topic-card" href="education.html"><img src="assets/icons/school.svg" alt=""><span><small>教育・子育て</small><strong>教育</strong><em>学校、幼稚園・保育施設、公立小中学校の学区</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="medical-welfare.html"><img src="assets/icons/medical.svg" alt=""><span><small>生活支援</small><strong>医療・福祉</strong><em>病院、診療所、歯科、福祉施設</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="public-facilities.html"><img src="assets/icons/public.svg" alt=""><span><small>施設・活動場所</small><strong>公共・文化・郵便</strong><em>公共施設、文化・スポーツ施設、郵便局</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="culture-history.html"><img src="assets/icons/culture.svg" alt=""><span><small>地域を知る</small><strong>文化・歴史・見どころ</strong><em>文化財、史跡、寺社、地域資源</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="safety-map.html"><img src="assets/icons/safety.svg" alt=""><span><small>防災・行政</small><strong>消防・警察</strong><em>消防署、警察署、交番と所管区域</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="population-outlook.html"><img src="assets/icons/population.svg" alt=""><span><small>地域の変化</small><strong>人口の見通し</strong><em>将来推計人口を地図で確認</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="station-passengers.html"><img src="assets/icons/station.svg" alt=""><span><small>交通</small><strong>駅の利用状況</strong><em>周辺駅の乗降客数の推移</em></span><b aria-hidden="true">›</b></a>
+      </div>
+      <a class="home-section-link" href="regional-maps.html">地域情報・地図の一覧を開く <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="section home-transport-section" id="public-transit">
+      <div class="shell">
+        <div class="section-heading"><div><p class="section-kicker">交通</p><h2>電車・モノレール・路線バス</h2></div><p>駅・バス停、運行本数、最終便など、西鎌倉周辺から移動するときの情報です。</p></div>
+        <a class="primary-feature" href="https://nishikama-ra.github.io/nishikama-transit-map/" target="_blank" rel="noopener"><span class="feature-route" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>駅・バス停を地図で探す</strong><span class="feature-explanation">駅やバス停を選ぶと、藤沢・大船・鎌倉へ向かう本数と公式時刻表を確認できます。標高ツールでは、徒歩経路の距離と上り下りも確認できます。</span><em class="feature-button">開く <span aria-hidden="true">↗</span></em></span></a>
+        <div class="home-transport-links">
+          <a class="late-link" href="last-bus.html"><span><small>帰る時間を確認する</small><strong>藤沢・大船・鎌倉からの最終電車・最終バス</strong></span><span aria-hidden="true">→</span></a>
+          <a class="late-link" href="stops.html"><span><small>近くの駅・バス停から出る便</small><strong>駅・バス停ごとの始発・終発・本数</strong></span><span aria-hidden="true">→</span></a>
+        </div>
+        <div class="home-card-grid" id="homeCards"></div>
+      </div>
+    </section>
+
+    <section class="section official-section" aria-labelledby="official-heading">
+      <div class="shell">
+        <div class="section-heading compact"><div><p class="section-kicker">公式サイトで確認する</p><h2 id="official-heading">公式時刻表</h2></div></div>
+        <div class="official-guide-grid">
+          <article class="official-guide-card"><h3>江ノ電バス</h3><a href="https://www.enoden.co.jp/bus/regular/" target="_blank" rel="noopener">停留所・時刻表を調べる ↗</a></article>
+          <article class="official-guide-card"><h3>京急バス</h3><a href="https://timetables.keikyu-bus.co.jp/" target="_blank" rel="noopener">時刻表を調べる ↗</a></article>
+          <article class="official-guide-card"><h3>湘南モノレール</h3><p><a href="https://www.shonan-monorail.co.jp/station/detail/fukasawa.html" target="_blank" rel="noopener">湘南深沢</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/nishikamakura.html" target="_blank" rel="noopener">西鎌倉</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/kataseyama.html" target="_blank" rel="noopener">片瀬山</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/shonanenoshima.html" target="_blank" rel="noopener">湘南江の島</a></p></article>
+          <article class="official-guide-card"><h3>江ノ島電鉄</h3><p><a href="https://www.enoden.co.jp/train/station/koshigoe/" target="_blank" rel="noopener">腰越</a>・<a href="https://www.enoden.co.jp/train/station/enoshima/" target="_blank" rel="noopener">江ノ島</a>・<a href="https://www.enoden.co.jp/train/station/kamakurakokomae/" target="_blank" rel="noopener">鎌倉高校前</a>・<a href="https://www.enoden.co.jp/train/station/shichirigahama/" target="_blank" rel="noopener">七里ヶ浜</a></p></article>
+          <article class="official-guide-card"><h3>小田急・JR</h3><p><a href="https://www.odakyu.jp/station/katase_enoshima/timetable/" target="_blank" rel="noopener">片瀬江ノ島駅</a>・<a href="https://www.jreast-timetable.jp/" target="_blank" rel="noopener">JR東日本</a></p></article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>© にしかま周辺 まちノート　｜　天気表示つきトップページ案</footer>
+  <footer class="mn-site-footer">© にしかま周辺 まちノート</footer>
+  <script src="scripts/machinote-shell.js"></script>
+  <script src="scripts/common.js"></script>
 </body>
 </html>
