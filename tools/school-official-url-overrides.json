@@ -1,0 +1,1089 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "recoveredFromCommit": "4052d06b82066f47afef4b397e3995ccd7e6aa38",
+    "recoveredAt": "2026-07-22",
+    "correctedLegacyIds": {
+      "C11431000171-00": "C114310000171-00",
+      "D11431000197-00": "D114310000197-00"
+    },
+    "institutionReferenceCount": 268,
+    "uniqueUrlCount": 215,
+    "verifiedCorrectionCount": 17,
+    "verifiedAt": "2026-07-22"
+  },
+  "institutions": {
+    "B114110000015-00": {
+      "name": "横浜国立大学教育学部附属鎌倉小学校",
+      "officialUrl": "https://www.kamakurasho.ynu.ac.jp/"
+    },
+    "B114110000024-00": {
+      "name": "横浜国立大学教育学部附属横浜小学校",
+      "officialUrl": "https://yokosyo.ynu.ac.jp/"
+    },
+    "B114310000011-00": {
+      "name": "聖ヨゼフ学園小学校",
+      "officialUrl": "https://www.st-joseph.ac.jp/primary/"
+    },
+    "B114310000020-00": {
+      "name": "精華小学校",
+      "officialUrl": "https://www.seika-net.ed.jp/"
+    },
+    "B114310000039-00": {
+      "name": "捜真小学校",
+      "officialUrl": "https://soshin.ac.jp/primary/"
+    },
+    "B114310000048-00": {
+      "name": "横浜雙葉小学校",
+      "officialUrl": "https://www.y-futaba-e.ed.jp/"
+    },
+    "B114310000057-00": {
+      "name": "関東学院小学校",
+      "officialUrl": "https://es.kanto-gakuin.ac.jp/"
+    },
+    "B114310000066-00": {
+      "name": "青山学院横浜英和小学校",
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/shougakkou/"
+    },
+    "B114310000075-00": {
+      "name": "関東学院六浦小学校",
+      "officialUrl": "https://kgm-es.jp/"
+    },
+    "B114310000084-00": {
+      "name": "横浜三育小学校",
+      "officialUrl": "https://www.yokohama-san-iku.ed.jp/"
+    },
+    "B114310000093-00": {
+      "name": "森村学園初等部",
+      "officialUrl": "https://morimura.ed.jp/"
+    },
+    "B114310000100-00": {
+      "name": "桐蔭学園小学校",
+      "officialUrl": "https://toin.ac.jp/ele/"
+    },
+    "B114310000119-00": {
+      "name": "慶應義塾横浜初等部",
+      "officialUrl": "https://www.yokohama-e.keio.ac.jp/"
+    },
+    "B114320100019-00": {
+      "name": "横須賀学院小学校",
+      "officialUrl": "https://pr.yokosukagakuin.ac.jp/"
+    },
+    "B114320400016-00": {
+      "name": "鎌倉女子大学初等部",
+      "officialUrl": "https://www.kamakura-u.ac.jp/elementary/"
+    },
+    "B114320400025-00": {
+      "name": "清泉小学校",
+      "officialUrl": "https://seisen-e.ac.jp/"
+    },
+    "B114320500015-00": {
+      "name": "湘南学園小学校",
+      "officialUrl": "https://www.shogak.ac.jp/elementary/"
+    },
+    "B114320500024-00": {
+      "name": "湘南白百合学園小学校",
+      "officialUrl": "https://syougakkou.shonan-shirayuri.ac.jp/"
+    },
+    "B114320500033-00": {
+      "name": "日本大学藤沢小学校",
+      "officialUrl": "https://fujisawa.es.nihon-u.ac.jp/"
+    },
+    "B114320700013-00": {
+      "name": "平和学園小学校",
+      "officialUrl": "https://www.aletheia.ac.jp/s/"
+    },
+    "B114320800012-00": {
+      "name": "聖マリア小学校",
+      "officialUrl": "https://www.seimaria-es.jp/"
+    },
+    "B114321300015-00": {
+      "name": "聖セシリア小学校",
+      "officialUrl": "https://www.st-cecilia-e.ed.jp/"
+    },
+    "C114110000013-00": {
+      "name": "横浜国立大学教育学部附属鎌倉中学校",
+      "officialUrl": "https://kamachu.ynu.ac.jp/"
+    },
+    "C114110000022-00": {
+      "name": "横浜国立大学教育学部附属横浜中学校",
+      "officialUrl": "https://yokochu.ynu.ac.jp/"
+    },
+    "C114310000019-00": {
+      "name": "聖ヨゼフ学園中学校",
+      "officialUrl": "https://www.st-joseph.ac.jp/"
+    },
+    "C114310000028-00": {
+      "name": "橘学苑中学校",
+      "officialUrl": "https://www.tachibana.ac.jp/"
+    },
+    "C114310000037-00": {
+      "name": "鶴見大学附属中学校",
+      "officialUrl": "https://tsurumi-fuzoku.ed.jp/"
+    },
+    "C114310000046-00": {
+      "name": "浅野中学校",
+      "officialUrl": "https://www.asano.ed.jp/"
+    },
+    "C114310000055-00": {
+      "name": "神奈川学園中学校",
+      "officialUrl": "https://www.kanagawa-kgs.ac.jp/"
+    },
+    "C114310000064-00": {
+      "name": "横浜創英中学校",
+      "officialUrl": "https://www.soei.ed.jp/"
+    },
+    "C114310000073-00": {
+      "name": "捜真女学校中学部",
+      "officialUrl": "https://soshin.ac.jp/"
+    },
+    "C114310000082-00": {
+      "name": "聖光学院中学校",
+      "officialUrl": "https://www.seiko.ac.jp/"
+    },
+    "C114310000091-00": {
+      "name": "フェリス女学院中学校",
+      "officialUrl": "https://www.ferris.ed.jp/"
+    },
+    "C114310000108-00": {
+      "name": "横浜共立学園中学校",
+      "officialUrl": "https://kjg.ed.jp/"
+    },
+    "C114310000117-00": {
+      "name": "横浜女学院中学校",
+      "officialUrl": "https://www.yjg.y-gakuin.ed.jp/"
+    },
+    "C114310000126-00": {
+      "name": "横浜雙葉中学校",
+      "officialUrl": "https://www.yokohamafutaba.ed.jp/"
+    },
+    "C114310000135-00": {
+      "name": "関東学院中学校",
+      "officialUrl": "https://kantogakuin.ed.jp/"
+    },
+    "C114310000144-00": {
+      "name": "青山学院横浜英和中学校",
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/chukou/"
+    },
+    "C114310000153-00": {
+      "name": "横浜清風中学校",
+      "officialUrl": "https://www.y-seifu.ac.jp/"
+    },
+    "C114310000162-00": {
+      "name": "横浜学園中学校",
+      "officialUrl": "https://www.yokogaku.ed.jp/"
+    },
+    "C114310000171-00": {
+      "name": "関東学院六浦中学校",
+      "officialUrl": "https://www.kgm.ed.jp/"
+    },
+    "C114310000180-00": {
+      "name": "横浜中学校",
+      "officialUrl": "https://www.yokohama-jsh.ac.jp/"
+    },
+    "C114310000199-00": {
+      "name": "慶應義塾普通部",
+      "officialUrl": "https://www.kf.keio.ac.jp/"
+    },
+    "C114310000206-00": {
+      "name": "日本大学中学校",
+      "officialUrl": "https://www.yokohama.hs.nihon-u.ac.jp/"
+    },
+    "C114310000215-00": {
+      "name": "武相中学校",
+      "officialUrl": "https://buso.ac.jp/"
+    },
+    "C114310000224-00": {
+      "name": "公文国際学園中等部",
+      "officialUrl": "https://kumon.ac.jp/k-gakuen/kokusai/"
+    },
+    "C114310000233-00": {
+      "name": "山手学院中学校",
+      "officialUrl": "https://www.yamate-gakuin.ac.jp/"
+    },
+    "C114310000242-00": {
+      "name": "星槎中学校",
+      "officialUrl": "https://www.seisahighschool.ed.jp/"
+    },
+    "C114310000251-00": {
+      "name": "横浜富士見丘学園中学校",
+      "officialUrl": "https://fujimigaoka.ed.jp/"
+    },
+    "C114310000260-00": {
+      "name": "森村学園中等部",
+      "officialUrl": "https://www.morimura.ac.jp/jsh/"
+    },
+    "C114310000279-00": {
+      "name": "神奈川大学附属中学校",
+      "officialUrl": "https://www.fhs.kanagawa-u.ac.jp/"
+    },
+    "C114310000288-00": {
+      "name": "横浜翠陵中学校",
+      "officialUrl": "https://www.suiryo.ed.jp/"
+    },
+    "C114310000297-00": {
+      "name": "横浜隼人中学校",
+      "officialUrl": "https://www.hayato.ed.jp/"
+    },
+    "C114310000313-00": {
+      "name": "サレジオ学院中学校",
+      "officialUrl": "https://www.salesio-gakuin.ed.jp/"
+    },
+    "C114310000322-00": {
+      "name": "中央大学附属横浜中学校",
+      "officialUrl": "https://yokohama-js.chuo-u.ac.jp/"
+    },
+    "C114320100017-00": {
+      "name": "神奈川歯科大学系属緑ヶ丘女子中学校",
+      "officialUrl": "https://midorigaoka.ed.jp/"
+    },
+    "C114320100026-00": {
+      "name": "横須賀学院中学校",
+      "officialUrl": "https://jhs.yokosukagakuin.ac.jp/"
+    },
+    "C114320400014-00": {
+      "name": "栄光学園中学校",
+      "officialUrl": "https://ekh.jp/"
+    },
+    "C114320400023-00": {
+      "name": "鎌倉学園中学校",
+      "officialUrl": "https://www.kamagaku.ac.jp/"
+    },
+    "C114320400032-00": {
+      "name": "鎌倉女学院中学校",
+      "officialUrl": "https://www.kamajo.ac.jp/"
+    },
+    "C114320400041-00": {
+      "name": "北鎌倉女子学園中学校",
+      "officialUrl": "https://www.kitakama.ac.jp/"
+    },
+    "C114320400050-00": {
+      "name": "鎌倉国際文理中学校",
+      "officialUrl": "https://www.kamakura-u-j.ed.jp/"
+    },
+    "C114320400069-00": {
+      "name": "清泉女学院中学校",
+      "officialUrl": "https://www.seisen-h.ed.jp/"
+    },
+    "C114320500013-00": {
+      "name": "湘南学園中学校",
+      "officialUrl": "https://www.shogak.ac.jp/highschool/"
+    },
+    "C114320500022-00": {
+      "name": "湘南白百合学園中学校",
+      "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/"
+    },
+    "C114320500031-00": {
+      "name": "聖園女学院中学校",
+      "officialUrl": "https://www.misono.jp/"
+    },
+    "C114320500040-00": {
+      "name": "慶應義塾湘南藤沢中等部",
+      "officialUrl": "https://www.sfc-js.keio.ac.jp/"
+    },
+    "C114320500059-00": {
+      "name": "藤嶺学園藤沢中学校",
+      "officialUrl": "https://www.tohrei-fujisawa.ed.jp/"
+    },
+    "C114320500068-00": {
+      "name": "日本大学藤沢中学校",
+      "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/"
+    },
+    "C114320700011-00": {
+      "name": "アレセイア湘南中学校",
+      "officialUrl": "https://www.aletheia.ac.jp/jr/"
+    },
+    "C114320800010-00": {
+      "name": "聖和学院中学校",
+      "officialUrl": "https://www.seiwagakuin.ed.jp/"
+    },
+    "C114320800029-00": {
+      "name": "逗子開成中学校",
+      "officialUrl": "https://www.zushi-kaisei.ac.jp/"
+    },
+    "C114321300013-00": {
+      "name": "聖セシリア女子中学校",
+      "officialUrl": "https://www.cecilia.ac.jp/"
+    },
+    "D114210010017-00": {
+      "name": "神奈川県立鶴見高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumi-h/"
+    },
+    "D114210010026-00": {
+      "name": "神奈川県立鶴見総合高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumisogo-ih/"
+    },
+    "D114210010035-00": {
+      "name": "神奈川県立神奈川工業高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanagawa-th/"
+    },
+    "D114210010044-00": {
+      "name": "神奈川県立神奈川総合高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanagawasohgoh-h/"
+    },
+    "D114210010053-00": {
+      "name": "神奈川県立横浜翠嵐高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamasuiran-h/"
+    },
+    "D114210010062-00": {
+      "name": "神奈川県立城郷高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shirosato-h/"
+    },
+    "D114210010071-00": {
+      "name": "神奈川県立横浜平沼高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamahiranuma-h/"
+    },
+    "D114210010080-00": {
+      "name": "神奈川県立横浜緑ケ丘高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-midorigaoka-h/"
+    },
+    "D114210010099-00": {
+      "name": "神奈川県立横浜立野高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-tateno-h/"
+    },
+    "D114210010106-00": {
+      "name": "神奈川県立横浜清陵高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-seiryo-h/"
+    },
+    "D114210010115-00": {
+      "name": "神奈川県立横浜国際高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamakokusai-h/"
+    },
+    "D114210010124-00": {
+      "name": "神奈川県立横浜南陵高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-nanryo-h/"
+    },
+    "D114210010133-00": {
+      "name": "神奈川県立横浜明朋高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-meiho-h/"
+    },
+    "D114210010142-00": {
+      "name": "神奈川県立永谷高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/nagaya-h/"
+    },
+    "D114210010151-00": {
+      "name": "神奈川県立光陵高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/koryo-h/"
+    },
+    "D114210010160-00": {
+      "name": "神奈川県立商工高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shoko-h/"
+    },
+    "D114210010179-00": {
+      "name": "神奈川県立保土ケ谷高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hodogaya-h/"
+    },
+    "D114210010188-00": {
+      "name": "神奈川県立希望ケ丘高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kibogaoka-h/"
+    },
+    "D114210010197-00": {
+      "name": "神奈川県立二俣川高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/futamatagawa-h/"
+    },
+    "D114210010204-00": {
+      "name": "神奈川県立旭高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/asahi-h/"
+    },
+    "D114210010213-00": {
+      "name": "神奈川県立横浜旭陵高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-kyokuryo-h/"
+    },
+    "D114210010222-00": {
+      "name": "神奈川県立磯子工業高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/isogo-th/"
+    },
+    "D114210010231-00": {
+      "name": "神奈川県立横浜氷取沢高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-hitorizawa-h/"
+    },
+    "D114210010240-00": {
+      "name": "神奈川県立金沢総合高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanazawasogo-ih/"
+    },
+    "D114210010259-00": {
+      "name": "神奈川県立釜利谷高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamariya-h/"
+    },
+    "D114210010268-00": {
+      "name": "神奈川県立港北高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kohoku-h/"
+    },
+    "D114210010277-00": {
+      "name": "神奈川県立新羽高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/nippa-h/"
+    },
+    "D114210010286-00": {
+      "name": "神奈川県立岸根高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kishine-h/"
+    },
+    "D114210010295-00": {
+      "name": "神奈川県立霧が丘高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kirigaoka-h/"
+    },
+    "D114210010302-00": {
+      "name": "神奈川県立白山高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hakusan-h/"
+    },
+    "D114210010311-00": {
+      "name": "神奈川県立市ケ尾高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ichigao-h/"
+    },
+    "D114210010320-00": {
+      "name": "神奈川県立青葉総合高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tana-h/"
+    },
+    "D114210010339-00": {
+      "name": "神奈川県立元石川高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/motoishikawa-h/"
+    },
+    "D114210010348-00": {
+      "name": "神奈川県立川和高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kawawa-h/"
+    },
+    "D114210010357-00": {
+      "name": "神奈川県立荏田高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/eda-h/"
+    },
+    "D114210010366-00": {
+      "name": "神奈川県立新栄高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shinei-h/"
+    },
+    "D114210010375-00": {
+      "name": "神奈川県立舞岡高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/maioka-h/"
+    },
+    "D114210010384-00": {
+      "name": "神奈川県立横浜桜陽高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-oyo-h/"
+    },
+    "D114210010393-00": {
+      "name": "神奈川県立上矢部高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamiyabe-h/"
+    },
+    "D114210010400-00": {
+      "name": "神奈川県立柏陽高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/hakuyo-h/"
+    },
+    "D114210010419-00": {
+      "name": "神奈川県立金井高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kanai-h/"
+    },
+    "D114210010428-00": {
+      "name": "神奈川県立横浜栄高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamasakae-h/"
+    },
+    "D114210010437-00": {
+      "name": "神奈川県立松陽高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shoyo-h/"
+    },
+    "D114210010446-00": {
+      "name": "神奈川県立横浜緑園高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-ryokuen-h/"
+    },
+    "D114210010455-00": {
+      "name": "神奈川県立横浜修悠館高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/y-shuyukan-h/"
+    },
+    "D114210010482-00": {
+      "name": "神奈川県立横浜瀬谷高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokohamaseya-h/"
+    },
+    "D114210020015-00": {
+      "name": "横浜市立戸塚高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/totsuka/"
+    },
+    "D114210020024-00": {
+      "name": "横浜市立桜丘高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.jp/sch/hs/sakura/index.html"
+    },
+    "D114210020033-00": {
+      "name": "横浜市立金沢高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/kanazawa/"
+    },
+    "D114210020042-00": {
+      "name": "横浜市立南高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/minami/"
+    },
+    "D114210020051-00": {
+      "name": "横浜市立東高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.jp/sch/hs/higashi/index.html"
+    },
+    "D114210020060-01": {
+      "name": "横浜市立横浜商業高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-shogyo/"
+    },
+    "D114210020060-02": {
+      "name": "横浜商業高等学校別科",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-shogyo/"
+    },
+    "D114210020079-00": {
+      "name": "横浜市立みなと総合高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/m-sogo/"
+    },
+    "D114210020088-00": {
+      "name": "横浜市立横浜サイエンスフロンティア高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/sfh/"
+    },
+    "D114210020097-00": {
+      "name": "横浜市立横浜総合高等学校",
+      "officialUrl": "https://www.edu.city.yokohama.lg.jp/school/hs/y-sogo/"
+    },
+    "D114220110015-00": {
+      "name": "神奈川県立横須賀高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosuka-h/"
+    },
+    "D114220110024-00": {
+      "name": "神奈川県立横須賀大津高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosukaotsu-h/"
+    },
+    "D114220110033-00": {
+      "name": "神奈川県立横須賀工業高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosuka-th/"
+    },
+    "D114220110042-00": {
+      "name": "神奈川県立海洋科学高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kaiyokagaku-h/"
+    },
+    "D114220110051-00": {
+      "name": "神奈川県立追浜高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/oppama-h/"
+    },
+    "D114220110060-00": {
+      "name": "神奈川県立津久井浜高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsukuihama-h/"
+    },
+    "D114220110079-00": {
+      "name": "神奈川県立横須賀南高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yokosukaminami-h/"
+    },
+    "D114220120013-00": {
+      "name": "横須賀市立横須賀総合高等学校",
+      "officialUrl": "https://ysh.ed.jp/index.html"
+    },
+    "D114220410012-00": {
+      "name": "神奈川県立鎌倉高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/kamakura-h/"
+    },
+    "D114220410021-00": {
+      "name": "神奈川県立七里ガ浜高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shichirigahama-h/"
+    },
+    "D114220410030-00": {
+      "name": "神奈川県立大船高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ofuna-h/"
+    },
+    "D114220410049-00": {
+      "name": "神奈川県立深沢高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fukasawa-h/"
+    },
+    "D114220510011-00": {
+      "name": "神奈川県立湘南高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shonan-h/"
+    },
+    "D114220510020-00": {
+      "name": "神奈川県立藤沢西高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawanishi-h/"
+    },
+    "D114220510039-00": {
+      "name": "神奈川県立藤沢工科高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawakoka-th/"
+    },
+    "D114220510048-00": {
+      "name": "神奈川県立藤沢清流高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawaseiryu-h/"
+    },
+    "D114220510057-00": {
+      "name": "神奈川県立藤沢総合高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/fujisawasogo-ih/"
+    },
+    "D114220510066-00": {
+      "name": "神奈川県立湘南台高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/shonandai-h/"
+    },
+    "D114220710019-00": {
+      "name": "神奈川県立茅ケ崎高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasaki-h/"
+    },
+    "D114220710028-00": {
+      "name": "神奈川県立茅ケ崎北陵高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasakihokuryo-h/"
+    },
+    "D114220710037-00": {
+      "name": "神奈川県立鶴嶺高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/tsurumine-h/"
+    },
+    "D114220710046-00": {
+      "name": "神奈川県立茅ケ崎西浜高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/chigasakinishihama-h/"
+    },
+    "D114220810036-00": {
+      "name": "神奈川県立逗子葉山高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/zushihayama-h/"
+    },
+    "D114221010014-00": {
+      "name": "神奈川県立三浦初声高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/miurahasse-h/"
+    },
+    "D114221310011-00": {
+      "name": "神奈川県立大和高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yamato-h/"
+    },
+    "D114221310020-00": {
+      "name": "神奈川県立大和南高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yamatominami-h/"
+    },
+    "D114221310039-00": {
+      "name": "神奈川県立大和東高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yamatohigashi-h/"
+    },
+    "D114221310048-00": {
+      "name": "神奈川県立大和西高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/yamatonishi-h/"
+    },
+    "D114221810016-00": {
+      "name": "神奈川県立綾瀬高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ayase-h/"
+    },
+    "D114221810025-00": {
+      "name": "神奈川県立綾瀬西高等学校",
+      "officialUrl": "https://www.pen-kanagawa.ed.jp/ayasenishi-h/"
+    },
+    "D114310000017-00": {
+      "name": "白鵬女子高等学校",
+      "officialUrl": "https://www.hakuhojoshi-h.ed.jp/"
+    },
+    "D114310000026-00": {
+      "name": "聖ヨゼフ学園高等学校",
+      "officialUrl": "https://www.st-joseph.ac.jp/"
+    },
+    "D114310000035-00": {
+      "name": "橘学苑高等学校",
+      "officialUrl": "https://www.tachibana.ac.jp/"
+    },
+    "D114310000044-00": {
+      "name": "鶴見大学附属高等学校",
+      "officialUrl": "https://tsurumi-fuzoku.ed.jp/"
+    },
+    "D114310000053-00": {
+      "name": "法政大学国際高等学校",
+      "officialUrl": "https://kokusai-high.ws.hosei.ac.jp/"
+    },
+    "D114310000062-00": {
+      "name": "浅野高等学校",
+      "officialUrl": "https://www.asano.ed.jp/"
+    },
+    "D114310000071-00": {
+      "name": "神奈川学園高等学校",
+      "officialUrl": "https://www.kanagawa-kgs.ac.jp/"
+    },
+    "D114310000080-00": {
+      "name": "横浜創英高等学校",
+      "officialUrl": "https://www.soei.ed.jp/"
+    },
+    "D114310000099-00": {
+      "name": "捜真女学校高等学部",
+      "officialUrl": "https://soshin.ac.jp/"
+    },
+    "D114310000106-00": {
+      "name": "聖光学院高等学校",
+      "officialUrl": "https://www.seiko.ac.jp/"
+    },
+    "D114310000115-00": {
+      "name": "フェリス女学院高等学校",
+      "officialUrl": "https://www.ferris.ed.jp/"
+    },
+    "D114310000124-00": {
+      "name": "横浜共立学園高等学校",
+      "officialUrl": "https://kjg.ed.jp/"
+    },
+    "D114310000133-00": {
+      "name": "横浜女学院高等学校",
+      "officialUrl": "https://www.yjg.y-gakuin.ed.jp/"
+    },
+    "D114310000142-00": {
+      "name": "横浜雙葉高等学校",
+      "officialUrl": "https://www.yokohamafutaba.ed.jp/"
+    },
+    "D114310000151-00": {
+      "name": "関東学院高等学校",
+      "officialUrl": "https://kantogakuin.ed.jp/"
+    },
+    "D114310000160-00": {
+      "name": "青山学院横浜英和高等学校",
+      "officialUrl": "https://www.yokohama-eiwa.ac.jp/chukou/"
+    },
+    "D114310000179-00": {
+      "name": "横浜清風高等学校",
+      "officialUrl": "https://www.y-seifu.ac.jp/"
+    },
+    "D114310000188-00": {
+      "name": "横浜学園高等学校",
+      "officialUrl": "https://www.yokogaku.ed.jp/"
+    },
+    "D114310000197-00": {
+      "name": "関東学院六浦高等学校",
+      "officialUrl": "https://www.kgm.ed.jp/"
+    },
+    "D114310000204-00": {
+      "name": "横浜高等学校",
+      "officialUrl": "https://www.yokohama-jsh.ac.jp/"
+    },
+    "D114310000213-00": {
+      "name": "横浜創学館高等学校",
+      "officialUrl": "https://so-gakukan.ed.jp/"
+    },
+    "D114310000222-00": {
+      "name": "慶應義塾高等学校",
+      "officialUrl": "https://www.hs.keio.ac.jp/"
+    },
+    "D114310000231-00": {
+      "name": "英理女子学院高等学校",
+      "officialUrl": "https://www.eiri.ed.jp/"
+    },
+    "D114310000240-00": {
+      "name": "日本大学高等学校",
+      "officialUrl": "https://www.yokohama.hs.nihon-u.ac.jp/"
+    },
+    "D114310000259-00": {
+      "name": "武相高等学校",
+      "officialUrl": "https://buso.ac.jp/"
+    },
+    "D114310000268-00": {
+      "name": "公文国際学園高等部",
+      "officialUrl": "https://kumon.ac.jp/k-gakuen/kokusai/"
+    },
+    "D114310000277-00": {
+      "name": "山手学院高等学校",
+      "officialUrl": "https://www.yamate-gakuin.ac.jp/"
+    },
+    "D114310000286-00": {
+      "name": "横浜商科大学高等学校",
+      "officialUrl": "https://www.shodai-h.ed.jp/"
+    },
+    "D114310000295-00": {
+      "name": "星槎高等学校",
+      "officialUrl": "https://www.seisahighschool.ed.jp/"
+    },
+    "D114310000302-00": {
+      "name": "横浜富士見丘学園高等学校",
+      "officialUrl": "https://fujimigaoka.ed.jp/"
+    },
+    "D114310000311-00": {
+      "name": "森村学園高等部",
+      "officialUrl": "https://www.morimura.ac.jp/jsh/"
+    },
+    "D114310000320-00": {
+      "name": "神奈川大学附属高等学校",
+      "officialUrl": "https://www.fhs.kanagawa-u.ac.jp/"
+    },
+    "D114310000339-00": {
+      "name": "横浜翠陵高等学校",
+      "officialUrl": "https://www.suiryo.ed.jp/"
+    },
+    "D114310000348-00": {
+      "name": "横浜隼人高等学校",
+      "officialUrl": "https://www.hayato.ed.jp/"
+    },
+    "D114310000357-00": {
+      "name": "桐蔭学園高等学校",
+      "officialUrl": "https://toin.ac.jp/high/"
+    },
+    "D114310000366-00": {
+      "name": "サレジオ学院高等学校",
+      "officialUrl": "https://www.salesio-gakuin.ed.jp/"
+    },
+    "D114310000375-00": {
+      "name": "中央大学附属横浜高等学校",
+      "officialUrl": "https://yokohama-js.chuo-u.ac.jp/"
+    },
+    "D114310000384-00": {
+      "name": "清心女子高等学校",
+      "officialUrl": "https://www.seisin.ed.jp/"
+    },
+    "D114310000393-00": {
+      "name": "秀英高等学校",
+      "officialUrl": "https://www.shuei.ed.jp/"
+    },
+    "D114320100015-00": {
+      "name": "湘南学院高等学校",
+      "officialUrl": "https://shonangakuin.ed.jp/"
+    },
+    "D114320100024-00": {
+      "name": "三浦学苑高等学校",
+      "officialUrl": "https://miura.ed.jp/"
+    },
+    "D114320100033-00": {
+      "name": "神奈川歯科大学系属緑ヶ丘女子高等学校",
+      "officialUrl": "https://midorigaoka.ed.jp/"
+    },
+    "D114320100042-00": {
+      "name": "横須賀学院高等学校",
+      "officialUrl": "https://jhs.yokosukagakuin.ac.jp/"
+    },
+    "D114320400012-00": {
+      "name": "栄光学園高等学校",
+      "officialUrl": "https://ekh.jp/"
+    },
+    "D114320400021-00": {
+      "name": "鎌倉学園高等学校",
+      "officialUrl": "https://www.kamagaku.ac.jp/"
+    },
+    "D114320400030-00": {
+      "name": "鎌倉女学院高等学校",
+      "officialUrl": "https://www.kamajo.ac.jp/"
+    },
+    "D114320400049-00": {
+      "name": "北鎌倉女子学園高等学校",
+      "officialUrl": "https://www.kitakama.ac.jp/"
+    },
+    "D114320400058-00": {
+      "name": "鎌倉国際文理高等学校",
+      "officialUrl": "https://www.kamakura-u-j.ed.jp/"
+    },
+    "D114320400067-00": {
+      "name": "清泉女学院高等学校",
+      "officialUrl": "https://www.seisen-h.ed.jp/"
+    },
+    "D114320500011-00": {
+      "name": "鵠沼高等学校",
+      "officialUrl": "https://kugenuma.ed.jp/"
+    },
+    "D114320500020-00": {
+      "name": "湘南工科大学附属高等学校",
+      "officialUrl": "https://www.sh.shonan-it.ac.jp/"
+    },
+    "D114320500039-00": {
+      "name": "湘南学園高等学校",
+      "officialUrl": "https://www.shogak.ac.jp/highschool/"
+    },
+    "D114320500048-00": {
+      "name": "湘南白百合学園高等学校",
+      "officialUrl": "https://chukou.shonan-shirayuri.ac.jp/"
+    },
+    "D114320500057-00": {
+      "name": "日本大学藤沢高等学校",
+      "officialUrl": "https://www.fujisawa.hs.nihon-u.ac.jp/"
+    },
+    "D114320500066-00": {
+      "name": "藤嶺学園藤沢高等学校",
+      "officialUrl": "https://www.tohrei-fujisawa.ed.jp/"
+    },
+    "D114320500075-00": {
+      "name": "藤沢翔陵高等学校",
+      "officialUrl": "https://shoryo.ed.jp/"
+    },
+    "D114320500084-00": {
+      "name": "聖園女学院高等学校",
+      "officialUrl": "https://www.misono.jp/"
+    },
+    "D114320500093-00": {
+      "name": "慶應義塾湘南藤沢高等部",
+      "officialUrl": "https://www.sfc-js.keio.ac.jp/"
+    },
+    "D114320700019-00": {
+      "name": "アレセイア湘南高等学校",
+      "officialUrl": "https://www.aletheia.ac.jp/h/"
+    },
+    "D114320800018-00": {
+      "name": "聖和学院高等学校",
+      "officialUrl": "https://www.seiwagakuin.ed.jp/"
+    },
+    "D114320800027-00": {
+      "name": "逗子開成高等学校",
+      "officialUrl": "https://www.zushi-kaisei.ac.jp/"
+    },
+    "D114321300011-00": {
+      "name": "聖セシリア女子高等学校",
+      "officialUrl": "https://www.cecilia.ac.jp/"
+    },
+    "D114321300020-00": {
+      "name": "柏木学園高等学校",
+      "officialUrl": "https://kashiwagi.ac.jp/"
+    },
+    "D214310000025-00": {
+      "name": "桐蔭学園中等教育学校",
+      "officialUrl": "https://toin.ac.jp/ses/"
+    },
+    "F113110102737-03": {
+      "name": "東京藝術大学 横浜キャンパス",
+      "officialUrl": "https://www.geidai.ac.jp/access/yokohama"
+    },
+    "F113110102746-02": {
+      "name": "東京科学大学 横浜キャンパス",
+      "officialUrl": "https://www.isct.ac.jp/ja/001/about/campuses/suzukakedai"
+    },
+    "F113310102868-03": {
+      "name": "文教大学 湘南キャンパス",
+      "officialUrl": "https://www.bunkyo.ac.jp/access/shonan/"
+    },
+    "F113310102984-04": {
+      "name": "慶應義塾大学 矢上キャンパス",
+      "officialUrl": "https://www.keio.ac.jp/ja/about/campus/yagami/"
+    },
+    "F113310102984-05": {
+      "name": "慶應義塾大学 日吉キャンパス",
+      "officialUrl": "https://www.keio.ac.jp/ja/about/campus/hiyoshi/"
+    },
+    "F113310102984-06": {
+      "name": "慶應義塾大学 湘南藤沢キャンパス",
+      "officialUrl": "https://www.sfc.keio.ac.jp/"
+    },
+    "F113310103073-02": {
+      "name": "昭和医科大学 横浜キャンパス",
+      "officialUrl": "https://www.showa-u.ac.jp/about_us/campus/yokohama.html"
+    },
+    "F113310103395-16": {
+      "name": "日本大学 生物資源科学部",
+      "officialUrl": "https://www.brs.nihon-u.ac.jp/"
+    },
+    "F113310103518-02": {
+      "name": "東京都市大学 横浜キャンパス",
+      "officialUrl": "https://www.tcu.ac.jp/access/yokohama/"
+    },
+    "F113310103545-02": {
+      "name": "明治学院大学 横浜キャンパス",
+      "officialUrl": "https://www.meijigakuin.ac.jp/campus/yokohama/"
+    },
+    "F113310103938-02": {
+      "name": "多摩大学 湘南キャンパス",
+      "officialUrl": "https://www.tama.ac.jp/guide/campus/shonan.html"
+    },
+    "F114110104592-00": {
+      "name": "横浜国立大学",
+      "officialUrl": "https://www.ynu.ac.jp/access/"
+    },
+    "F114110104609-01": {
+      "name": "総合研究大学院大学 葉山キャンパス",
+      "officialUrl": "https://www.soken.ac.jp/access/"
+    },
+    "F114110104609-15": {
+      "name": "総合研究大学院大学 葉山キャンパス",
+      "officialUrl": "https://www.soken.ac.jp/access/"
+    },
+    "F114210104616-01": {
+      "name": "横浜市立大学 金沢八景キャンパス",
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/hakkei_campusmap.html"
+    },
+    "F114210104616-02": {
+      "name": "横浜市立大学 福浦キャンパス",
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/fukuura_campusmap.html"
+    },
+    "F114210104616-03": {
+      "name": "横浜市立大学 鶴見キャンパス",
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/tsurumi_campusmap.html"
+    },
+    "F114210104616-04": {
+      "name": "横浜市立大学 舞岡キャンパス",
+      "officialUrl": "https://www.yokohama-cu.ac.jp/access/maioka_campusmap.html"
+    },
+    "F114210104625-00": {
+      "name": "神奈川県立保健福祉大学",
+      "officialUrl": "https://www.kuhs.ac.jp/access/"
+    },
+    "F114310104641-01": {
+      "name": "神奈川大学 横浜キャンパス",
+      "officialUrl": "https://www.kanagawa-u.ac.jp/access/yokohama/"
+    },
+    "F114310104641-03": {
+      "name": "神奈川大学 みなとみらいキャンパス",
+      "officialUrl": "https://www.kanagawa-u.ac.jp/access/minatomirai/"
+    },
+    "F114310104650-01": {
+      "name": "関東学院大学 横浜・金沢八景キャンパス",
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html"
+    },
+    "F114310104650-02": {
+      "name": "関東学院大学 横浜・金沢文庫キャンパス",
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html"
+    },
+    "F114310104650-03": {
+      "name": "関東学院大学 横浜・関内キャンパス",
+      "officialUrl": "https://univ.kanto-gakuin.ac.jp/about-university/location.html"
+    },
+    "F114310104669-00": {
+      "name": "鶴見大学",
+      "officialUrl": "https://www.tsurumi-u.ac.jp/"
+    },
+    "F114310104678-01": {
+      "name": "フェリス女学院大学 緑園キャンパス",
+      "officialUrl": "https://www.ferris.ac.jp/life/ryokuen-campus/"
+    },
+    "F114310104678-02": {
+      "name": "フェリス女学院大学 山手キャンパス",
+      "officialUrl": "https://www.ferris.ac.jp/life/yamate-campus/"
+    },
+    "F114310104687-00": {
+      "name": "横浜商科大学",
+      "officialUrl": "https://www.shodai.ac.jp/access/"
+    },
+    "F114310104696-00": {
+      "name": "八洲学園大学",
+      "officialUrl": "https://www.yashima.ac.jp/univ/"
+    },
+    "F114310104703-00": {
+      "name": "情報セキュリティ大学院大学",
+      "officialUrl": "https://www.iisec.ac.jp/"
+    },
+    "F114310104712-00": {
+      "name": "横浜薬科大学",
+      "officialUrl": "https://www.hamayaku.ac.jp/"
+    },
+    "F114310104730-00": {
+      "name": "神奈川歯科大学",
+      "officialUrl": "https://www.kdu.ac.jp/dental/outline/campusmap/"
+    },
+    "F114310104749-00": {
+      "name": "鎌倉女子大学",
+      "officialUrl": "https://www.kamakura-u.ac.jp/access/print/index.html"
+    },
+    "F114310104758-00": {
+      "name": "湘南工科大学",
+      "officialUrl": "https://www.shonan-it.ac.jp/"
+    },
+    "F114310104810-00": {
+      "name": "桐蔭横浜大学",
+      "officialUrl": "https://toin.ac.jp/univ/"
+    },
+    "F114310104829-00": {
+      "name": "東洋英和女学院大学",
+      "officialUrl": "https://www.toyoeiwa.ac.jp/daigaku/"
+    },
+    "F114310104856-00": {
+      "name": "横浜美術大学",
+      "officialUrl": "https://www.yokohama-art.ac.jp/"
+    },
+    "F114310104874-00": {
+      "name": "横浜創英大学",
+      "officialUrl": "https://www.soei.ac.jp/"
+    },
+    "F114310104883-00": {
+      "name": "湘南医療大学",
+      "officialUrl": "https://sums.ac.jp/"
+    },
+    "F114310104892-00": {
+      "name": "湘南鎌倉医療大学",
+      "officialUrl": "https://www.sku.ac.jp/"
+    },
+    "F114310104909-00": {
+      "name": "ビューティ＆ウェルネス専門職大学",
+      "officialUrl": "https://www.b-w.ac.jp/"
+    },
+    "F214310104926-00": {
+      "name": "鶴見大学短期大学部",
+      "officialUrl": "https://www.tsurumi-u.ac.jp/"
+    },
+    "F214310104935-00": {
+      "name": "横浜女子短期大学",
+      "officialUrl": "https://www.yokotan.ac.jp/"
+    },
+    "F214310104971-00": {
+      "name": "鎌倉女子大学短期大学部",
+      "officialUrl": "https://www.kamakura-u.ac.jp/access/print/index.html"
+    },
+    "F214310105006-00": {
+      "name": "神奈川歯科大学短期大学部",
+      "officialUrl": "https://www.kdu.ac.jp/college/"
+    }
+  }
+}

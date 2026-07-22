@@ -221,11 +221,16 @@ button { color: inherit; font: inherit; }
 }
 .school-map.is-selecting-route-origin { cursor: crosshair; }
 .school-list-item { display: grid; }
+.school-list-links {
+  display: grid;
+  gap: 5px;
+  padding: 7px 14px 9px;
+  border-top: 1px solid #eef2ef;
+}
+.school-list-official-link,
 .school-list-transit-link {
   display: block;
-  padding: 7px 14px 9px;
   color: #2d6865;
-  border-top: 1px solid #eef2ef;
   font-size: 10.5px;
   text-decoration: underline;
   text-underline-offset: 2px;

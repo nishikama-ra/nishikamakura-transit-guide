@@ -1,11 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
 
 // Build content/schools.json from the extracted P29-23_14.geojson file.
 // The official P29 ZIP must be extracted first; this script intentionally does not
 // download data or guess an archive structure.
 const SOURCE_PAGE = 'https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P29-2023.html';
+const TOOL_DIRECTORY = path.dirname(fileURLToPath(import.meta.url));
+const OFFICIAL_URL_OVERRIDE_FILE = path.join(TOOL_DIRECTORY, 'school-official-url-overrides.json');
+const officialUrlOverrideData = JSON.parse(fs.readFileSync(OFFICIAL_URL_OVERRIDE_FILE, 'utf8'));
+const RECOVERED_OFFICIAL_URLS_BY_ID = Object.fromEntries(
+  Object.entries(officialUrlOverrideData.institutions).map(([id, item]) => [id, item.officialUrl])
+);
 const TYPE_LABELS = {
   "elementary": "小学校",
   "juniorHigh": "中学校",
@@ -322,7 +329,7 @@ function featureToInstitution(feature) {
     formalTypeCode,
     formalTypeLabel: FORMAL_TYPE_LABELS[formalTypeCode],
     ownership,
-    officialUrl: OFFICIAL_URLS_BY_ID[id] ?? OFFICIAL_URLS[sourceName] ?? null,
+    officialUrl: RECOVERED_OFFICIAL_URLS_BY_ID[id] ?? OFFICIAL_URLS_BY_ID[id] ?? OFFICIAL_URLS[sourceName] ?? null,
   };
 }
 
@@ -352,6 +359,12 @@ function buildOutput(features, sourceName, sourceSha256) {
 
   const institutions = features.map(featureToInstitution).filter(Boolean);
   if (institutions.length < 50) throw new Error(`Too few selected institutions: ${institutions.length}`);
+  const institutionIds = new Set(institutions.map(item => item.id));
+  const missingOfficialUrlIds = institutions.filter(item => !RECOVERED_OFFICIAL_URLS_BY_ID[item.id]).map(item => item.id);
+  const unusedOfficialUrlIds = Object.keys(RECOVERED_OFFICIAL_URLS_BY_ID).filter(id => !institutionIds.has(id));
+  if (missingOfficialUrlIds.length || unusedOfficialUrlIds.length) {
+    throw new Error(`Official URL coverage mismatch: missing=${missingOfficialUrlIds.join(',')} unused=${unusedOfficialUrlIds.join(',')}`);
+  }
 
   const groups = new Map();
   for (const item of institutions) {
@@ -420,6 +433,10 @@ function buildOutput(features, sourceName, sourceSha256) {
       campusCount: campuses.length,
       reviewedAt: '2026-07-20',
       reviewBasis: '文部科学省 学校コード一覧および各学校・大学の公式ページ',
+      officialUrlSource: 'tools/school-official-url-overrides.json',
+      officialUrlReferenceCount: institutions.length,
+      officialUrlMissingCount: missingOfficialUrlIds.length,
+      officialUrlUniqueCount: new Set(institutions.map(item => item.officialUrl)).size,
       countsByType,
       countsByMunicipality,
       selectionRule: '小中学校は市立を除外。高校と大学・短大は国立・県立・市立・私立を収録。保育施設・幼稚園・特別支援学校・専門学校等は除外。',

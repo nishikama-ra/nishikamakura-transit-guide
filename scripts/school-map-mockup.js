@@ -320,6 +320,14 @@ function popupHtml(campus) {
   </div>`;
 }
 
+function officialLinksHtml(campus) {
+  const listings = activeListings(campus).filter(item => item.officialUrl);
+  return listings.map(item => {
+    const label = listings.length > 1 ? `${item.name} 公式情報 ↗` : '公式情報 ↗';
+    return `<a class="school-list-official-link" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
+  }).join('');
+}
+
 function clearMarkers() {
   state.markers.forEach(marker => marker.remove());
   state.markers.clear();
@@ -388,7 +396,10 @@ function renderList() {
           <strong>${escapeHtml(campus.name)}</strong>
           <span>${escapeHtml(campus.address)}</span>
         </button>
-        <a class="school-list-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">GoogleMapでルートを見る ↗</a>
+        <div class="school-list-links">
+          ${officialLinksHtml(campus)}
+          <a class="school-list-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">GoogleMapでルートを見る ↗</a>
+        </div>
       </article>`).join('')
     : '<p class="load-error">条件に合う施設がありません。</p>';
   document.querySelectorAll('[data-campus-id]').forEach(button => button.addEventListener('click', () => focusCampus(button.dataset.campusId)));

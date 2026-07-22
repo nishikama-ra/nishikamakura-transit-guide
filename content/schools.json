@@ -87,7 +87,12 @@
       50,
       50,
       48
-    ]
+    ],
+    "officialUrlSource": "tools/school-official-url-overrides.json",
+    "officialUrlReferenceCount": 268,
+    "officialUrlListingCount": 267,
+    "officialUrlMissingCount": 0,
+    "officialUrlUniqueCount": 215
   },
   "files": [
     "schools-01.json",
