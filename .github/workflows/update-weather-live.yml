@@ -33,8 +33,12 @@ jobs:
           JST = timezone(timedelta(hours=9))
           now = datetime.now(JST)
           FEED_URL = 'https://www.data.jma.go.jp/developer/xml/feed/regular_l.xml'
+          FORECAST_URL = 'https://www.jma.go.jp/bosai/forecast/data/forecast/140000.json'
           AREA_NEAR = ('140010', '140000')
           AREA_FAR = ('140000',)
+          TEMPERATURE_AREA_CODE = '46106'
+          TEMPERATURE_AREA_NAME = '横浜'
+          data_path = Path('content/weather-live.json')
 
           def fetch_text(url):
               req = urllib.request.Request(
@@ -47,11 +51,21 @@ jobs:
               with urllib.request.urlopen(req, timeout=30) as response:
                   return response.read().decode('utf-8-sig', errors='replace')
 
+          def fetch_json(url):
+              return json.loads(fetch_text(url))
+
           def parse_iso(value):
               try:
                   return datetime.fromisoformat(value)
               except Exception:
                   return None
+
+          def finite_number(value):
+              try:
+                  number = float(value)
+              except (TypeError, ValueError):
+                  return None
+              return number if number == number and abs(number) != float('inf') else None
 
           def local_name(tag):
               return tag.rsplit('}', 1)[-1]
@@ -173,6 +187,21 @@ jobs:
                       return root, entry['href']
               detail = '; '.join(errors[:3])
               raise RuntimeError(f'{product_code} の神奈川県電文が見つかりません。{detail}')
+
+          def report_history(feed_text, product_code, limit=12):
+              reports = []
+              for entry in feed_entries(feed_text, product_code)[:60]:
+                  try:
+                      root = ET.fromstring(fetch_text(entry['href']))
+                  except Exception as exc:
+                      print(f"{product_code} history fetch failed: {entry['href']}: {exc}")
+                      continue
+                  if not is_kanagawa_report(root):
+                      continue
+                  reports.append((root, entry['href']))
+                  if len(reports) >= limit:
+                      break
+              return reports
 
           def report_datetime(root):
               values = [(node.text or '').strip() for node in descendants(root, 'ReportDateTime')]
@@ -297,8 +326,195 @@ jobs:
               ))
               return result
 
+          def load_previous_temperature_days():
+              try:
+                  previous = json.loads(data_path.read_text(encoding='utf-8'))
+              except Exception:
+                  return {}
+              section = previous.get('temperatureForecasts', {})
+              days = section.get('days', {}) if isinstance(section, dict) else {}
+              keep_from = now.date()
+              keep_until = keep_from + timedelta(days=8)
+              kept = {}
+              for date_key, values in days.items():
+                  try:
+                      day = datetime.strptime(date_key, '%Y-%m-%d').date()
+                  except (TypeError, ValueError):
+                      continue
+                  if not keep_from <= day <= keep_until or not isinstance(values, dict):
+                      continue
+                  item = {}
+                  for field in ('max', 'min'):
+                      number = finite_number(values.get(field))
+                      if number is not None:
+                          item[field] = number
+                          report_field = f'{field}ReportDatetime'
+                          if values.get(report_field):
+                              item[report_field] = values[report_field]
+                  if item:
+                      item['source'] = '気象庁'
+                      item['areaName'] = values.get('areaName') or TEMPERATURE_AREA_NAME
+                      kept[date_key] = item
+              return kept
+
+          def set_temperature_value(days, date_key, field, value, report_dt, overwrite=True):
+              number = finite_number(value)
+              if number is None or not date_key:
+                  return
+              item = days.setdefault(date_key, {'source': '気象庁', 'areaName': TEMPERATURE_AREA_NAME})
+              if not overwrite and finite_number(item.get(field)) is not None:
+                  return
+              item[field] = number
+              if report_dt:
+                  item[f'{field}ReportDatetime'] = report_dt
+              item['source'] = '気象庁'
+              item['areaName'] = TEMPERATURE_AREA_NAME
+
+          def extract_json_temperatures(forecast_data):
+              extracted = {}
+              if not isinstance(forecast_data, list) or not forecast_data:
+                  return extracted
+              short = forecast_data[0] if isinstance(forecast_data[0], dict) else {}
+              short_report = short.get('reportDatetime', '')
+              for series in short.get('timeSeries', []):
+                  time_defines = series.get('timeDefines', [])
+                  for area in series.get('areas', []):
+                      if str(area.get('area', {}).get('code', '')) != TEMPERATURE_AREA_CODE:
+                          continue
+                      values = area.get('temps')
+                      if not isinstance(values, list):
+                          continue
+                      for time_value, raw in zip(time_defines, values):
+                          dt = parse_iso(time_value)
+                          if not dt:
+                              continue
+                          dt = dt.astimezone(JST)
+                          field = 'min' if dt.hour == 0 else 'max' if dt.hour == 9 else ''
+                          if field:
+                              set_temperature_value(extracted, dt.date().isoformat(), field, raw, short_report)
+
+              if len(forecast_data) > 1 and isinstance(forecast_data[1], dict):
+                  weekly = forecast_data[1]
+                  weekly_report = weekly.get('reportDatetime', '')
+                  for series in weekly.get('timeSeries', []):
+                      time_defines = series.get('timeDefines', [])
+                      for area in series.get('areas', []):
+                          if str(area.get('area', {}).get('code', '')) != TEMPERATURE_AREA_CODE:
+                              continue
+                          for field, source_field in (('max', 'tempsMax'), ('min', 'tempsMin')):
+                              values = area.get(source_field)
+                              if not isinstance(values, list):
+                                  continue
+                              for time_value, raw in zip(time_defines, values):
+                                  dt = parse_iso(time_value)
+                                  if dt:
+                                      set_temperature_value(
+                                          extracted,
+                                          dt.astimezone(JST).date().isoformat(),
+                                          field,
+                                          raw,
+                                          weekly_report,
+                                      )
+              return extracted
+
+          def extract_xml_temperatures(root):
+              extracted = {}
+              report_dt = report_datetime(root)
+              for series in descendants(root, 'TimeSeriesInfo'):
+                  times = {}
+                  for time_define in descendants(series, 'TimeDefine'):
+                      time_id = time_define.attrib.get('timeId', '')
+                      times[time_id] = child_text(time_define, 'DateTime')
+                  for item in descendants(series, 'Item'):
+                      area_code, _ = direct_area_code(item)
+                      if area_code != TEMPERATURE_AREA_CODE:
+                          continue
+                      for temperature in descendants(item, 'Temperature'):
+                          type_name = temperature.attrib.get('type', '')
+                          field = 'max' if '最高' in type_name else 'min' if '最低' in type_name else ''
+                          ref_id = temperature.attrib.get('refID', '')
+                          dt = parse_iso(times.get(ref_id, ''))
+                          if not field or not dt:
+                              continue
+                          set_temperature_value(
+                              extracted,
+                              dt.astimezone(JST).date().isoformat(),
+                              field,
+                              (temperature.text or '').strip(),
+                              report_dt,
+                          )
+              return extracted
+
+          def merge_temperature_days(base, incoming, overwrite=True):
+              for date_key, values in incoming.items():
+                  for field in ('max', 'min'):
+                      report_field = f'{field}ReportDatetime'
+                      set_temperature_value(
+                          base,
+                          date_key,
+                          field,
+                          values.get(field),
+                          values.get(report_field, ''),
+                          overwrite=overwrite,
+                      )
+
+          temperature_days = load_previous_temperature_days()
+          temperature_error = ''
+          latest_temperature_report = ''
+          feed_text = ''
+
+          try:
+              forecast_data = fetch_json(FORECAST_URL)
+              current_temperatures = extract_json_temperatures(forecast_data)
+              merge_temperature_days(temperature_days, current_temperatures, overwrite=True)
+              report_values = [
+                  values.get(field)
+                  for values in current_temperatures.values()
+                  for field in ('maxReportDatetime', 'minReportDatetime')
+                  if values.get(field)
+              ]
+              if report_values:
+                  latest_temperature_report = max(report_values)
+          except Exception as exc:
+              temperature_error = str(exc)
+              print(f'Temperature forecast fetch failed: {exc}')
+
+          try:
+              feed_text = fetch_text(FEED_URL)
+              for root, _ in report_history(feed_text, 'VPFD51', limit=12):
+                  historical = extract_xml_temperatures(root)
+                  merge_temperature_days(temperature_days, historical, overwrite=False)
+          except Exception as exc:
+              print(f'Temperature forecast history fetch failed: {exc}')
+              if not temperature_error:
+                  temperature_error = str(exc)
+
+          keep_from = now.date()
+          keep_until = keep_from + timedelta(days=8)
+          temperature_days = {
+              date_key: values
+              for date_key, values in sorted(temperature_days.items())
+              if keep_from <= datetime.strptime(date_key, '%Y-%m-%d').date() <= keep_until
+          }
+          all_temperature_reports = [
+              values.get(field)
+              for values in temperature_days.values()
+              for field in ('maxReportDatetime', 'minReportDatetime')
+              if values.get(field)
+          ]
+          if all_temperature_reports:
+              latest_temperature_report = max(all_temperature_reports)
+
           result = {
               'updatedAt': now.isoformat(timespec='minutes'),
+              'temperatureForecasts': {
+                  'status': 'ok' if temperature_days else 'error',
+                  'updatedAt': latest_temperature_report,
+                  'areaCode': TEMPERATURE_AREA_CODE,
+                  'areaName': TEMPERATURE_AREA_NAME,
+                  'source': '気象庁',
+                  'days': temperature_days,
+              },
               'wbgt': {'status': 'error', 'updatedAt': '', 'days': []},
               'earlyWarnings': {
                   'status': 'error',
@@ -307,6 +523,8 @@ jobs:
                   'items': [],
               },
           }
+          if temperature_error:
+              result['temperatureForecasts']['error'] = temperature_error
 
           try:
               wbgt_text = fetch_text('https://www.wbgt.env.go.jp/prev15WG/dl/yohou_46141.csv')
@@ -319,7 +537,8 @@ jobs:
               print(f'WBGT fetch failed: {exc}')
 
           try:
-              feed_text = fetch_text(FEED_URL)
+              if not feed_text:
+                  feed_text = fetch_text(FEED_URL)
               near_root, near_url = latest_report(feed_text, 'VPFD61')
               near_dt = report_datetime(near_root)
               near_parsed = parse_iso(near_dt)
@@ -355,7 +574,7 @@ jobs:
               print(f'Early warning fetch failed: {exc}')
               result['earlyWarnings']['error'] = str(exc)
 
-          Path('content/weather-live.json').write_text(
+          data_path.write_text(
               json.dumps(result, ensure_ascii=False, indent=2) + '\n',
               encoding='utf-8',
           )
@@ -363,11 +582,11 @@ jobs:
           html_path = Path('weather-top-mockup.html')
           html = html_path.read_text(encoding='utf-8')
           if 'scripts/weather-live.js' not in html:
-              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-22"></script>\n</body>')
+              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-23"></script>\n</body>')
           else:
               html = re.sub(
                   r'scripts/weather-live\.js(?:\?v=[^"\']*)?',
-                  'scripts/weather-live.js?v=20260722-22',
+                  'scripts/weather-live.js?v=20260722-23',
                   html,
               )
           html_path.write_text(html, encoding='utf-8')
