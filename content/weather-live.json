@@ -67,22 +67,31 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-23T07:10+09:00",
+    "updatedAt": "2026-07-23T07:11+09:00",
+    "forecastCreatedAt": "2026/07/23 06:25",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-23",
-        "max": 35.0
+        "max": 35.0,
+        "forecastMax": 35.0,
+        "observedMax": 29.6,
+        "observedThrough": "2026-07-23T06:00+09:00",
+        "valueType": "observed-or-forecast-maximum"
       },
       {
         "label": "明日",
         "date": "2026-07-24",
-        "max": 34.0
+        "max": 34.0,
+        "forecastMax": 34.0,
+        "valueType": "forecast-maximum"
       },
       {
         "label": "明後日",
         "date": "2026-07-25",
-        "max": 30.0
+        "max": 30.0,
+        "forecastMax": 30.0,
+        "valueType": "forecast-maximum"
       }
     ]
   },
