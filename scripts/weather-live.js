@@ -38,6 +38,7 @@
     day: '2-digit'
   }).format(new Date());
   const wbgtLabel = value => value >= 31 ? '危険' : value >= 28 ? '厳重警戒' : value >= 25 ? '警戒' : value >= 21 ? '注意' : 'ほぼ安全';
+  const formatWbgt = value => Number.isInteger(Number(value)) ? String(Number(value)) : Number(value).toFixed(1);
 
   const ensureStyle = () => {
     if (document.getElementById('weather-live-fix-style')) return;
@@ -99,19 +100,7 @@
     return { temp, observedAt: latestText };
   };
 
-  const fetchLocalCurrent = async () => {
-    const data = await fetchJson('https://api.open-meteo.com/v1/jma?latitude=35.319292&longitude=139.504460&current=temperature_2m&timezone=Asia%2FTokyo');
-    return {
-      current: Number(data.current?.temperature_2m),
-      currentAt: data.current?.time || ''
-    };
-  };
-
-  const renderTodayTemperatures = async data => {
-    const [amedasResult, localResult] = await Promise.allSettled([
-      fetchCurrentAmedas(),
-      fetchLocalCurrent()
-    ]);
+  const renderTodayTemperatures = async (data, amedasResult) => {
     const primary = await waitForToday();
     if (!primary) return;
 
@@ -121,21 +110,17 @@
     const existingMin = originalIsForecast ? Number.parseFloat(spanText) : NaN;
 
     const amedas = amedasResult.status === 'fulfilled' ? amedasResult.value : null;
-    const local = localResult.status === 'fulfilled' ? localResult.value : {};
     const temperatureSection = data.temperatureForecasts || {};
     const forecast = temperatureSection.days?.[todayKey()] || {};
     const savedMax = Number(forecast.max);
     const savedMin = Number(forecast.min);
 
-    const currentTemp = amedas?.temp ?? (Number.isFinite(local.current) ? local.current : NaN);
     const maxTemp = Number.isFinite(savedMax) ? savedMax : existingMax;
     const minTemp = Number.isFinite(savedMin) ? savedMin : existingMin;
 
-    if (Number.isFinite(currentTemp)) {
-      const timeLabel = amedas
-        ? `${formatClock(amedas.observedAt)}現在（辻堂アメダス）`
-        : `${formatClock(local.currentAt)}現在（西鎌倉付近・推定）`;
-      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span class="weather-current-time">${timeLabel}</span>`;
+    if (amedas && Number.isFinite(amedas.temp)) {
+      const timeLabel = `${formatClock(amedas.observedAt)}現在（辻堂アメダス）`;
+      primary.innerHTML = `<strong>${amedas.temp.toFixed(1)}℃</strong><span class="weather-current-time">${timeLabel}</span>`;
     }
 
     let range = primary.parentElement.querySelector('.weather-today-range');
@@ -167,6 +152,14 @@
 
   const render = async () => {
     ensureStyle();
+
+    const liveDataPromise = fetch(`content/weather-live.json?v=${Date.now()}`, { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error(`weather-live ${response.status}`);
+        return response.json();
+      });
+    const amedasPromise = Promise.allSettled([fetchCurrentAmedas()]).then(results => results[0]);
+
     const block = await waitForHourlyBlock();
     if (!block) return;
 
@@ -175,16 +168,14 @@
 
     let data;
     try {
-      const response = await fetch(`content/weather-live.json?v=${Date.now()}`, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`weather-live ${response.status}`);
-      data = await response.json();
+      data = await liveDataPromise;
     } catch (error) {
       console.error(error);
       block.insertAdjacentHTML('afterend', '<p class="weather-live-status">暑さ指数・早期注意情報を取得できませんでした。</p>');
       return;
     }
 
-    await renderTodayTemperatures(data);
+    await renderTodayTemperatures(data, await amedasPromise);
 
     const sections = [];
     const statusMessages = [];
@@ -193,9 +184,9 @@
     if (data.wbgt?.status && data.wbgt.status !== 'ok') {
       statusMessages.push('暑さ指数を取得できませんでした。');
     } else if (wbgt.length && wbgt.some(day => Number(day.max) >= 25)) {
-      const cards = wbgt.slice(0, 3).map(day => `<div><small>${escapeHtml(day.label || '')}<br>${formatDate(day.date)}</small><strong>${Math.round(Number(day.max))}</strong><span>${wbgtLabel(Number(day.max))}</span></div>`).join('');
+      const cards = wbgt.slice(0, 3).map(day => `<div><small>${escapeHtml(day.label || '')}<br>${formatDate(day.date)}</small><strong>${formatWbgt(day.max)}</strong><span>${wbgtLabel(Number(day.max))}</span></div>`).join('');
       const updatedAt = data.wbgt?.updatedAt || data.updatedAt || '';
-      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数 <span class="weather-advisory-title-meta">（WBGT・辻堂）</span></strong><span>各日の予測最高値（今日も予測）</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　取得：${formatDateTime(updatedAt, '時点')}</p></section>`);
+      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数 <span class="weather-advisory-title-meta">（WBGT・辻堂）</span></strong><span>日最高値</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　取得：${formatDateTime(updatedAt, '時点')}</p></section>`);
     }
 
     const earlyStatus = data.earlyWarnings?.status || 'ok';
@@ -224,5 +215,5 @@
     }
   };
 
-  window.addEventListener('load', () => setTimeout(render, 300));
+  window.addEventListener('load', () => setTimeout(render, 100));
 })();
