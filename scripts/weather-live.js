@@ -22,6 +22,21 @@
     }).formatToParts(d).filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
     return `${parts.month}/${parts.day}(${parts.weekday}) ${parts.hour}:${parts.minute}${suffix}`;
   };
+  const formatClock = value => {
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return '';
+    return new Intl.DateTimeFormat('ja-JP', {
+      timeZone: 'Asia/Tokyo',
+      hour: 'numeric',
+      minute: '2-digit'
+    }).format(d);
+  };
+  const todayKey = () => new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date());
   const wbgtLabel = value => value >= 31 ? '危険' : value >= 28 ? '厳重警戒' : value >= 25 ? '警戒' : value >= 21 ? '注意' : 'ほぼ安全';
 
   const ensureStyle = () => {
@@ -38,6 +53,9 @@
       .early-warning-item strong{display:block;color:#29474e;font-size:.72rem}
       .early-warning-item span{display:block;margin-top:2px;color:#66787b;font-size:.65rem}
       .weather-advisories.single{grid-template-columns:1fr}
+      .weather-today-range{margin:4px 0 0;color:#60757a;font-size:.72rem;line-height:1.4}
+      .weather-today-range strong{color:#263f45;font-size:.8rem}
+      .weather-current-source,.weather-range-source{margin:2px 0 0;color:#7a898b;font-size:.6rem;line-height:1.4}
     `;
     document.head.appendChild(style);
   };
@@ -49,6 +67,108 @@
       await new Promise(resolve => setTimeout(resolve, 100));
     }
     return null;
+  };
+
+  const waitForToday = async () => {
+    for (let i = 0; i < 120; i++) {
+      const primary = document.querySelector('.weather-today .weather-primary-temp');
+      if (primary) return primary;
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    return null;
+  };
+
+  const fetchJson = async url => {
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`${url} ${response.status}`);
+    return response.json();
+  };
+
+  const fetchCurrentAmedas = async () => {
+    const latestResponse = await fetch(`https://www.jma.go.jp/bosai/amedas/data/latest_time.txt?v=${Date.now()}`, { cache: 'no-store' });
+    if (!latestResponse.ok) throw new Error(`amedas latest ${latestResponse.status}`);
+    const latestText = (await latestResponse.text()).trim();
+    const key = latestText.replace(/\D/g, '').slice(0, 14);
+    if (key.length !== 14) throw new Error('amedas latest time invalid');
+    const map = await fetchJson(`https://www.jma.go.jp/bosai/amedas/data/map/${key}.json`);
+    const temp = Number(map?.['46141']?.temp?.[0]);
+    if (!Number.isFinite(temp)) throw new Error('辻堂アメダスの気温なし');
+    return { temp, observedAt: latestText };
+  };
+
+  const fetchLocalCurrent = async () => {
+    const data = await fetchJson('https://api.open-meteo.com/v1/jma?latitude=35.319292&longitude=139.504460&current=temperature_2m&timezone=Asia%2FTokyo');
+    return {
+      current: Number(data.current?.temperature_2m),
+      currentAt: data.current?.time || ''
+    };
+  };
+
+  const renderTodayTemperatures = async data => {
+    const [amedasResult, localResult] = await Promise.allSettled([
+      fetchCurrentAmedas(),
+      fetchLocalCurrent()
+    ]);
+    const primary = await waitForToday();
+    if (!primary) return;
+
+    const spanText = primary.querySelector('span')?.textContent || '';
+    const originalIsForecast = !spanText.includes('現在');
+    const existingMax = originalIsForecast ? Number.parseFloat(primary.querySelector('strong')?.textContent || '') : NaN;
+    const existingMin = originalIsForecast ? Number.parseFloat(spanText) : NaN;
+
+    const amedas = amedasResult.status === 'fulfilled' ? amedasResult.value : null;
+    const local = localResult.status === 'fulfilled' ? localResult.value : {};
+    const temperatureSection = data.temperatureForecasts || {};
+    const forecast = temperatureSection.days?.[todayKey()] || {};
+    const savedMax = Number(forecast.max);
+    const savedMin = Number(forecast.min);
+
+    const currentTemp = amedas?.temp ?? (Number.isFinite(local.current) ? local.current : NaN);
+    const maxTemp = Number.isFinite(savedMax) ? savedMax : existingMax;
+    const minTemp = Number.isFinite(savedMin) ? savedMin : existingMin;
+
+    if (Number.isFinite(currentTemp)) {
+      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span>現在</span>`;
+    }
+
+    let range = primary.parentElement.querySelector('.weather-today-range');
+    if (!range) {
+      range = document.createElement('p');
+      range.className = 'weather-today-range';
+      primary.insertAdjacentElement('afterend', range);
+    }
+    range.innerHTML = `予想最高 <strong>${Number.isFinite(maxTemp) ? `${Math.round(maxTemp)}℃` : '―'}</strong> ／ 最低 <strong>${Number.isFinite(minTemp) ? `${Math.round(minTemp)}℃` : '―'}</strong>`;
+
+    let currentSource = primary.parentElement.querySelector('.weather-current-source');
+    if (!currentSource) {
+      currentSource = document.createElement('p');
+      currentSource.className = 'weather-current-source';
+      range.insertAdjacentElement('afterend', currentSource);
+    }
+    if (amedas) {
+      currentSource.textContent = `現在気温：辻堂アメダス ${formatClock(amedas.observedAt)}観測`;
+    } else if (Number.isFinite(local.current)) {
+      currentSource.textContent = `現在気温：西鎌倉付近の推定値 ${formatClock(local.currentAt)}時点`;
+    } else {
+      currentSource.textContent = '';
+    }
+
+    let rangeSource = primary.parentElement.querySelector('.weather-range-source');
+    if (!rangeSource) {
+      rangeSource = document.createElement('p');
+      rangeSource.className = 'weather-range-source';
+      currentSource.insertAdjacentElement('afterend', rangeSource);
+    }
+    const reportTimes = [forecast.maxReportDatetime, forecast.minReportDatetime].filter(Boolean).sort();
+    const reportLabel = reportTimes.length ? formatDateTime(reportTimes.at(-1), '発表') : '';
+    if (Number.isFinite(savedMax) || Number.isFinite(savedMin)) {
+      rangeSource.textContent = `予想最高・最低：気象庁（${temperatureSection.areaName || forecast.areaName || '横浜'}）${reportLabel ? ` ${reportLabel}` : ''}`;
+    } else if (Number.isFinite(existingMax) || Number.isFinite(existingMin)) {
+      rangeSource.textContent = '予想最高・最低：気象庁';
+    } else {
+      rangeSource.textContent = '予想最高・最低を取得できませんでした。';
+    }
   };
 
   const render = async () => {
@@ -69,6 +189,8 @@
       block.insertAdjacentHTML('afterend', '<p class="weather-live-status">暑さ指数・早期注意情報を取得できませんでした。</p>');
       return;
     }
+
+    await renderTodayTemperatures(data);
 
     const sections = [];
     const statusMessages = [];
