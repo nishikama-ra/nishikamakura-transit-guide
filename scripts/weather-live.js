@@ -104,6 +104,14 @@
     };
   };
 
+  const clarifyForecastStatus = () => {
+    const status = document.getElementById('weatherStatus');
+    if (!status) return;
+    const text = status.textContent.trim();
+    if (!text || text === '取得中' || text === '取得できませんでした' || text.startsWith('今日～明後日の予報')) return;
+    status.textContent = `今日～明後日の予報 ${text}`;
+  };
+
   const renderTodayTemperatures = async data => {
     const [amedasResult, localResult] = await Promise.allSettled([
       fetchCurrentAmedas(),
@@ -112,8 +120,10 @@
     const primary = await waitForToday();
     if (!primary) return;
 
+    clarifyForecastStatus();
+
     const spanText = primary.querySelector('span')?.textContent || '';
-    const originalIsForecast = !spanText.includes('現在');
+    const originalIsForecast = !spanText.includes('観測') && !spanText.includes('時点');
     const existingMax = originalIsForecast ? Number.parseFloat(primary.querySelector('strong')?.textContent || '') : NaN;
     const existingMin = originalIsForecast ? Number.parseFloat(spanText) : NaN;
 
@@ -129,7 +139,8 @@
     const minTemp = Number.isFinite(savedMin) ? savedMin : existingMin;
 
     if (Number.isFinite(currentTemp)) {
-      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span>現在</span>`;
+      const timeLabel = amedas ? `${formatClock(amedas.observedAt)}観測` : `${formatClock(local.currentAt)}時点`;
+      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span>${timeLabel}</span>`;
     }
 
     let range = primary.parentElement.querySelector('.weather-today-range');
@@ -147,9 +158,9 @@
       range.insertAdjacentElement('afterend', currentSource);
     }
     if (amedas) {
-      currentSource.textContent = `現在気温：辻堂アメダス ${formatClock(amedas.observedAt)}観測`;
+      currentSource.textContent = '観測地点：辻堂アメダス';
     } else if (Number.isFinite(local.current)) {
-      currentSource.textContent = `現在気温：西鎌倉付近の推定値 ${formatClock(local.currentAt)}時点`;
+      currentSource.textContent = '西鎌倉付近の推定値';
     } else {
       currentSource.textContent = '';
     }
