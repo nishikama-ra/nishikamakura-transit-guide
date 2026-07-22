@@ -23,26 +23,77 @@ jobs:
           import csv
           import io
           import json
+          import re
           import urllib.request
+          from urllib.parse import urljoin
+          import xml.etree.ElementTree as ET
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
 
           JST = timezone(timedelta(hours=9))
           now = datetime.now(JST)
+          FEED_URL = 'https://www.data.jma.go.jp/developer/xml/feed/regular_l.xml'
+          AREA_NEAR = ('140010', '140000')
+          AREA_FAR = ('140000',)
 
           def fetch_text(url):
-              req = urllib.request.Request(url, headers={'User-Agent': 'nishikamakura-transit-guide/1.0'})
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      'User-Agent': 'nishikamakura-transit-guide/1.0',
+                      'Cache-Control': 'no-cache',
+                  },
+              )
               with urllib.request.urlopen(req, timeout=30) as response:
                   return response.read().decode('utf-8-sig', errors='replace')
-
-          def fetch_json(url):
-              return json.loads(fetch_text(url))
 
           def parse_iso(value):
               try:
                   return datetime.fromisoformat(value)
               except Exception:
                   return None
+
+          def local_name(tag):
+              return tag.rsplit('}', 1)[-1]
+
+          def child_text(parent, name):
+              if parent is None:
+                  return ''
+              for child in parent:
+                  if local_name(child.tag) == name:
+                      return (child.text or '').strip()
+              return ''
+
+          def descendants(parent, name):
+              return [node for node in parent.iter() if local_name(node.tag) == name]
+
+          def parse_duration(value):
+              match = re.fullmatch(r'P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?', value or '')
+              if not match:
+                  return timedelta(0)
+              days, hours, minutes = (int(part or 0) for part in match.groups())
+              return timedelta(days=days, hours=hours, minutes=minutes)
+
+          def format_range(start, end):
+              display_end = end
+              end_hour = end.hour
+              if end > start and end.hour == 0 and end.minute == 0:
+                  display_end = end - timedelta(days=1)
+                  end_hour = 24
+              if display_end.date() == start.date():
+                  return f'{start.month}/{start.day} {start.hour:02d}時～{end_hour:02d}時'
+              return f'{start.month}/{start.day} {start.hour:02d}時～{display_end.month}/{display_end.day} {end_hour:02d}時'
+
+          def format_period(start_value, duration_value):
+              start = parse_iso(start_value)
+              if not start:
+                  return start_value or ''
+              start = start.astimezone(JST)
+              duration = parse_duration(duration_value)
+              end = start + duration
+              if duration == timedelta(days=1) and start.hour == 0:
+                  return f'{start.month}/{start.day}'
+              return format_range(start, end)
 
           def parse_wbgt(text):
               rows = list(csv.reader(io.StringIO(text)))
@@ -70,9 +121,68 @@ jobs:
                   for i, day in enumerate(targets)
               ]
 
+          def feed_entries(feed_text, product_code):
+              root = ET.fromstring(feed_text)
+              entries = []
+              for entry in descendants(root, 'entry'):
+                  href = ''
+                  for link in entry:
+                      if local_name(link.tag) == 'link' and link.attrib.get('href'):
+                          href = link.attrib['href']
+                          if product_code in href:
+                              break
+                  if not href or product_code not in href:
+                      continue
+                  entries.append({
+                      'href': urljoin(FEED_URL, href),
+                      'updated': child_text(entry, 'updated'),
+                      'content': child_text(entry, 'content'),
+                      'title': child_text(entry, 'title'),
+                  })
+              entries.sort(key=lambda item: item['updated'], reverse=True)
+              preferred = [
+                  item for item in entries
+                  if '横浜地方気象台' in item['content']
+                  or re.search(r'_140000\.xml(?:$|\?)', item['href'])
+              ]
+              return preferred or entries
+
+          def is_kanagawa_report(root):
+              status = next(((node.text or '').strip() for node in descendants(root, 'Status') if (node.text or '').strip()), '')
+              if status and status != '通常':
+                  return False
+              offices = ' '.join((node.text or '').strip() for node in descendants(root, 'PublishingOffice'))
+              titles = ' '.join((node.text or '').strip() for node in descendants(root, 'Title'))
+              codes = {(node.text or '').strip() for node in descendants(root, 'Code')}
+              return (
+                  '横浜地方気象台' in offices
+                  or '神奈川県' in titles
+                  or bool(codes.intersection({'140000', '140010', '140020'}))
+              )
+
+          def latest_report(feed_text, product_code):
+              errors = []
+              for entry in feed_entries(feed_text, product_code)[:80]:
+                  try:
+                      xml_text = fetch_text(entry['href'])
+                      root = ET.fromstring(xml_text)
+                  except Exception as exc:
+                      errors.append(f"{entry['href']}: {exc}")
+                      continue
+                  if is_kanagawa_report(root):
+                      return root, entry['href']
+              detail = '; '.join(errors[:3])
+              raise RuntimeError(f'{product_code} の神奈川県電文が見つかりません。{detail}')
+
+          def report_datetime(root):
+              values = [(node.text or '').strip() for node in descendants(root, 'ReportDateTime')]
+              return next((value for value in values if value), '')
+
           def phenomenon_name(type_name):
               text = str(type_name)
-              if '雨' in text:
+              if '土砂' in text:
+                  return '土砂災害'
+              if '大雨' in text or '雨' in text:
                   return '大雨'
               if '雪' in text:
                   return '大雪'
@@ -84,81 +194,182 @@ jobs:
                   return '高潮'
               return text.replace('の警報級の可能性', '')
 
-          def format_period(value):
-              dt = parse_iso(value)
-              if not dt:
-                  return str(value)
-              return f'{dt.month}/{dt.day} {dt.hour:02d}時～'
-
-          def extract_early(data):
-              if not isinstance(data, list):
-                  return '', []
-              reports = [item for item in data if isinstance(item, dict) and item.get('reportDatetime')]
-              if not reports:
-                  return '', []
-              latest_report = max(reports, key=lambda item: item['reportDatetime'])
-              report_dt = parse_iso(latest_report['reportDatetime'])
-              if not report_dt or now - report_dt.astimezone(JST) > timedelta(hours=18):
-                  return latest_report['reportDatetime'], []
-
-              items = []
-              seen = set()
-              for report in reports:
-                  if report.get('reportDatetime') != latest_report['reportDatetime']:
+          def direct_area_code(item):
+              for child in item:
+                  if local_name(child.tag) != 'Area':
                       continue
-                  for series in report.get('timeSeries', []):
-                      times = series.get('timeDefines', [])
-                      for area in series.get('areas', []):
-                          if str(area.get('code')) not in ('140010', '140000'):
+                  return child_text(child, 'Code'), child_text(child, 'Name')
+              return '', ''
+
+          def extract_report_items(root, accepted_codes, source_code):
+              rows = []
+              all_codes = {direct_area_code(item)[0] for item in descendants(root, 'Item')}
+              target_code = next((code for code in accepted_codes if code in all_codes), '')
+              if not target_code:
+                  return rows
+              for series in descendants(root, 'TimeSeriesInfo'):
+                  times = {}
+                  for time_define in descendants(series, 'TimeDefine'):
+                      time_id = time_define.attrib.get('timeId', '')
+                      times[time_id] = {
+                          'start': child_text(time_define, 'DateTime'),
+                          'duration': child_text(time_define, 'Duration'),
+                          'name': child_text(time_define, 'Name'),
+                      }
+                  for item in descendants(series, 'Item'):
+                      area_code, area_name = direct_area_code(item)
+                      if area_code != target_code:
+                          continue
+                      for prop in descendants(item, 'Property'):
+                          type_name = child_text(prop, 'Type')
+                          if '警報級の可能性' not in type_name:
                               continue
-                          for prop in area.get('properties', []):
-                              probabilities = prop.get('probabilities')
-                              if not isinstance(probabilities, list):
+                          phenomenon = phenomenon_name(type_name)
+                          for rank in descendants(prop, 'PossibilityRankOfWarning'):
+                              level = (rank.text or '').strip()
+                              if level not in ('高', '中'):
                                   continue
-                              phenomenon = phenomenon_name(prop.get('type', ''))
-                              for index, level in enumerate(probabilities):
-                                  if level not in ('高', '中'):
-                                      continue
-                                  period = format_period(times[index]) if index < len(times) else ''
-                                  key = (phenomenon, level, period)
-                                  if key in seen:
-                                      continue
-                                  seen.add(key)
-                                  items.append({'phenomenon': phenomenon, 'level': level, 'period': period})
-              items.sort(key=lambda item: (0 if item['level'] == '高' else 1, item['period'], item['phenomenon']))
-              return latest_report['reportDatetime'], items
+                              ref_id = rank.attrib.get('refID', '')
+                              period_info = times.get(ref_id, {})
+                              rows.append({
+                                  'phenomenon': phenomenon,
+                                  'level': level,
+                                  'start': period_info.get('start', ''),
+                                  'duration': period_info.get('duration', ''),
+                                  'period': format_period(
+                                      period_info.get('start', ''),
+                                      period_info.get('duration', ''),
+                                  ),
+                                  'areaCode': area_code,
+                                  'areaName': area_name,
+                                  'sourceCode': source_code,
+                              })
+              return rows
+
+          def merge_contiguous(rows):
+              normalized = []
+              for row in rows:
+                  start = parse_iso(row.get('start', ''))
+                  duration = parse_duration(row.get('duration', ''))
+                  if not start or not duration:
+                      normalized.append(row)
+                      continue
+                  item = dict(row)
+                  item['_start'] = start.astimezone(JST)
+                  item['_end'] = (start + duration).astimezone(JST)
+                  normalized.append(item)
+
+              normalized.sort(key=lambda item: (
+                  0 if item['level'] == '高' else 1,
+                  item['phenomenon'],
+                  item.get('_start') or datetime.max.replace(tzinfo=JST),
+              ))
+              merged = []
+              for item in normalized:
+                  if '_start' not in item:
+                      merged.append(item)
+                      continue
+                  previous = merged[-1] if merged else None
+                  same = previous and all(previous.get(key) == item.get(key) for key in (
+                      'phenomenon', 'level', 'areaCode', 'sourceCode'
+                  ))
+                  if same and previous.get('_end') == item['_start']:
+                      previous['_end'] = item['_end']
+                      continue
+                  merged.append(item)
+
+              result = []
+              for item in merged:
+                  cleaned = {key: value for key, value in item.items() if not key.startswith('_') and key not in ('start', 'duration')}
+                  if '_start' in item:
+                      start = item['_start']
+                      end = item['_end']
+                      duration = end - start
+                      if duration == timedelta(days=1) and start.hour == 0:
+                          cleaned['period'] = f'{start.month}/{start.day}'
+                      else:
+                          cleaned['period'] = format_range(start, end)
+                  result.append(cleaned)
+              result.sort(key=lambda item: (
+                  0 if item['level'] == '高' else 1,
+                  item.get('period', ''),
+                  item['phenomenon'],
+              ))
+              return result
 
           result = {
               'updatedAt': now.isoformat(timespec='minutes'),
-              'wbgt': {'updatedAt': '', 'days': []},
-              'earlyWarnings': {'reportDatetime': '', 'items': []}
+              'wbgt': {'status': 'error', 'updatedAt': '', 'days': []},
+              'earlyWarnings': {
+                  'status': 'error',
+                  'reportDatetime': '',
+                  'reports': {},
+                  'items': [],
+              },
           }
 
           try:
-              wbgt_text = fetch_text('http://www.wbgt.env.go.jp/prev15WG/dl/yohou_46141.csv')
+              wbgt_text = fetch_text('https://www.wbgt.env.go.jp/prev15WG/dl/yohou_46141.csv')
               result['wbgt'] = {
+                  'status': 'ok',
                   'updatedAt': now.isoformat(timespec='minutes'),
-                  'days': parse_wbgt(wbgt_text)
+                  'days': parse_wbgt(wbgt_text),
               }
           except Exception as exc:
               print(f'WBGT fetch failed: {exc}')
 
           try:
-              early_data = fetch_json('https://www.jma.go.jp/bosai/probability/data/probability/140000.json')
-              report, items = extract_early(early_data)
-              result['earlyWarnings'] = {'reportDatetime': report, 'items': items}
+              feed_text = fetch_text(FEED_URL)
+              near_root, near_url = latest_report(feed_text, 'VPFD61')
+              near_dt = report_datetime(near_root)
+              near_parsed = parse_iso(near_dt)
+              if not near_parsed or now - near_parsed.astimezone(JST) > timedelta(hours=24):
+                  raise RuntimeError(f'VPFD61 の発表時刻が古いか不明です: {near_dt}')
+
+              rows = extract_report_items(near_root, AREA_NEAR, 'VPFD61')
+              reports = {
+                  'VPFD61': {'reportDatetime': near_dt, 'sourceUrl': near_url},
+              }
+              report_values = [near_dt]
+
+              try:
+                  far_root, far_url = latest_report(feed_text, 'VPFW60')
+                  far_dt = report_datetime(far_root)
+                  far_parsed = parse_iso(far_dt)
+                  if not far_parsed or now - far_parsed.astimezone(JST) > timedelta(hours=36):
+                      raise RuntimeError(f'VPFW60 の発表時刻が古いか不明です: {far_dt}')
+                  rows.extend(extract_report_items(far_root, AREA_FAR, 'VPFW60'))
+                  reports['VPFW60'] = {'reportDatetime': far_dt, 'sourceUrl': far_url}
+                  report_values.append(far_dt)
+              except Exception as exc:
+                  print(f'Far-range early warning fetch failed: {exc}')
+                  reports['VPFW60'] = {'status': 'error', 'error': str(exc)}
+
+              result['earlyWarnings'] = {
+                  'status': 'ok',
+                  'reportDatetime': max(report_values),
+                  'reports': reports,
+                  'items': merge_contiguous(rows),
+              }
           except Exception as exc:
               print(f'Early warning fetch failed: {exc}')
+              result['earlyWarnings']['error'] = str(exc)
 
-          Path('content/weather-live.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          Path('content/weather-live.json').write_text(
+              json.dumps(result, ensure_ascii=False, indent=2) + '\n',
+              encoding='utf-8',
+          )
 
           html_path = Path('weather-top-mockup.html')
           html = html_path.read_text(encoding='utf-8')
           if 'scripts/weather-live.js' not in html:
-              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-21"></script>\n</body>')
+              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-22"></script>\n</body>')
           else:
-              import re
-              html = re.sub(r'scripts/weather-live\.js(?:\?v=[^"\']*)?', 'scripts/weather-live.js?v=20260722-21', html)
+              html = re.sub(
+                  r'scripts/weather-live\.js(?:\?v=[^"\']*)?',
+                  'scripts/weather-live.js?v=20260722-22',
+                  html,
+              )
           html_path.write_text(html, encoding='utf-8')
           PY
 
