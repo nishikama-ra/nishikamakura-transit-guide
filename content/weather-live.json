@@ -10,8 +10,8 @@
       "2026-07-23": {
         "max": 37.0,
         "maxReportDatetime": "2026-07-23T05:00:00+09:00",
-        "min": 37.0,
-        "minReportDatetime": "2026-07-23T05:00:00+09:00",
+        "min": 28.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
         "source": "気象庁",
         "areaName": "横浜"
       },
