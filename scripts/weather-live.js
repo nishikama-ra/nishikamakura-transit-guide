@@ -55,8 +55,10 @@
       .weather-advisories.single{grid-template-columns:1fr}
       .weather-today-range{margin:4px 0 0;color:#60757a;font-size:.72rem;line-height:1.4}
       .weather-today-range strong{color:#263f45;font-size:.8rem}
-      .weather-primary-temp .weather-current-time{font-weight:400!important}
+      .weather-primary-temp .weather-current-time{font-weight:400!important;font-size:.6rem!important;color:#7a898b}
       .weather-range-source{margin:2px 0 0;color:#7a898b;font-size:.6rem;line-height:1.4}
+      .weather-advisory-title-meta{font-size:.62rem!important;font-weight:400!important;color:#66787b}
+      .hourly-head span{display:none!important}
     `;
     document.head.appendChild(style);
   };
@@ -193,7 +195,7 @@
     } else if (wbgt.length && wbgt.some(day => Number(day.max) >= 25)) {
       const cards = wbgt.slice(0, 3).map(day => `<div><small>${escapeHtml(day.label || '')}<br>${formatDate(day.date)}</small><strong>${Math.round(Number(day.max))}</strong><span>${wbgtLabel(Number(day.max))}</span></div>`).join('');
       const updatedAt = data.wbgt?.updatedAt || data.updatedAt || '';
-      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>3日間の予測最高値</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　更新：${formatDateTime(updatedAt, '時点')}</p></section>`);
+      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数 <span class="weather-advisory-title-meta">（WBGT・辻堂）</span></strong><span>各日の予測最高値（今日も予測）</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　取得：${formatDateTime(updatedAt, '時点')}</p></section>`);
     }
 
     const earlyStatus = data.earlyWarnings?.status || 'ok';
