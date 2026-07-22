@@ -103,6 +103,23 @@ async function renderHourlyWeatherMockup() {
 
     block.innerHTML = `<div class="hourly-head"><strong>これから24時間</strong><span>1時間ごと</span></div><div class="hourly-scroll"><div class="hourly-inner" style="width:${width}px;min-width:${width}px"><svg class="temp-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="1時間ごとの気温">${grid}<polyline class="temp-line" points="${points}"></polyline>${dots}</svg><div class="hourly-table" style="--cols:${rows.length}"><div class="hourly-row-label">時刻</div>${cells('hourly-time', rows.map(row => row.label))}<div class="hourly-row-label">天気</div>${cells('hourly-icon', rows.map(row => icon(row.code)))}<div class="hourly-row-label">降水量</div>${cells('hourly-value', rain.map(value => `${value}<small>mm</small>`))}<div class="hourly-row-label">風</div>${cells('hourly-value hourly-wind', rows.map(row => `${compass(row.direction)}<br>${row.speed.toFixed(1)}m/s`))}</div></div><p class="hour-source">日別予報：気象庁　時間別予報：Open-Meteo JMAモデル</p>`;
 
+    if (!document.getElementById('weather-advisory-mockup-style')) {
+      const style = document.createElement('style');
+      style.id = 'weather-advisory-mockup-style';
+      style.textContent = `
+        .weather-advisories{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #d8e4e5;background:#fff}
+        .weather-advisory{padding:12px 18px 13px;min-width:0}.weather-advisory+ .weather-advisory{border-left:1px solid #d8e4e5}
+        .weather-advisory-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px}
+        .weather-advisory-head strong{font-size:.8rem;color:#29474e}.weather-advisory-head span{font-size:.67rem;color:#6a7779;text-align:right}
+        .heat-advisory{background:#fffdf8}.heat-days{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+        .heat-days div{display:grid;grid-template-columns:auto auto;align-items:baseline;gap:1px 7px;padding:7px 9px;border:1px solid #e4ded0;border-radius:9px;background:#fff}
+        .heat-days small{font-size:.65rem;color:#6e7777}.heat-days strong{font-size:1.15rem;color:#35494d;justify-self:end}.heat-days span{grid-column:1/-1;font-size:.66rem;color:#786b53}
+        .weather-advisory p{margin:7px 0 0;color:#66787b;font-size:.65rem;line-height:1.5}.early-advisory{background:#fafcfc}.early-advisory>p{margin-top:2px;font-size:.72rem;color:#435d63}
+        @media(max-width:720px){.weather-advisories{grid-template-columns:1fr}.weather-advisory{padding:11px 14px 12px}.weather-advisory+ .weather-advisory{border-left:0;border-top:1px solid #d8e4e5}.weather-advisory-head{align-items:flex-start}.heat-days div{padding:6px 8px}}
+      `;
+      document.head.appendChild(style);
+    }
+
     const weatherLayout = document.querySelector('.weather-layout');
     if (weatherLayout && !document.querySelector('.weather-advisories')) {
       const advisories = document.createElement('div');
