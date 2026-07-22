@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T23:12+09:00",
+  "updatedAt": "2026-07-23T01:25+09:00",
   "temperatureForecasts": {
     "status": "ok",
     "updatedAt": "2026-07-22T17:00:00+09:00",
@@ -7,14 +7,6 @@
     "areaName": "横浜",
     "source": "気象庁",
     "days": {
-      "2026-07-22": {
-        "max": 37.0,
-        "maxReportDatetime": "2026-07-22T11:00:00+09:00",
-        "min": 27.0,
-        "minReportDatetime": "2026-07-21T17:00:00+09:00",
-        "source": "気象庁",
-        "areaName": "横浜"
-      },
       "2026-07-23": {
         "max": 37.0,
         "maxReportDatetime": "2026-07-22T17:00:00+09:00",
@@ -75,31 +67,22 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-22T23:12+09:00",
-    "forecastCreatedAt": "2026/07/22 22:25",
+    "updatedAt": "2026-07-23T01:25+09:00",
     "days": [
       {
         "label": "今日",
-        "date": "2026-07-22",
-        "max": 33.0,
-        "forecastMax": null,
-        "observedMax": 33.0,
-        "observedThrough": "2026-07-22T22:00+09:00",
-        "valueType": "observed-or-forecast-maximum"
+        "date": "2026-07-23",
+        "max": 34.0
       },
       {
         "label": "明日",
-        "date": "2026-07-23",
-        "max": 35.0,
-        "forecastMax": 35.0,
-        "valueType": "forecast-maximum"
+        "date": "2026-07-24",
+        "max": 31.0
       },
       {
         "label": "明後日",
-        "date": "2026-07-24",
-        "max": 31.0,
-        "forecastMax": 31.0,
-        "valueType": "forecast-maximum"
+        "date": "2026-07-25",
+        "max": 30.0
       }
     ]
   },
