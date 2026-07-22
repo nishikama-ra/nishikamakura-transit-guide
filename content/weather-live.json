@@ -1,11 +1,27 @@
 {
-  "updatedAt": "",
+  "updatedAt": "2026-07-22T14:22+09:00",
   "wbgt": {
-    "updatedAt": "",
-    "days": []
+    "updatedAt": "2026-07-22T14:22+09:00",
+    "days": [
+      {
+        "label": "今日",
+        "date": "2026-07-22",
+        "max": null
+      },
+      {
+        "label": "明日",
+        "date": "2026-07-23",
+        "max": null
+      },
+      {
+        "label": "明後日",
+        "date": "2026-07-24",
+        "max": null
+      }
+    ]
   },
   "earlyWarnings": {
-    "reportDatetime": "",
+    "reportDatetime": "2026-05-28T11:00:00+09:00",
     "items": []
   }
 }
