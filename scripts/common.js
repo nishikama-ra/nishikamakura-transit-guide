@@ -109,6 +109,111 @@ async function renderActiveWarnings() {
   }
 }
 
+function formatWeatherDay(offset, relative) {
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  const weekdays = ['日','月','火','水','木','金','土'];
+  return `${relative}<br>${d.getMonth() + 1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
+}
+
+function wbgtLevel(value) {
+  if (value >= 31) return '危険';
+  if (value >= 28) return '厳重警戒';
+  if (value >= 25) return '警戒';
+  if (value >= 21) return '注意';
+  return 'ほぼ安全';
+}
+
+function parseWbgtForecast(csvText) {
+  const today = new Date();
+  const dayKeys = [0,1,2].map(offset => {
+    const d = new Date(today);
+    d.setDate(d.getDate() + offset);
+    return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
+  });
+  const maxima = new Map(dayKeys.map(key => [key, null]));
+  csvText.split(/\r?\n/).forEach(line => {
+    const cells = line.split(',').map(cell => cell.trim().replace(/^"|"$/g,''));
+    const joined = cells.join(' ');
+    const dateMatch = joined.match(/(20\d{2})[\/-]?(\d{2})[\/-]?(\d{2})/);
+    if (!dateMatch) return;
+    const key = `${dateMatch[1]}${dateMatch[2]}${dateMatch[3]}`;
+    if (!maxima.has(key)) return;
+    const values = cells.map(Number).filter(value => Number.isFinite(value) && value >= 0 && value <= 60);
+    if (!values.length) return;
+    const value = Math.max(...values);
+    maxima.set(key, maxima.get(key) == null ? value : Math.max(maxima.get(key), value));
+  });
+  return dayKeys.map(key => maxima.get(key));
+}
+
+function findEarlyWarningLevel(data) {
+  let best = '';
+  const visit = value => {
+    if (value == null) return;
+    if (typeof value === 'string') {
+      if (value.includes('高')) best = '高';
+      else if (!best && value.includes('中')) best = '中';
+      return;
+    }
+    if (Array.isArray(value)) {
+      value.forEach(visit);
+      return;
+    }
+    if (typeof value === 'object') {
+      const code = value.code || value.area?.code;
+      if (code && !['140010','140000'].includes(String(code))) {
+        const serialized = JSON.stringify(value);
+        if (!serialized.includes('140010') && !serialized.includes('神奈川県東部')) return;
+      }
+      Object.values(value).forEach(visit);
+    }
+  };
+  visit(data);
+  return best;
+}
+
+async function renderLiveAdvisories(block) {
+  if (document.querySelector('.weather-advisories')) return;
+
+  const [wbgtResult, earlyResult] = await Promise.allSettled([
+    fetch('https://www.wbgt.env.go.jp/prev15WG/dl/yohou_46141.csv', { cache:'no-store' }).then(response => {
+      if (!response.ok) throw new Error(`WBGT ${response.status}`);
+      return response.text();
+    }),
+    fetch('https://www.jma.go.jp/bosai/probability/data/probability/140000.json', { cache:'no-store' }).then(response => {
+      if (!response.ok) throw new Error(`probability ${response.status}`);
+      return response.json();
+    })
+  ]);
+
+  const sections = [];
+  if (wbgtResult.status === 'fulfilled') {
+    const values = parseWbgtForecast(wbgtResult.value);
+    if (values.some(value => value != null && value >= 25)) {
+      const cards = values.map((value,index) => value == null ? '' : `<div><small>${formatWeatherDay(index,['今日','明日','明後日'][index])}</small><strong>${Math.round(value)}</strong><span>${wbgtLevel(value)}</span></div>`).join('');
+      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>3日間の予測最高値</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト</p></section>`);
+    }
+  } else {
+    console.error(wbgtResult.reason);
+  }
+
+  if (earlyResult.status === 'fulfilled') {
+    const level = findEarlyWarningLevel(earlyResult.value);
+    if (level) {
+      sections.push(`<section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>警報級の可能性［${level}］</span></div><p>神奈川県東部では、警報級の現象が発生する可能性があります。最新の防災気象情報をご確認ください。</p><p class="weather-source">出典：気象庁</p></section>`);
+    }
+  } else {
+    console.error(earlyResult.reason);
+  }
+
+  if (!sections.length) return;
+  const advisories = document.createElement('div');
+  advisories.className = 'weather-advisories';
+  advisories.innerHTML = sections.join('');
+  block.insertAdjacentElement('afterend', advisories);
+}
+
 async function renderHourlyWeatherMockup() {
   if (!location.pathname.endsWith('/weather-top-mockup.html')) return;
   ensureWeatherMockupStyle();
@@ -183,18 +288,7 @@ async function renderHourlyWeatherMockup() {
 
     block.innerHTML = `<div class="hourly-head"><strong>これから24時間</strong><span>1時間ごと</span></div><div class="hourly-scroll"><div class="hourly-inner" style="width:${width}px;min-width:${width}px"><svg class="temp-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="1時間ごとの気温">${grid}<polyline class="temp-line" points="${points}"></polyline>${dots}</svg><div class="hourly-table" style="--cols:${rows.length}"><div class="hourly-row-label">時刻</div>${cells('hourly-time',rows.map(row => row.label))}<div class="hourly-row-label">天気</div>${cells('hourly-icon',rows.map(row => icon(row.code)))}<div class="hourly-row-label">降水量</div>${cells('hourly-value',rain.map(value => `${value}<small>mm</small>`))}<div class="hourly-row-label">風</div>${cells('hourly-value hourly-wind',rows.map(row => `${compass(row.direction)}<br>${row.speed.toFixed(1)}m/s`))}</div></div><p class="hour-source">日別予報：気象庁　時間別予報：Open-Meteo JMAモデル</p>`;
 
-    if (!document.querySelector('.weather-advisories')) {
-      const formatDay = (offset, relative) => {
-        const d = new Date();
-        d.setDate(d.getDate() + offset);
-        const weekdays = ['日','月','火','水','木','金','土'];
-        return `${relative}<br>${d.getMonth() + 1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
-      };
-      const advisories = document.createElement('div');
-      advisories.className = 'weather-advisories';
-      advisories.innerHTML = `<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>神奈川県に熱中症警戒アラート発表中</span></div><div class="heat-days"><div><small>${formatDay(0,'今日')}</small><strong>32</strong><span>危険</span></div><div><small>${formatDay(1,'明日')}</small><strong>34</strong><span>危険</span></div><div><small>${formatDay(2,'明後日')}</small><strong>30</strong><span>厳重警戒</span></div></div><p>3日間の最高値が25以上の場合に表示します。</p><p class="weather-source">出典：環境省 熱中症予防情報サイト</p></section><section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>警報級の可能性［中］</span></div><p>神奈川県東部では、22日12時～18時、23日18時～24時に、大雨警報が発表される可能性があります。</p><p class="weather-source">出典：気象庁</p></section>`;
-      block.insertAdjacentElement('afterend', advisories);
-    }
+    await renderLiveAdvisories(block);
   } catch (error) {
     console.error(error);
   }
