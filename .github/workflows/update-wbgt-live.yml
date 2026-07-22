@@ -55,9 +55,9 @@ jobs:
               with urllib.request.urlopen(request, timeout=30) as response:
                   return response.read().decode('utf-8-sig', errors='replace')
 
-          def number(value):
+          def finite_number(value, divisor=1.0):
               try:
-                  value = float(str(value).strip()) / 10.0
+                  value = float(str(value).strip()) / divisor
               except (TypeError, ValueError):
                   return None
               return value if value == value else None
@@ -80,7 +80,7 @@ jobs:
                       dt = datetime.strptime(digits[:10], '%Y%m%d%H').replace(tzinfo=JST)
                   except ValueError:
                       continue
-                  value = number(raw)
+                  value = finite_number(raw, divisor=10.0)
                   if value is None:
                       continue
                   key = dt.date().isoformat()
@@ -100,32 +100,27 @@ jobs:
                   value_index = next(i for i, cell in enumerate(header) if cell.strip() == point)
               except StopIteration:
                   value_index = 2
-              today = now.date()
               maximum = None
               latest = None
               for row in rows[header_index + 1:]:
                   if len(row) <= value_index:
                       continue
-                  date_digits = ''.join(ch for ch in row[0] if ch.isdigit())
-                  time_digits = ''.join(ch for ch in row[1] if ch.isdigit())
-                  if len(date_digits) != 8 or not time_digits:
-                      continue
-                  time_digits = time_digits.zfill(4)[-4:]
                   try:
-                      day = datetime.strptime(date_digits, '%Y%m%d').date()
-                      hour = int(time_digits[:2])
-                      minute = int(time_digits[2:])
-                  except ValueError:
+                      day = datetime.strptime(row[0].strip(), '%Y/%m/%d').date()
+                      hour_text, minute_text = row[1].strip().split(':', 1)
+                      hour = int(hour_text)
+                      minute = int(minute_text)
+                  except (ValueError, TypeError):
                       continue
-                  if day != today:
+                  if day != now.date():
                       continue
-                  if hour == 24:
+                  if hour == 24 and minute == 0:
                       observed_at = datetime.combine(day + timedelta(days=1), datetime.min.time(), tzinfo=JST)
                   elif 0 <= hour <= 23 and 0 <= minute <= 59:
                       observed_at = datetime(day.year, day.month, day.day, hour, minute, tzinfo=JST)
                   else:
                       continue
-                  value = number(row[value_index])
+                  value = finite_number(row[value_index])
                   if value is None:
                       continue
                   maximum = value if maximum is None else max(maximum, value)
@@ -134,9 +129,7 @@ jobs:
 
           data = json.loads(data_path.read_text(encoding='utf-8'))
           forecast_maxima, forecast_created = parse_forecast(fetch_text(forecast_url))
-          observed_text = fetch_text(observed_url)
-          Path('content/wbgt-debug.txt').write_text('\n'.join(observed_text.splitlines()[:20]) + '\n', encoding='utf-8')
-          observed_max, observed_through = parse_observed(observed_text)
+          observed_max, observed_through = parse_observed(fetch_text(observed_url))
 
           labels = ['今日', '明日', '明後日']
           days = []
@@ -177,7 +170,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/weather-live.json content/wbgt-debug.txt
+          git add content/weather-live.json
           if git diff --cached --quiet; then
             exit 0
           fi
