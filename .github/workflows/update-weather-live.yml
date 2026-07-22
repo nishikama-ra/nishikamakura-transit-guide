@@ -230,6 +230,13 @@ jobs:
                   return child_text(child, 'Code'), child_text(child, 'Name')
               return '', ''
 
+          def direct_station_code(item):
+              for child in item:
+                  if local_name(child.tag) not in ('Station', 'Area'):
+                      continue
+                  return child_text(child, 'Code'), child_text(child, 'Name')
+              return '', ''
+
           def extract_report_items(root, accepted_codes, source_code):
               rows = []
               all_codes = {direct_area_code(item)[0] for item in descendants(root, 'Item')}
@@ -426,7 +433,7 @@ jobs:
                       time_id = time_define.attrib.get('timeId', '')
                       times[time_id] = child_text(time_define, 'DateTime')
                   for item in descendants(series, 'Item'):
-                      area_code, _ = direct_area_code(item)
+                      area_code, _ = direct_station_code(item)
                       if area_code != TEMPERATURE_AREA_CODE:
                           continue
                       for temperature in descendants(item, 'Temperature'):
@@ -481,7 +488,7 @@ jobs:
 
           try:
               feed_text = fetch_text(FEED_URL)
-              for root, _ in report_history(feed_text, 'VPFD51', limit=12):
+              for root, _ in report_history(feed_text, 'VPFD51', limit=6):
                   historical = extract_xml_temperatures(root)
                   merge_temperature_days(temperature_days, historical, overwrite=False)
           except Exception as exc:
