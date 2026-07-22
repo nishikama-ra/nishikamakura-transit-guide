@@ -54,8 +54,14 @@ async function renderActiveWarnings() {
   if (!location.pathname.endsWith('/weather-top-mockup.html')) return;
   ensureWeatherMockupStyle();
 
-  const weatherLayout = document.querySelector('.weather-layout');
-  if (!weatherLayout || document.querySelector('.active-weather-alerts')) return;
+  const waitForWeatherPanel = async () => {
+    for (let i = 0; i < 100; i++) {
+      const panel = document.querySelector('.weather-panel');
+      if (panel) return panel;
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    return null;
+  };
 
   const warningNames = {
     '02':'暴風雪警報','03':'大雨警報','04':'洪水警報','05':'暴風警報','06':'大雪警報','07':'波浪警報','08':'高潮警報',
@@ -66,6 +72,9 @@ async function renderActiveWarnings() {
   const warningCodes = new Set(['02','03','04','05','06','07','08','32','33','35','36','37','38']);
 
   try {
+    const weatherPanel = await waitForWeatherPanel();
+    if (!weatherPanel || document.querySelector('.active-weather-alerts')) return;
+
     const params = new URLSearchParams(location.search);
     let active;
     let updatedLabel;
@@ -94,7 +103,7 @@ async function renderActiveWarnings() {
     const section = document.createElement('section');
     section.className = 'active-weather-alerts';
     section.innerHTML = `<div class="active-weather-alerts-head"><strong>鎌倉市に発表中の警報・注意報</strong><span>${updatedLabel}</span></div><div class="active-weather-alert-list">${active.map(item => `<div class="active-weather-alert ${warningCodes.has(item.code) ? 'warning' : ''}"><b>${item.name}</b><p>鎌倉市</p></div>`).join('')}</div><p class="weather-source">出典：気象庁</p>`;
-    weatherLayout.insertAdjacentElement('beforebegin', section);
+    weatherPanel.prepend(section);
   } catch (error) {
     console.error(error);
   }
