@@ -26,6 +26,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          fetch-depth: 2
 
       - name: Combine today's observations and remaining forecast
         run: |
@@ -34,6 +35,7 @@ jobs:
           import io
           import json
           import re
+          import subprocess
           import urllib.request
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
@@ -62,6 +64,47 @@ jobs:
               except (TypeError, ValueError):
                   return None
               return value if value == value else None
+
+          def restore_invalid_temperature_minimum(data):
+              try:
+                  previous_text = subprocess.check_output(
+                      ['git', 'show', 'HEAD^:content/weather-live.json'],
+                      text=True,
+                      encoding='utf-8',
+                  )
+                  previous = json.loads(previous_text)
+              except Exception as exc:
+                  print(f'Previous weather data unavailable: {exc}')
+                  return
+
+              today_key = now.date().isoformat()
+              current_days = data.get('temperatureForecasts', {}).get('days', {})
+              previous_days = previous.get('temperatureForecasts', {}).get('days', {})
+              current = current_days.get(today_key)
+              prior = previous_days.get(today_key)
+              if not isinstance(current, dict) or not isinstance(prior, dict):
+                  return
+
+              current_max = finite_number(current.get('max'))
+              current_min = finite_number(current.get('min'))
+              previous_min = finite_number(prior.get('min'))
+              duplicated_report = (
+                  current.get('minReportDatetime')
+                  and current.get('minReportDatetime') == current.get('maxReportDatetime')
+              )
+              invalid = (
+                  current_max is not None
+                  and current_min is not None
+                  and current_min >= current_max
+                  and duplicated_report
+              )
+              if not invalid or previous_min is None or previous_min >= current_max:
+                  return
+
+              current['min'] = previous_min
+              if prior.get('minReportDatetime'):
+                  current['minReportDatetime'] = prior['minReportDatetime']
+              print(f'Restored {today_key} minimum temperature: {previous_min}')
 
           def parse_forecast(text):
               rows = list(csv.reader(io.StringIO(text)))
@@ -129,6 +172,7 @@ jobs:
               return maximum, latest.isoformat(timespec='minutes') if latest else ''
 
           data = json.loads(data_path.read_text(encoding='utf-8'))
+          restore_invalid_temperature_minimum(data)
           forecast_maxima, forecast_created = parse_forecast(fetch_text(forecast_url))
           observed_max, observed_through = parse_observed(fetch_text(observed_url))
 
