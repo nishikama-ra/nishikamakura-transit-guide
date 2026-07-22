@@ -11,234 +11,85 @@
   <link rel="stylesheet" href="machinote-theme.css">
   <link rel="stylesheet" href="existing-pages-theme.css">
   <style>
-    html { scroll-behavior: smooth; }
-    .mock-jump-nav { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-top: 1px solid #dfe8e8; border-bottom: 1px solid #dfe8e8; backdrop-filter: blur(8px); }
-    .mock-jump-nav-inner { display: flex; gap: 8px; overflow-x: auto; padding: 9px 0; scrollbar-width: none; }
-    .mock-jump-nav-inner::-webkit-scrollbar { display: none; }
-    .mock-jump-nav a { flex: 0 0 auto; padding: 7px 12px; border: 1px solid #cfdcdc; border-radius: 999px; background: #fff; color: #315861; text-decoration: none; font-size: .86rem; font-weight: 700; }
-    .mock-weather-section { scroll-margin-top: 72px; padding: 0 0 22px; }
-    #life-heading, #public-transit { scroll-margin-top: 72px; }
-    .mock-weather-card { border: 1px solid #d9e5e5; border-radius: 18px; background: #f7fbfb; overflow: hidden; }
-    .mock-weather-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 18px 20px 12px; }
-    .mock-weather-head h2 { margin: 0; font-size: 1.22rem; }
-    .mock-weather-status { color: #677b80; font-size: .8rem; text-align: right; }
-    .mock-weather-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #d9e5e5; }
-    .mock-weather-day { min-width: 0; padding: 18px 20px; background: #fff; border-right: 1px solid #d9e5e5; }
-    .mock-weather-day:last-child { border-right: 0; }
-    .mock-weather-day h3 { margin: 0 0 8px; font-size: 1rem; }
-    .mock-weather-text { min-height: 3.2em; margin: 0 0 12px; color: #30494f; font-weight: 700; line-height: 1.55; }
-    .mock-weather-values { display: flex; flex-wrap: wrap; gap: 7px 14px; margin: 0; color: #60747a; font-size: .88rem; }
-    .mock-weather-values strong { color: #263e44; }
-    .mock-weather-links { display: flex; gap: 10px; flex-wrap: wrap; padding: 13px 20px 17px; border-top: 1px solid #d9e5e5; }
-    .mock-weather-links a { color: #315f6b; font-weight: 700; font-size: .88rem; }
-    .mock-weather-error { padding: 20px; border-top: 1px solid #d9e5e5; background: #fff; color: #6b5552; }
-    @media (max-width: 720px) {
-      .mock-weather-grid { grid-template-columns: 1fr; }
-      .mock-weather-day { border-right: 0; border-bottom: 1px solid #d9e5e5; }
-      .mock-weather-day:last-child { border-bottom: 0; }
-      .mock-weather-head { align-items: flex-start; }
-    }
+    html{scroll-behavior:smooth}
+    .mock-jump-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-top:1px solid #dfe8e8;border-bottom:1px solid #dfe8e8;backdrop-filter:blur(8px)}
+    .mock-jump-nav-inner{display:flex;gap:8px;overflow-x:auto;padding:9px 0;scrollbar-width:none}.mock-jump-nav-inner::-webkit-scrollbar{display:none}
+    .mock-jump-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid #cfdcdc;border-radius:999px;background:#fff;color:#315861;text-decoration:none;font-size:.86rem;font-weight:700}
+    .mock-weather-section{scroll-margin-top:72px;padding:0 0 26px}#life-heading,#public-transit{scroll-margin-top:72px}
+    .weather-panel{border:1px solid #d8e4e5;border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(42,77,84,.06);overflow:hidden}
+    .weather-panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:18px 22px 14px;background:#f5faf9}
+    .weather-panel-head h2{margin:0;font-size:1.2rem}.weather-panel-head p{margin:3px 0 0;color:#667a7f;font-size:.82rem}.weather-status{color:#667a7f;font-size:.78rem;text-align:right;white-space:nowrap}
+    .weather-layout{display:grid;grid-template-columns:1.35fr .85fr;border-top:1px solid #d8e4e5}
+    .weather-today{padding:24px 26px}.weather-today-main{display:grid;grid-template-columns:104px 1fr;gap:22px;align-items:center}
+    .weather-symbol{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;background:#eaf4f4;font-size:3.5rem;line-height:1}
+    .weather-day-label{margin:0 0 3px;color:#54757d;font-size:.82rem;font-weight:700}.weather-condition{margin:0;font-size:1.3rem;font-weight:750;line-height:1.45}
+    .weather-metrics{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:14px;color:#61757a;font-size:.9rem}.weather-metrics strong{color:#263f45;font-size:1rem}
+    .weather-next{border-left:1px solid #d8e4e5}.weather-next-day{display:grid;grid-template-columns:52px 48px 1fr;gap:8px;align-items:center;padding:18px 20px;border-bottom:1px solid #d8e4e5}.weather-next-day:last-child{border-bottom:0}
+    .weather-next-day h3{margin:0;font-size:.92rem}.weather-next-icon{font-size:2rem;text-align:center}.weather-next-text{min-width:0}.weather-next-text strong{display:block;font-size:.93rem;line-height:1.4}.weather-next-text span{display:block;margin-top:4px;color:#667a7f;font-size:.82rem}
+    .weather-links{display:flex;gap:12px;flex-wrap:wrap;padding:13px 22px 16px;border-top:1px solid #d8e4e5;background:#fbfdfd}.weather-links a{color:#315f6b;font-weight:700;font-size:.86rem}
+    .weather-error{padding:24px;color:#6b5552}
+    @media(max-width:720px){.weather-layout{grid-template-columns:1fr}.weather-next{border-left:0;border-top:1px solid #d8e4e5}.weather-today{padding:20px}.weather-today-main{grid-template-columns:78px 1fr;gap:15px}.weather-symbol{width:74px;height:74px;font-size:2.7rem}.weather-condition{font-size:1.08rem}.weather-panel-head{padding:16px 18px}.weather-status{white-space:normal}.weather-next-day{padding:15px 18px}}
   </style>
 </head>
 <body data-mn-page="home" data-mn-base=".">
   <div data-machinote-header></div>
-
   <main>
     <section class="hero shell">
-      <p class="eyebrow" id="heroEyebrow"></p>
-      <h1 id="heroTitle"></h1>
-      <p class="hero-lead" id="heroLead"></p>
-      <div class="home-hero-actions">
-        <a class="home-hero-primary" href="regional-maps.html">地域情報・地図を開く <span aria-hidden="true">→</span></a>
-        <a class="home-hero-secondary" href="#public-transit">交通情報を見る</a>
-      </div>
+      <p class="eyebrow" id="heroEyebrow"></p><h1 id="heroTitle"></h1><p class="hero-lead" id="heroLead"></p>
+      <div class="home-hero-actions"><a class="home-hero-primary" href="regional-maps.html">地域情報・地図を開く <span aria-hidden="true">→</span></a><a class="home-hero-secondary" href="#public-transit">交通情報を見る</a></div>
     </section>
-
-    <nav class="mock-jump-nav" aria-label="ページ内移動">
-      <div class="shell mock-jump-nav-inner">
-        <a href="#weather">天気</a>
-        <a href="#life-heading">暮らしの分野から探す</a>
-        <a href="#public-transit">電車・モノレール・路線バス</a>
-      </div>
-    </nav>
-
+    <nav class="mock-jump-nav" aria-label="ページ内移動"><div class="shell mock-jump-nav-inner"><a href="#weather">天気</a><a href="#life-heading">暮らしの分野から探す</a><a href="#public-transit">電車・モノレール・路線バス</a></div></nav>
     <section class="section shell mock-weather-section" id="weather" aria-labelledby="weather-heading">
-      <div class="mock-weather-card">
-        <div class="mock-weather-head">
-          <h2 id="weather-heading">天気</h2>
-          <span class="mock-weather-status" id="weatherStatus">気象庁から取得中</span>
-        </div>
-        <div class="mock-weather-grid" id="weatherGrid" aria-live="polite"></div>
-        <div class="mock-weather-links">
-          <a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=140000" target="_blank" rel="noopener">気象庁の天気予報 ↗</a>
-          <a href="https://www.jma.go.jp/bosai/nowc/#zoom:11/lat:35.319/lon:139.511/colordepth:normal/elements:hrpns" target="_blank" rel="noopener">雨雲の動き ↗</a>
-        </div>
+      <div class="weather-panel">
+        <div class="weather-panel-head"><div><h2 id="weather-heading">天気</h2><p>神奈川県東部の予報</p></div><span class="weather-status" id="weatherStatus">気象庁から取得中</span></div>
+        <div id="weatherContent" aria-live="polite"></div>
+        <div class="weather-links"><a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=140000" target="_blank" rel="noopener">気象庁の天気予報 ↗</a><a href="https://www.jma.go.jp/bosai/nowc/#zoom:11/lat:35.319/lon:139.511/colordepth:normal/elements:hrpns" target="_blank" rel="noopener">雨雲の動き ↗</a></div>
       </div>
     </section>
-
     <section class="section shell" aria-labelledby="life-heading">
-      <div class="section-heading">
-        <div><p class="section-kicker">地域情報・地図</p><h2 id="life-heading">暮らしの分野から探す</h2></div>
-        <p>施設の場所や地域の状況を、地図やグラフで確認できます。</p>
-      </div>
+      <div class="section-heading"><div><p class="section-kicker">地域情報・地図</p><h2 id="life-heading">暮らしの分野から探す</h2></div><p>施設の場所や地域の状況を、地図やグラフで確認できます。</p></div>
       <div class="home-topic-grid">
-        <a class="home-topic-card" href="education.html">
-          <img src="assets/icons/school.svg" alt="">
-          <span><small>教育・子育て</small><strong>教育</strong><em>学校、幼稚園・保育施設、公立小中学校の学区</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="medical-welfare.html">
-          <img src="assets/icons/medical.svg" alt="">
-          <span><small>生活支援</small><strong>医療・福祉</strong><em>病院、診療所、歯科、福祉施設</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="public-facilities.html">
-          <img src="assets/icons/public.svg" alt="">
-          <span><small>施設・活動場所</small><strong>公共・文化・郵便</strong><em>公共施設、文化・スポーツ施設、郵便局</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="culture-history.html">
-          <img src="assets/icons/culture.svg" alt="">
-          <span><small>地域を知る</small><strong>文化・歴史・見どころ</strong><em>文化財、史跡、寺社、地域資源</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="safety-map.html">
-          <img src="assets/icons/safety.svg" alt="">
-          <span><small>防災・行政</small><strong>消防・警察</strong><em>消防署、警察署、交番と所管区域</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="population-outlook.html">
-          <img src="assets/icons/population.svg" alt="">
-          <span><small>地域の変化</small><strong>人口の見通し</strong><em>将来推計人口を地図で確認</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-        <a class="home-topic-card" href="station-passengers.html">
-          <img src="assets/icons/station.svg" alt="">
-          <span><small>交通</small><strong>駅の利用状況</strong><em>周辺駅の乗降客数の推移</em></span>
-          <b aria-hidden="true">›</b>
-        </a>
-      </div>
-      <a class="home-section-link" href="regional-maps.html">地域情報・地図の一覧を開く <span aria-hidden="true">→</span></a>
+        <a class="home-topic-card" href="education.html"><img src="assets/icons/school.svg" alt=""><span><small>教育・子育て</small><strong>教育</strong><em>学校、幼稚園・保育施設、公立小中学校の学区</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="medical-welfare.html"><img src="assets/icons/medical.svg" alt=""><span><small>生活支援</small><strong>医療・福祉</strong><em>病院、診療所、歯科、福祉施設</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="public-facilities.html"><img src="assets/icons/public.svg" alt=""><span><small>施設・活動場所</small><strong>公共・文化・郵便</strong><em>公共施設、文化・スポーツ施設、郵便局</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="culture-history.html"><img src="assets/icons/culture.svg" alt=""><span><small>地域を知る</small><strong>文化・歴史・見どころ</strong><em>文化財、史跡、寺社、地域資源</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="safety-map.html"><img src="assets/icons/safety.svg" alt=""><span><small>防災・行政</small><strong>消防・警察</strong><em>消防署、警察署、交番と所管区域</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="population-outlook.html"><img src="assets/icons/population.svg" alt=""><span><small>地域の変化</small><strong>人口の見通し</strong><em>将来推計人口を地図で確認</em></span><b aria-hidden="true">›</b></a>
+        <a class="home-topic-card" href="station-passengers.html"><img src="assets/icons/station.svg" alt=""><span><small>交通</small><strong>駅の利用状況</strong><em>周辺駅の乗降客数の推移</em></span><b aria-hidden="true">›</b></a>
+      </div><a class="home-section-link" href="regional-maps.html">地域情報・地図の一覧を開く <span aria-hidden="true">→</span></a>
     </section>
-
-    <section class="section home-transport-section" id="public-transit">
-      <div class="shell">
-        <div class="section-heading">
-          <div><p class="section-kicker">交通</p><h2>電車・モノレール・路線バス</h2></div>
-          <p>駅・バス停、運行本数、最終便など、西鎌倉周辺から移動するときの情報です。</p>
-        </div>
-        <a class="primary-feature" href="https://nishikama-ra.github.io/nishikama-transit-map/" target="_blank" rel="noopener">
-          <span class="feature-route" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>
-            <strong>駅・バス停を地図で探す</strong>
-            <span class="feature-explanation">駅やバス停を選ぶと、藤沢・大船・鎌倉へ向かう本数と公式時刻表を確認できます。標高ツールでは、徒歩経路の距離と上り下りも確認できます。</span>
-            <em class="feature-button">開く <span aria-hidden="true">↗</span></em>
-          </span>
-        </a>
-        <div class="home-transport-links">
-          <a class="late-link" href="last-bus.html">
-            <span><small>帰る時間を確認する</small><strong>藤沢・大船・鎌倉からの最終電車・最終バス</strong></span>
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="late-link" href="stops.html">
-            <span><small>近くの駅・バス停から出る便</small><strong>駅・バス停ごとの始発・終発・本数</strong></span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-        <div class="home-card-grid" id="homeCards"></div>
-      </div>
-    </section>
-
-    <section class="section official-section" aria-labelledby="official-heading">
-      <div class="shell">
-        <div class="section-heading compact"><div><p class="section-kicker">公式サイトで確認する</p><h2 id="official-heading">公式時刻表</h2></div></div>
-        <div class="official-guide-grid">
-          <article class="official-guide-card"><h3>江ノ電バス</h3><a href="https://www.enoden.co.jp/bus/regular/" target="_blank" rel="noopener">停留所・時刻表を調べる ↗</a></article>
-          <article class="official-guide-card"><h3>京急バス</h3><a href="https://timetables.keikyu-bus.co.jp/" target="_blank" rel="noopener">時刻表を調べる ↗</a></article>
-          <article class="official-guide-card"><h3>湘南モノレール</h3><p><a href="https://www.shonan-monorail.co.jp/station/detail/fukasawa.html" target="_blank" rel="noopener">湘南深沢</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/nishikamakura.html" target="_blank" rel="noopener">西鎌倉</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/kataseyama.html" target="_blank" rel="noopener">片瀬山</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/shonanenoshima.html" target="_blank" rel="noopener">湘南江の島</a></p></article>
-          <article class="official-guide-card"><h3>江ノ島電鉄</h3><p><a href="https://www.enoden.co.jp/train/station/koshigoe/" target="_blank" rel="noopener">腰越</a>・<a href="https://www.enoden.co.jp/train/station/enoshima/" target="_blank" rel="noopener">江ノ島</a>・<a href="https://www.enoden.co.jp/train/station/kamakurakokomae/" target="_blank" rel="noopener">鎌倉高校前</a>・<a href="https://www.enoden.co.jp/train/station/shichirigahama/" target="_blank" rel="noopener">七里ヶ浜</a></p></article>
-          <article class="official-guide-card"><h3>小田急・JR</h3><p><a href="https://www.odakyu.jp/station/katase_enoshima/timetable/" target="_blank" rel="noopener">片瀬江ノ島駅</a>・<a href="https://www.jreast-timetable.jp/" target="_blank" rel="noopener">JR東日本</a></p></article>
-        </div>
-      </div>
-    </section>
+    <section class="section home-transport-section" id="public-transit"><div class="shell">
+      <div class="section-heading"><div><p class="section-kicker">交通</p><h2>電車・モノレール・路線バス</h2></div><p>駅・バス停、運行本数、最終便など、西鎌倉周辺から移動するときの情報です。</p></div>
+      <a class="primary-feature" href="https://nishikama-ra.github.io/nishikama-transit-map/" target="_blank" rel="noopener"><span class="feature-route" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>駅・バス停を地図で探す</strong><span class="feature-explanation">駅やバス停を選ぶと、藤沢・大船・鎌倉へ向かう本数と公式時刻表を確認できます。標高ツールでは、徒歩経路の距離と上り下りも確認できます。</span><em class="feature-button">開く <span aria-hidden="true">↗</span></em></span></a>
+      <div class="home-transport-links"><a class="late-link" href="last-bus.html"><span><small>帰る時間を確認する</small><strong>藤沢・大船・鎌倉からの最終電車・最終バス</strong></span><span aria-hidden="true">→</span></a><a class="late-link" href="stops.html"><span><small>近くの駅・バス停から出る便</small><strong>駅・バス停ごとの始発・終発・本数</strong></span><span aria-hidden="true">→</span></a></div><div class="home-card-grid" id="homeCards"></div>
+    </div></section>
+    <section class="section official-section" aria-labelledby="official-heading"><div class="shell"><div class="section-heading compact"><div><p class="section-kicker">公式サイトで確認する</p><h2 id="official-heading">公式時刻表</h2></div></div><div class="official-guide-grid">
+      <article class="official-guide-card"><h3>江ノ電バス</h3><a href="https://www.enoden.co.jp/bus/regular/" target="_blank" rel="noopener">停留所・時刻表を調べる ↗</a></article>
+      <article class="official-guide-card"><h3>京急バス</h3><a href="https://timetables.keikyu-bus.co.jp/" target="_blank" rel="noopener">時刻表を調べる ↗</a></article>
+      <article class="official-guide-card"><h3>湘南モノレール</h3><p><a href="https://www.shonan-monorail.co.jp/station/detail/fukasawa.html" target="_blank" rel="noopener">湘南深沢</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/nishikamakura.html" target="_blank" rel="noopener">西鎌倉</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/kataseyama.html" target="_blank" rel="noopener">片瀬山</a>・<a href="https://www.shonan-monorail.co.jp/station/detail/shonanenoshima.html" target="_blank" rel="noopener">湘南江の島</a></p></article>
+      <article class="official-guide-card"><h3>江ノ島電鉄</h3><p><a href="https://www.enoden.co.jp/train/station/koshigoe/" target="_blank" rel="noopener">腰越</a>・<a href="https://www.enoden.co.jp/train/station/enoshima/" target="_blank" rel="noopener">江ノ島</a>・<a href="https://www.enoden.co.jp/train/station/kamakurakokomae/" target="_blank" rel="noopener">鎌倉高校前</a>・<a href="https://www.enoden.co.jp/train/station/shichirigahama/" target="_blank" rel="noopener">七里ヶ浜</a></p></article>
+      <article class="official-guide-card"><h3>小田急・JR</h3><p><a href="https://www.odakyu.jp/station/katase_enoshima/timetable/" target="_blank" rel="noopener">片瀬江ノ島駅</a>・<a href="https://www.jreast-timetable.jp/" target="_blank" rel="noopener">JR東日本</a></p></article>
+    </div></div></section>
   </main>
-
   <footer class="mn-site-footer">© にしかま周辺 まちノート</footer>
-  <script src="scripts/machinote-shell.js"></script>
-  <script src="scripts/common.js"></script>
+  <script src="scripts/machinote-shell.js"></script><script src="scripts/common.js"></script>
   <script>
-    (() => {
-      const endpoint = 'https://www.jma.go.jp/bosai/forecast/data/forecast/140000.json';
-      const grid = document.getElementById('weatherGrid');
-      const status = document.getElementById('weatherStatus');
-      const labels = ['今日', '明日', '明後日'];
-
-      const cleanWeather = value => String(value || '')
-        .replace(/所により/g, '／所により')
-        .replace(/で 雷を伴う/g, '、雷を伴う')
-        .replace(/\s+/g, ' ')
-        .trim();
-
-      const formatDate = value => {
-        const date = new Date(value);
-        return new Intl.DateTimeFormat('ja-JP', {
-          month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'
-        }).format(date) + '発表';
-      };
-
-      const getPopForDay = (popSeries, dateString) => {
-        if (!popSeries) return '―';
-        const values = popSeries.timeDefines
-          .map((time, index) => ({ time, value: popSeries.areas[0].pops[index] }))
-          .filter(item => item.time.slice(0, 10) === dateString && item.value !== '')
-          .map(item => Number(item.value));
-        return values.length ? Math.max(...values) + '%' : '―';
-      };
-
-      const getTemps = (tempSeries, dateString) => {
-        if (!tempSeries) return { min: '―', max: '―' };
-        const rows = tempSeries.timeDefines.map((time, index) => ({
-          time,
-          value: tempSeries.areas[0].temps[index]
-        })).filter(item => item.time.slice(0, 10) === dateString && item.value !== '');
-        const nums = rows.map(item => Number(item.value)).filter(Number.isFinite);
-        if (!nums.length) return { min: '―', max: '―' };
-        return { min: Math.min(...nums) + '℃', max: Math.max(...nums) + '℃' };
-      };
-
-      fetch(endpoint, { cache: 'no-store' })
-        .then(response => {
-          if (!response.ok) throw new Error('HTTP ' + response.status);
-          return response.json();
-        })
-        .then(data => {
-          const short = data[0];
-          const weatherSeries = short.timeSeries[0];
-          const popSeries = short.timeSeries[1];
-          const tempSeries = short.timeSeries[2];
-          const eastWeather = weatherSeries.areas.find(item => item.area.code === '140010') || weatherSeries.areas[0];
-          const eastPop = popSeries && (popSeries.areas.find(item => item.area.code === '140010') || popSeries.areas[0]);
-          const yokohamaTemps = tempSeries && (tempSeries.areas.find(item => item.area.code === '46106') || tempSeries.areas[0]);
-          const popNormalized = popSeries ? { timeDefines: popSeries.timeDefines, areas: [eastPop] } : null;
-          const tempNormalized = tempSeries ? { timeDefines: tempSeries.timeDefines, areas: [yokohamaTemps] } : null;
-
-          grid.innerHTML = weatherSeries.timeDefines.slice(0, 3).map((time, index) => {
-            const dateString = time.slice(0, 10);
-            const temps = getTemps(tempNormalized, dateString);
-            return `<article class="mock-weather-day">
-              <h3>${labels[index] || new Intl.DateTimeFormat('ja-JP', { weekday: 'short' }).format(new Date(time))}</h3>
-              <p class="mock-weather-text">${cleanWeather(eastWeather.weathers[index])}</p>
-              <p class="mock-weather-values"><span>最高 <strong>${temps.max}</strong></span><span>最低 <strong>${temps.min}</strong></span><span>降水 <strong>${getPopForDay(popNormalized, dateString)}</strong></span></p>
-            </article>`;
-          }).join('');
-          status.textContent = '神奈川県東部　' + formatDate(short.reportDatetime);
-        })
-        .catch(error => {
-          console.error(error);
-          status.textContent = '取得できませんでした';
-          grid.innerHTML = '<p class="mock-weather-error">天気予報を取得できませんでした。気象庁の天気予報をご確認ください。</p>';
-        });
-    })();
+  (()=>{
+    const endpoint='https://www.jma.go.jp/bosai/forecast/data/forecast/140000.json';
+    const content=document.getElementById('weatherContent');const status=document.getElementById('weatherStatus');const labels=['今日','明日','明後日'];
+    const iconFor=code=>{const n=Number(code);if([100,101,110,111,210,211].includes(n))return'☀️';if([102,103,104,105,106,107,108,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,130,131,132,140,160,170,181,200,201,202,203,204,205,206,207,208,209,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,240,250,260,270,281].includes(n))return'🌦️';if(n>=300&&n<400)return'🌧️';if(n>=400)return'❄️';return'☁️'};
+    const clean=v=>String(v||'').replace(/所により/g,'／所により').replace(/で 雷を伴う/g,'、雷を伴う').replace(/\s+/g,' ').trim();
+    const formatDate=v=>new Intl.DateTimeFormat('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(v))+'発表';
+    const popFor=(s,d)=>{if(!s)return'―';const a=s.timeDefines.map((t,i)=>({t,v:s.areas[0].pops[i]})).filter(x=>x.t.slice(0,10)===d&&x.v!=='').map(x=>Number(x.v));return a.length?Math.max(...a)+'%':'―'};
+    const tempsFor=(s,d)=>{if(!s)return{min:'―',max:'―'};const a=s.timeDefines.map((t,i)=>({t,v:s.areas[0].temps[i]})).filter(x=>x.t.slice(0,10)===d&&x.v!=='').map(x=>Number(x.v)).filter(Number.isFinite);return a.length?{min:Math.min(...a)+'℃',max:Math.max(...a)+'℃'}:{min:'―',max:'―'}};
+    fetch(endpoint,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(data=>{
+      const short=data[0],w=short.timeSeries[0],p=short.timeSeries[1],t=short.timeSeries[2];const ew=w.areas.find(x=>x.area.code==='140010')||w.areas[0];const ep=p&&(p.areas.find(x=>x.area.code==='140010')||p.areas[0]);const yt=t&&(t.areas.find(x=>x.area.code==='46106')||t.areas[0]);const pn=p?{timeDefines:p.timeDefines,areas:[ep]}:null;const tn=t?{timeDefines:t.timeDefines,areas:[yt]}:null;
+      const days=w.timeDefines.slice(0,3).map((time,i)=>{const d=time.slice(0,10);return{label:labels[i],icon:iconFor(ew.weatherCodes[i]),text:clean(ew.weathers[i]),temps:tempsFor(tn,d),pop:popFor(pn,d)}});
+      const first=days[0],rest=days.slice(1);
+      content.innerHTML=`<div class="weather-layout"><article class="weather-today"><div class="weather-today-main"><div class="weather-symbol" aria-hidden="true">${first.icon}</div><div><p class="weather-day-label">${first.label}</p><p class="weather-condition">${first.text}</p><div class="weather-metrics"><span>最高 <strong>${first.temps.max}</strong></span><span>最低 <strong>${first.temps.min}</strong></span><span>降水 <strong>${first.pop}</strong></span></div></div></div></article><div class="weather-next">${rest.map(d=>`<article class="weather-next-day"><h3>${d.label}</h3><div class="weather-next-icon" aria-hidden="true">${d.icon}</div><div class="weather-next-text"><strong>${d.text}</strong><span>最高 ${d.temps.max}　最低 ${d.temps.min}　降水 ${d.pop}</span></div></article>`).join('')}</div></div>`;
+      status.textContent=formatDate(short.reportDatetime);
+    }).catch(e=>{console.error(e);status.textContent='取得できませんでした';content.innerHTML='<p class="weather-error">天気予報を取得できませんでした。気象庁の天気予報をご確認ください。</p>'});
+  })();
   </script>
 </body>
 </html>
