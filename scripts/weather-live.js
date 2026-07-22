@@ -55,7 +55,8 @@
       .weather-advisories.single{grid-template-columns:1fr}
       .weather-today-range{margin:4px 0 0;color:#60757a;font-size:.72rem;line-height:1.4}
       .weather-today-range strong{color:#263f45;font-size:.8rem}
-      .weather-current-source,.weather-range-source{margin:2px 0 0;color:#7a898b;font-size:.6rem;line-height:1.4}
+      .weather-primary-temp .weather-current-time{font-weight:400!important}
+      .weather-range-source{margin:2px 0 0;color:#7a898b;font-size:.6rem;line-height:1.4}
     `;
     document.head.appendChild(style);
   };
@@ -104,14 +105,6 @@
     };
   };
 
-  const clarifyForecastStatus = () => {
-    const status = document.getElementById('weatherStatus');
-    if (!status) return;
-    const text = status.textContent.trim();
-    if (!text || text === '取得中' || text === '取得できませんでした' || text.startsWith('今日～明後日の予報')) return;
-    status.textContent = `今日～明後日の予報 ${text}`;
-  };
-
   const renderTodayTemperatures = async data => {
     const [amedasResult, localResult] = await Promise.allSettled([
       fetchCurrentAmedas(),
@@ -120,10 +113,8 @@
     const primary = await waitForToday();
     if (!primary) return;
 
-    clarifyForecastStatus();
-
     const spanText = primary.querySelector('span')?.textContent || '';
-    const originalIsForecast = !spanText.includes('観測') && !spanText.includes('時点');
+    const originalIsForecast = !spanText.includes('現在（');
     const existingMax = originalIsForecast ? Number.parseFloat(primary.querySelector('strong')?.textContent || '') : NaN;
     const existingMin = originalIsForecast ? Number.parseFloat(spanText) : NaN;
 
@@ -139,8 +130,10 @@
     const minTemp = Number.isFinite(savedMin) ? savedMin : existingMin;
 
     if (Number.isFinite(currentTemp)) {
-      const timeLabel = amedas ? `${formatClock(amedas.observedAt)}観測` : `${formatClock(local.currentAt)}時点`;
-      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span>${timeLabel}</span>`;
+      const timeLabel = amedas
+        ? `${formatClock(amedas.observedAt)}現在（辻堂アメダス）`
+        : `${formatClock(local.currentAt)}現在（西鎌倉付近・推定）`;
+      primary.innerHTML = `<strong>${currentTemp.toFixed(1)}℃</strong><span class="weather-current-time">${timeLabel}</span>`;
     }
 
     let range = primary.parentElement.querySelector('.weather-today-range');
@@ -151,25 +144,13 @@
     }
     range.innerHTML = `予想最高 <strong>${Number.isFinite(maxTemp) ? `${Math.round(maxTemp)}℃` : '―'}</strong> ／ 最低 <strong>${Number.isFinite(minTemp) ? `${Math.round(minTemp)}℃` : '―'}</strong>`;
 
-    let currentSource = primary.parentElement.querySelector('.weather-current-source');
-    if (!currentSource) {
-      currentSource = document.createElement('p');
-      currentSource.className = 'weather-current-source';
-      range.insertAdjacentElement('afterend', currentSource);
-    }
-    if (amedas) {
-      currentSource.textContent = '観測地点：辻堂アメダス';
-    } else if (Number.isFinite(local.current)) {
-      currentSource.textContent = '西鎌倉付近の推定値';
-    } else {
-      currentSource.textContent = '';
-    }
+    primary.parentElement.querySelector('.weather-current-source')?.remove();
 
     let rangeSource = primary.parentElement.querySelector('.weather-range-source');
     if (!rangeSource) {
       rangeSource = document.createElement('p');
       rangeSource.className = 'weather-range-source';
-      currentSource.insertAdjacentElement('afterend', rangeSource);
+      range.insertAdjacentElement('afterend', rangeSource);
     }
     const reportTimes = [forecast.maxReportDatetime, forecast.minReportDatetime].filter(Boolean).sort();
     const reportLabel = reportTimes.length ? formatDateTime(reportTimes.at(-1), '発表') : '';
