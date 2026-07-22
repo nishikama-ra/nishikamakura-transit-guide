@@ -78,13 +78,16 @@ async function renderHourlyWeatherMockup() {
     const block = await waitForHourlyBlock();
     if (!block || rows.length < 2) return;
 
+    document.querySelectorAll('.weather-metrics span, .weather-next-meta').forEach(element => {
+      element.innerHTML = element.innerHTML.replace(/^降水(?=\s)/, '降水確率');
+    });
+
     const cellWidth = 58;
     const labelWidth = 72;
     const width = labelWidth + rows.length * cellWidth;
     const height = 120;
     const top = 18;
     const bottom = 8;
-    const plotWidth = width - labelWidth;
     const plotHeight = height - top - bottom;
     const temps = rows.map(row => row.temp);
     const min = Math.floor(Math.min(...temps) - 1);
@@ -99,6 +102,30 @@ async function renderHourlyWeatherMockup() {
     const rain = rows.map(row => row.precipitation < 0.05 ? '0' : row.precipitation.toFixed(1));
 
     block.innerHTML = `<div class="hourly-head"><strong>これから24時間</strong><span>1時間ごと</span></div><div class="hourly-scroll"><div class="hourly-inner" style="width:${width}px;min-width:${width}px"><svg class="temp-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="1時間ごとの気温">${grid}<polyline class="temp-line" points="${points}"></polyline>${dots}</svg><div class="hourly-table" style="--cols:${rows.length}"><div class="hourly-row-label">時刻</div>${cells('hourly-time', rows.map(row => row.label))}<div class="hourly-row-label">天気</div>${cells('hourly-icon', rows.map(row => icon(row.code)))}<div class="hourly-row-label">降水量</div>${cells('hourly-value', rain.map(value => `${value}<small>mm</small>`))}<div class="hourly-row-label">風</div>${cells('hourly-value hourly-wind', rows.map(row => `${compass(row.direction)}<br>${row.speed.toFixed(1)}m/s`))}</div></div><p class="hour-source">日別予報：気象庁　時間別予報：Open-Meteo JMAモデル</p>`;
+
+    const weatherLayout = document.querySelector('.weather-layout');
+    if (weatherLayout && !document.querySelector('.weather-advisories')) {
+      const advisories = document.createElement('div');
+      advisories.className = 'weather-advisories';
+      advisories.innerHTML = `
+        <section class="weather-advisory heat-advisory" aria-labelledby="heat-heading">
+          <div class="weather-advisory-head">
+            <strong id="heat-heading">暑さ指数</strong>
+            <span>神奈川県に熱中症警戒アラート発表中</span>
+          </div>
+          <div class="heat-days">
+            <div><small>今日</small><strong>32</strong><span>危険</span></div>
+            <div><small>明日</small><strong>34</strong><span>危険</span></div>
+            <div><small>明後日</small><strong>30</strong><span>厳重警戒</span></div>
+          </div>
+          <p>辻堂の予測値。3日間の最高値が25以上の場合に表示します。</p>
+        </section>
+        <section class="weather-advisory early-advisory" aria-labelledby="early-heading">
+          <div class="weather-advisory-head"><strong id="early-heading">早期注意情報</strong><span>警報級の可能性［中］</span></div>
+          <p>東部では、22日12時～18時、23日18時～24時に、大雨警報が発表される可能性があります。</p>
+        </section>`;
+      weatherLayout.insertAdjacentElement('afterend', advisories);
+    }
   } catch (error) {
     console.error(error);
   }
