@@ -1,8 +1,81 @@
 {
-  "updatedAt": "2026-07-22T17:39+09:00",
+  "updatedAt": "2026-07-22T18:10+09:00",
+  "temperatureForecasts": {
+    "status": "ok",
+    "updatedAt": "2026-07-22T17:00:00+09:00",
+    "areaCode": "46106",
+    "areaName": "横浜",
+    "source": "気象庁",
+    "days": {
+      "2026-07-22": {
+        "source": "気象庁",
+        "areaName": "横浜",
+        "max": 37.0,
+        "maxReportDatetime": "2026-07-22T11:00:00+09:00",
+        "min": 27.0,
+        "minReportDatetime": "2026-07-21T17:00:00+09:00"
+      },
+      "2026-07-23": {
+        "max": 37.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 28.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-24": {
+        "max": 33.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 26.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-25": {
+        "max": 31.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 24.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-26": {
+        "max": 30.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 24.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-27": {
+        "max": 33.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 25.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-28": {
+        "max": 33.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 25.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      },
+      "2026-07-29": {
+        "max": 32.0,
+        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
+        "min": 26.0,
+        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "source": "気象庁",
+        "areaName": "横浜"
+      }
+    }
+  },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-22T17:39+09:00",
+    "updatedAt": "2026-07-22T18:10+09:00",
     "days": [
       {
         "label": "今日",
