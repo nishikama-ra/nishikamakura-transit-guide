@@ -39,10 +39,11 @@ function ensureWeatherMockupStyle() {
     .weather-advisory{padding:12px 18px 13px}.weather-advisory+.weather-advisory{border-left:1px solid #d8e4e5}
     .heat-advisory{background:#fffdf8}.heat-days{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
     .heat-days div{padding:8px 7px;border:1px solid #e4ded0;border-radius:9px;background:#fff;text-align:center}
-    .heat-days small{display:block;margin-bottom:3px;font-size:.65rem;color:#6e7777}
+    .heat-days small{display:block;margin-bottom:3px;font-size:.62rem;line-height:1.35;color:#6e7777;font-weight:400}
     .heat-days strong{font-size:1.15rem;color:#35494d;font-weight:700}
-    .heat-days span{margin-left:3px;font-size:.65rem;color:#786b53;font-weight:400}
+    .heat-days span{margin-left:3px;font-size:.62rem;color:#786b53;font-weight:400}
     .weather-advisory p{margin:7px 0 0;color:#66787b;font-size:.65rem;line-height:1.5}
+    .weather-source{margin-top:8px!important;color:#7c898b!important;font-size:.61rem!important}
     .early-advisory{background:#fafcfc}.early-advisory>p{margin-top:2px;font-size:.72rem;color:#435d63}
     @media(max-width:720px){.active-weather-alerts{padding:9px 14px 10px}.active-weather-alert-list{display:grid}.weather-advisories{grid-template-columns:1fr}.weather-advisory{padding:11px 14px 12px}.weather-advisory+.weather-advisory{border-left:0;border-top:1px solid #d8e4e5}.weather-advisory-head{align-items:flex-start}.heat-days div{padding:7px 5px}}
   `;
@@ -92,7 +93,7 @@ async function renderActiveWarnings() {
 
     const section = document.createElement('section');
     section.className = 'active-weather-alerts';
-    section.innerHTML = `<div class="active-weather-alerts-head"><strong>鎌倉市に発表中の警報・注意報</strong><span>${updatedLabel}</span></div><div class="active-weather-alert-list">${active.map(item => `<div class="active-weather-alert ${warningCodes.has(item.code) ? 'warning' : ''}"><b>${item.name}</b><p>鎌倉市</p></div>`).join('')}</div>`;
+    section.innerHTML = `<div class="active-weather-alerts-head"><strong>鎌倉市に発表中の警報・注意報</strong><span>${updatedLabel}</span></div><div class="active-weather-alert-list">${active.map(item => `<div class="active-weather-alert ${warningCodes.has(item.code) ? 'warning' : ''}"><b>${item.name}</b><p>鎌倉市</p></div>`).join('')}</div><p class="weather-source">出典：気象庁</p>`;
     weatherLayout.insertAdjacentElement('beforebegin', section);
   } catch (error) {
     console.error(error);
@@ -174,9 +175,15 @@ async function renderHourlyWeatherMockup() {
     block.innerHTML = `<div class="hourly-head"><strong>これから24時間</strong><span>1時間ごと</span></div><div class="hourly-scroll"><div class="hourly-inner" style="width:${width}px;min-width:${width}px"><svg class="temp-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="1時間ごとの気温">${grid}<polyline class="temp-line" points="${points}"></polyline>${dots}</svg><div class="hourly-table" style="--cols:${rows.length}"><div class="hourly-row-label">時刻</div>${cells('hourly-time',rows.map(row => row.label))}<div class="hourly-row-label">天気</div>${cells('hourly-icon',rows.map(row => icon(row.code)))}<div class="hourly-row-label">降水量</div>${cells('hourly-value',rain.map(value => `${value}<small>mm</small>`))}<div class="hourly-row-label">風</div>${cells('hourly-value hourly-wind',rows.map(row => `${compass(row.direction)}<br>${row.speed.toFixed(1)}m/s`))}</div></div><p class="hour-source">日別予報：気象庁　時間別予報：Open-Meteo JMAモデル</p>`;
 
     if (!document.querySelector('.weather-advisories')) {
+      const formatDay = (offset, relative) => {
+        const d = new Date();
+        d.setDate(d.getDate() + offset);
+        const weekdays = ['日','月','火','水','木','金','土'];
+        return `${relative}<br>${d.getMonth() + 1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
+      };
       const advisories = document.createElement('div');
       advisories.className = 'weather-advisories';
-      advisories.innerHTML = '<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>神奈川県に熱中症警戒アラート発表中</span></div><div class="heat-days"><div><small>今日</small><strong>32</strong><span>危険</span></div><div><small>明日</small><strong>34</strong><span>危険</span></div><div><small>明後日</small><strong>30</strong><span>厳重警戒</span></div></div><p>3日間の最高値が25以上の場合に表示します。</p></section><section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>警報級の可能性［中］</span></div><p>神奈川県東部では、22日12時～18時、23日18時～24時に、大雨警報が発表される可能性があります。</p></section>';
+      advisories.innerHTML = `<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>神奈川県に熱中症警戒アラート発表中</span></div><div class="heat-days"><div><small>${formatDay(0,'今日')}</small><strong>32</strong><span>危険</span></div><div><small>${formatDay(1,'明日')}</small><strong>34</strong><span>危険</span></div><div><small>${formatDay(2,'明後日')}</small><strong>30</strong><span>厳重警戒</span></div></div><p>3日間の最高値が25以上の場合に表示します。</p><p class="weather-source">出典：環境省 熱中症予防情報サイト</p></section><section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>警報級の可能性［中］</span></div><p>神奈川県東部では、22日12時～18時、23日18時～24時に、大雨警報が発表される可能性があります。</p><p class="weather-source">出典：気象庁</p></section>`;
       block.insertAdjacentElement('afterend', advisories);
     }
   } catch (error) {
