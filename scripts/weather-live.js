@@ -4,9 +4,23 @@
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const weekdays = ['日','月','火','水','木','金','土'];
   const formatDate = value => {
-    const d = new Date(value);
+    const d = new Date(/^\d{4}-\d{2}-\d{2}$/.test(String(value)) ? `${value}T00:00:00+09:00` : value);
     if (Number.isNaN(d.getTime())) return escapeHtml(value);
-    return `${d.getMonth() + 1}/${d.getDate()}（${weekdays[d.getDay()]}）`;
+    return `${d.getMonth() + 1}/${d.getDate()}(${weekdays[d.getDay()]})`;
+  };
+  const formatDateTime = (value, suffix) => {
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return escapeHtml(value || '');
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('ja-JP', {
+      timeZone: 'Asia/Tokyo',
+      month: 'numeric',
+      day: 'numeric',
+      weekday: 'short',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
+    }).formatToParts(d).filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+    return `${parts.month}/${parts.day}(${parts.weekday}) ${parts.hour}:${parts.minute}${suffix}`;
   };
   const wbgtLabel = value => value >= 31 ? '危険' : value >= 28 ? '厳重警戒' : value >= 25 ? '警戒' : value >= 21 ? '注意' : 'ほぼ安全';
 
@@ -43,6 +57,7 @@
     if (!block) return;
 
     document.querySelector('.weather-advisories')?.remove();
+    document.querySelectorAll('.weather-live-status').forEach(element => element.remove());
 
     let data;
     try {
@@ -56,27 +71,41 @@
     }
 
     const sections = [];
+    const statusMessages = [];
+
     const wbgt = Array.isArray(data.wbgt?.days) ? data.wbgt.days.filter(day => Number.isFinite(Number(day.max))) : [];
-    if (wbgt.length && wbgt.some(day => Number(day.max) >= 25)) {
+    if (data.wbgt?.status && data.wbgt.status !== 'ok') {
+      statusMessages.push('暑さ指数を取得できませんでした。');
+    } else if (wbgt.length && wbgt.some(day => Number(day.max) >= 25)) {
       const cards = wbgt.slice(0, 3).map(day => `<div><small>${escapeHtml(day.label || '')}<br>${formatDate(day.date)}</small><strong>${Math.round(Number(day.max))}</strong><span>${wbgtLabel(Number(day.max))}</span></div>`).join('');
-      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>3日間の予測最高値</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　更新：${escapeHtml(data.wbgt.updatedAt || data.updatedAt || '')}</p></section>`);
+      const updatedAt = data.wbgt?.updatedAt || data.updatedAt || '';
+      sections.push(`<section class="weather-advisory heat-advisory"><div class="weather-advisory-head"><strong>暑さ指数（WBGT・辻堂）</strong><span>3日間の予測最高値</span></div><div class="heat-days">${cards}</div><p class="weather-source">出典：環境省 熱中症予防情報サイト　更新：${formatDateTime(updatedAt, '時点')}</p></section>`);
     }
 
+    const earlyStatus = data.earlyWarnings?.status || 'ok';
     const early = Array.isArray(data.earlyWarnings?.items) ? data.earlyWarnings.items : [];
-    if (early.length) {
+    if (earlyStatus !== 'ok') {
+      statusMessages.push('早期注意情報を取得できませんでした。');
+    } else if (early.length) {
       const items = early.map(item => `<div class="early-warning-item"><strong>${escapeHtml(item.phenomenon)}　警報級の可能性［${escapeHtml(item.level)}］</strong><span>${escapeHtml(item.period || '')}</span></div>`).join('');
-      sections.push(`<section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>神奈川県東部</span></div><div class="early-warning-list">${items}</div><p class="weather-source">出典：気象庁　発表：${escapeHtml(data.earlyWarnings.reportDatetime || '')}</p></section>`);
+      const reportDatetime = data.earlyWarnings?.reportDatetime || '';
+      sections.push(`<section class="weather-advisory early-advisory"><div class="weather-advisory-head"><strong>早期注意情報</strong><span>神奈川県東部</span></div><div class="early-warning-list">${items}</div><p class="weather-source">出典：気象庁　発表：${formatDateTime(reportDatetime, '発表')}</p></section>`);
     }
 
-    if (!sections.length) {
+    let anchor = block;
+    if (sections.length) {
+      const wrapper = document.createElement('div');
+      wrapper.className = `weather-advisories${sections.length === 1 ? ' single' : ''}`;
+      wrapper.innerHTML = sections.join('');
+      block.insertAdjacentElement('afterend', wrapper);
+      anchor = wrapper;
+    }
+
+    if (statusMessages.length) {
+      anchor.insertAdjacentHTML('afterend', `<p class="weather-live-status">${statusMessages.map(escapeHtml).join(' ')}</p>`);
+    } else if (!sections.length) {
       block.insertAdjacentHTML('afterend', '<p class="weather-live-status">現在、表示対象の暑さ指数または早期注意情報はありません。</p>');
-      return;
     }
-
-    const wrapper = document.createElement('div');
-    wrapper.className = `weather-advisories${sections.length === 1 ? ' single' : ''}`;
-    wrapper.innerHTML = sections.join('');
-    block.insertAdjacentElement('afterend', wrapper);
   };
 
   window.addEventListener('load', () => setTimeout(render, 300));

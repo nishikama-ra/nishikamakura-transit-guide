@@ -1,17 +1,18 @@
 {
-  "updatedAt": "2026-07-22T14:25+09:00",
+  "updatedAt": "2026-07-22T16:00+09:00",
   "wbgt": {
-    "updatedAt": "2026-07-22T14:25+09:00",
+    "status": "ok",
+    "updatedAt": "2026-07-22T16:00+09:00",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-22",
-        "max": 32.0
+        "max": 29.0
       },
       {
         "label": "明日",
         "date": "2026-07-23",
-        "max": 34.0
+        "max": 35.0
       },
       {
         "label": "明後日",
@@ -21,7 +22,35 @@
     ]
   },
   "earlyWarnings": {
-    "reportDatetime": "2026-05-28T11:00:00+09:00",
-    "items": []
+    "status": "ok",
+    "reportDatetime": "2026-07-22T11:00:00+09:00",
+    "reports": {
+      "VPFD61": {
+        "reportDatetime": "2026-07-22T11:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260722013450_0_VPFD61_140000.xml"
+      },
+      "VPFW60": {
+        "reportDatetime": "2026-07-22T11:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260722014015_0_VPFW60_140000.xml"
+      }
+    },
+    "items": [
+      {
+        "phenomenon": "大雨",
+        "level": "中",
+        "period": "7/22 12時～24時",
+        "areaCode": "140010",
+        "areaName": "東部",
+        "sourceCode": "VPFD61"
+      },
+      {
+        "phenomenon": "大雨",
+        "level": "中",
+        "period": "7/23 12時～24時",
+        "areaCode": "140010",
+        "areaName": "東部",
+        "sourceCode": "VPFD61"
+      }
+    ]
   }
 }
