@@ -10,30 +10,4 @@
     @media(max-width:820px){.hero{background-position:50% 18%!important}}
   `;
   document.head.appendChild(style);
-
-  const guardId = 'weatherLegacyAdvisoryGuard';
-  const ensureGuard = () => {
-    if (document.querySelector('.weather-advisories:not(#weatherLegacyAdvisoryGuard)')) return;
-    if (document.getElementById(guardId)) return;
-    const guard = document.createElement('div');
-    guard.id = guardId;
-    guard.className = 'weather-advisories';
-    guard.hidden = true;
-    guard.setAttribute('aria-hidden', 'true');
-    document.body.appendChild(guard);
-  };
-
-  ensureGuard();
-
-  const observer = new MutationObserver(() => {
-    const liveAdvisory = document.querySelector('.weather-advisories:not(#weatherLegacyAdvisoryGuard)');
-    if (liveAdvisory) {
-      document.getElementById(guardId)?.remove();
-      observer.disconnect();
-      return;
-    }
-    ensureGuard();
-  });
-
-  observer.observe(document.documentElement, { childList: true, subtree: true });
 })();

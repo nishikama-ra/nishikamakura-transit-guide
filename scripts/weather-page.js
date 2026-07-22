@@ -1,5 +1,5 @@
 (() => {
-  if (!location.pathname.endsWith('/weather-top-mockup.html')) return;
+  if (!document.getElementById('weatherContent')) return;
 
   const jmaUrl = 'https://www.jma.go.jp/bosai/forecast/data/forecast/140000.json';
   const hourlyUrl = 'https://api.open-meteo.com/v1/forecast?latitude=35.319292&longitude=139.504460&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,wind_direction_10m&wind_speed_unit=ms&timezone=Asia%2FTokyo&forecast_days=2';
@@ -165,6 +165,7 @@
   Promise.allSettled([dailyReady, hourlyReady]).then(([, hourlyResult]) => {
     const block = content.querySelector('.hourly-block');
     if (!block) return;
+    if (block.dataset.weatherHourlySource === 'open-meteo-jma') return;
     if (hourlyResult.status !== 'fulfilled') {
       console.error(hourlyResult.reason);
       block.innerHTML = '<div class="hourly-head"><strong>これから48時間</strong></div><p class="weather-live-status">時間別予報を取得できませんでした。</p>';

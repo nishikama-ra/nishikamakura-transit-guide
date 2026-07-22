@@ -9,6 +9,26 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="machinote-theme.css">
   <link rel="stylesheet" href="existing-pages-theme.css">
+  <style>
+    .mock-weather-section{scroll-margin-top:24px;padding:0 0 22px}
+    .weather-panel{border:1px solid #d8e4e5;border-radius:16px;background:#fff;box-shadow:0 5px 18px rgba(42,77,84,.05);overflow:hidden}
+    .weather-panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:13px 18px 9px;background:#f5faf9}
+    .weather-panel-head h2{margin:0;font-size:1rem}.weather-panel-head p{margin:2px 0 0;color:#667a7f;font-size:.72rem}.weather-status{color:#667a7f;font-size:.7rem;text-align:right;white-space:nowrap}
+    .weather-layout{display:grid;grid-template-columns:1.25fr .95fr;border-top:1px solid #d8e4e5}
+    .weather-today{padding:14px 18px}.weather-today-main{display:grid;grid-template-columns:68px 1fr;gap:13px;align-items:center}
+    .weather-symbol{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#eaf4f4;font-size:2.55rem;line-height:1}
+    .weather-day-label{margin:0 0 1px;color:#54757d;font-size:.7rem;font-weight:700}
+    .weather-primary-temp{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0}.weather-primary-temp strong{font-size:1.45rem;line-height:1.15;color:#263f45;letter-spacing:-.02em}.weather-primary-temp span{font-size:.82rem;color:#60757a;font-weight:700}
+    .weather-condition{margin:4px 0 0;color:#61757a;font-size:.72rem;font-weight:600;line-height:1.35}
+    .weather-metrics{display:flex;gap:6px 13px;flex-wrap:wrap;margin-top:6px;color:#61757a;font-size:.72rem}.weather-metrics strong{color:#263f45;font-size:.78rem}
+    .weather-next{border-left:1px solid #d8e4e5}.weather-next-day{display:grid;grid-template-columns:38px 34px 1fr;gap:6px;align-items:center;padding:10px 13px;border-bottom:1px solid #d8e4e5}.weather-next-day:last-child{border-bottom:0}
+    .weather-next-day h3{margin:0;font-size:.76rem}.weather-next-icon{font-size:1.45rem;text-align:center}.weather-next-text{min-width:0}.weather-next-temp{display:block;font-size:.95rem;line-height:1.2;color:#263f45}.weather-next-condition{display:block;margin-top:2px;color:#667a7f;font-size:.66rem;line-height:1.3}.weather-next-meta{display:block;margin-top:2px;color:#667a7f;font-size:.68rem}
+    .hourly-block{border-top:1px solid #d8e4e5;padding:10px 14px 13px;background:#fbfdfd}.hourly-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}.hourly-head strong{font-size:.78rem}.hourly-head span{color:#6a7d82;font-size:.64rem}
+    .hourly-scroll{overflow-x:auto;scrollbar-width:thin;padding-bottom:4px}.hourly-inner{min-width:1040px}.temp-chart{display:block;width:100%;height:120px}.temp-grid{stroke:#dfe8e8;stroke-width:1}.temp-line{fill:none;stroke:#315f6b;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.temp-dot{fill:#fff;stroke:#315f6b;stroke-width:2}.temp-value{fill:#263f45;font-size:10px;font-weight:700;text-anchor:middle}.temp-axis{fill:#6a7d82;font-size:9px}
+    .hourly-table{display:grid;grid-template-columns:72px repeat(var(--cols),minmax(58px,1fr));border-top:1px solid #dbe6e7;border-left:1px solid #dbe6e7;background:#fff}.hourly-table>*{min-width:0;border-right:1px solid #dbe6e7;border-bottom:1px solid #dbe6e7;padding:6px 3px;text-align:center}.hourly-row-label{position:sticky;left:0;z-index:1;background:#f3f8f8;color:#526b71;font-size:.65rem;font-weight:700;display:grid;place-items:center}.hourly-time{color:#536c72;font-size:.65rem;font-weight:700}.hourly-icon{font-size:1.25rem;line-height:1}.hourly-value{color:#314b51;font-size:.7rem}.hourly-wind{font-size:.62rem;line-height:1.3}.hour-source{margin:7px 1px 0;color:#78898d;font-size:.6rem}
+    .weather-links{display:flex;gap:12px;flex-wrap:wrap;padding:9px 18px 12px;border-top:1px solid #d8e4e5;background:#fff}.weather-links a{color:#315f6b;font-weight:700;font-size:.76rem}.weather-error{padding:20px;color:#6b5552}
+    @media(max-width:720px){.weather-layout{grid-template-columns:1fr}.weather-next{border-left:0;border-top:1px solid #d8e4e5}.weather-today{padding:12px 14px}.weather-today-main{grid-template-columns:58px 1fr;gap:10px}.weather-symbol{width:54px;height:54px;font-size:2.1rem}.weather-primary-temp strong{font-size:1.3rem}.weather-condition{font-size:.68rem}.weather-panel-head{padding:11px 14px 8px}.weather-status{white-space:normal}.weather-next-day{padding:9px 12px}.hourly-block{padding:9px 10px 11px}.hourly-inner{min-width:980px}.hourly-table{grid-template-columns:64px repeat(var(--cols),minmax(54px,1fr))}}
+  </style>
 </head>
 <body data-mn-page="home" data-mn-base=".">
   <div data-machinote-header></div>
@@ -23,6 +43,8 @@
         <a class="home-hero-secondary" href="#public-transit">交通情報を見る</a>
       </div>
     </section>
+
+    <section class="section shell mock-weather-section" id="weather" aria-labelledby="weather-heading"><div class="weather-panel"><div class="weather-panel-head"><div><h2 id="weather-heading">西鎌倉付近の天気</h2></div><span class="weather-status" id="weatherStatus">取得中</span></div><div id="weatherContent" aria-live="polite"></div><div class="weather-links"><a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=140000" target="_blank" rel="noopener">気象庁の天気予報 ↗</a><a href="https://www.jma.go.jp/bosai/nowc/#zoom:11/lat:35.319292/lon:139.504460/colordepth:normal/elements:hrpns" target="_blank" rel="noopener">雨雲の動き ↗</a></div></div></section>
 
     <section class="section shell" aria-labelledby="life-heading">
       <div class="section-heading">
@@ -114,5 +136,7 @@
   <footer class="mn-site-footer">© にしかま周辺 まちノート</footer>
   <script src="scripts/machinote-shell.js"></script>
   <script src="scripts/common.js"></script>
+  <script src="scripts/weather-page.js?v=20260722-1"></script>
+  <script src="scripts/weather-live.js?v=20260722-24"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 (() => {
-  if (!location.pathname.endsWith('/weather-top-mockup.html')) return;
+  if (!document.getElementById('weatherContent')) return;
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const weekdays = ['日','月','火','水','木','金','土'];
