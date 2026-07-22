@@ -23,7 +23,6 @@ jobs:
           import csv
           import io
           import json
-          import re
           import urllib.request
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
@@ -39,103 +38,95 @@ jobs:
           def fetch_json(url):
               return json.loads(fetch_text(url))
 
-          def parse_date(value):
-              s = str(value).strip()
-              for pattern in ('%Y%m%d', '%Y/%m/%d', '%Y-%m-%d', '%Y%m%d%H', '%Y/%m/%d %H'):
-                  try:
-                      return datetime.strptime(s, pattern).replace(tzinfo=JST)
-                  except ValueError:
-                      pass
-              m = re.search(r'(20\d{2})[/-]?(\d{1,2})[/-]?(\d{1,2})', s)
-              if m:
-                  return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=JST)
-              return None
+          def parse_iso(value):
+              try:
+                  return datetime.fromisoformat(value)
+              except Exception:
+                  return None
 
           def parse_wbgt(text):
+              rows = list(csv.reader(io.StringIO(text)))
               targets = [(now + timedelta(days=i)).date() for i in range(3)]
-              maxima = {d: None for d in targets}
-              for row in csv.reader(io.StringIO(text)):
-                  if not row:
+              maxima = {day: None for day in targets}
+              if len(rows) < 2:
+                  return []
+              header = rows[0]
+              values = rows[1]
+              for i in range(2, min(len(header), len(values))):
+                  stamp = header[i].strip()
+                  raw = values[i].strip()
+                  try:
+                      dt = datetime.strptime(stamp, '%Y%m%d%H').replace(tzinfo=JST)
+                      value = float(raw) / 10.0
+                  except ValueError:
                       continue
-                  joined = ' '.join(row)
-                  dt = parse_date(joined)
-                  if not dt or dt.date() not in maxima:
+                  day = dt.date()
+                  if day not in maxima:
                       continue
-                  nums = []
-                  for cell in row:
-                      try:
-                          value = float(str(cell).strip())
-                      except ValueError:
-                          continue
-                      if 0 <= value <= 60:
-                          nums.append(value)
-                  if not nums:
-                      continue
-                  value = max(nums)
-                  maxima[dt.date()] = value if maxima[dt.date()] is None else max(maxima[dt.date()], value)
+                  maxima[day] = value if maxima[day] is None else max(maxima[day], value)
               labels = ['今日', '明日', '明後日']
               return [
                   {'label': labels[i], 'date': day.isoformat(), 'max': maxima[day]}
                   for i, day in enumerate(targets)
               ]
 
-          phenomena = ['大雨', '土砂災害', '雪', '風', '波', '潮位']
+          def phenomenon_name(type_name):
+              text = str(type_name)
+              if '雨' in text:
+                  return '大雨'
+              if '雪' in text:
+                  return '大雪'
+              if '風' in text:
+                  return '暴風・暴風雪'
+              if '波' in text:
+                  return '高波'
+              if '潮位' in text:
+                  return '高潮'
+              return text.replace('の警報級の可能性', '')
 
-          def normalize_period(value):
-              if isinstance(value, str):
-                  return value.replace('T', ' ').replace('+09:00', '')
-              return ''
+          def format_period(value):
+              dt = parse_iso(value)
+              if not dt:
+                  return str(value)
+              return f'{dt.month}/{dt.day} {dt.hour:02d}時～'
 
           def extract_early(data):
-              report = ''
-              if isinstance(data, dict):
-                  report = data.get('reportDatetime', '')
-              elif isinstance(data, list):
-                  for item in data:
-                      if isinstance(item, dict) and item.get('reportDatetime'):
-                          report = item['reportDatetime']
-                          break
+              if not isinstance(data, list):
+                  return '', []
+              reports = [item for item in data if isinstance(item, dict) and item.get('reportDatetime')]
+              if not reports:
+                  return '', []
+              latest_report = max(reports, key=lambda item: item['reportDatetime'])
+              report_dt = parse_iso(latest_report['reportDatetime'])
+              if not report_dt or now - report_dt.astimezone(JST) > timedelta(hours=18):
+                  return latest_report['reportDatetime'], []
 
-              found = []
+              items = []
               seen = set()
-
-              def walk(node, area_ok=False, time_defs=None, phenomenon=None):
-                  if isinstance(node, dict):
-                      area = node.get('area') if isinstance(node.get('area'), dict) else None
-                      code = str(node.get('code') or (area or {}).get('code') or '')
-                      name = str(node.get('name') or (area or {}).get('name') or '')
-                      local_area_ok = area_ok or code == '140010' or '神奈川県東部' in name or name == '東部'
-                      local_times = node.get('timeDefines') if isinstance(node.get('timeDefines'), list) else time_defs
-                      local_phenomenon = phenomenon
-                      for key in ('type', 'propertyType', 'phenomenon', 'name'):
-                          value = node.get(key)
-                          if isinstance(value, str):
-                              for p in phenomena:
-                                  if p in value:
-                                      local_phenomenon = p
-                                      break
-                      for key, value in node.items():
-                          if local_area_ok and isinstance(value, list) and value and all(isinstance(v, str) for v in value):
-                              if any(v in ('高', '中') for v in value):
-                                  p = local_phenomenon or next((x for x in phenomena if x in key), '現象')
-                                  for i, level in enumerate(value):
-                                      if level not in ('高', '中'):
-                                          continue
-                                      period = ''
-                                      if local_times and i < len(local_times):
-                                          period = normalize_period(local_times[i])
-                                      item = (p, level, period)
-                                      if item not in seen:
-                                          seen.add(item)
-                                          found.append({'phenomenon': p, 'level': level, 'period': period})
-                          walk(value, local_area_ok, local_times, local_phenomenon)
-                  elif isinstance(node, list):
-                      for value in node:
-                          walk(value, area_ok, time_defs, phenomenon)
-
-              walk(data)
-              found.sort(key=lambda x: (0 if x['level'] == '高' else 1, x['period'], x['phenomenon']))
-              return report, found
+              for report in reports:
+                  if report.get('reportDatetime') != latest_report['reportDatetime']:
+                      continue
+                  for series in report.get('timeSeries', []):
+                      times = series.get('timeDefines', [])
+                      for area in series.get('areas', []):
+                          if str(area.get('code')) not in ('140010', '140000'):
+                              continue
+                          for prop in area.get('properties', []):
+                              probabilities = prop.get('probabilities')
+                              if not isinstance(probabilities, list):
+                                  continue
+                              phenomenon = phenomenon_name(prop.get('type', ''))
+                              for index, level in enumerate(probabilities):
+                                  if level not in ('高', '中'):
+                                      continue
+                                  period = format_period(times[index]) if index < len(times) else ''
+                                  key = (phenomenon, level, period)
+                                  if key in seen:
+                                      continue
+                                  seen.add(key)
+                                  items.append({'phenomenon': phenomenon, 'level': level, 'period': period})
+              items.sort(key=lambda item: (0 if item['level'] == '高' else 1, item['period'], item['phenomenon']))
+              return latest_report['reportDatetime'], items
 
           result = {
               'updatedAt': now.isoformat(timespec='minutes'),
@@ -164,9 +155,10 @@ jobs:
           html_path = Path('weather-top-mockup.html')
           html = html_path.read_text(encoding='utf-8')
           if 'scripts/weather-live.js' not in html:
-              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-20"></script>\n</body>')
+              html = html.replace('</body>', '<script src="scripts/weather-live.js?v=20260722-21"></script>\n</body>')
           else:
-              html = re.sub(r'scripts/weather-live\.js(?:\?v=[^"\']*)?', 'scripts/weather-live.js?v=20260722-20', html)
+              import re
+              html = re.sub(r'scripts/weather-live\.js(?:\?v=[^"\']*)?', 'scripts/weather-live.js?v=20260722-21', html)
           html_path.write_text(html, encoding='utf-8')
           PY
 
