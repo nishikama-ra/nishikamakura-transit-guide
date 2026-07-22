@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-07-23T03:14+09:00",
+  "updatedAt": "2026-07-23T05:16+09:00",
   "temperatureForecasts": {
     "status": "ok",
-    "updatedAt": "2026-07-22T17:00:00+09:00",
+    "updatedAt": "2026-07-23T05:00:00+09:00",
     "areaCode": "46106",
     "areaName": "横浜",
     "source": "気象庁",
     "days": {
       "2026-07-23": {
         "max": 37.0,
-        "maxReportDatetime": "2026-07-22T17:00:00+09:00",
-        "min": 28.0,
-        "minReportDatetime": "2026-07-22T17:00:00+09:00",
+        "maxReportDatetime": "2026-07-23T05:00:00+09:00",
+        "min": 37.0,
+        "minReportDatetime": "2026-07-23T05:00:00+09:00",
         "source": "気象庁",
         "areaName": "横浜"
       },
@@ -67,41 +67,32 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-23T03:14+09:00",
-    "forecastCreatedAt": "2026/07/23 02:25",
+    "updatedAt": "2026-07-23T05:16+09:00",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-23",
-        "max": 34.0,
-        "forecastMax": 34.0,
-        "observedMax": 27.7,
-        "observedThrough": "2026-07-23T02:00+09:00",
-        "valueType": "observed-or-forecast-maximum"
+        "max": 35.0
       },
       {
         "label": "明日",
         "date": "2026-07-24",
-        "max": 31.0,
-        "forecastMax": 31.0,
-        "valueType": "forecast-maximum"
+        "max": 34.0
       },
       {
         "label": "明後日",
         "date": "2026-07-25",
-        "max": 30.0,
-        "forecastMax": 30.0,
-        "valueType": "forecast-maximum"
+        "max": 30.0
       }
     ]
   },
   "earlyWarnings": {
     "status": "ok",
-    "reportDatetime": "2026-07-22T17:00:00+09:00",
+    "reportDatetime": "2026-07-23T05:00:00+09:00",
     "reports": {
       "VPFD61": {
-        "reportDatetime": "2026-07-22T17:00:00+09:00",
-        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260722073503_0_VPFD61_140000.xml"
+        "reportDatetime": "2026-07-23T05:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260722193407_0_VPFD61_140000.xml"
       },
       "VPFW60": {
         "reportDatetime": "2026-07-22T17:00:00+09:00",
@@ -109,14 +100,6 @@
       }
     },
     "items": [
-      {
-        "phenomenon": "大雨",
-        "level": "中",
-        "period": "7/22 18時～24時",
-        "areaCode": "140010",
-        "areaName": "東部",
-        "sourceCode": "VPFD61"
-      },
       {
         "phenomenon": "大雨",
         "level": "中",
