@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T06:13+09:00",
+  "updatedAt": "2026-07-24T08:03+09:00",
   "temperatureForecasts": {
     "status": "ok",
     "updatedAt": "2026-07-24T05:00:00+09:00",
@@ -67,8 +67,8 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-24T06:13+09:00",
-    "forecastCreatedAt": "2026/07/24 05:25",
+    "updatedAt": "2026-07-24T08:03+09:00",
+    "forecastCreatedAt": "2026/07/24 07:25",
     "days": [
       {
         "label": "今日",
@@ -76,8 +76,8 @@
         "max": 33.0,
         "forecastMax": 33.0,
         "valueType": "observed-or-forecast-maximum",
-        "observedMax": 27.5,
-        "observedThrough": "2026-07-24T05:00+09:00"
+        "observedMax": 30.0,
+        "observedThrough": "2026-07-24T07:00+09:00"
       },
       {
         "label": "明日",
