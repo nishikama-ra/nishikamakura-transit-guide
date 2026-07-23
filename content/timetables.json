@@ -1,6 +1,6 @@
 {
-    "checkedAt":  "2026-07-15",
-    "status":  "2026/7/15時点",
+    "checkedAt":  "2026-07-23",
+    "status":  "2026/7/23時点",
     "origins":  [
                     {
                         "name":  "藤沢駅",
@@ -105,6 +105,36 @@
                                                            }
                                          },
                                          {
+                                             "boarding":  "藤沢駅南口 3番乗り場",
+                                             "route":  "F31 湘南港桟橋行き",
+                                             "mode":  "路線バス",
+                                             "weekday":  "―",
+                                             "holiday":  "07:03",
+                                             "href":  "https://www.enoden.co.jp/bus/files/timeschedule/00101_%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3_03.pdf",
+                                             "headlineStops":  [
+                                                                   "藤ヶ谷",
+                                                                   "江ノ島駅前"
+                                                               ],
+                                             "destination":  "湘南港桟橋",
+                                             "areaStops":  {
+                                                               "stations":  [
+
+                                                                            ],
+                                                               "busStops":  [
+                                                                                "ミネベアミツミ前",
+                                                                                "新屋敷",
+                                                                                "諏訪神社前",
+                                                                                "西方",
+                                                                                "江ノ島駅前",
+                                                                                "竜口寺",
+                                                                                "東浜",
+                                                                                "江ノ島海岸",
+                                                                                "江ノ島",
+                                                                                "湘南港桟橋"
+                                                                            ]
+                                                           }
+                                         },
+                                         {
                                              "boarding":  "藤沢駅南口 4番乗り場",
                                              "route":  "N13 湘南車庫行き",
                                              "mode":  "路線バス",
@@ -126,6 +156,74 @@
                                                                                 "古館橋",
                                                                                 "神戸製鋼前",
                                                                                 "町屋橋"
+                                                                            ]
+                                                           }
+                                         },
+                                         {
+                                             "boarding":  "藤沢駅南口 3番乗り場",
+                                             "route":  "F20 片瀬山循環（藤ヶ谷経由）",
+                                             "mode":  "路線バス",
+                                             "weekday":  "20:15",
+                                             "holiday":  "20:00",
+                                             "href":  "https://www.enoden.co.jp/bus/files/timeschedule/00101_%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3_03.pdf",
+                                             "headlineStops":  [
+                                                                   "片瀬山",
+                                                                   "西鎌倉",
+                                                                   "手広"
+                                                               ],
+                                             "destination":  "藤沢駅南口",
+                                             "areaStops":  {
+                                                               "stations":  [
+
+                                                                            ],
+                                                               "busStops":  [
+                                                                                "ミネベアミツミ前",
+                                                                                "岩屋不動入口",
+                                                                                "片瀬中学校前",
+                                                                                "片瀬山",
+                                                                                "片瀬山入口",
+                                                                                "諏訪ヶ谷",
+                                                                                "西鎌倉",
+                                                                                "郵便局前",
+                                                                                "西鎌倉入口",
+                                                                                "西ヶ谷",
+                                                                                "鎖大師",
+                                                                                "手広"
+                                                                            ]
+                                                           }
+                                         },
+                                         {
+                                             "boarding":  "藤沢駅南口 3番乗り場",
+                                             "route":  "F21 津村行き（片瀬山経由）",
+                                             "mode":  "路線バス",
+                                             "weekday":  "14:00",
+                                             "holiday":  "―",
+                                             "href":  "https://www.enoden.co.jp/bus/files/timeschedule/00101_%E8%97%A4%E6%B2%A2%E9%A7%85%E5%8D%97%E5%8F%A3_03.pdf",
+                                             "headlineStops":  [
+                                                                   "片瀬山",
+                                                                   "西鎌倉",
+                                                                   "津村"
+                                                               ],
+                                             "destination":  "津村",
+                                             "areaStops":  {
+                                                               "stations":  [
+
+                                                                            ],
+                                                               "busStops":  [
+                                                                                "ミネベアミツミ前",
+                                                                                "岩屋不動入口",
+                                                                                "片瀬中学校前",
+                                                                                "片瀬山",
+                                                                                "片瀬山入口",
+                                                                                "諏訪ヶ谷",
+                                                                                "西鎌倉",
+                                                                                "郵便局前",
+                                                                                "西鎌倉入口",
+                                                                                "西ヶ谷",
+                                                                                "鎖大師",
+                                                                                "手広",
+                                                                                "赤羽",
+                                                                                "津村"
                                                                             ]
                                                            }
                                          },
@@ -205,6 +303,10 @@
                                              "weekday":  "23:42",
                                              "holiday":  "23:42",
                                              "href":  "https://www.enoden.co.jp/train/station/fujisawa/time-table/",
+                                             "departureId":  "enoden-fujisawa-enoshima",
+                                             "headlineStops":  [
+                                                                   "江ノ島駅"
+                                                               ],
                                              "destination":  "江ノ島駅",
                                              "areaStops":  {
                                                                "stations":  [
@@ -213,6 +315,74 @@
                                                                                 "鵠沼駅",
                                                                                 "湘南海岸公園駅",
                                                                                 "江ノ島駅（江ノ電）"
+                                                                            ],
+                                                               "busStops":  [
+
+                                                                            ]
+                                                           }
+                                         },
+                                         {
+                                             "boarding":  "江ノ電 藤沢駅",
+                                             "route":  "江ノ電 鎌倉行き",
+                                             "mode":  "電車",
+                                             "weekday":  "23:16",
+                                             "holiday":  "23:16",
+                                             "href":  "https://www.enoden.co.jp/train/station/fujisawa/time-table/",
+                                             "departureId":  "enoden-fujisawa-kamakura",
+                                             "headlineStops":  [
+                                                                   "江ノ島駅",
+                                                                   "鎌倉高校前駅",
+                                                                   "鎌倉駅"
+                                                               ],
+                                             "destination":  "鎌倉駅",
+                                             "areaStops":  {
+                                                               "stations":  [
+                                                                                "石上駅",
+                                                                                "柳小路駅",
+                                                                                "鵠沼駅",
+                                                                                "湘南海岸公園駅",
+                                                                                "江ノ島駅（江ノ電）",
+                                                                                "腰越駅（江ノ電）",
+                                                                                "鎌倉高校前駅",
+                                                                                "七里ヶ浜駅（江ノ電）",
+                                                                                "稲村ヶ崎駅",
+                                                                                "極楽寺駅",
+                                                                                "長谷駅",
+                                                                                "由比ヶ浜駅",
+                                                                                "和田塚駅",
+                                                                                "鎌倉駅（江ノ電）"
+                                                                            ],
+                                                               "busStops":  [
+
+                                                                            ]
+                                                           }
+                                         },
+                                         {
+                                             "boarding":  "江ノ電 藤沢駅",
+                                             "route":  "江ノ電 極楽寺行き",
+                                             "mode":  "電車",
+                                             "weekday":  "21:14",
+                                             "holiday":  "21:14",
+                                             "href":  "https://www.enoden.co.jp/train/station/fujisawa/time-table/",
+                                             "departureId":  "enoden-fujisawa-gokurakuji",
+                                             "headlineStops":  [
+                                                                   "江ノ島駅",
+                                                                   "鎌倉高校前駅",
+                                                                   "極楽寺駅"
+                                                               ],
+                                             "destination":  "極楽寺駅",
+                                             "areaStops":  {
+                                                               "stations":  [
+                                                                                "石上駅",
+                                                                                "柳小路駅",
+                                                                                "鵠沼駅",
+                                                                                "湘南海岸公園駅",
+                                                                                "江ノ島駅（江ノ電）",
+                                                                                "腰越駅（江ノ電）",
+                                                                                "鎌倉高校前駅",
+                                                                                "七里ヶ浜駅（江ノ電）",
+                                                                                "稲村ヶ崎駅",
+                                                                                "極楽寺駅"
                                                                             ],
                                                                "busStops":  [
 
@@ -463,6 +633,12 @@
                                              "weekday":  "23:50",
                                              "holiday":  "23:50",
                                              "href":  "https://www.shonan-monorail.co.jp/station/detail/ofuna.html",
+                                             "departureId":  "monorail-ofuna-shonan-enoshima",
+                                             "headlineStops":  [
+                                                                   "湘南深沢駅",
+                                                                   "西鎌倉駅",
+                                                                   "湘南江の島駅"
+                                                               ],
                                              "destination":  "湘南江の島駅",
                                              "areaStops":  {
                                                                "stations":  [
@@ -485,6 +661,33 @@
                         "name":  "鎌倉駅",
                         "tone":  "kamakura",
                         "services":  [
+                                         {
+                                             "boarding":  "鎌倉駅東口 6番乗り場",
+                                             "route":  "鎌4 鎌倉山行き",
+                                             "mode":  "路線バス",
+                                             "operator":  "京急バス",
+                                             "weekday":  "21:30",
+                                             "holiday":  "20:30",
+                                             "href":  "https://transfer-cloud.navitime.biz/keikyubus/courses/timetables?busstop=00020507\u0026course-sequence=0008100054-1",
+                                             "departureId":  "keikyu-kama4",
+                                             "headlineStops":  [
+                                                                   "常盤口",
+                                                                   "鎌倉山"
+                                                               ],
+                                             "destination":  "鎌倉山",
+                                             "areaStops":  {
+                                                               "stations":  [
+
+                                                                            ],
+                                                               "busStops":  [
+                                                                                "長谷観音",
+                                                                                "大仏前",
+                                                                                "火の見下",
+                                                                                "常盤口",
+                                                                                "鎌倉山"
+                                                                            ]
+                                                           }
+                                         },
                                          {
                                              "boarding":  "鎌倉駅東口 1番ポール",
                                              "route":  "K1 桔梗山行き",
@@ -647,6 +850,11 @@
                                              "weekday":  "23:38",
                                              "holiday":  "23:38",
                                              "href":  "https://www.enoden.co.jp/train/station/kamakura/time-table/",
+                                             "departureId":  "enoden-kamakura-enoshima",
+                                             "headlineStops":  [
+                                                                   "鎌倉高校前駅",
+                                                                   "江ノ島駅"
+                                                               ],
                                              "destination":  "江ノ島駅",
                                              "areaStops":  {
                                                                "stations":  [
@@ -655,6 +863,42 @@
                                                                                 "鎌倉高校前駅",
                                                                                 "腰越駅（江ノ電）",
                                                                                 "江ノ島駅（江ノ電）"
+                                                                            ],
+                                                               "busStops":  [
+
+                                                                            ]
+                                                           }
+                                         },
+                                         {
+                                             "boarding":  "江ノ電 鎌倉駅",
+                                             "route":  "江ノ電 藤沢行き",
+                                             "mode":  "電車",
+                                             "weekday":  "23:05",
+                                             "holiday":  "23:05",
+                                             "href":  "https://www.enoden.co.jp/train/station/kamakura/time-table/",
+                                             "departureId":  "enoden-kamakura-fujisawa",
+                                             "headlineStops":  [
+                                                                   "鎌倉高校前駅",
+                                                                   "江ノ島駅",
+                                                                   "藤沢駅"
+                                                               ],
+                                             "destination":  "藤沢駅",
+                                             "areaStops":  {
+                                                               "stations":  [
+                                                                                "和田塚駅",
+                                                                                "由比ヶ浜駅",
+                                                                                "長谷駅",
+                                                                                "極楽寺駅",
+                                                                                "稲村ヶ崎駅",
+                                                                                "七里ヶ浜駅（江ノ電）",
+                                                                                "鎌倉高校前駅",
+                                                                                "腰越駅（江ノ電）",
+                                                                                "江ノ島駅（江ノ電）",
+                                                                                "湘南海岸公園駅",
+                                                                                "鵠沼駅",
+                                                                                "柳小路駅",
+                                                                                "石上駅",
+                                                                                "藤沢駅（江ノ電）"
                                                                             ],
                                                                "busStops":  [
 
