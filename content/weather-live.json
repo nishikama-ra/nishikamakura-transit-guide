@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T13:23+09:00",
+  "updatedAt": "2026-07-23T16:38+09:00",
   "temperatureForecasts": {
     "status": "ok",
     "updatedAt": "2026-07-23T11:00:00+09:00",
@@ -75,41 +75,41 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-23T13:23+09:00",
-    "forecastCreatedAt": "2026/07/23 12:25",
+    "updatedAt": "2026-07-23T16:38+09:00",
+    "forecastCreatedAt": "2026/07/23 16:25",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-23",
-        "max": 33.3,
-        "forecastMax": 31.0,
+        "max": 34.1,
+        "forecastMax": 29.0,
         "valueType": "observed-or-forecast-maximum",
-        "observedMax": 33.3,
-        "observedThrough": "2026-07-23T13:00+09:00"
+        "observedMax": 34.1,
+        "observedThrough": "2026-07-23T16:00+09:00"
       },
       {
         "label": "明日",
         "date": "2026-07-24",
-        "max": 31.0,
-        "forecastMax": 31.0,
+        "max": 33.0,
+        "forecastMax": 33.0,
         "valueType": "forecast-maximum"
       },
       {
         "label": "明後日",
         "date": "2026-07-25",
-        "max": 30.0,
-        "forecastMax": 30.0,
+        "max": 31.0,
+        "forecastMax": 31.0,
         "valueType": "forecast-maximum"
       }
     ]
   },
   "earlyWarnings": {
     "status": "ok",
-    "reportDatetime": "2026-07-23T11:00:00+09:00",
+    "reportDatetime": "2026-07-23T17:00:00+09:00",
     "reports": {
       "VPFD61": {
-        "reportDatetime": "2026-07-23T11:00:00+09:00",
-        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260723013331_0_VPFD61_140000.xml"
+        "reportDatetime": "2026-07-23T17:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260723073515_0_VPFD61_140000.xml"
       },
       "VPFW60": {
         "reportDatetime": "2026-07-23T11:00:00+09:00",
@@ -117,14 +117,6 @@
       }
     },
     "items": [
-      {
-        "phenomenon": "大雨",
-        "level": "中",
-        "period": "7/23 12時～18時",
-        "areaCode": "140010",
-        "areaName": "東部",
-        "sourceCode": "VPFD61"
-      },
       {
         "phenomenon": "大雨",
         "level": "中",
