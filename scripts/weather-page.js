@@ -7,14 +7,51 @@
   const status = document.getElementById('weatherStatus');
   const labels = ['今日', '明日', '明後日'];
 
-  const jmaIcon = code => {
-    const n = Number(code);
-    if ([100, 101, 110, 111].includes(n)) return '☀️';
-    if (n >= 400) return '❄️';
-    if (n >= 300 && n < 400) return '🌧️';
-    if ([200, 201, 209, 210, 211].includes(n)) return '☁️';
-    if (n >= 100 && n < 300) return '🌦️';
-    return '☁️';
+  const jmaIconFiles = {};
+  [
+    ['100 123 124 130 131', '100', '500'],
+    ['101 132', '101', '501'],
+    ['102 103 106 107 108 120 121 140', '102', '502'],
+    ['104 105 160 170', '104', '504'],
+    ['110 111', '110', '510'],
+    ['112 113 114 118 119 122 125 126 127 128', '112', '512'],
+    ['115 116 117 181', '115', '515'],
+    ['200 209 231', '200', '200'],
+    ['201 223', '201', '601'],
+    ['202 203 206 207 208 220 221 240', '202', '202'],
+    ['204 205 250 260 270', '204', '204'],
+    ['210 211', '210', '610'],
+    ['212 213 214 218 219 222 224 225 226', '212', '212'],
+    ['215 216 217 228 229 230 281', '215', '215'],
+    ['300 304 306 328 329 350', '300', '300'],
+    ['301', '301', '701'],
+    ['302', '302', '302'],
+    ['303 309 322', '303', '303'],
+    ['308', '308', '308'],
+    ['311 316 320 323 324 325', '311', '711'],
+    ['313 317 321', '313', '313'],
+    ['314 315 326 327', '314', '314'],
+    ['340 400 405 425 426 427 450', '400', '400'],
+    ['361 411 420', '411', '811'],
+    ['371 413 421', '413', '413'],
+    ['401', '401', '801'],
+    ['402', '402', '402'],
+    ['403 409', '403', '403'],
+    ['406 407', '406', '406'],
+    ['414 422 423', '414', '414']
+  ].forEach(([codes, dayIcon, nightIcon]) => {
+    codes.split(' ').forEach(code => {
+      jmaIconFiles[code] = [dayIcon, nightIcon];
+    });
+  });
+
+  const jmaIcon = (code, reportDatetime, dayIndex) => {
+    const normalized = String(code || '');
+    if (!/^\d{3}$/.test(normalized)) return '☁️';
+    const [dayIcon, nightIcon] = jmaIconFiles[normalized] || [normalized, normalized];
+    const reportHour = new Date(reportDatetime).getHours();
+    const icon = dayIndex === 0 && reportHour >= 17 ? nightIcon : dayIcon;
+    return `<img class="jma-forecast-icon" src="https://www.jma.go.jp/bosai/forecast/img/${icon}.svg" alt="">`;
   };
 
   const wmoIcon = code => {
@@ -139,7 +176,7 @@
             };
         return {
           label: labels[index],
-          icon: jmaIcon(eastWeather.weatherCodes[index]),
+          icon: jmaIcon(eastWeather.weatherCodes[index], short.reportDatetime, index),
           text: clean(eastWeather.weathers[index]),
           temperatures,
           pop: maxPop(popSeries, eastPop, date)
