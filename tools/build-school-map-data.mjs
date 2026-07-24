@@ -215,8 +215,20 @@ const OFFICIAL_URLS_BY_ID = {
   "B114320500015-00": "https://www.shogak.ac.jp/elementary/access"
 };
 const ADDRESSES_BY_ID = {
-  "B114320500015-00": "神奈川県藤沢市鵠沼松が岡4-1-32"
+  "B114320500015-00": "神奈川県藤沢市鵠沼松が岡4-1-32",
+  // 横浜中学校(47-1) と 横浜高等学校(46-1) は同一の中高一貫校（横浜中学校・高等学校）。
+  // 原資料の住所差で別地点に分かれるため、公式所在地46-1へ寄せて1キャンパスに統合する。
+  "C114310000180-00": "神奈川県横浜市金沢区能見台通46-1",
+  "D114310000204-00": "神奈川県横浜市金沢区能見台通46-1",
+  // 北鎌倉女子学園中学校(山之内913) と 高等学校(山ノ内913) は同一校。表記揺れを山ノ内913へ統一して統合する。
+  "C114320400041-00": "神奈川県鎌倉市山ノ内913",
+  "D114320400049-00": "神奈川県鎌倉市山ノ内913"
 };
+// P29には横浜清風中学校(C114310000153-00)が含まれるが、横浜清風高等学校は高校のみで併設中学校は実在しない
+// （公式沿革・神奈川県私立中学高等学校協会いずれも高校のみ）。誤登録として収録対象から除外する。
+const EXCLUDED_INSTITUTION_IDS = new Set([
+  "C114310000153-00"
+]);
 const DISPLAY_NAMES = {
   "日本大学": "日本大学 生物資源科学部",
   "慶應義塾大学": "慶應義塾大学 湘南藤沢キャンパス",
@@ -310,6 +322,7 @@ function featureToInstitution(feature) {
   const campusCode = String(first(properties, ['P29_008', 'CampusCode', 'campusCode', 'キャンパスコード'], '00')).trim() || '00';
   const campusName = String(first(properties, ['P29_009', 'CampusName', 'campusName', 'キャンパス名'])).trim();
   const id = `${schoolCode || 'unknown'}-${campusCode}`;
+  if (EXCLUDED_INSTITUTION_IDS.has(id)) return null;
   const defaultDisplayName = DISPLAY_NAMES[sourceName] ?? sourceName;
   const displayName = DISPLAY_NAMES_BY_ID[id]
     ?? (types.includes('university') && campusName ? `${defaultDisplayName} ${campusName}` : defaultDisplayName);
