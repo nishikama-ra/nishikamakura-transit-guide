@@ -1,0 +1,2430 @@
+{
+    "title":  "金融機関・ATM",
+    "meta":  {
+                 "checkedAt":  "2026年7月",
+                 "source":  "各金融機関・ATM運営会社の公式店舗/ATM検索"
+             },
+    "categories":  [
+                       "銀行",
+                       "信用金庫・JA・労金",
+                       "ゆうちょ・郵便局",
+                       "証券・信託",
+                       "店舗外ATM",
+                       "コンビニATM"
+                   ],
+    "places":  [
+                   {
+                       "id":  "BOY-001",
+                       "name":  "横浜銀行大船支店",
+                       "address":  "鎌倉市大船1-24-5",
+                       "lat":  35.3501583,
+                       "lng":  139.5358972,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/51200/"
+                                        },
+                                        {
+                                            "name":  "横浜銀行 湘南桂台支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/32600/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-003",
+                       "name":  "横浜銀行鎌倉支店",
+                       "address":  "鎌倉市小町1-6-21",
+                       "lat":  35.3162583,
+                       "lng":  139.554,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 鎌倉支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/51100/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-004",
+                       "name":  "横浜銀行片瀬支店",
+                       "address":  "藤沢市片瀬3-16-18",
+                       "lat":  35.3088001,
+                       "lng":  139.4901331,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 片瀬支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61200/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-005",
+                       "name":  "横浜銀行藤沢中央支店",
+                       "address":  "藤沢市藤沢460-9",
+                       "lat":  35.3362,
+                       "lng":  139.4898028,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 藤沢中央支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61800/"
+                                        },
+                                        {
+                                            "name":  "横浜銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61100/"
+                                        },
+                                        {
+                                            "name":  "横浜銀行 善行支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61600/"
+                                        },
+                                        {
+                                            "name":  "横浜銀行 藤沢住宅ローンセンター",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61190/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SSK-001",
+                       "name":  "湘南信用金庫鎌倉営業部",
+                       "address":  "鎌倉市御成町4-13",
+                       "lat":  35.3126539,
+                       "lng":  139.5529428,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "湘南信用金庫 鎌倉営業部",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/31/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SSK-002",
+                       "name":  "湘南信用金庫鎌倉駅前支店",
+                       "address":  "鎌倉市御成町11-39",
+                       "lat":  35.3158042,
+                       "lng":  139.5526736,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "湘南信用金庫 鎌倉駅前支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/62/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SSK-003",
+                       "name":  "湘南信用金庫大船支店",
+                       "address":  "鎌倉市大船1-4-1",
+                       "lat":  35.3493181,
+                       "lng":  139.5347061,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "湘南信用金庫 大船支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/32/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SSK-004",
+                       "name":  "湘南信用金庫深沢支店",
+                       "address":  "鎌倉市常盤82",
+                       "lat":  35.3276672,
+                       "lng":  139.5209178,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "湘南信用金庫 深沢支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/40/"
+                                        },
+                                        {
+                                            "name":  "湘南信用金庫 腰越支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/33/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SSK-006",
+                       "name":  "湘南信用金庫藤沢支店",
+                       "address":  "藤沢市鵠沼橘1-1-2",
+                       "lat":  35.3335464,
+                       "lng":  139.4897108,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "湘南信用金庫 藤沢支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/p/shonan/dtl/63/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MUF-001",
+                       "name":  "三菱UFJ銀行藤沢支店",
+                       "address":  "藤沢市藤沢113-1",
+                       "lat":  35.340193884,
+                       "lng":  139.489727778,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592253/"
+                                        },
+                                        {
+                                            "name":  "三菱UFJ銀行 南藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592253/"
+                                        },
+                                        {
+                                            "name":  "三菱UFJ銀行 湘南台支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592253/"
+                                        },
+                                        {
+                                            "name":  "三菱UFJ銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592253/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MUF-005",
+                       "name":  "三菱UFJ銀行鎌倉支店",
+                       "address":  "鎌倉市小町1-5-4",
+                       "lat":  35.319224169,
+                       "lng":  139.551338889,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ銀行 鎌倉支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592246/"
+                                        },
+                                        {
+                                            "name":  "三菱UFJ銀行 逗子支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA592246/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-001",
+                       "name":  "みずほ銀行藤沢支店",
+                       "address":  "藤沢市藤沢107-1",
+                       "lat":  35.3369783,
+                       "lng":  139.492165,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA340697"
+                                        },
+                                        {
+                                            "name":  "みずほ銀行 鵠沼支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA339131/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-002",
+                       "name":  "みずほ銀行大船支店",
+                       "address":  "鎌倉市大船1-24-15",
+                       "lat":  35.3498097,
+                       "lng":  139.53669,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA339113"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-003",
+                       "name":  "みずほ銀行鎌倉支店",
+                       "address":  "鎌倉市御成町11-35",
+                       "lat":  35.3159008,
+                       "lng":  139.5523014,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 鎌倉支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA339989/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-001",
+                       "name":  "三井住友銀行藤沢支店",
+                       "address":  "藤沢市藤沢438-1",
+                       "lat":  35.3391958,
+                       "lng":  139.4870119,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601005000346/"
+                                        },
+                                        {
+                                            "name":  "三井住友銀行 湘南台支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601005000346/"
+                                        },
+                                        {
+                                            "name":  "三井住友銀行 片瀬山出張所",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601005000346/"
+                                        },
+                                        {
+                                            "name":  "三井住友銀行 平塚支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601005000346/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-005",
+                       "name":  "三井住友銀行大船支店",
+                       "address":  "鎌倉市大船1-24-16",
+                       "lat":  35.3531561,
+                       "lng":  139.5337117,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601004800873/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-006",
+                       "name":  "三井住友銀行鎌倉支店",
+                       "address":  "鎌倉市小町1-4-1",
+                       "lat":  35.3187367,
+                       "lng":  139.5514183,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 鎌倉支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2601006900933/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-007",
+                       "name":  "三井住友銀行藤沢ローンプラザ",
+                       "address":  "藤沢市藤沢555",
+                       "lat":  35.3398592,
+                       "lng":  139.4870474,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 藤沢ローンプラザ",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2604000800000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "JAS-001",
+                       "name":  "JAさがみ深沢支店",
+                       "address":  "鎌倉市常盤144",
+                       "lat":  35.3302808,
+                       "lng":  139.5190515,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "JAさがみ 深沢支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://ja-sagami.or.jp/archives/store/shiten_fukazawa/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "JAS-002",
+                       "name":  "JAさがみ西鎌倉支店",
+                       "address":  "鎌倉市津西1-10-8",
+                       "lat":  35.31862651,
+                       "lng":  139.5033838,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "JAさがみ 西鎌倉支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://ja-sagami.or.jp/archives/store/shiten_nishikamakura/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "JAS-003",
+                       "name":  "JAさがみ鎌倉支店",
+                       "address":  "鎌倉市小町2-8-2",
+                       "lat":  35.32115211,
+                       "lng":  139.5522507,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "JAさがみ 鎌倉支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://ja-sagami.or.jp/archives/store/shiten_kamakura/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "JAS-004",
+                       "name":  "JAさがみ大船支店",
+                       "address":  "鎌倉市小袋谷567",
+                       "lat":  35.34421358,
+                       "lng":  139.5401171,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "JAさがみ 大船支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://ja-sagami.or.jp/archives/store/shiten_ofuna/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "CRK-001",
+                       "name":  "中央労働金庫藤沢支店",
+                       "address":  "藤沢市鵠沼花沢町1-1-101",
+                       "lat":  35.3349722,
+                       "lng":  139.4892417,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "中央労働金庫 藤沢支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/rokinbk/info/2963326001"
+                                        },
+                                        {
+                                            "name":  "中央労働金庫 藤沢ローンセンター",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/rokinbk/info/2963999079"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "CRK-003",
+                       "name":  "中央労働金庫大船支店",
+                       "address":  "鎌倉市大船2-17-39",
+                       "lat":  35.3499361,
+                       "lng":  139.5382694,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "中央労働金庫 大船支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/rokinbk/info/2963329001"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YKS-001",
+                       "name":  "横浜信用金庫大船法人支店",
+                       "address":  "鎌倉市大船2-18-16",
+                       "lat":  35.3533847,
+                       "lng":  139.5316399,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜信用金庫 大船法人支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.yokoshin.co.jp/_other/shop/detail/063/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SBS-001",
+                       "name":  "SBI新生銀行藤沢フィナンシャルセンター",
+                       "address":  "藤沢市南藤沢4-3",
+                       "lat":  35.3378252,
+                       "lng":  139.48973,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "SBI新生銀行 藤沢フィナンシャルセンター",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.sbishinseibank.co.jp/tempo/011/fujisawa.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "TSB-001",
+                       "name":  "東京スター銀行藤沢支店ファイナンシャル・ラウンジ",
+                       "address":  "藤沢市南藤沢3-12",
+                       "lat":  35.3377966,
+                       "lng":  139.4886362,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "東京スター銀行 藤沢支店ファイナンシャル・ラウンジ",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.tokyostarbank.co.jp/lounge_atm/?code=0000010465"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "KNB-001",
+                       "name":  "神奈川銀行藤沢支店",
+                       "address":  "藤沢市鵠沼石上1-5-7",
+                       "lat":  35.336064,
+                       "lng":  139.4897,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "神奈川銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.kanagawabank.co.jp/branch/236.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "KAS-001",
+                       "name":  "かながわ信用金庫藤沢営業部",
+                       "address":  "藤沢市藤沢484-33",
+                       "lat":  35.3362639,
+                       "lng":  139.4885306,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "かながわ信用金庫 藤沢営業部",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/shinkin/info/1281043"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "KAS-002",
+                       "name":  "かながわ信用金庫片瀬支店",
+                       "address":  "藤沢市片瀬3-17-29",
+                       "lat":  35.3102472,
+                       "lng":  139.4895083,
+                       "categories":  [
+                                          "信用金庫・JA・労金"
+                                      ],
+                       "primaryCategory":  "信用金庫・JA・労金",
+                       "listings":  [
+                                        {
+                                            "name":  "かながわ信用金庫 片瀬支店",
+                                            "categories":  [
+                                                               "信用金庫・JA・労金"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/shinkin/info/1281044"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SZB-001",
+                       "name":  "静岡銀行藤沢支店",
+                       "address":  "藤沢市藤沢東横須賀556-76",
+                       "lat":  35.3403509,
+                       "lng":  139.4876435,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "静岡銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/shizuokabank/info/A000157/"
+                                        },
+                                        {
+                                            "name":  "静岡銀行 湘南ローンセンター",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/shizuokabank/info/B000016/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SZB-003",
+                       "name":  "静岡銀行大船支店",
+                       "address":  "鎌倉市大船1-24-30",
+                       "lat":  35.3532127,
+                       "lng":  139.5333247,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "静岡銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/shizuokabank/info/A000149/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "NMR-001",
+                       "name":  "野村證券藤沢支店",
+                       "address":  "藤沢市鵠沼石上1-5-10",
+                       "lat":  35.3357735,
+                       "lng":  139.4895138,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "野村證券 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.nomura.co.jp/branch/branch/fujisawa.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "DIW-001",
+                       "name":  "大和証券藤沢支店",
+                       "address":  "藤沢市藤沢462",
+                       "lat":  35.3398816,
+                       "lng":  139.4860861,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "大和証券 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.daiwa.jp/event/app/brc_info?siten_cd=084"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SNK-001",
+                       "name":  "SMBC日興証券藤沢支店",
+                       "address":  "藤沢市藤沢438-6",
+                       "lat":  35.3390588,
+                       "lng":  139.4857786,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "SMBC日興証券 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.smbcnikko.co.jp/service/office/257/access.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MZS-001",
+                       "name":  "みずほ証券湘南支店藤沢オフィス",
+                       "address":  "藤沢市藤沢559",
+                       "lat":  35.3398725,
+                       "lng":  139.4886041,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ証券 湘南支店 藤沢オフィス",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuho-sc.com/b/mhsc/info/MH100336/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SRG-001",
+                       "name":  "スルガ銀行藤沢支店",
+                       "address":  "藤沢市藤沢109-6",
+                       "lat":  35.3396877,
+                       "lng":  139.4895716,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "スルガ銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.surugabank.co.jp/suruga/detailMap?account=suruga&accmd=0&bid=100300"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SRG-002",
+                       "name":  "スルガ銀行鎌倉支店",
+                       "address":  "鎌倉市小町1-13-20",
+                       "lat":  35.3178344,
+                       "lng":  139.5518478,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "スルガ銀行 鎌倉支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://map.surugabank.co.jp/suruga/detailMap?account=suruga&accmd=0&bid=100230"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "RSN-001",
+                       "name":  "りそな銀行藤沢支店",
+                       "address":  "藤沢市藤沢555",
+                       "lat":  35.3398592,
+                       "lng":  139.4870474,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "りそな銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.resonabank.co.jp/kojin/tenpo_atm/store/?sid=id_00387&type=RB"
+                                        },
+                                        {
+                                            "name":  "りそな銀行 藤沢ローンプラザ",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://resona-map.jp/detail.php?id=599"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "RSN-002",
+                       "name":  "りそな銀行大船支店",
+                       "address":  "鎌倉市大船1-22-5",
+                       "lat":  35.3525797,
+                       "lng":  139.5327527,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "りそな銀行 大船支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.resonabank.co.jp/kojin/tenpo_atm/rb/id_00388.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "RSN-003",
+                       "name":  "りそな銀行西鎌倉出張所",
+                       "address":  "鎌倉市西鎌倉1-1-5",
+                       "lat":  35.3228205,
+                       "lng":  139.5064559,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "りそな銀行 西鎌倉出張所",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://www.resonabank.co.jp/kojin/tenpo_atm/rb/id_00389.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "KRB-001",
+                       "name":  "きらぼし銀行藤沢支店",
+                       "address":  "藤沢市藤沢462",
+                       "lat":  35.3398816,
+                       "lng":  139.4860861,
+                       "categories":  [
+                                          "銀行"
+                                      ],
+                       "primaryCategory":  "銀行",
+                       "listings":  [
+                                        {
+                                            "name":  "きらぼし銀行 藤沢支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://krbs.mapion.co.jp/b/kiraboshi/info/K0889/"
+                                        },
+                                        {
+                                            "name":  "きらぼし銀行 湘南台支店",
+                                            "categories":  [
+                                                               "銀行"
+                                                           ],
+                                            "officialUrl":  "https://krbs.mapion.co.jp/b/kiraboshi/info/K0858/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MTB-001",
+                       "name":  "三菱UFJ信託銀行藤沢支店",
+                       "address":  "藤沢市南藤沢20-3",
+                       "lat":  35.3342944,
+                       "lng":  139.4915694,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ信託銀行 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://maps.tr.mufg.jp/b/tr_mufg/info/4800/"
+                                        },
+                                        {
+                                            "name":  "三菱UFJ信託銀行 平塚支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://maps.tr.mufg.jp/b/tr_mufg/info/4800/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SST-001",
+                       "name":  "三井住友信託銀行藤沢支店",
+                       "address":  "藤沢市南藤沢21-1",
+                       "lat":  35.334258,
+                       "lng":  139.4910612,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友信託銀行 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://mappc.smtb.jp/b/smtb/info/336/"
+                                        },
+                                        {
+                                            "name":  "三井住友信託銀行 藤沢中央支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://mappc.smtb.jp/b/smtb/info/336/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-001",
+                       "name":  "鎌倉郵便局",
+                       "address":  "鎌倉市小町1-10-3",
+                       "lat":  35.3181169,
+                       "lng":  139.5519633,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102026000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-002",
+                       "name":  "大船郵便局",
+                       "address":  "鎌倉市大船2-20-23",
+                       "lat":  35.3544839,
+                       "lng":  139.5367179,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 大船郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102095000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-003",
+                       "name":  "大船ルミネウィング内郵便局",
+                       "address":  "鎌倉市大船1-4-1",
+                       "lat":  35.3529451,
+                       "lng":  139.5313051,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 大船ルミネウィング内郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300109022000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-004",
+                       "name":  "鎌倉大船三郵便局",
+                       "address":  "鎌倉市大船3-15-29",
+                       "lat":  35.3476207,
+                       "lng":  139.53546,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉大船三郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102139000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-005",
+                       "name":  "腰越郵便局",
+                       "address":  "鎌倉市腰越3-1-23",
+                       "lat":  35.30867,
+                       "lng":  139.492244,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 腰越郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102251000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-006",
+                       "name":  "深沢郵便局",
+                       "address":  "鎌倉市常盤60-3",
+                       "lat":  35.331141,
+                       "lng":  139.518075,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 深沢郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102320000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-007",
+                       "name":  "鎌倉津西郵便局",
+                       "address":  "鎌倉市津西1-1-14",
+                       "lat":  35.312392,
+                       "lng":  139.499049,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉津西郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102337000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-008",
+                       "name":  "西鎌倉郵便局",
+                       "address":  "鎌倉市西鎌倉1-3-4",
+                       "lat":  35.322475,
+                       "lng":  139.504104,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 西鎌倉郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102535000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-009",
+                       "name":  "鎌倉七里ガ浜郵便局",
+                       "address":  "鎌倉市七里ガ浜東4-13-4",
+                       "lat":  35.310837,
+                       "lng":  139.516382,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉七里ガ浜郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102694000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-010",
+                       "name":  "鎌倉手広郵便局",
+                       "address":  "鎌倉市笛田1-8-4",
+                       "lat":  35.33139,
+                       "lng":  139.508437,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉手広郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300109031000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-011",
+                       "name":  "鎌倉梶原郵便局",
+                       "address":  "鎌倉市梶原2-34-8",
+                       "lat":  35.329863,
+                       "lng":  139.53188,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 鎌倉梶原郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102506000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-012",
+                       "name":  "藤沢郵便局",
+                       "address":  "藤沢市藤沢115-2",
+                       "lat":  35.3397058,
+                       "lng":  139.4900178,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 藤沢郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102008000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-013",
+                       "name":  "藤沢南口郵便局",
+                       "address":  "藤沢市鵠沼花沢町1-4",
+                       "lat":  35.3379407,
+                       "lng":  139.4857855,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 藤沢南口郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300109012000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-014",
+                       "name":  "藤沢南仲通郵便局",
+                       "address":  "藤沢市藤沢1015-14",
+                       "lat":  35.3418957,
+                       "lng":  139.4837861,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 藤沢南仲通郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102271000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-015",
+                       "name":  "藤沢片瀬山郵便局",
+                       "address":  "藤沢市片瀬山2-8-8",
+                       "lat":  35.323919,
+                       "lng":  139.494466,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 藤沢片瀬山郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102262000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-016",
+                       "name":  "江ノ島郵便局",
+                       "address":  "藤沢市江の島1-4-13",
+                       "lat":  35.30168,
+                       "lng":  139.480891,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 江ノ島郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102086000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "YCH-017",
+                       "name":  "片瀬郵便局",
+                       "address":  "藤沢市片瀬4-14-10",
+                       "lat":  35.315518,
+                       "lng":  139.485719,
+                       "categories":  [
+                                          "ゆうちょ・郵便局"
+                                      ],
+                       "primaryCategory":  "ゆうちょ・郵便局",
+                       "listings":  [
+                                        {
+                                            "name":  "ゆうちょ銀行 片瀬郵便局",
+                                            "categories":  [
+                                                               "ゆうちょ・郵便局"
+                                                           ],
+                                            "officialUrl":  "https://map.japanpost.jp/p/search/dtl/300102050000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MHT-001",
+                       "name":  "みずほ信託銀行大船支店",
+                       "address":  "鎌倉市大船1-26-30",
+                       "lat":  35.3542181,
+                       "lng":  139.533399,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ信託銀行 大船支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuho-tb.co.jp/b/mhtb/info/BA718286/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "DIW-002",
+                       "name":  "大和証券鎌倉支店",
+                       "address":  "鎌倉市小町1-4-10",
+                       "lat":  35.3184894,
+                       "lng":  139.551496,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "大和証券 鎌倉支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.daiwa.jp/event/app/brc_info?siten_cd=085"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SNK-002",
+                       "name":  "SMBC日興証券鎌倉支店",
+                       "address":  "鎌倉市御成町1-4-1",
+                       "lat":  35.3182278,
+                       "lng":  139.5500381,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "SMBC日興証券 鎌倉支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.smbcnikko.co.jp/service/office/307/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "HTT-001",
+                       "name":  "浜銀TT証券鎌倉・大船営業部",
+                       "address":  "鎌倉市大船1-26-27",
+                       "lat":  35.3540649,
+                       "lng":  139.5338311,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "浜銀TT証券 鎌倉・大船営業部",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.hamagintt.co.jp/shop/oofuna.html"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MSM-001",
+                       "name":  "三菱UFJモルガン・スタンレー証券湘南支店",
+                       "address":  "藤沢市南藤沢4-3",
+                       "lat":  35.3378252,
+                       "lng":  139.48973,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJモルガン・スタンレー証券 湘南支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.sc.mufg.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SJP-001",
+                       "name":  "証券ジャパン藤沢支店",
+                       "address":  "藤沢市鵠沼石上1-5-2",
+                       "lat":  35.3366352,
+                       "lng":  139.4896991,
+                       "categories":  [
+                                          "証券・信託"
+                                      ],
+                       "primaryCategory":  "証券・信託",
+                       "listings":  [
+                                        {
+                                            "name":  "証券ジャパン 藤沢支店",
+                                            "categories":  [
+                                                               "証券・信託"
+                                                           ],
+                                            "officialUrl":  "https://www.secjp.co.jp/shop/fujisawa/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-A01",
+                       "name":  "JR大船駅南改札",
+                       "address":  "鎌倉市大船(JR大船駅南改札出て右側)",
+                       "lat":  35.3503052,
+                       "lng":  139.5338239,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 大船駅ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/51206/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-A02",
+                       "name":  "イトーヨーカドー大船店",
+                       "address":  "鎌倉市大船6-1-1",
+                       "lat":  35.3508035,
+                       "lng":  139.5415016,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 イトーヨーカドー大船店ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/51203/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-A03",
+                       "name":  "そうてつローゼン鎌倉深沢店",
+                       "address":  "鎌倉市深沢地区(そうてつローゼン鎌倉深沢店入口横)",
+                       "lat":  35.3266643,
+                       "lng":  139.5219142,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 そうてつローゼン鎌倉深沢店ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/51204/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-A04",
+                       "name":  "JR・小田急藤沢駅南口湘南ダイヤモンドビル1F",
+                       "address":  "藤沢市藤沢(藤沢駅南口湘南ダイヤモンドビル1階)",
+                       "lat":  35.3351657,
+                       "lng":  139.4915318,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 藤沢駅前ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61817/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "BOY-A05",
+                       "name":  "小田急片瀬江ノ島駅海側改札",
+                       "address":  "藤沢市片瀬海岸(小田急片瀬江ノ島駅海側改札口出て右側)",
+                       "lat":  35.3055385,
+                       "lng":  139.4864011,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "横浜銀行 小田急片瀬江ノ島駅ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/boy/info/61280/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "HNB-A01",
+                       "name":  "横浜銀行鎌倉支店内",
+                       "address":  "鎌倉市小町1-6-21",
+                       "lat":  35.3162812,
+                       "lng":  139.5540273,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "東日本銀行 鎌倉ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/higashi_nipponbank/info/h301/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SZB-A01",
+                       "name":  "アゴラ大船",
+                       "address":  "鎌倉市大船1-24-30(アゴラ大船)",
+                       "lat":  35.3532127,
+                       "lng":  139.5333247,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "静岡銀行 アゴラ大船ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://sasp.mapion.co.jp/b/shizuokabank/info/C000303/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "CRK-A01",
+                       "name":  "藤沢市役所",
+                       "address":  "藤沢市藤沢115-1(藤沢市役所)",
+                       "lat":  35.33552669,
+                       "lng":  139.4942833,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "中央労働金庫 藤沢市役所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.areamarker.com/rokinbk/info/2963999088"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "JAS-A01",
+                       "name":  "JAさがみ腰越出張所",
+                       "address":  "鎌倉市腰越3-23-2",
+                       "lat":  35.3087954,
+                       "lng":  139.4926377,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "JAさがみ 腰越出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.jabank.jp/ja/shops/index/5131000"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "RSN-A01",
+                       "name":  "サンシャイン・タヒチビル",
+                       "address":  "藤沢市南藤沢20-10",
+                       "lat":  35.3368289,
+                       "lng":  139.492946,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "りそな銀行 藤沢駅南口ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://resona-map.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MUF-A01",
+                       "name":  "藤沢駅南口",
+                       "address":  "藤沢市南藤沢20-23",
+                       "lat":  35.3375116,
+                       "lng":  139.4882181,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ銀行 ATMコーナー藤沢駅南口",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA841919/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MUF-A02",
+                       "name":  "大船駅前 座間ビル",
+                       "address":  "鎌倉市大船1-10-5",
+                       "lat":  35.3527615,
+                       "lng":  139.5320853,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ銀行 ATMコーナー大船駅前",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA841820/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MUF-A03",
+                       "name":  "JR大船駅",
+                       "address":  "鎌倉市大船1-1-1",
+                       "lat":  35.3537934,
+                       "lng":  139.5312611,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "三菱UFJ銀行 ATMコーナーJR大船駅",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://map.bk.mufg.jp/b/bk_mufg/info/BA841953/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A01",
+                       "name":  "JR藤沢駅構内ニューデイズ",
+                       "address":  "藤沢市藤沢75(JR藤沢駅構内)",
+                       "lat":  35.3387,
+                       "lng":  139.4879,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 ニューデイズ藤沢出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA842361/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A02",
+                       "name":  "リエール藤沢",
+                       "address":  "藤沢市南藤沢1-2",
+                       "lat":  35.3385752,
+                       "lng":  139.4875767,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 リエール藤沢出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA418111/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A03",
+                       "name":  "ルミネ藤沢",
+                       "address":  "藤沢市藤沢438-1",
+                       "lat":  35.3391958,
+                       "lng":  139.4870119,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 ルミネ藤沢出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA842297/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A04",
+                       "name":  "JR大船駅北口ニューデイズ",
+                       "address":  "鎌倉市大船1-1-1",
+                       "lat":  35.3537934,
+                       "lng":  139.5312611,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 ニューデイズ大船北口出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA830713/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A05",
+                       "name":  "鎌倉東急ストア",
+                       "address":  "鎌倉市小町1-2-11",
+                       "lat":  35.3181805,
+                       "lng":  139.5509931,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 鎌倉東急ストア出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA842363/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "MIZ-A06",
+                       "name":  "鎌倉駅東口",
+                       "address":  "鎌倉市小町1-1-1",
+                       "lat":  35.3189152,
+                       "lng":  139.5506748,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "みずほ銀行 鎌倉駅出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://shop.www.mizuhobank.co.jp/b/mhbk/info/BA340650/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-A01",
+                       "name":  "片瀬山二丁目",
+                       "address":  "藤沢市片瀬山2-7-2",
+                       "lat":  35.3233733,
+                       "lng":  139.4938935,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 片瀬山二丁目出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2611012300000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "SMB-A02",
+                       "name":  "七里ガ浜",
+                       "address":  "鎌倉市七里ガ浜東4-3-13",
+                       "lat":  35.3098786,
+                       "lng":  139.5161132,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "三井住友銀行 七里ガ浜出張所ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.e-map.ne.jp/smt/smbcbank/inf/2611004000000/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "AEO-A01",
+                       "name":  "ダイエー藤沢店",
+                       "address":  "藤沢市藤沢520",
+                       "lat":  35.3400676,
+                       "lng":  139.4847641,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イオン銀行 ダイエー藤沢店ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://map.aeonbank.co.jp/aeonbank/spot/detail?code=0000001833"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "AEO-A02",
+                       "name":  "湘南藤沢オーパ",
+                       "address":  "藤沢市南藤沢22-3",
+                       "lat":  35.3377197,
+                       "lng":  139.4867294,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イオン銀行 湘南藤沢オーパ店ATM",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://map.aeonbank.co.jp/aeonbank/spot/detail?code=0000002670"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "VIA-01",
+                       "name":  "JR藤沢駅改札外",
+                       "address":  "藤沢市藤沢(JR藤沢駅改札外)",
+                       "lat":  35.3388,
+                       "lng":  139.4884,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "VIEW ALTTE 藤沢駅VIEW ALTTE",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.jreast.co.jp/estation/view-atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "VIA-02",
+                       "name":  "JR大船駅改札内外",
+                       "address":  "鎌倉市大船(JR大船駅)",
+                       "lat":  35.3505,
+                       "lng":  139.533,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "VIEW ALTTE 大船駅VIEW ALTTE",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.jreast.co.jp/estation/view-atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "VIA-03",
+                       "name":  "JR鎌倉駅改札外",
+                       "address":  "鎌倉市小町(JR鎌倉駅改札外)",
+                       "lat":  35.319,
+                       "lng":  139.5503,
+                       "categories":  [
+                                          "店舗外ATM"
+                                      ],
+                       "primaryCategory":  "店舗外ATM",
+                       "listings":  [
+                                        {
+                                            "name":  "VIEW ALTTE 鎌倉駅VIEW ALTTE",
+                                            "categories":  [
+                                                               "店舗外ATM"
+                                                           ],
+                                            "officialUrl":  "https://www.jreast.co.jp/estation/view-atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-01",
+                       "name":  "セブン‐イレブン 藤沢片瀬5丁目店",
+                       "address":  "藤沢市片瀬5-11-6",
+                       "lat":  35.3175554,
+                       "lng":  139.4854024,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン藤沢片瀬5丁目店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-02",
+                       "name":  "セブン‐イレブン 藤沢片瀬海岸1丁目店",
+                       "address":  "藤沢市片瀬海岸1-11-32",
+                       "lat":  35.3093119,
+                       "lng":  139.4864856,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン藤沢片瀬海岸1丁目店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-01",
+                       "name":  "ローソン 片瀬海岸一丁目店",
+                       "address":  "藤沢市片瀬海岸1-2-6",
+                       "lat":  35.3130615,
+                       "lng":  139.4860857,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン片瀬海岸一丁目店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-02",
+                       "name":  "ローソン 片瀬海岸二丁目店",
+                       "address":  "藤沢市片瀬海岸2-16-21",
+                       "lat":  35.3084342,
+                       "lng":  139.4825803,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン片瀬海岸二丁目店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-03",
+                       "name":  "ローソン 片瀬海岸店",
+                       "address":  "藤沢市片瀬海岸1-13-18",
+                       "lat":  35.3082842,
+                       "lng":  139.4850468,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン片瀬海岸店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "EN-01",
+                       "name":  "ファミリーマート 湘南江ノ島店",
+                       "address":  "藤沢市片瀬海岸1-11-9",
+                       "lat":  35.3087481,
+                       "lng":  139.486955,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イーネット ファミリーマート湘南江ノ島店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.enetcom.co.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "EN-02",
+                       "name":  "ファミリーマート 片瀬江ノ島駅前店",
+                       "address":  "藤沢市片瀬海岸2-16-10",
+                       "lat":  35.3084398,
+                       "lng":  139.4834802,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イーネット ファミリーマート片瀬江ノ島駅前店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.enetcom.co.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-04",
+                       "name":  "ローソン 西鎌倉二丁目店",
+                       "address":  "鎌倉市西鎌倉2-1-7",
+                       "lat":  35.323319,
+                       "lng":  139.506179,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン西鎌倉二丁目店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-03",
+                       "name":  "セブン‐イレブン 鎌倉七里ガ浜店",
+                       "address":  "鎌倉市七里ガ浜東2-2-5",
+                       "lat":  35.3055628,
+                       "lng":  139.5110372,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉七里ガ浜店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-04",
+                       "name":  "セブン‐イレブン 鎌倉津西店",
+                       "address":  "鎌倉市津西1-8-14",
+                       "lat":  35.3158115,
+                       "lng":  139.5024015,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉津西店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "EN-03",
+                       "name":  "ファミリーマート 鎌倉津店",
+                       "address":  "鎌倉市津670-3",
+                       "lat":  35.3142117,
+                       "lng":  139.5016737,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イーネット ファミリーマート鎌倉津店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.enetcom.co.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-05",
+                       "name":  "セブン‐イレブン 鎌倉深沢店",
+                       "address":  "鎌倉市梶原1-5-21",
+                       "lat":  35.3325404,
+                       "lng":  139.5188255,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉深沢店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-06",
+                       "name":  "セブン‐イレブン 鎌倉山崎店",
+                       "address":  "鎌倉市山崎38-2",
+                       "lat":  35.3445058,
+                       "lng":  139.5216168,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉山崎店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-07",
+                       "name":  "セブン‐イレブン 鎌倉湘南町屋駅前店",
+                       "address":  "鎌倉市山崎919-1",
+                       "lat":  35.3384621,
+                       "lng":  139.5225751,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉湘南町屋駅前店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-08",
+                       "name":  "セブン‐イレブン 鎌倉富士見町店",
+                       "address":  "鎌倉市山崎1143",
+                       "lat":  35.3434171,
+                       "lng":  139.5267748,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉富士見町店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "AEO-A03",
+                       "name":  "ミニストップ 鎌倉手広店",
+                       "address":  "鎌倉市手広2-26-17",
+                       "lat":  35.3267632,
+                       "lng":  139.5091983,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "イオン銀行 ミニストップ鎌倉手広店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://map.aeonbank.co.jp/aeonbank/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-09",
+                       "name":  "セブン‐イレブン 鎌倉手広西店",
+                       "address":  "鎌倉市手広6-1-12",
+                       "lat":  35.3320013,
+                       "lng":  139.5051067,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉手広西店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-10",
+                       "name":  "セブン‐イレブン 鎌倉常盤店",
+                       "address":  "鎌倉市常盤212-1",
+                       "lat":  35.3293797,
+                       "lng":  139.5216309,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉常盤店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-05",
+                       "name":  "ローソン 鎌倉梶原店",
+                       "address":  "鎌倉市常盤364-5",
+                       "lat":  35.32598,
+                       "lng":  139.5244058,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン鎌倉梶原店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "7B-11",
+                       "name":  "セブン‐イレブン 鎌倉市役所通り店",
+                       "address":  "鎌倉市常盤655",
+                       "lat":  35.322797,
+                       "lng":  139.5312608,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "セブン銀行 セブン‐イレブン鎌倉市役所通り店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.sevenbank.co.jp/personal/atm/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "id":  "LB-06",
+                       "name":  "ローソン 鎌倉手広店",
+                       "address":  "鎌倉市笛田1-4-40",
+                       "lat":  35.3316071,
+                       "lng":  139.5093593,
+                       "categories":  [
+                                          "コンビニATM"
+                                      ],
+                       "primaryCategory":  "コンビニATM",
+                       "listings":  [
+                                        {
+                                            "name":  "ローソン銀行 ローソン鎌倉手広店ATM",
+                                            "categories":  [
+                                                               "コンビニATM"
+                                                           ],
+                                            "officialUrl":  "https://www.lawsonbank.jp/"
+                                        }
+                                    ]
+                   }
+               ]
+}

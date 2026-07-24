@@ -23,6 +23,8 @@ const ICONS = {
   landscape: '<path d="M4 19h16L15 9l-3 5-2-3z"/><circle cx="7" cy="7" r="2"/>',
   fire: '<path d="M13 3c1 4-2 5-1 8 1-2 3-2 4-4 3 4 4 8 2 11-2 4-10 4-12 0-2-4 0-8 4-11 0 3 2 4 3 5 1-3-1-5 0-9z"/>',
   police: '<path d="M12 3 20 6v6c0 5-3 8-8 10-5-2-8-5-8-10V6z"/><path d="M12 7v9m-4-5h8"/>',
+  bank: '<path d="M12 4l9 6H3zM6 11v7m4-7v7m4-7v7m4-7v7M4 20h16"/>',
+  atm: '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10.5h18M6.5 14.5h4"/>',
   pin: '<path d="M12 21c-4-5-7-8-7-12a7 7 0 1 1 14 0c0 4-3 7-7 12z"/><circle cx="12" cy="9" r="2"/>'
 };
 
