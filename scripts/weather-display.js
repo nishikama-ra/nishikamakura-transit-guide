@@ -162,8 +162,7 @@
       const title = special ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
       const report = formatReport(item.reportDatetime);
       const targetDate = formatTargetDate(item.date);
-      const targetText = targetDate ? `${targetDate}対象` : '対象日';
-      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><strong>${escapeHtml(targetText)}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div>`;
+      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><strong>${escapeHtml(targetDate || '対象日')}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div>`;
     }).join('');
     const explanations = '<div class="heat-alert-explanations"><p><strong>熱中症警戒アラート：</strong>高齢者、こども等は熱中症になりやすいので特に注意してください。</p><p><strong>熱中症特別警戒アラート：</strong>熱中症対策を徹底できていない場合は、運動、外出、イベント等の中止、延期、変更等を判断してください。</p></div>';
     const alertCard = `<div class="heat-alert-card"><div class="heat-alert-list">${items}</div>${explanations}</div>`;
