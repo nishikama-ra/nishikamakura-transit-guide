@@ -49,12 +49,12 @@
       .wbgt-guide a{color:#526f76;text-decoration:underline;text-underline-offset:2px}
       .heat-alert{grid-column:1/-1;background:#fffaf7;border-bottom:1px solid #d8e4e5}
       .heat-alert+.weather-advisory{border-left:0}
-      .heat-alert-list{border-top:1px solid #e1d8cf}
-      .heat-alert-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px 18px;flex-wrap:wrap;padding:7px 0;border-bottom:1px solid #e1d8cf}
+      .heat-alert-card{margin-top:8px;padding:0 11px 10px;border:1px solid #e1d8cf;border-radius:9px;background:#fff}
+      .heat-alert-item{display:flex;justify-content:space-between;align-items:baseline;gap:10px 18px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid #e1d8cf}
       .heat-alert-item strong{font-size:.76rem;color:#384e53}
       .heat-alert-item.special strong{color:#6b403b}
       .heat-alert-item span{font-size:.64rem;color:#6e7d80;text-align:right;white-space:nowrap}
-      .heat-alert-explanations{margin-top:8px;padding:8px 0 0;color:#435d63}
+      .heat-alert-explanations{padding:8px 0 0;color:#435d63}
       .heat-alert-explanations p{margin:0!important;font-size:.7rem!important;line-height:1.55!important}
       .heat-alert-explanations p+p{margin-top:5px!important}
       .heat-alert-explanations strong{color:#384e53}
@@ -166,9 +166,10 @@
       return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><strong>${escapeHtml(targetText)}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div>`;
     }).join('');
     const explanations = '<div class="heat-alert-explanations"><p><strong>熱中症警戒アラート：</strong>高齢者、こども等は熱中症になりやすいので特に注意してください。</p><p><strong>熱中症特別警戒アラート：</strong>熱中症対策を徹底できていない場合は、運動、外出、イベント等の中止、延期、変更等を判断してください。</p></div>';
+    const alertCard = `<div class="heat-alert-card"><div class="heat-alert-list">${items}</div>${explanations}</div>`;
     const sourcePage = sectionData.sourcePage || 'https://www.wbgt.env.go.jp/alert.php';
     const heading = alerts.some(item => item.level === 'special') ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
-    sameHtml(section, `<div class="weather-advisory-head"><strong>${heading}</strong><span>神奈川県</span></div><div class="heat-alert-list">${items}</div>${explanations}<p class="weather-source"><a href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">出典：環境省 熱中症予防情報サイト</a></p>`);
+    sameHtml(section, `<div class="weather-advisory-head"><strong>${heading}</strong><span>神奈川県</span></div>${alertCard}<p class="weather-source"><a href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">出典：環境省 熱中症予防情報サイト</a></p>`);
     if (wrapper.firstElementChild !== section) wrapper.prepend(section);
 
     const secondaryCount = wrapper.querySelectorAll(':scope > .weather-advisory:not(.heat-alert)').length;
