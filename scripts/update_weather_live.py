@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from weather_update import temperature, warnings, wbgt
+from weather_update import heat_alerts, temperature, warnings, wbgt
 from weather_update.common import DATA_PATH, NOW, read_previous
 
 
@@ -26,6 +26,14 @@ def main() -> None:
         wbgt_section['days'] = []
 
     try:
+        heat_alert_section = heat_alerts.build()
+    except Exception as exc:
+        print(f'Heat alert fetch failed: {exc}')
+        heat_alert_section = make_error(str(exc))
+        heat_alert_section['sourcePage'] = 'https://www.wbgt.env.go.jp/alert.php'
+        heat_alert_section['days'] = []
+
+    try:
         warning_section = warnings.build()
     except Exception as exc:
         print(f'Early warning fetch failed: {exc}')
@@ -38,6 +46,7 @@ def main() -> None:
         'updatedAt': NOW.isoformat(timespec='minutes'),
         'temperatureForecasts': temperature_section,
         'wbgt': wbgt_section,
+        'heatAlerts': heat_alert_section,
         'earlyWarnings': warning_section,
     }
     DATA_PATH.write_text(
