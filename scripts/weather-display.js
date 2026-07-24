@@ -57,7 +57,6 @@
       .heat-alert-explanations{padding:8px 0 0;color:#435d63}
       .heat-alert-explanations p{margin:0!important;font-size:.7rem!important;line-height:1.55!important}
       .heat-alert-explanations p+p{margin-top:5px!important}
-      .heat-alert-explanations strong{color:#384e53}
       .heat-alert .weather-source a{color:inherit}
       @media(max-width:720px){.weather-daily-source{padding:5px 14px 8px}.heat-alert-item{gap:3px 10px}.heat-alert-item span{text-align:left}}
     `;
@@ -164,7 +163,7 @@
       const targetDate = formatTargetDate(item.date);
       return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><strong>${escapeHtml(targetDate || '対象日')}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div>`;
     }).join('');
-    const explanations = '<div class="heat-alert-explanations"><p><strong>熱中症警戒アラート：</strong>高齢者、こども等は熱中症になりやすいので特に注意してください。</p><p><strong>熱中症特別警戒アラート：</strong>熱中症対策を徹底できない運動、外出、イベント等は中止、延期、変更等を判断してください。</p></div>';
+    const explanations = '<div class="heat-alert-explanations"><p>熱中症警戒アラート：高齢者、こども等は熱中症になりやすいので特に注意してください。</p><p>熱中症特別警戒アラート：熱中症対策を徹底できない運動、外出、イベント等は中止、延期、変更等を判断してください。</p></div>';
     const alertCard = `<div class="heat-alert-card"><div class="heat-alert-list">${items}</div>${explanations}</div>`;
     const sourcePage = sectionData.sourcePage || 'https://www.wbgt.env.go.jp/alert.php';
     const heading = alerts.some(item => item.level === 'special') ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
