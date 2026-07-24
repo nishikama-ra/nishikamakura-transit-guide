@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T20:47+09:00",
+  "updatedAt": "2026-07-24T23:00+09:00",
   "temperatureForecasts": {
     "status": "ok",
     "updatedAt": "2026-07-24T17:00:00+09:00",
@@ -75,23 +75,23 @@
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-24T20:47+09:00",
-    "forecastCreatedAt": "2026/07/24 20:25",
+    "updatedAt": "2026-07-24T23:00+09:00",
+    "forecastCreatedAt": "2026/07/24 22:25",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-24",
         "max": 32.9,
-        "forecastMax": 28.0,
+        "forecastMax": null,
         "valueType": "observed-or-forecast-maximum",
         "observedMax": 32.9,
-        "observedThrough": "2026-07-24T20:00+09:00"
+        "observedThrough": "2026-07-24T22:00+09:00"
       },
       {
         "label": "明日",
         "date": "2026-07-25",
-        "max": 34.0,
-        "forecastMax": 34.0,
+        "max": 33.0,
+        "forecastMax": 33.0,
         "valueType": "forecast-maximum"
       },
       {
@@ -105,7 +105,7 @@
   },
   "heatAlerts": {
     "status": "ok",
-    "updatedAt": "2026-07-24T20:47+09:00",
+    "updatedAt": "2026-07-24T23:00+09:00",
     "sourcePage": "https://www.wbgt.env.go.jp/alert.php",
     "days": [
       {
