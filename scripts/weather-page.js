@@ -184,7 +184,15 @@
       });
       const first = days[0];
       const rest = days.slice(1);
-      content.innerHTML = `<div class="weather-layout"><article class="weather-today"><div class="weather-today-main"><div class="weather-symbol" aria-hidden="true">${first.icon}</div><div><p class="weather-day-label">${first.label}</p><p class="weather-primary-temp"><strong>${first.temperatures.max}</strong><span>最低 ${first.temperatures.min}</span></p><p class="weather-condition">${first.text}</p><div class="weather-metrics"><span>降水 <strong>${first.pop}</strong></span></div></div></div></article><div class="weather-next">${rest.map(day => `<article class="weather-next-day"><h3>${day.label}</h3><div class="weather-next-icon" aria-hidden="true">${day.icon}</div><div class="weather-next-text"><strong class="weather-next-temp">${day.temperatures.max} / ${day.temperatures.min}</strong><span class="weather-next-condition">${day.text}</span><span class="weather-next-meta">降水 ${day.pop}</span></div></article>`).join('')}</div></div>${hourlyPlaceholder()}`;
+      const layoutClass = days.length >= 3
+        ? 'weather-layout--three'
+        : days.length === 2
+          ? 'weather-layout--two'
+          : 'weather-layout--one';
+      const nextDays = rest.length
+        ? `<div class="weather-next">${rest.map(day => `<article class="weather-next-day"><h3>${day.label}</h3><div class="weather-next-icon" aria-hidden="true">${day.icon}</div><div class="weather-next-text"><strong class="weather-next-temp">${day.temperatures.max} / ${day.temperatures.min}</strong><span class="weather-next-condition">${day.text}</span><span class="weather-next-meta">降水 ${day.pop}</span></div></article>`).join('')}</div>`
+        : '';
+      content.innerHTML = `<div class="weather-layout ${layoutClass}"><article class="weather-today"><div class="weather-today-main"><div class="weather-symbol" aria-hidden="true">${first.icon}</div><div><p class="weather-day-label">${first.label}</p><p class="weather-primary-temp"><strong>${first.temperatures.max}</strong><span>最低 ${first.temperatures.min}</span></p><p class="weather-condition">${first.text}</p><div class="weather-metrics"><span>降水 <strong>${first.pop}</strong></span></div></div></div></article>${nextDays}</div>${hourlyPlaceholder()}`;
       status.textContent = formatReport(short.reportDatetime);
     })
     .catch(error => {
