@@ -142,7 +142,7 @@ button { color: inherit; font: inherit; }
 .marker-mixed { --marker-color: #476b69; }
 .marker-tone-strong { --marker-lighten: 0%; }
 .marker-tone-soft { --marker-lighten: 24%; }
-.school-popup { min-width: 220px; color: #294249; font-family: "BIZ UDPGothic", Meiryo, sans-serif; }
+.school-popup { min-width: 220px; color: #294249; font-family: "BIZ UDPGothic", Meiryo, sans-serif; font-size: 11px; }
 .school-popup > strong { display: block; margin-bottom: 4px; font-size: 14px; }
 .school-popup-address { display: block; color: #687d83; font-size: 11px; }
 .school-popup-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 7px 0; }
