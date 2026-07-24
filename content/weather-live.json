@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-24T09:06+09:00",
+  "updatedAt": "2026-07-24T12:36+09:00",
   "temperatureForecasts": {
     "status": "ok",
-    "updatedAt": "2026-07-24T05:00:00+09:00",
+    "updatedAt": "2026-07-24T11:00:00+09:00",
     "areaCode": "46106",
     "areaName": "横浜",
     "source": "気象庁",
@@ -11,7 +11,7 @@
         "source": "気象庁",
         "areaName": "横浜",
         "max": 33.0,
-        "maxReportDatetime": "2026-07-24T05:00:00+09:00",
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
         "min": 27.0,
         "minReportDatetime": "2026-07-23T17:00:00+09:00"
       },
@@ -19,65 +19,73 @@
         "source": "気象庁",
         "areaName": "横浜",
         "max": 33.0,
-        "maxReportDatetime": "2026-07-24T05:00:00+09:00",
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
         "min": 27.0,
-        "minReportDatetime": "2026-07-24T05:00:00+09:00"
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       },
       "2026-07-26": {
         "source": "気象庁",
         "areaName": "横浜",
         "max": 32.0,
-        "maxReportDatetime": "2026-07-23T17:00:00+09:00",
-        "min": 25.0,
-        "minReportDatetime": "2026-07-23T17:00:00+09:00"
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
+        "min": 24.0,
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       },
       "2026-07-27": {
         "source": "気象庁",
         "areaName": "横浜",
-        "max": 34.0,
-        "maxReportDatetime": "2026-07-23T17:00:00+09:00",
-        "min": 26.0,
-        "minReportDatetime": "2026-07-23T17:00:00+09:00"
+        "max": 32.0,
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
+        "min": 24.0,
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       },
       "2026-07-28": {
         "source": "気象庁",
         "areaName": "横浜",
-        "max": 34.0,
-        "maxReportDatetime": "2026-07-23T17:00:00+09:00",
-        "min": 26.0,
-        "minReportDatetime": "2026-07-23T17:00:00+09:00"
+        "max": 32.0,
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
+        "min": 25.0,
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       },
       "2026-07-29": {
         "source": "気象庁",
         "areaName": "横浜",
         "max": 33.0,
-        "maxReportDatetime": "2026-07-23T17:00:00+09:00",
-        "min": 26.0,
-        "minReportDatetime": "2026-07-23T17:00:00+09:00"
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
+        "min": 25.0,
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       },
       "2026-07-30": {
         "source": "気象庁",
         "areaName": "横浜",
         "max": 34.0,
-        "maxReportDatetime": "2026-07-23T17:00:00+09:00",
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
         "min": 26.0,
-        "minReportDatetime": "2026-07-23T17:00:00+09:00"
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
+      },
+      "2026-07-31": {
+        "source": "気象庁",
+        "areaName": "横浜",
+        "max": 35.0,
+        "maxReportDatetime": "2026-07-24T11:00:00+09:00",
+        "min": 27.0,
+        "minReportDatetime": "2026-07-24T11:00:00+09:00"
       }
     }
   },
   "wbgt": {
     "status": "ok",
-    "updatedAt": "2026-07-24T09:06+09:00",
-    "forecastCreatedAt": "2026/07/24 08:25",
+    "updatedAt": "2026-07-24T12:36+09:00",
+    "forecastCreatedAt": "2026/07/24 12:25",
     "days": [
       {
         "label": "今日",
         "date": "2026-07-24",
-        "max": 33.0,
-        "forecastMax": 33.0,
+        "max": 32.3,
+        "forecastMax": 30.0,
         "valueType": "observed-or-forecast-maximum",
-        "observedMax": 30.0,
-        "observedThrough": "2026-07-24T08:00+09:00"
+        "observedMax": 32.3,
+        "observedThrough": "2026-07-24T12:00+09:00"
       },
       {
         "label": "明日",
@@ -97,7 +105,7 @@
   },
   "heatAlerts": {
     "status": "ok",
-    "updatedAt": "2026-07-24T09:06+09:00",
+    "updatedAt": "2026-07-24T12:36+09:00",
     "sourcePage": "https://www.wbgt.env.go.jp/alert.php",
     "days": [
       {
@@ -113,15 +121,15 @@
   },
   "earlyWarnings": {
     "status": "ok",
-    "reportDatetime": "2026-07-24T05:00:00+09:00",
+    "reportDatetime": "2026-07-24T11:00:00+09:00",
     "reports": {
       "VPFD61": {
-        "reportDatetime": "2026-07-24T05:00:00+09:00",
-        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260723193832_0_VPFD61_140000.xml"
+        "reportDatetime": "2026-07-24T11:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260724013501_0_VPFD61_140000.xml"
       },
       "VPFW60": {
-        "reportDatetime": "2026-07-23T17:00:00+09:00",
-        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260723073916_0_VPFW60_140000.xml"
+        "reportDatetime": "2026-07-24T11:00:00+09:00",
+        "sourceUrl": "https://www.data.jma.go.jp/developer/xml/data/20260724014435_0_VPFW60_140000.xml"
       }
     },
     "items": [
@@ -137,6 +145,22 @@
         "phenomenon": "大雨",
         "level": "中",
         "period": "7/24 18時～24時",
+        "areaCode": "140010",
+        "areaName": "東部",
+        "sourceCode": "VPFD61"
+      },
+      {
+        "phenomenon": "大雨",
+        "level": "中",
+        "period": "7/25 12時～18時",
+        "areaCode": "140010",
+        "areaName": "東部",
+        "sourceCode": "VPFD61"
+      },
+      {
+        "phenomenon": "大雨",
+        "level": "中",
+        "period": "7/25 18時～24時",
         "areaCode": "140010",
         "areaName": "東部",
         "sourceCode": "VPFD61"
