@@ -22,6 +22,13 @@
       timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit'
     }).format(date);
   };
+  const formatTargetDate = value => {
+    const date = new Date(/^\d{4}-\d{2}-\d{2}$/.test(String(value)) ? `${value}T00:00:00+09:00` : value);
+    if (Number.isNaN(date.getTime())) return '';
+    return new Intl.DateTimeFormat('ja-JP', {
+      timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', weekday: 'short'
+    }).format(date);
+  };
   const sameHtml = (element, html) => {
     if (element && element.innerHTML !== html) element.innerHTML = html;
   };
@@ -157,8 +164,10 @@
       const special = item.level === 'special';
       const title = special ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
       const report = formatReport(item.reportDatetime);
-      const areaText = item.label === '明日' ? `明日を対象に${item.areaName || '神奈川県'}に発表中` : `${item.areaName || '神奈川県'}に発表中`;
-      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><div class="heat-alert-item-head"><strong>${escapeHtml(item.label || '')}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div><p class="heat-alert-area">${escapeHtml(areaText)}</p><p>${escapeHtml(alertMessage(item.level))}</p></div>`;
+      const targetDate = formatTargetDate(item.date);
+      const targetText = targetDate ? `${targetDate}対象` : '対象日';
+      const areaName = item.areaName || '神奈川県';
+      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><div class="heat-alert-item-head"><strong>${escapeHtml(targetText)}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div><p class="heat-alert-area">${escapeHtml(areaName)}</p><p>${escapeHtml(alertMessage(item.level))}</p></div>`;
     }).join('');
     const sourcePage = sectionData.sourcePage || 'https://www.wbgt.env.go.jp/alert.php';
     const heading = alerts.some(item => item.level === 'special') ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
