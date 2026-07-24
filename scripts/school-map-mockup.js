@@ -304,10 +304,52 @@ function googleTransitUrl(campus) {
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
+const OFFICIAL_LINK_NAME_SUFFIXES = ['中等教育学校', '義務教育学校', '短期大学部', '短期大学', '高等学校', '中学校', '小学校', '高等部', '中等部', '初等部', '大学'];
+
+// 中高一貫など、対外呼称・URLが同じ複数の掲載を1つの公式リンクにまとめるためのラベル生成。
+// 例: ['聖ヨゼフ学園中学校', '聖ヨゼフ学園高等学校'] → '聖ヨゼフ学園中学校・高等学校'
+function combineListingNames(names) {
+  if (names.length <= 1) return names[0] || '';
+  const parts = names.map(name => {
+    const suffix = OFFICIAL_LINK_NAME_SUFFIXES.find(value => name.endsWith(value));
+    return { base: suffix ? name.slice(0, -suffix.length) : name, suffix: suffix || '' };
+  });
+  const base = parts[0].base;
+  if (base && parts.every(part => part.base === base && part.suffix)) {
+    return `${base}${parts.map(part => part.suffix).join('・')}`;
+  }
+  return names.join('／');
+}
+
+// 表示中の掲載を公式URLごとに束ねる。同一URLは1リンクに集約し、URLが異なるものだけ分けて出す。
+function officialLinkGroups(campus) {
+  const groups = [];
+  const byUrl = new Map();
+  for (const item of activeListings(campus)) {
+    if (!item.officialUrl) continue;
+    if (!byUrl.has(item.officialUrl)) {
+      const group = { url: item.officialUrl, names: [] };
+      byUrl.set(item.officialUrl, group);
+      groups.push(group);
+    }
+    byUrl.get(item.officialUrl).names.push(item.name);
+  }
+  return groups;
+}
+
+function officialLinkAnchors(campus, className) {
+  const groups = officialLinkGroups(campus);
+  return groups.map(group => {
+    const label = groups.length > 1 ? `${combineListingNames(group.names)} 公式情報 ↗` : '公式情報 ↗';
+    return `<a class="${className}" href="${escapeHtml(group.url)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
+  }).join('');
+}
+
 function popupHtml(campus) {
   const listings = activeListings(campus)
-    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.formalTypes.filter(formalType => state.types.has(formalType.type)).map(formalType => formalType.label).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span>${item.officialUrl ? `<br><a href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">公式情報 ↗</a>` : ''}</li>`)
+    .map(item => `<li><strong>${escapeHtml(item.name)}</strong><br><span>${escapeHtml(item.formalTypes.filter(formalType => state.types.has(formalType.type)).map(formalType => formalType.label).join('・'))}・${escapeHtml(item.ownerships.map(ownership => state.data.meta.ownershipLabels[ownership]).join('・'))}</span></li>`)
     .join('');
+  const links = officialLinkAnchors(campus, 'school-popup-official-link');
   return `<div class="school-popup">
     <strong>${escapeHtml(campus.name)}</strong>
     <span class="school-popup-address">${escapeHtml(campus.address)}</span>
@@ -316,16 +358,13 @@ function popupHtml(campus) {
       <span>${escapeHtml(ownershipText(campus))}</span>
     </div>
     <ul>${listings}</ul>
+    ${links ? `<div class="school-popup-links">${links}</div>` : ''}
     <a class="school-transit-link" href="${escapeHtml(googleTransitUrl(campus))}" target="_blank" rel="noopener">GoogleMapでルートを見る ↗</a>
   </div>`;
 }
 
 function officialLinksHtml(campus) {
-  const listings = activeListings(campus).filter(item => item.officialUrl);
-  return listings.map(item => {
-    const label = listings.length > 1 ? `${item.name} 公式情報 ↗` : '公式情報 ↗';
-    return `<a class="school-list-official-link" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
-  }).join('');
+  return officialLinkAnchors(campus, 'school-list-official-link');
 }
 
 function clearMarkers() {

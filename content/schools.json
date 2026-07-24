@@ -59,18 +59,18 @@
       "national": "国立",
       "private": "私立"
     },
-    "institutionCount": 268,
-    "campusCount": 198,
+    "institutionCount": 267,
+    "campusCount": 196,
     "reviewedAt": "2026-07-20",
     "reviewBasis": "文部科学省 学校コード一覧および各学校・大学の公式ページ",
     "countsByType": {
       "elementary": 22,
-      "juniorHigh": 52,
+      "juniorHigh": 51,
       "high": 150,
       "university": 45
     },
     "countsByMunicipality": {
-      "横浜市": 172,
+      "横浜市": 171,
       "横須賀市": 18,
       "逗子市": 6,
       "三浦市": 1,
@@ -84,15 +84,15 @@
     "selectionRule": "小中学校は市立を除外。高校と大学・短大は国立・県立・市立・私立を収録。保育施設・幼稚園・特別支援学校・専門学校等は除外。",
     "shardCampusCounts": [
       50,
+      49,
       50,
-      50,
-      48
+      47
     ],
     "officialUrlSource": "tools/school-official-url-overrides.json",
-    "officialUrlReferenceCount": 268,
-    "officialUrlListingCount": 267,
+    "officialUrlReferenceCount": 267,
+    "officialUrlListingCount": 266,
     "officialUrlMissingCount": 0,
-    "officialUrlUniqueCount": 215
+    "officialUrlUniqueCount": 219
   },
   "files": [
     "schools-01.json",
