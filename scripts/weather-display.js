@@ -165,8 +165,8 @@
     sameHtml(section, `<div class="weather-advisory-head"><strong>${heading}</strong><span>神奈川県</span></div><div class="heat-alert-list">${items}</div><p class="weather-source"><a href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">出典：環境省 熱中症予防情報サイト</a></p>`);
     if (wrapper.firstElementChild !== section) wrapper.prepend(section);
 
-    const sectionCount = wrapper.querySelectorAll(':scope > .weather-advisory').length;
-    wrapper.classList.toggle('single', sectionCount === 1);
+    const secondaryCount = wrapper.querySelectorAll(':scope > .weather-advisory:not(.heat-alert)').length;
+    wrapper.classList.toggle('single', secondaryCount <= 1);
     content.querySelectorAll('.weather-live-status').forEach(element => {
       if (element.textContent?.startsWith('現在、表示対象の暑さ指数')) element.remove();
     });
