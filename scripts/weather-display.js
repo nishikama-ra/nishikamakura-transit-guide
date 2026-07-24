@@ -57,6 +57,10 @@
       .heat-alert-item-head span{font-size:.64rem;color:#6e7d80;text-align:right}
       .heat-alert-item p{margin:4px 0 0!important;font-size:.7rem!important;color:#435d63!important;line-height:1.55!important}
       .heat-alert-item .heat-alert-area{font-weight:700}
+      .heat-alert-explanations{margin-top:9px;padding:9px 11px;border-top:1px solid #e1d8cf;color:#435d63}
+      .heat-alert-explanations p{margin:0!important;font-size:.7rem!important;line-height:1.55!important}
+      .heat-alert-explanations p+p{margin-top:5px!important}
+      .heat-alert-explanations strong{color:#384e53}
       .heat-alert .weather-source a{color:inherit}
       @media(max-width:720px){.weather-daily-source{padding:5px 14px 8px}.heat-alert-item-head{align-items:flex-start;flex-direction:column;gap:2px}.heat-alert-item-head span{text-align:left}}
     `;
@@ -119,10 +123,6 @@
     sameHtml(guide, '<a href="https://www.wbgt.env.go.jp/wbgt.php" target="_blank" rel="noopener">25～27 警戒　28～30 厳重警戒　31～ 危険</a>');
   };
 
-  const alertMessage = level => level === 'special'
-    ? '熱中症対策を徹底できていない場合は、運動、外出、イベント等の中止・延期・変更等を判断してください。'
-    : '高齢者、こども等は熱中症になりやすいので、特に注意してください。';
-
   const renderHeatAlerts = data => {
     const sectionData = data.heatAlerts || {};
     const alerts = Array.isArray(sectionData.days) ? sectionData.days.filter(item => item && (item.level === 'warning' || item.level === 'special')) : [];
@@ -167,11 +167,12 @@
       const targetDate = formatTargetDate(item.date);
       const targetText = targetDate ? `${targetDate}対象` : '対象日';
       const areaName = item.areaName || '神奈川県';
-      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><div class="heat-alert-item-head"><strong>${escapeHtml(targetText)}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div><p class="heat-alert-area">${escapeHtml(areaName)}</p><p>${escapeHtml(alertMessage(item.level))}</p></div>`;
+      return `<div class="heat-alert-item ${special ? 'special' : 'warning'}"><div class="heat-alert-item-head"><strong>${escapeHtml(targetText)}　${title}</strong><span>${escapeHtml(report ? `${report}発表` : '')}</span></div><p class="heat-alert-area">${escapeHtml(areaName)}</p></div>`;
     }).join('');
+    const explanations = '<div class="heat-alert-explanations"><p><strong>熱中症警戒アラート：</strong>高齢者、こども等は熱中症になりやすいので特に注意してください。</p><p><strong>熱中症特別警戒アラート：</strong>熱中症対策を徹底できていない場合は、運動、外出、イベント等の中止、延期、変更等を判断してください。</p></div>';
     const sourcePage = sectionData.sourcePage || 'https://www.wbgt.env.go.jp/alert.php';
     const heading = alerts.some(item => item.level === 'special') ? '熱中症特別警戒アラート' : '熱中症警戒アラート';
-    sameHtml(section, `<div class="weather-advisory-head"><strong>${heading}</strong><span>神奈川県</span></div><div class="heat-alert-list">${items}</div><p class="weather-source"><a href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">出典：環境省 熱中症予防情報サイト</a></p>`);
+    sameHtml(section, `<div class="weather-advisory-head"><strong>${heading}</strong><span>神奈川県</span></div><div class="heat-alert-list">${items}</div>${explanations}<p class="weather-source"><a href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">出典：環境省 熱中症予防情報サイト</a></p>`);
     if (wrapper.firstElementChild !== section) wrapper.prepend(section);
 
     const secondaryCount = wrapper.querySelectorAll(':scope > .weather-advisory:not(.heat-alert)').length;
